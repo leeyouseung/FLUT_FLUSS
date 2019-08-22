@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Page.activity.MainActivity">
+    tools:context=".view.activity.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -44,15 +46,15 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:id="@+id/listButton"
+
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/list_act"
+                app:srcCompat="@drawable/remittance_icon"
                 tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/listButtonText"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -72,15 +74,15 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:id="@+id/plusButton"
+
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:background="@drawable/plus"
+                android:background="@drawable/show_money_list_icon"
                 tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/plusButtonText"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -100,15 +102,15 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:id="@+id/searchButton"
+
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/search_2"
+                app:srcCompat="@drawable/time_line_icon"
                 tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/searchButtonText"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -128,15 +130,43 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:id="@+id/peopleButton"
+
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/people"
+                app:srcCompat="@drawable/add_card_icon"
                 tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/peopleButtonText"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="마이페이지"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/setting_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -151,3 +181,5 @@
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
