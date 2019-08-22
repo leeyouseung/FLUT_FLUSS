@@ -47,10 +47,10 @@
 
             <ImageView
 
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="5dp"
                 app:srcCompat="@drawable/remittance_icon"
                 tools:ignore="ContentDescription" />
 
@@ -60,6 +60,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="송금"
+                android:textSize="5pt"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 android:visibility="visible"
@@ -76,10 +77,10 @@
 
             <ImageView
 
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/show_money_list_icon"
                 tools:ignore="ContentDescription" />
 
@@ -89,9 +90,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="조회"
+                android:textSize="5pt"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/black"
-                android:visibility="invisible"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
@@ -105,10 +106,10 @@
 
             <ImageView
 
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="5dp"
                 app:srcCompat="@drawable/time_line_icon"
                 tools:ignore="ContentDescription" />
 
@@ -118,9 +119,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="타임라인"
+                android:textSize="5pt"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/black"
-                android:visibility="invisible"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
@@ -134,10 +135,10 @@
 
             <ImageView
 
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="5dp"
                 app:srcCompat="@drawable/add_card_icon"
                 tools:ignore="ContentDescription" />
 
@@ -147,9 +148,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="개설"
+                android:textSize="5pt"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/black"
-                android:visibility="invisible"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
@@ -163,10 +164,10 @@
 
             <ImageView
 
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="5dp"
                 app:srcCompat="@drawable/setting_icon"
                 tools:ignore="ContentDescription" />
 
@@ -176,9 +177,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="전체"
+                android:textSize="5pt"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/black"
-                android:visibility="invisible"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
