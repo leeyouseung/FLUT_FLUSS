@@ -46,23 +46,23 @@ public class LoginActivity extends AppCompatActivity {
 
     private void clickPasswordClearButton() {
 
-        binding.clear.setOnClickListener(v -> binding.passwordText.setText(""));
+        binding.pwClearButton.setOnClickListener(v -> binding.passwordText.setText(""));
     }
 
     private void clickBlindButton() {
 
-        binding.blind.setOnClickListener(v -> {
+        binding.blindButton.setOnClickListener(v -> {
 
             if (checkBlind) {
 
-                binding.blind.setImageResource(R.drawable.ic_blind);
+                binding.blindButton.setImageResource(R.drawable.ic_blind);
                 binding.passwordText.setTransformationMethod(PasswordTransformationMethod.getInstance());
 
                 checkBlind = false;
             }
             else {
 
-                binding.blind.setImageResource(R.drawable.ic_blind_check);
+                binding.blindButton.setImageResource(R.drawable.ic_blind_check);
                 binding.passwordText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
 
                 checkBlind = true;
@@ -89,6 +89,9 @@ public class LoginActivity extends AppCompatActivity {
 //            loginViewModel.login(
 //                    new LoginRequest(binding.idText.getText().toString(),
 //                            binding.passwordText.getText().toString()));
+
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
         });
 
         binding.registerButton.setOnClickListener(v -> {
