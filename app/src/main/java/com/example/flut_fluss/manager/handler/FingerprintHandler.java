@@ -12,7 +12,7 @@ import androidx.core.app.ActivityCompat;
 
 import com.example.flut_fluss.view.activity.MainActivity;
 
-class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
+public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
 
     private Context context;
 

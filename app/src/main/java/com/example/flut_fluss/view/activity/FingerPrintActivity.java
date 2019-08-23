@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.FingerPrintActivityBinding;
+import com.example.flut_fluss.manager.handler.FingerprintHandler;
 //import com.example.flut_fluss.manager.FingerprintHandler;
 
 import java.io.IOException;
