@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void onButtonSetting() {
 
-        binding.remittanceIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+        binding.remittanceIcon.setImageResource(R.drawable.remittance_icon_click);
         binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));
     }
 
@@ -78,8 +78,20 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.main_activity_fragment, new RemittanceFragment());
             fragmentTransaction.commit();
 
-            binding.remittanceIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+            binding.remittanceIcon.setImageResource(R.drawable.remittance_icon_click);
             binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));
+
+            binding.showMoneyListIcon.setImageResource(R.drawable.show_money_list_icon);
+            binding.showMoneyListTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.timeLineIcon.setImageResource(R.drawable.time_line_icon);
+            binding.timeLineTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.addCardIcon.setImageResource(R.drawable.add_card_icon);
+            binding.addCardTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.settingIcon.setImageResource(R.drawable.setting_icon);
+            binding.settingTitle.setTextColor(getResources().getColor(R.color.black));
         });
     }
 
@@ -94,8 +106,20 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.main_activity_fragment, new ShowMoneyListFragment());
             fragmentTransaction.commit();
 
-            binding.showMoneyListIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+            binding.remittanceIcon.setImageResource(R.drawable.remittance_icon);
+            binding.remittanceTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.showMoneyListIcon.setImageResource(R.drawable.show_money_list_icon_click);
             binding.showMoneyListTitle.setTextColor(getResources().getColor(R.color.blue));
+
+            binding.timeLineIcon.setImageResource(R.drawable.time_line_icon);
+            binding.timeLineTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.addCardIcon.setImageResource(R.drawable.add_card_icon);
+            binding.addCardTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.settingIcon.setImageResource(R.drawable.setting_icon);
+            binding.settingTitle.setTextColor(getResources().getColor(R.color.black));
         });
     }
 
@@ -110,8 +134,20 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.main_activity_fragment, new TimeLineFragment());
             fragmentTransaction.commit();
 
-            binding.timeLineIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+            binding.remittanceIcon.setImageResource(R.drawable.remittance_icon);
+            binding.remittanceTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.showMoneyListIcon.setImageResource(R.drawable.show_money_list_icon);
+            binding.showMoneyListTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.timeLineIcon.setImageResource(R.drawable.time_line_icon_click);
             binding.timeLineTitle.setTextColor(getResources().getColor(R.color.blue));
+
+            binding.addCardIcon.setImageResource(R.drawable.add_card_icon);
+            binding.addCardTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.settingIcon.setImageResource(R.drawable.setting_icon);
+            binding.settingTitle.setTextColor(getResources().getColor(R.color.black));
         });
     }
 
@@ -126,8 +162,20 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.main_activity_fragment, new AddCardFragment());
             fragmentTransaction.commit();
 
-            binding.addCardIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+            binding.remittanceIcon.setImageResource(R.drawable.remittance_icon);
+            binding.remittanceTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.showMoneyListIcon.setImageResource(R.drawable.show_money_list_icon);
+            binding.showMoneyListTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.timeLineIcon.setImageResource(R.drawable.time_line_icon);
+            binding.timeLineTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.addCardIcon.setImageResource(R.drawable.add_card_icon_click);
             binding.addCardTitle.setTextColor(getResources().getColor(R.color.blue));
+
+            binding.settingIcon.setImageResource(R.drawable.setting_icon);
+            binding.settingTitle.setTextColor(getResources().getColor(R.color.black));
         });
     }
 
@@ -142,7 +190,19 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.main_activity_fragment, new SettingFragment());
             fragmentTransaction.commit();
 
-            binding.settingIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+            binding.remittanceIcon.setImageResource(R.drawable.remittance_icon);
+            binding.remittanceTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.showMoneyListIcon.setImageResource(R.drawable.show_money_list_icon);
+            binding.showMoneyListTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.timeLineIcon.setImageResource(R.drawable.time_line_icon);
+            binding.timeLineTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.addCardIcon.setImageResource(R.drawable.add_card_icon);
+            binding.addCardTitle.setTextColor(getResources().getColor(R.color.black));
+
+            binding.settingIcon.setImageResource(R.drawable.setting_icon_click);
             binding.settingTitle.setTextColor(getResources().getColor(R.color.blue));
         });
     }
