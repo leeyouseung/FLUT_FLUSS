@@ -17,14 +17,16 @@ import android.security.keystore.KeyProperties;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.FingerPrintActivityBinding;
-import com.example.flut_fluss.manager.FingerprintHandler;
+//import com.example.flut_fluss.manager.FingerprintHandler;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
+import java.security.Key;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -41,13 +43,15 @@ public class FingerPrintActivity extends AppCompatActivity {
 
     FingerPrintActivityBinding binding;
 
+//    private static final String KEY_NAME = "example_key";
+//    private FingerprintManager.CryptoObject cryptoObject;
+
+    private KeyStore keyStore;
     private static final String KEY_NAME = "example_key";
+    private Cipher cipher;
     private FingerprintManager fingerprintManager;
     private KeyguardManager keyguardManager;
-    private KeyStore keyStore;
     private KeyGenerator keyGenerator;
-    private Cipher cipher;
-    private FingerprintManager.CryptoObject cryptoObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +60,9 @@ public class FingerPrintActivity extends AppCompatActivity {
 
         event();
 
-        binding.tvMessage.setText("앱이 시작되었습니다.");
+        keyguardManager = (KeyguardManager)getSystemService(KEYGUARD_SERVICE);
+
+        fingerprintManager = (FingerprintManager)getSystemService(FINGERPRINT_SERVICE);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
@@ -88,11 +94,9 @@ public class FingerPrintActivity extends AppCompatActivity {
 
                 if(cipherInit()) {
 
-                    cryptoObject = new FingerprintManager.CryptoObject(cipher);
+                    FingerprintManager.CryptoObject cryptoObject = new FingerprintManager().CryptoObject(this);
 
-                    //핸들러실행
-                    FingerprintHandler fingerprintHandler = new FingerprintHandler(this);
-                    fingerprintHandler.startAutho(fingerprintManager, cryptoObject);
+                    FingerprintHandler handler = FingerprintHandler
                 }
             }
         }
