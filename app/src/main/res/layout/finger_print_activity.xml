@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".MainActivity">
+    tools:context=".view.activity.MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -17,7 +17,8 @@
         android:layout_marginTop="13dp"
         android:text="지문인증"
         android:textColor="@color/colorPrimary"
-        android:textSize="24dp" />
+        android:textSize="24dp"
+        tools:ignore="HardcodedText,SpUsage" />
 
     <!--지문 이미지-->
     <ImageView
@@ -27,7 +28,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="66dp"
-        app:srcCompat="@drawable/fingerprint_icon" />
+        app:srcCompat="@drawable/fingerprint_icon"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tv_message"
@@ -54,14 +56,17 @@
             android:id="@+id/iv_photo"
             android:layout_width="match_parent"
             android:layout_height="203dp"
-            app:srcCompat="@drawable/sample" />
+            app:srcCompat="@drawable/time_line_icon"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/iv_lock"
             android:layout_marginTop="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_done" />
+            app:srcCompat="@drawable/finger_print_done_icon"
+            tools:ignore="ContentDescription" />
 
     </LinearLayout>
+
 </RelativeLayout>
