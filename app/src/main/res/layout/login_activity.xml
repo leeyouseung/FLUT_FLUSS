@@ -7,6 +7,174 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.activity.LoginActivity"/>
+        tools:context=".view.activity.LoginActivity" >
+
+        <ImageView
+            android:id="@+id/animation_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="170dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/animation_logo"
+            tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/login_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo">
+
+            <EditText
+                android:id="@+id/idText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="30dp"
+                android:hint="ID"
+                android:inputType="textPersonName"
+                android:paddingStart="8dp"
+                android:backgroundTint="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/login_container"
+                tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/pwText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="30dp"
+                android:ems="18"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="8dp"
+                android:backgroundTint="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/idText"
+                tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/clear"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_clear_btn"
+                app:layout_constraintBottom_toBottomOf="@+id/pwText"
+                app:layout_constraintEnd_toStartOf="@+id/blind"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/blind"
+                android:layout_width="25dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_blind"
+                app:layout_constraintBottom_toBottomOf="@+id/clear"
+                app:layout_constraintEnd_toEndOf="@+id/pwText"
+                app:layout_constraintTop_toTopOf="@+id/clear"
+                tools:ignore="ContentDescription" />
+
+            <CheckBox
+                android:id="@+id/keepLoginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:text="로그인 유지"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pwText"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/login_button_radius"
+                android:text="로그인"
+                android:textColor="@color/white"
+                android:textSize="8pt"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/keepLoginButton"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/findIdButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="16dp"
+                android:text="ID 찾기"
+                android:textColor="@color/black"
+                android:textSize="7pt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginButton"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/findPwButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="비밀번호 찾기"
+                android:textColor="@color/black"
+                android:textSize="7pt"
+                app:layout_constraintStart_toEndOf="@+id/bar"
+                app:layout_constraintTop_toBottomOf="@+id/loginButton"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="/"
+                android:textColor="@color/black"
+                android:textSize="7pt"
+                app:layout_constraintStart_toEndOf="@+id/findIdButton"
+                app:layout_constraintTop_toBottomOf="@+id/loginButton"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/registerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="회원가입"
+                android:textColor="@color/black"
+                android:textSize="7pt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bar"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
