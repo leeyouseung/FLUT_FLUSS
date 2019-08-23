@@ -17,6 +17,8 @@ public class SplashActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
         Animation hold = AnimationUtils.loadAnimation(this, R.anim.splash_hold);
 
         final Animation scale = AnimationUtils.loadAnimation(this, R.anim.splash_scale);
