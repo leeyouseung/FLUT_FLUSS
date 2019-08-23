@@ -1,6 +1,5 @@
 package com.example.flut_fluss.view.animation;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.Animation;
@@ -13,7 +12,6 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.SplashActivityBinding;
 import com.example.flut_fluss.view.activity.LoginActivity;
 
-@SuppressLint("Registered")
 public class SplashActivity extends AppCompatActivity {
 
     SplashActivityBinding binding;
