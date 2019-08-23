@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.SplashActivityBinding;
+import com.example.flut_fluss.view.activity.FingerPrintActivity;
 import com.example.flut_fluss.view.activity.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
@@ -57,7 +58,7 @@ public class SplashActivity extends AppCompatActivity {
 
                 binding.animationLogo.clearAnimation();
 
-                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                Intent intent = new Intent(SplashActivity.this, FingerPrintActivity.class);
                 startActivity(intent);
 
                 finish();
