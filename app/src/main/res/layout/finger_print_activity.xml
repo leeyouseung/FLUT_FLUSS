@@ -13,6 +13,20 @@
     android:background="@color/finger_login_check_background"
     tools:context=".view.activity.FingerPrintActivity">
 
+    <ImageView
+        android:id="@+id/animation_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="170dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/animation_logo"
+        tools:ignore="ContentDescription" />
+
     <TextView
         android:id="@+id/finger_title"
         android:layout_width="wrap_content"
@@ -20,7 +34,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="165dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
         android:text="잠금 해제"
         android:textColor="@color/white"
@@ -28,7 +42,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animation_logo"
         tools:ignore="HardcodedText,SpUsage" />
 
     <!--지문 이미지-->
@@ -40,7 +54,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
