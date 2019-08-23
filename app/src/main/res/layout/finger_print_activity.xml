@@ -1,55 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:background="@color/finger_login_check_background"
     tools:context=".view.activity.MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/finger_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
-        android:text="지문인증"
-        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="8dp"
+        android:text="잠금 해제"
+        android:textColor="@color/white"
         android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText,SpUsage" />
 
     <!--지문 이미지-->
     <ImageView
         android:id="@+id/iv_fingerprint"
-        android:layout_width="176dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tv_message"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_message"
         app:srcCompat="@drawable/fingerprint_icon"
         tools:ignore="ContentDescription" />
 
+    <!-- 지문 인식 상태 확인 -->
     <TextView
         android:id="@+id/tv_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/finger_title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="135dp"
-        android:text="Message..."
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="지문이 일치하면 잠금이 해체됩니다."
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finger_title"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/finger_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:text="'FLUSS'의 Touch ID"
+        android:textColor="@color/white"
+        android:textSize="7pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_fingerprint"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/finger_sub_2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:text="지문이 일치하면 앱을 실행합니다."
+        android:textColor="@color/white"
+        android:textSize="6pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finger_sub_title"
         tools:ignore="HardcodedText" />
 
     <!--지문인증 되면 나타나는 내용-->
-    <LinearLayout
+
+    <!-- <LinearLayout
         android:id="@+id/ll_secure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/tv_message"
         android:gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="200dp"
         android:orientation="vertical">
 
         <ImageView
@@ -67,6 +118,6 @@
             app:srcCompat="@drawable/finger_print_done_icon"
             tools:ignore="ContentDescription" />
 
-    </LinearLayout>
+    </LinearLayout> -->
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

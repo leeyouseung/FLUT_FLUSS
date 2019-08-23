@@ -10,4 +10,5 @@
     <color name="background_color">#EFEFEF</color>
     <color name="login_button_first_gradation">#02BEE8</color>
     <color name="login_button_end_gradation">#024FE9</color>
+    <color name="finger_login_check_background">#090D88</color>
 </resources>
