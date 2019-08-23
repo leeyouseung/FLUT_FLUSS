@@ -75,6 +75,6 @@ public class SplashActivity extends AppCompatActivity {
 
     private void initData() {
 
-        binding = DataBindingUtil.setContentView(this, R.layout.main_activity);
+        binding = DataBindingUtil.setContentView(this, R.layout.splash_activity);
     }
 }
