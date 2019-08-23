@@ -9,17 +9,17 @@
         android:background="@color/background_color">
 
         <ImageView
-            android:id="@+id/logo"
+            android:id="@+id/animation_logo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="150dp"
             android:layout_marginTop="70dp"
-            android:layout_marginEnd="100dp"
+            android:layout_marginEnd="150dp"
             android:adjustViewBounds="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo"
+            app:srcCompat="@drawable/animation_logo"
             tools:ignore="ContentDescription" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
