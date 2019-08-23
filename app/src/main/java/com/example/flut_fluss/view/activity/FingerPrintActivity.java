@@ -165,7 +165,7 @@ public class FingerPrintActivity extends AppCompatActivity {
 
             keyGenerator.generateKey();
 
-        } catch (NoSuchAlgorithmException | InvalidAlgorithmParameterException | CertificateException | IOException e){
+        } catch (NoSuchAlgorithmException | InvalidAlgorithmParameterException | CertificateException | IOException e) {
 
             throw new RuntimeException(e);
         }
