@@ -11,13 +11,11 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.CancellationSignal;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
 import com.example.flut_fluss.R;
-import com.example.flut_fluss.view.activity.FingerPrintActivity;
 import com.example.flut_fluss.view.activity.MainActivity;
 
 @TargetApi(Build.VERSION_CODES.M)
@@ -77,7 +75,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         final ImageView iv_fingerprint = ((Activity)context).findViewById(R.id.iv_fingerprint);
 //        final LinearLayout linearLayout = ((Activity)context).findViewById(R.id.ll_secure);
 
-        //안내 메세지 출력
+        // 안내 메세지 출력
 //        iv_fingerpr.setText(s);
 
         if(!b) {
@@ -85,7 +83,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorAccent));
 
         }
-        else {    //지문인증 성공
+        else {    // 지문인증 성공
 
 //            tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
 //            iv_fingerprint.setImageResource(R.drawable.finger_print_done_icon);
