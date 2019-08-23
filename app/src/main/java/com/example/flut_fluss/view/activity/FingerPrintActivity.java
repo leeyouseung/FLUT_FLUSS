@@ -54,10 +54,10 @@ public class FingerPrintActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.finger_print_activity);
 
-        iv_fingerprint = (ImageView) findViewById(R.id.iv_fingerprint);
-        tv_message = (TextView) findViewById(R.id.tv_message);
+        iv_fingerprint = findViewById(R.id.iv_fingerprint);
+        tv_message = findViewById(R.id.tv_message);
         tv_message.setText("앱이 시작되었습니다.");
-        linearLayout = (LinearLayout) findViewById(R.id.ll_secure);
+        linearLayout = findViewById(R.id.ll_secure);
         linearLayout.setVisibility(LinearLayout.GONE);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

@@ -70,14 +70,14 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
     private void update(String s, boolean b) {
 
-        final TextView tv_message = (TextView) ((Activity)context).findViewById(R.id.tv_message);
-        final ImageView iv_fingerprint = (ImageView) ((Activity)context).findViewById(R.id.iv_fingerprint);
-        final LinearLayout linearLayout = (LinearLayout) ((Activity)context).findViewById(R.id.ll_secure);
+        final TextView tv_message = ((Activity)context).findViewById(R.id.tv_message);
+        final ImageView iv_fingerprint = ((Activity)context).findViewById(R.id.iv_fingerprint);
+        final LinearLayout linearLayout = ((Activity)context).findViewById(R.id.ll_secure);
 
         //안내 메세지 출력
         tv_message.setText(s);
 
-        if(b == false) {
+        if(!b) {
 
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorAccent));
 
