@@ -3,7 +3,6 @@ package com.example.flut_fluss.manager;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.hardware.fingerprint.FingerprintManager;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -11,14 +10,12 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.CancellationSignal;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 
 import com.example.flut_fluss.R;
-import com.example.flut_fluss.view.activity.MainActivity;
 
 @TargetApi(Build.VERSION_CODES.M)
 public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
@@ -74,7 +71,6 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
     private void update(String s, boolean b) {
 
         final TextView tv_message = ((Activity)context).findViewById(R.id.tv_message);
-        final ImageView iv_fingerprint = ((Activity)context).findViewById(R.id.iv_fingerprint);
         final ConstraintLayout mainPage = (((Activity) context).findViewById(R.id.main_activity_show));
         final ConstraintLayout fingerPage = (((Activity) context).findViewById(R.id.finger_page));
 
@@ -90,8 +86,6 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         }
         else {    // 지문인증 성공
 
-//            tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
-//            iv_fingerprint.setImageResource(R.drawable.finger_print_done_icon);
             mainPage.setVisibility(View.VISIBLE);
             fingerPage.setVisibility(View.INVISIBLE);
 

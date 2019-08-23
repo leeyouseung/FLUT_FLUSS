@@ -41,8 +41,6 @@ public class FingerPrintActivity extends AppCompatActivity {
 
     FingerPrintActivityBinding binding;
 
-    final String TAG = "MainActivity";
-
     private static final String KEY_NAME = "example_key";
     private FingerprintManager fingerprintManager;
     private KeyguardManager keyguardManager;
