@@ -39,6 +39,7 @@
         tools:ignore="DisableBaselineAlignment">
 
         <LinearLayout
+            android:id="@+id/remittance_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -46,7 +47,6 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
@@ -55,7 +55,6 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -69,6 +68,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/show_money_list_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -76,7 +76,6 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
@@ -85,7 +84,6 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -98,6 +96,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/time_line_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -105,7 +104,6 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
@@ -114,7 +112,6 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -127,6 +124,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/add_card_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -134,7 +132,6 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
@@ -143,7 +140,6 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -156,6 +152,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/setting_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -163,7 +160,6 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
@@ -172,7 +168,6 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"

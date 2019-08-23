@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void clickRemittanceButton() {
 
+        
     }
 
     private void clickShowMoneyListButton() {
@@ -65,6 +66,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void clickSettingButton() {
-        
+
     }
 }
