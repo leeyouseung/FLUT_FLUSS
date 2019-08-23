@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 
 import android.Manifest;
 import android.app.KeyguardManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
@@ -56,8 +57,6 @@ public class FingerPrintActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.finger_print_activity);
 
         binding.tvMessage.setText("앱이 시작되었습니다.");
-//        linearLayout = findViewById(R.id.ll_secure);
-//        linearLayout.setVisibility(LinearLayout.GONE);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 

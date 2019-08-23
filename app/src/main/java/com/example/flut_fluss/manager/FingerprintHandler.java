@@ -10,9 +10,11 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.CancellationSignal;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 
 import com.example.flut_fluss.R;
@@ -73,6 +75,9 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
         final TextView tv_message = ((Activity)context).findViewById(R.id.tv_message);
         final ImageView iv_fingerprint = ((Activity)context).findViewById(R.id.iv_fingerprint);
+        final ConstraintLayout mainPage = (((Activity) context).findViewById(R.id.main_activity_show));
+        final ConstraintLayout fingerPage = (((Activity) context).findViewById(R.id.finger_page));
+
 //        final LinearLayout linearLayout = ((Activity)context).findViewById(R.id.ll_secure);
 
         // 안내 메세지 출력
@@ -87,15 +92,14 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
 //            tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
 //            iv_fingerprint.setImageResource(R.drawable.finger_print_done_icon);
-//            linearLayout.setVisibility(LinearLayout.VISIBLE);
+            mainPage.setVisibility(View.VISIBLE);
+            fingerPage.setVisibility(View.INVISIBLE);
 
             //sound effect
 //            Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 //            Ringtone r = RingtoneManager.getRingtone((Activity)context, notification);
 //
 //            r.play();
-
-            Intent intent = new Intent((Activity)context, MainActivity.class);
         }
     }
 }
