@@ -17,48 +17,59 @@ import androidx.core.content.ContextCompat;
 
 import com.example.flut_fluss.R;
 
-@TargetApi(Build.VERSION_CODES.M)//이녀석은 또 처음 보는군.
-public class FingerprintHandler extends FingerprintManager.AuthenticationCallback{
+@TargetApi(Build.VERSION_CODES.M)
+public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
+
     CancellationSignal cancellationSignal;
     private Context context;
 
-    public FingerprintHandler(Context context){
+    public FingerprintHandler(Context context) {
+
         this.context = context;
     }
 
     //메소드들 정의
-    public void startAutho(FingerprintManager fingerprintManager, FingerprintManager.CryptoObject cryptoObject){
+    public void startAutho(FingerprintManager fingerprintManager, FingerprintManager.CryptoObject cryptoObject) {
+
         cancellationSignal = new CancellationSignal();
+
         fingerprintManager.authenticate(cryptoObject, cancellationSignal, 0, this, null);
     }
 
     @Override
     public void onAuthenticationError(int errorCode, CharSequence errString) {
+
         this.update("인증 에러 발생" + errString, false);
     }
 
     @Override
     public void onAuthenticationFailed() {
+
         this.update("인증 실패", false);
     }
 
     @Override
     public void onAuthenticationHelp(int helpCode, CharSequence helpString) {
+
         this.update("Error: "+ helpString, false);
     }
 
     @Override
     public void onAuthenticationSucceeded(FingerprintManager.AuthenticationResult result) {
+
         this.update("앱 접근이 허용되었습니다.", true);
     }
 
-    public void stopFingerAuth(){
-        if(cancellationSignal != null && !cancellationSignal.isCanceled()){
+    public void stopFingerAuth() {
+
+        if(cancellationSignal != null && !cancellationSignal.isCanceled()) {
+
             cancellationSignal.cancel();
         }
     }
 
     private void update(String s, boolean b) {
+
         final TextView tv_message = (TextView) ((Activity)context).findViewById(R.id.tv_message);
         final ImageView iv_fingerprint = (ImageView) ((Activity)context).findViewById(R.id.iv_fingerprint);
         final LinearLayout linearLayout = (LinearLayout) ((Activity)context).findViewById(R.id.ll_secure);
@@ -66,9 +77,12 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         //안내 메세지 출력
         tv_message.setText(s);
 
-        if(b == false){
+        if(b == false) {
+
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorAccent));
-        } else {//지문인증 성공
+
+        } else {    //지문인증 성공
+
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
             iv_fingerprint.setImageResource(R.drawable.finger_print_done_icon);
             linearLayout.setVisibility(LinearLayout.VISIBLE);
@@ -76,6 +90,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
             //sound effect
             Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
             Ringtone r = RingtoneManager.getRingtone((Activity)context, notification);
+
             r.play();
         }
     }
