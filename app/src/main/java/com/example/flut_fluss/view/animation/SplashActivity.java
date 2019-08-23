@@ -1,15 +1,18 @@
 package com.example.flut_fluss.view.animation;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-import com.example.fiba.R;
-import com.example.fiba.base.BaseActivity;
-import com.example.fiba.databinding.SplashActivityBinding;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class SplashActivity extends BaseActivity<SplashActivityBinding> {
+import com.example.flut_fluss.R;
+import com.example.flut_fluss.view.activity.LoginActivity;
+
+@SuppressLint("Registered")
+public class SplashActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,11 +64,5 @@ public class SplashActivity extends BaseActivity<SplashActivityBinding> {
         });
 
         binding.logo.startAnimation(hold);
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.splash_activity;
     }
 }
