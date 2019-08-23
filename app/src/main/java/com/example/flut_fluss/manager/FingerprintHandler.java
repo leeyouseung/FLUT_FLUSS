@@ -3,6 +3,7 @@ package com.example.flut_fluss.manager;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.fingerprint.FingerprintManager;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -16,6 +17,8 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.view.activity.FingerPrintActivity;
+import com.example.flut_fluss.view.activity.MainActivity;
 
 @TargetApi(Build.VERSION_CODES.M)
 public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
@@ -84,15 +87,17 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         }
         else {    //지문인증 성공
 
-            tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
-            iv_fingerprint.setImageResource(R.drawable.finger_print_done_icon);
+//            tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
+//            iv_fingerprint.setImageResource(R.drawable.finger_print_done_icon);
 //            linearLayout.setVisibility(LinearLayout.VISIBLE);
 
             //sound effect
-            Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-            Ringtone r = RingtoneManager.getRingtone((Activity)context, notification);
+//            Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+//            Ringtone r = RingtoneManager.getRingtone((Activity)context, notification);
+//
+//            r.play();
 
-            r.play();
+            Intent intent = new Intent((Activity)context, MainActivity.class);
         }
     }
 }
