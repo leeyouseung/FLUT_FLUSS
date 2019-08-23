@@ -90,7 +90,7 @@ public class FingerPrintActivity extends AppCompatActivity {
 
                 if(cipherInit()) {
 
-                    FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(this);
+                    FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
 
                     FingerprintHandler handler = new FingerprintHandler(this);
 
