@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         onCreateViewSetting();
 
+        onButtonSetting();
+
         event();
     }
 
@@ -43,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentTransaction.replace(R.id.main_activity_fragment, new RemittanceFragment());
         fragmentTransaction.commit();
+    }
+
+    private void onButtonSetting() {
+
+        binding.remittanceIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+        binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));
     }
 
     private void event() {
@@ -69,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
 
             fragmentTransaction.replace(R.id.main_activity_fragment, new RemittanceFragment());
             fragmentTransaction.commit();
+
+            binding.remittanceIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+            binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));
         });
     }
 
@@ -82,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
 
             fragmentTransaction.replace(R.id.main_activity_fragment, new ShowMoneyListFragment());
             fragmentTransaction.commit();
+
+            binding.showMoneyListIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+            binding.showMoneyListTitle.setTextColor(getResources().getColor(R.color.blue));
         });
     }
 
@@ -95,6 +109,9 @@ public class MainActivity extends AppCompatActivity {
 
             fragmentTransaction.replace(R.id.main_activity_fragment, new TimeLineFragment());
             fragmentTransaction.commit();
+
+            binding.timeLineIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+            binding.timeLineTitle.setTextColor(getResources().getColor(R.color.blue));
         });
     }
 
@@ -108,6 +125,9 @@ public class MainActivity extends AppCompatActivity {
 
             fragmentTransaction.replace(R.id.main_activity_fragment, new AddCardFragment());
             fragmentTransaction.commit();
+
+            binding.addCardIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+            binding.addCardTitle.setTextColor(getResources().getColor(R.color.blue));
         });
     }
 
@@ -121,6 +141,9 @@ public class MainActivity extends AppCompatActivity {
 
             fragmentTransaction.replace(R.id.main_activity_fragment, new SettingFragment());
             fragmentTransaction.commit();
+
+            binding.settingIcon.setBackgroundColor(getResources().getColor(R.color.blue));
+            binding.settingTitle.setTextColor(getResources().getColor(R.color.blue));
         });
     }
 }
