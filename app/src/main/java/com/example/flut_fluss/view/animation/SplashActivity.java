@@ -21,6 +21,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = DataBindingUtil.setContentView(this, R.layout.splash_activity);
 
         initData();
 
@@ -75,6 +76,5 @@ public class SplashActivity extends AppCompatActivity {
 
     private void initData() {
 
-        binding = DataBindingUtil.setContentView(this, R.layout.splash_activity);
     }
 }
