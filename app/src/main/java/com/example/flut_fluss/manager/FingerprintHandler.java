@@ -75,7 +75,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 //        final LinearLayout linearLayout = ((Activity)context).findViewById(R.id.ll_secure);
 
         //안내 메세지 출력
-        iv_fingerpr.setText(s);
+//        iv_fingerpr.setText(s);
 
         if(!b) {
 
@@ -86,7 +86,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
             iv_fingerprint.setImageResource(R.drawable.finger_print_done_icon);
-            linearLayout.setVisibility(LinearLayout.VISIBLE);
+//            linearLayout.setVisibility(LinearLayout.VISIBLE);
 
             //sound effect
             Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
