@@ -51,7 +51,7 @@ public class FingerPrintActivity extends AppCompatActivity {
     private Cipher cipher;
     private FingerprintManager fingerprintManager;
     private KeyguardManager keyguardManager;
-    private KeyGenerator keyGenerator;
+    private KeyGenerator keyGenerator = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +59,6 @@ public class FingerPrintActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.finger_print_activity);
 
         event();
-
-        keyguardManager = (KeyguardManager)getSystemService(KEYGUARD_SERVICE);
-
-        fingerprintManager = (FingerprintManager)getSystemService(FINGERPRINT_SERVICE);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
@@ -94,9 +90,11 @@ public class FingerPrintActivity extends AppCompatActivity {
 
                 if(cipherInit()) {
 
-                    FingerprintManager.CryptoObject cryptoObject = new FingerprintManager().CryptoObject(this);
+                    FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(this);
 
-                    FingerprintHandler handler = FingerprintHandler
+                    FingerprintHandler handler = new FingerprintHandler(this);
+
+                    handler.startAuthentication(fingerprintManager, cryptoObject);
                 }
             }
         }
@@ -141,7 +139,7 @@ public class FingerPrintActivity extends AppCompatActivity {
 
             keyStore = KeyStore.getInstance("AndroidKeyStore");
 
-        } catch (Exception e) {
+        } catch (KeyStoreException e) {
 
             e.printStackTrace();
         }
