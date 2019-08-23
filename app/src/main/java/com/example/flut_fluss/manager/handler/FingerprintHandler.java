@@ -1,4 +1,4 @@
-package com.example.flut_fluss.manager;
+package com.example.flut_fluss.manager.handler;
 
 import android.Manifest;
 import android.content.Context;
