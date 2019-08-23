@@ -36,5 +36,35 @@ public class MainActivity extends AppCompatActivity {
 
     private void event() {
 
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
+        clickRemittanceButton();
+        clickShowMoneyListButton();
+        clickTimeLineButton();
+        clickAddCardButton();
+        clickSettingButton();
+    }
+
+    private void clickRemittanceButton() {
+
+    }
+
+    private void clickShowMoneyListButton() {
+
+    }
+
+    private void clickTimeLineButton() {
+
+    }
+
+    private void clickAddCardButton() {
+
+    }
+
+    private void clickSettingButton() {
+        
     }
 }
