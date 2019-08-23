@@ -71,25 +71,25 @@
                 tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
 
             <ImageView
-                android:id="@+id/clear"
+                android:id="@+id/pw_clear_button"
                 android:layout_width="15dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/ic_clear_btn"
                 app:layout_constraintBottom_toBottomOf="@+id/password_text"
-                app:layout_constraintEnd_toStartOf="@+id/blind"
+                app:layout_constraintEnd_toStartOf="@+id/blind_button"
                 tools:ignore="ContentDescription" />
 
             <ImageView
-                android:id="@+id/blind"
+                android:id="@+id/blind_button"
                 android:layout_width="25dp"
                 android:layout_height="15dp"
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/ic_blind"
-                app:layout_constraintBottom_toBottomOf="@+id/clear"
+                app:layout_constraintBottom_toBottomOf="@+id/pw_clear_button"
                 app:layout_constraintEnd_toEndOf="@+id/password_text"
-                app:layout_constraintTop_toTopOf="@+id/clear"
+                app:layout_constraintTop_toTopOf="@+id/pw_clear_button"
                 tools:ignore="ContentDescription" />
 
             <CheckBox
@@ -121,7 +121,7 @@
                 tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/findIdButton"
+                android:id="@+id/find_id_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="110dp"
@@ -134,7 +134,7 @@
                 tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/findPwButton"
+                android:id="@+id/find_pw_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -155,7 +155,7 @@
                 android:text="/"
                 android:textColor="@color/black"
                 android:textSize="7pt"
-                app:layout_constraintStart_toEndOf="@+id/findIdButton"
+                app:layout_constraintStart_toEndOf="@+id/find_id_button"
                 app:layout_constraintTop_toBottomOf="@+id/login_button"
                 tools:ignore="HardcodedText" />
 
