@@ -2,6 +2,7 @@ package com.example.flut_fluss.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.databinding.DataBindingUtil;
 
 import android.Manifest;
 import android.app.KeyguardManager;
@@ -17,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.databinding.FingerPrintActivityBinding;
 import com.example.flut_fluss.manager.FingerprintHandler;
 
 import java.io.IOException;
@@ -36,10 +38,9 @@ import javax.crypto.SecretKey;
 
 public class FingerPrintActivity extends AppCompatActivity {
 
+    FingerPrintActivityBinding binding;
+
     final String TAG = "MainActivity";
-    private ImageView iv_fingerprint;
-    private TextView tv_message;
-    private LinearLayout linearLayout;
 
     private static final String KEY_NAME = "example_key";
     private FingerprintManager fingerprintManager;
@@ -52,13 +53,11 @@ public class FingerPrintActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.finger_print_activity);
+        binding = DataBindingUtil.setContentView(this, R.layout.finger_print_activity);
 
-        iv_fingerprint = findViewById(R.id.iv_fingerprint);
-        tv_message = findViewById(R.id.tv_message);
-        tv_message.setText("앱이 시작되었습니다.");
-        linearLayout = findViewById(R.id.ll_secure);
-        linearLayout.setVisibility(LinearLayout.GONE);
+        binding.tvMessage.setText("앱이 시작되었습니다.");
+//        linearLayout = findViewById(R.id.ll_secure);
+//        linearLayout.setVisibility(LinearLayout.GONE);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
@@ -67,24 +66,24 @@ public class FingerPrintActivity extends AppCompatActivity {
 
             if(!fingerprintManager.isHardwareDetected()) {   //Manifest 에 Fingerprint 퍼미션을 추가해 워야 사용가능
 
-                tv_message.setText("지문을 사용할 수 없는 디바이스 입니다.");
+                binding.tvMessage.setText("지문을 사용할 수 없는 디바이스 입니다.");
             }
             else if(ContextCompat.checkSelfPermission(this, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
 
-                tv_message.setText("지문사용을 허용해 주세요.");
+                binding.tvMessage.setText("지문사용을 허용해 주세요.");
                 /*잠금화면 상태를 체크한다.*/
             }
             else if(!keyguardManager.isKeyguardSecure()) {
 
-                tv_message.setText("잠금화면을 설정해 주세요.");
+                binding.tvMessage.setText("잠금화면을 설정해 주세요.");
             }
             else if(!fingerprintManager.hasEnrolledFingerprints()) {
 
-                tv_message.setText("등록된 지문이 없습니다.");
+                binding.tvMessage.setText("등록된 지문이 없습니다.");
             }
             else {  //모든 관문을 성공적으로 통과(지문인식을 지원하고 지문 사용이 허용되어 있고 잠금화면이 설정되었고 지문이 등록되어 있을때)
 
-                tv_message.setText("손가락을 홈버튼에 대 주세요.");
+                binding.tvMessage.setText("손가락을 홈버튼에 대 주세요.");
 
                 generateKey();
 

@@ -72,16 +72,17 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
         final TextView tv_message = ((Activity)context).findViewById(R.id.tv_message);
         final ImageView iv_fingerprint = ((Activity)context).findViewById(R.id.iv_fingerprint);
-        final LinearLayout linearLayout = ((Activity)context).findViewById(R.id.ll_secure);
+//        final LinearLayout linearLayout = ((Activity)context).findViewById(R.id.ll_secure);
 
         //안내 메세지 출력
-        tv_message.setText(s);
+        iv_fingerpr.setText(s);
 
         if(!b) {
 
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorAccent));
 
-        } else {    //지문인증 성공
+        }
+        else {    //지문인증 성공
 
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
             iv_fingerprint.setImageResource(R.drawable.finger_print_done_icon);
