@@ -56,6 +56,8 @@ public class FingerPrintActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.finger_print_activity);
 
+        event();
+
         binding.tvMessage.setText("앱이 시작되었습니다.");
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -63,7 +65,7 @@ public class FingerPrintActivity extends AppCompatActivity {
             fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
             keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
 
-            if(!fingerprintManager.isHardwareDetected()) {   //Manifest 에 Fingerprint 퍼미션을 추가해 워야 사용가능
+            if(!fingerprintManager.isHardwareDetected()) {   // Manifest 에 Fingerprint 퍼미션을 추가해 워야 사용가능
 
                 binding.tvMessage.setText("지문을 사용할 수 없는 디바이스 입니다.");
             }
@@ -167,5 +169,24 @@ public class FingerPrintActivity extends AppCompatActivity {
 
             throw new RuntimeException(e);
         }
+    }
+
+    private void event() {
+
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
+        clickCancelButton();
+    }
+
+    private void clickCancelButton() {
+
+        binding.cancelButton.setOnClickListener(v -> {
+
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
+        });
     }
 }
