@@ -9,7 +9,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="setting"
+        android:text="환경설정 페이지"
+        android:gravity="center"
         tools:ignore="HardcodedText" />
 
 </FrameLayout>
