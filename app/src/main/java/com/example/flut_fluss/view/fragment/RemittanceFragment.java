@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
@@ -99,70 +100,107 @@ public class RemittanceFragment extends Fragment {
 
     private void clickMoneyNumber0() {
 
-        if(binding.money.toString().equals("0")) {
+        binding.moneyNumber0.setOnClickListener(v -> {
 
-            return;
-        }
-        else {
+            if(binding.money.toString().equals("0")) {
 
-            binding.money.setText("0");
-        }
+                return;
+            }
+            else {
+
+                binding.money.setText("0");
+            }
+        });
     }
 
     private void clickMoneyNumber1() {
 
-        binding.money.setText("1");
+        binding.moneyNumber1.setOnClickListener(v -> {
+
+            binding.money.setText("1");
+        });
     }
 
 
     private void clickMoneyNumber2() {
 
-        binding.money.setText("2");
+        binding.moneyNumber2.setOnClickListener(v -> {
+
+            binding.money.setText("2");
+        });
     }
 
     private void clickMoneyNumber3() {
 
-        binding.money.setText("3");
+        binding.moneyNumber3.setOnClickListener(v -> {
+
+            binding.money.setText("3");
+        });
     }
 
     private void clickMoneyNumber4() {
 
-        binding.money.setText("4");
+        binding.moneyNumber4.setOnClickListener(v -> {
+
+            binding.money.setText("4");
+        });
     }
 
     private void clickMoneyNumber5() {
 
-        binding.money.setText("5");
+        binding.moneyNumber5.setOnClickListener(v -> {
+
+            binding.money.setText("5");
+        });
     }
 
     private void clickMoneyNumber6() {
 
-        binding.money.setText("6");
+        binding.moneyNumber6.setOnClickListener(v -> {
+
+            binding.money.setText("6");
+        });
     }
 
     private void clickMoneyNumber7() {
 
-        binding.money.setText("7");
+        binding.moneyNumber7.setOnClickListener(v -> {
+
+            binding.money.setText("7");
+        });
     }
 
     private void clickMoneyNumber8() {
 
-        binding.money.setText("8");
+        binding.moneyNumber8.setOnClickListener(v -> {
+
+            binding.money.setText("8");
+        });
     }
 
     private void clickMoneyNumber9() {
 
-        binding.money.setText("9");
+         binding.moneyNumber9.setOnClickListener(v -> {
+
+             binding.money.setText("9");
+         });
     }
 
     private void clickCancelButton() {
 
-        binding.money.setText("0");
+        binding.cancelButton.setOnClickListener(v -> {
+
+            binding.money.setText("0");
+        });
     }
 
     private void clickDeleteButton() {
 
         // TODO
+        binding.deleteButton.setOnClickListener(v -> {
+
+            Toast.makeText(getContext(), "delete_button_onClicked", Toast.LENGTH_LONG).show();
+        });
     }
 
     // TODO: Rename method, update argument and hook method into UI event
