@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         // 돈 입력 했을 때, 하단 메뉴바 사라지게 만들고 더치페이 보내기 레이아웃 만들기           70%
         // 돈 입력 기능 구현.                                                               100%
         // qr 코드 구현.                                                                     0%
+        //
     }
 
     private void onCreateViewSetting() {
