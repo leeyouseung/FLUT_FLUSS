@@ -1,5 +1,6 @@
 package com.example.flut_fluss.view.fragment;
 
+import android.annotation.SuppressLint;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -90,52 +91,83 @@ public class RemittanceFragment extends Fragment {
         clickDeleteButton();
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickMoneyNumber0() {
 
+        if(binding.money.toString().equals("0")) {
+
+            return;
+        }
+        else {
+
+            binding.money.setText(binding.money + "0");
+        }
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickMoneyNumber1() {
 
+        binding.money.setText(binding.money + "1");
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickMoneyNumber2() {
 
+        binding.money.setText(binding.money + "2");
+
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickMoneyNumber3() {
 
+        binding.money.setText(binding.money + "3");
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickMoneyNumber4() {
 
+        binding.money.setText(binding.money + "4");
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickMoneyNumber5() {
 
+        binding.money.setText(binding.money + "5");
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickMoneyNumber6() {
 
+        binding.money.setText(binding.money + "6");
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickMoneyNumber7() {
 
+        binding.money.setText(binding.money + "7");
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickMoneyNumber8() {
 
+        binding.money.setText(binding.money + "8");
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickMoneyNumber9() {
 
+        binding.money.setText(binding.money + "9");
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickCancelButton() {
 
+        binding.money.setText(binding.money + "0");
     }
 
     private void clickDeleteButton() {
 
+        // TODO
     }
 
     // TODO: Rename method, update argument and hook method into UI event
