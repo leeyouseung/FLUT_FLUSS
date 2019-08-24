@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.MainActivityBinding;
@@ -88,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                 if(!charSequence.equals("0") || charSequence.length() != 0) {
+
+                    Toast.makeText(getApplicationContext(), "changed", Toast.LENGTH_SHORT).show();
 
                     menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                     moneySendLinearLayout.setVisibility(View.VISIBLE);
