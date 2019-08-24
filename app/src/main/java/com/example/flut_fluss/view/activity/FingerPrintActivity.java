@@ -186,8 +186,7 @@ public class FingerPrintActivity extends AppCompatActivity {
 
         binding.cancelButton.setOnClickListener(v -> {
 
-            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         });
     }
 }
