@@ -74,9 +74,9 @@ public class RemittanceFragment extends Fragment {
 
         initData();
 
-        event();
-
         setting();
+
+        event();
     }
 
     private void initData() {
@@ -85,7 +85,7 @@ public class RemittanceFragment extends Fragment {
 
     private void setting() {
 
-        binding.money.setText("0");
+        binding.money.setText(String.valueOf(resultNumber));
     }
 
     private void event() {
@@ -118,7 +118,7 @@ public class RemittanceFragment extends Fragment {
 
             if(isFirstInput) {
 
-                return;
+
             }
             else {
 
