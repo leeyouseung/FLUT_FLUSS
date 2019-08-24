@@ -5,7 +5,11 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     MainActivityBinding binding;
 
-    private TextView money = (RemittanceFragment)findViewById(R.id.money);
+    private TextView money;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +46,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
 
-        money = findViewById(R.id.money);
+        LayoutInflater layoutInflater = (LayoutInflater)getApplication().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = layoutInflater.inflate(R.layout.remittance_fragment, null);
+
+        money = view.findViewById(R.id.money);
 
         // 나르샤 끝나고 할 일 :
         // 돈 입력 했을 때, 하단 메뉴바 사라지게 만들고 더치페이 보내기 만들기
@@ -71,16 +78,32 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout menuNavigationLinearLayout = findViewById(R.id.menu_navigation_linearLayout);
         LinearLayout moneySendLinearLayout = findViewById(R.id.money_send_linearLayout);
 
-        if(!(money.getText().equals("0") && money.getText().length() > 0)) {
+        money.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-            menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-            moneySendLinearLayout.setVisibility(View.VISIBLE);
-        }
-        else {
+            }
 
-            menuNavigationLinearLayout.setVisibility(View.VISIBLE);
-            moneySendLinearLayout.setVisibility(View.INVISIBLE);
-        }
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                if(charSequence.equals("0") || charSequence.length() == 0) {
+
+                    menuNavigationLinearLayout.setVisibility(View.VISIBLE);
+                    moneySendLinearLayout.setVisibility(View.INVISIBLE);
+                }
+                else {
+
+                    menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+                    moneySendLinearLayout.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
     }
 
     private void event() {
