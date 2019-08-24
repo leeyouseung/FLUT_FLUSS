@@ -108,6 +108,7 @@ public class RemittanceFragment extends Fragment {
         clickMoneyNumber9();
         clickCancelButton();
         clickDeleteButton();
+        clickQrCameraButton();
     }
 
     private void clickMoneyNumber0() {
@@ -317,6 +318,14 @@ public class RemittanceFragment extends Fragment {
         binding.deleteButton.setOnClickListener(v -> {
 
             Toast.makeText(getContext(), "delete_button_onClicked", Toast.LENGTH_LONG).show();
+        });
+    }
+
+    private void clickQrCameraButton() {
+
+        binding.qrCameraButton.setOnClickListener(v -> {
+
+            Toast.makeText(getContext(), "qr_camera_button_onClicked", Toast.LENGTH_LONG).show();
         });
     }
 
