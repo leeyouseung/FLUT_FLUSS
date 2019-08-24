@@ -90,14 +90,12 @@ public class LoginActivity extends AppCompatActivity {
 //                    new LoginRequest(binding.idText.getText().toString(),
 //                            binding.passwordText.getText().toString()));
 
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         });
 
         binding.registerButton.setOnClickListener(v -> {
 
-            Intent intent = new Intent(this, RegisterActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
         });
     }
 }
