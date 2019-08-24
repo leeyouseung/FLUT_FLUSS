@@ -1,18 +1,22 @@
 package com.example.flut_fluss.manager.handler;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.CancellationSignal;
-import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 
+import com.example.flut_fluss.R;
+import com.example.flut_fluss.databinding.FingerPrintActivityBinding;
 import com.example.flut_fluss.view.activity.MainActivity;
 
 public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
+
+    private FingerPrintActivityBinding binding;
 
     private Context context;
 
@@ -33,11 +37,13 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         fingerprintManager.authenticate(cryptoObject, cancellationSignal, 0, this, null);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onAuthenticationFailed() {
         super.onAuthenticationFailed();
 
-        Toast.makeText(context, "지문 인식에 실패 했습니다.", Toast.LENGTH_SHORT).show();
+        binding.tvMessage.setTextColor(R.color.red);
+        binding.tvMessage.setText("지문 인식에 실패 했습니다.");
     }
 
     @Override
