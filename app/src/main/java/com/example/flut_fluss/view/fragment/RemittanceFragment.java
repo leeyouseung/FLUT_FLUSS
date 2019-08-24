@@ -1,6 +1,5 @@
 package com.example.flut_fluss.view.fragment;
 
-import android.annotation.SuppressLint;
 import android.net.Uri;
 import android.os.Bundle;
 
