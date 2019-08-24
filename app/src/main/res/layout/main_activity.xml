@@ -30,7 +30,7 @@
     <LinearLayout
         android:id="@+id/menu_navigation_linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="55dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,10 +48,10 @@
 
             <ImageView
                 android:id="@+id/remittance_icon"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 app:srcCompat="@drawable/remittance_icon"
                 tools:ignore="ContentDescription" />
 
@@ -79,10 +79,10 @@
 
             <ImageView
                 android:id="@+id/show_money_list_icon"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 android:background="@drawable/show_money_list_icon"
                 tools:ignore="ContentDescription" />
 
@@ -109,10 +109,10 @@
 
             <ImageView
                 android:id="@+id/time_line_icon"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 app:srcCompat="@drawable/time_line_icon"
                 tools:ignore="ContentDescription" />
 
@@ -139,10 +139,10 @@
 
             <ImageView
                 android:id="@+id/add_card_icon"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 app:srcCompat="@drawable/add_card_icon"
                 tools:ignore="ContentDescription" />
 
@@ -169,10 +169,10 @@
 
             <ImageView
                 android:id="@+id/setting_icon"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 app:srcCompat="@drawable/setting_icon"
                 tools:ignore="ContentDescription" />
 
