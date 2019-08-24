@@ -102,8 +102,10 @@
 
             <ImageButton
                 android:id="@+id/imageButton3"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/show_in_money_list_icon"
                 android:scaleType="center"
                 app:layout_constraintEnd_toEndOf="parent"
