@@ -107,13 +107,15 @@ public class RemittanceFragment extends Fragment {
 
             resultNumber = 0;
 
-            if(binding.money.toString().equals("0")) {
+            if(isFirstInput) {
 
-                return;
+                binding.money.setText(String.valueOf(resultNumber));
+
+                isFirstInput = false;
             }
             else {
 
-                binding.money.setText(String.valueOf(resultNumber));
+                binding.money.append(String.valueOf(resultNumber));
             }
         });
     }
