@@ -1,22 +1,21 @@
 package com.example.flut_fluss.manager.handler;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.CancellationSignal;
+import android.widget.TextView;
 
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.example.flut_fluss.R;
-import com.example.flut_fluss.databinding.FingerPrintActivityBinding;
 import com.example.flut_fluss.view.activity.MainActivity;
 
 public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
-
-    private FingerPrintActivityBinding binding;
 
     private Context context;
 
@@ -41,8 +40,10 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
     public void onAuthenticationFailed() {
         super.onAuthenticationFailed();
 
-        binding.tvMessage.setTextColor(context.getColor(R.color.red));
-        binding.tvMessage.setText("지문 인식에 실패 했습니다.");
+        final TextView tv_message = ((Activity)context).findViewById(R.id.tv_message);
+
+        tv_message.setTextColor(ContextCompat.getColor(context, R.color.red));
+        tv_message.setText("지문 인식에 실패 했습니다.");
     }
 
     @Override
