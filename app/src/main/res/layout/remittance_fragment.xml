@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="60dp"
             android:text="송금"
             android:textColor="@color/black"
             android:textSize="11pt"
@@ -30,8 +30,8 @@
 
         <ImageButton
             android:id="@+id/camera_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/camera_icon"
@@ -42,8 +42,8 @@
 
         <ImageButton
             android:id="@+id/notification_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/notifications_icon"
@@ -56,15 +56,27 @@
             android:id="@+id/money"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="150dp"
-            android:layout_marginEnd="8dp"
-            android:text="0 원"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="12dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="22pt"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/money_title"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/money_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="150dp"
+            android:text="원"
             android:textColor="@color/black"
             android:textSize="22pt"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="HardcodedText" />
 
@@ -255,6 +267,7 @@
             app:layout_constraintStart_toEndOf="@+id/money_number_0"
             app:layout_constraintTop_toBottomOf="@+id/money_number_9"
             tools:ignore="ContentDescription" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
