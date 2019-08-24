@@ -51,7 +51,6 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="2dp"
                 app:srcCompat="@drawable/remittance_icon"
                 tools:ignore="ContentDescription" />
 
@@ -82,7 +81,6 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="2dp"
                 android:background="@drawable/show_money_list_icon"
                 tools:ignore="ContentDescription" />
 
@@ -112,7 +110,6 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="2dp"
                 app:srcCompat="@drawable/time_line_icon"
                 tools:ignore="ContentDescription" />
 
@@ -142,7 +139,6 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="2dp"
                 app:srcCompat="@drawable/add_card_icon"
                 tools:ignore="ContentDescription" />
 
@@ -172,7 +168,6 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="2dp"
                 app:srcCompat="@drawable/setting_icon"
                 tools:ignore="ContentDescription" />
 
