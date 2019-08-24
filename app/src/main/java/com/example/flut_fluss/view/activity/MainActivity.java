@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                if(!charSequence.equals("0")) {
+                if(!money.getText().toString().equals("0")) {
 
                     menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                     moneySendLinearLayout.setVisibility(View.VISIBLE);
