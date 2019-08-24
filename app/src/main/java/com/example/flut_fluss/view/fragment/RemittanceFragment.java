@@ -109,9 +109,7 @@ public class RemittanceFragment extends Fragment {
 
             if(isFirstInput) {
 
-                binding.money.setText(String.valueOf(resultNumber));
-
-                isFirstInput = false;
+                return;
             }
             else {
 
