@@ -91,8 +91,6 @@ public class MainActivity extends AppCompatActivity {
 
                 if(!charSequence.equals("0")) {
 
-                    Toast.makeText(getApplicationContext(), "changed", Toast.LENGTH_SHORT).show();
-
                     menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                     moneySendLinearLayout.setVisibility(View.VISIBLE);
                 }
