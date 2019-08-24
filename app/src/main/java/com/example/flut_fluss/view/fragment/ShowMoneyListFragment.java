@@ -12,14 +12,6 @@ import android.view.ViewGroup;
 
 import com.example.flut_fluss.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link ShowMoneyListFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link ShowMoneyListFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class ShowMoneyListFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -37,14 +29,6 @@ public class ShowMoneyListFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ShowMoneyListFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static ShowMoneyListFragment newInstance(String param1, String param2) {
         ShowMoneyListFragment fragment = new ShowMoneyListFragment();
@@ -75,6 +59,22 @@ public class ShowMoneyListFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        initData();
+
+        event();
+    }
+
+    private void initData() {
+
+    }
+
+    private void event() {
+
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -89,17 +89,6 @@ public class ShowMoneyListFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
