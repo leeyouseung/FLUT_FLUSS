@@ -13,4 +13,5 @@
     <color name="finger_login_check_background">#FF090D39</color>
     <color name="blue">#0002FF</color>
     <color name="red">#FF0000</color>
+    <color name="transparent">#00ff0000</color>
 </resources>
