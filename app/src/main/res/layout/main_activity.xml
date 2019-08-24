@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="70dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/menu_navigation_linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +28,8 @@
     </FrameLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:visibility="invisible"
+        android:id="@+id/menu_navigation_linearLayout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:orientation="horizontal"
@@ -186,6 +187,61 @@
                 android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/money_send_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DisableBaselineAlignment">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="InefficientWeight,UselessLeaf,UselessParent" >
+
+        <Button
+            android:id="@+id/dutch_pay_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:text="더치페이"
+            android:textSize="7pt"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/dutch_pay_button_radius"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="InefficientWeight,UselessLeaf,UselessParent" >
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:text="보내기"
+                android:textSize="7pt"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/money_send_button_radius"
+                tools:ignore="ButtonStyle,HardcodedText" />
 
         </LinearLayout>
 

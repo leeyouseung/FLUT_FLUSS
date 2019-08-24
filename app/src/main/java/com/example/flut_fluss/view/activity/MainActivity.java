@@ -6,9 +6,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.MainActivityBinding;
+import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
 import com.example.flut_fluss.view.fragment.AddCardFragment;
 import com.example.flut_fluss.view.fragment.RemittanceFragment;
 import com.example.flut_fluss.view.fragment.SettingFragment;
@@ -18,6 +21,8 @@ import com.example.flut_fluss.view.fragment.TimeLineFragment;
 public class MainActivity extends AppCompatActivity {
 
     MainActivityBinding binding;
+
+    RemittanceFragmentBinding remittanceFragmentBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         onCreateViewSetting();
 
         onButtonSetting();
+
+        onNavigationBarSetting();
 
         event();
     }
@@ -55,6 +62,23 @@ public class MainActivity extends AppCompatActivity {
 
         binding.remittanceIcon.setImageResource(R.drawable.remittance_icon_click);
         binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));
+    }
+
+    private void onNavigationBarSetting() {
+
+        LinearLayout menuNavigationLinearLayout = findViewById(R.id.menu_navigation_linearLayout);
+        LinearLayout moneySendLinearLayout = findViewById(R.id.money_send_linearLayout);
+
+        if(!(remittanceFragmentBinding.money.getText().equals("0") && remittanceFragmentBinding.money.getText().length() > 0)) {
+
+            menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+            moneySendLinearLayout.setVisibility(View.VISIBLE);
+        }
+        else {
+
+            menuNavigationLinearLayout.setVisibility(View.VISIBLE);
+            moneySendLinearLayout.setVisibility(View.INVISIBLE);
+        }
     }
 
     private void event() {
