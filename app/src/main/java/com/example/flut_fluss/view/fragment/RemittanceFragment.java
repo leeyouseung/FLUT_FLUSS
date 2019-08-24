@@ -19,6 +19,9 @@ public class RemittanceFragment extends Fragment {
 
     RemittanceFragmentBinding binding;
 
+    boolean isFirstInput = false;
+    int resultNumber = 0;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -102,13 +105,15 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber0.setOnClickListener(v -> {
 
+            resultNumber = 0;
+
             if(binding.money.toString().equals("0")) {
 
                 return;
             }
             else {
 
-                binding.money.setText("0");
+                binding.money.setText(String.valueOf(resultNumber));
             }
         });
     }
@@ -117,7 +122,18 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber1.setOnClickListener(v -> {
 
-            binding.money.setText("1");
+            resultNumber = 1;
+
+            if(isFirstInput) {
+
+                binding.money.setText(String.valueOf(resultNumber));
+
+                isFirstInput = false;
+            }
+            else {
+
+                binding.money.append(String.valueOf(resultNumber));
+            }
         });
     }
 
@@ -126,7 +142,18 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber2.setOnClickListener(v -> {
 
-            binding.money.setText("2");
+            resultNumber = 2;
+
+            if(isFirstInput) {
+
+                binding.money.setText(String.valueOf(resultNumber));
+
+                isFirstInput = false;
+            }
+            else {
+
+                binding.money.append(String.valueOf(resultNumber));
+            }
         });
     }
 
@@ -134,7 +161,18 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber3.setOnClickListener(v -> {
 
-            binding.money.setText("3");
+            resultNumber = 3;
+
+            if(isFirstInput) {
+
+                binding.money.setText(String.valueOf(resultNumber));
+
+                isFirstInput = false;
+            }
+            else {
+
+                binding.money.append(String.valueOf(resultNumber));
+            }
         });
     }
 
@@ -142,7 +180,18 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber4.setOnClickListener(v -> {
 
-            binding.money.setText("4");
+            resultNumber = 4;
+
+            if(isFirstInput) {
+
+                binding.money.setText(String.valueOf(resultNumber));
+
+                isFirstInput = false;
+            }
+            else {
+
+                binding.money.append(String.valueOf(resultNumber));
+            }
         });
     }
 
@@ -150,7 +199,18 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber5.setOnClickListener(v -> {
 
-            binding.money.setText("5");
+            resultNumber = 5;
+
+            if(isFirstInput) {
+
+                binding.money.setText(String.valueOf(resultNumber));
+
+                isFirstInput = false;
+            }
+            else {
+
+                binding.money.append(String.valueOf(resultNumber));
+            }
         });
     }
 
@@ -158,7 +218,18 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber6.setOnClickListener(v -> {
 
-            binding.money.setText("6");
+            resultNumber = 6;
+
+            if(isFirstInput) {
+
+                binding.money.setText(String.valueOf(resultNumber));
+
+                isFirstInput = false;
+            }
+            else {
+
+                binding.money.append(String.valueOf(resultNumber));
+            }
         });
     }
 
@@ -166,7 +237,18 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber7.setOnClickListener(v -> {
 
-            binding.money.setText("7");
+            resultNumber = 7;
+
+            if(isFirstInput) {
+
+                binding.money.setText(String.valueOf(resultNumber));
+
+                isFirstInput = false;
+            }
+            else {
+
+                binding.money.append(String.valueOf(resultNumber));
+            }
         });
     }
 
@@ -174,7 +256,18 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber8.setOnClickListener(v -> {
 
-            binding.money.setText("8");
+            resultNumber = 8;
+
+            if(isFirstInput) {
+
+                binding.money.setText(String.valueOf(resultNumber));
+
+                isFirstInput = false;
+            }
+            else {
+
+                binding.money.append(String.valueOf(resultNumber));
+            }
         });
     }
 
@@ -182,7 +275,18 @@ public class RemittanceFragment extends Fragment {
 
          binding.moneyNumber9.setOnClickListener(v -> {
 
-             binding.money.setText("9");
+             resultNumber = 9;
+
+             if(isFirstInput) {
+
+                 binding.money.setText(String.valueOf(resultNumber));
+
+                 isFirstInput = false;
+             }
+             else {
+
+                 binding.money.append(String.valueOf(resultNumber));
+             }
          });
     }
 
@@ -190,7 +294,11 @@ public class RemittanceFragment extends Fragment {
 
         binding.cancelButton.setOnClickListener(v -> {
 
-            binding.money.setText("0");
+            resultNumber = 0;
+
+            isFirstInput = true;
+
+            binding.money.setText(String.valueOf(resultNumber));
         });
     }
 
