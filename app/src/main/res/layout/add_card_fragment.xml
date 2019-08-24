@@ -9,7 +9,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="AddCard"
+        android:text="개설 페이지"
+        android:gravity="center"
         tools:ignore="HardcodedText" />
 
 </FrameLayout>
