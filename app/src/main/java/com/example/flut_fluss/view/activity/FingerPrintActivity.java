@@ -43,9 +43,6 @@ public class FingerPrintActivity extends AppCompatActivity {
 
     FingerPrintActivityBinding binding;
 
-//    private static final String KEY_NAME = "example_key";
-//    private FingerprintManager.CryptoObject cryptoObject;
-
     private KeyStore keyStore;
     private static final String KEY_NAME = "example_key";
     private Cipher cipher;
