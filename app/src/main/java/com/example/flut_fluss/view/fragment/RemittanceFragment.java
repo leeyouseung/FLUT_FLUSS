@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.flut_fluss.R;
@@ -18,6 +19,8 @@ import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
 public class RemittanceFragment extends Fragment {
 
     RemittanceFragmentBinding binding;
+
+    public TextView money;
 
     boolean isFirstInput = false;
     int resultNumber = 0;
@@ -69,9 +72,15 @@ public class RemittanceFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        initData();
+
         event();
 
         setting();
+    }
+
+    private void initData() {
+
     }
 
     private void setting() {

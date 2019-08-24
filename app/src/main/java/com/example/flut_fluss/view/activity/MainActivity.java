@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.MainActivityBinding;
-import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
 import com.example.flut_fluss.view.fragment.AddCardFragment;
 import com.example.flut_fluss.view.fragment.RemittanceFragment;
 import com.example.flut_fluss.view.fragment.SettingFragment;
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     MainActivityBinding binding;
 
-    private TextView money;
+    private TextView money = (RemittanceFragment)findViewById(R.id.money);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
