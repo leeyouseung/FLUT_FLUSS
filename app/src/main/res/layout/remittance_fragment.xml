@@ -30,7 +30,7 @@
             tools:ignore="HardcodedText" />
 
         <ImageButton
-            android:id="@+id/camera_button"
+            android:id="@+id/qr_camera_button"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginTop="16dp"
