@@ -66,6 +66,13 @@ public class RemittanceFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         event();
+
+        setting();
+    }
+
+    private void setting() {
+
+        binding.money.setText("0");
     }
 
     private void event() {
@@ -89,7 +96,7 @@ public class RemittanceFragment extends Fragment {
         clickCancelButton();
         clickDeleteButton();
     }
-    
+
     private void clickMoneyNumber0() {
 
         if(binding.money.toString().equals("0")) {
@@ -98,59 +105,59 @@ public class RemittanceFragment extends Fragment {
         }
         else {
 
-            binding.money.setText(binding.money + "0");
+            binding.money.setText("0");
         }
     }
 
     private void clickMoneyNumber1() {
 
-        binding.money.setText(binding.money + "1");
+        binding.money.setText("1");
     }
 
-    
+
     private void clickMoneyNumber2() {
 
-        binding.money.setText(binding.money + "2");
+        binding.money.setText("2");
     }
 
     private void clickMoneyNumber3() {
 
-        binding.money.setText(binding.money + "3");
+        binding.money.setText("3");
     }
-    
+
     private void clickMoneyNumber4() {
 
-        binding.money.setText(binding.money + "4");
+        binding.money.setText("4");
     }
 
     private void clickMoneyNumber5() {
 
-        binding.money.setText(binding.money + "5");
+        binding.money.setText("5");
     }
 
     private void clickMoneyNumber6() {
 
-        binding.money.setText(binding.money + "6");
+        binding.money.setText("6");
     }
-    
+
     private void clickMoneyNumber7() {
 
-        binding.money.setText(binding.money + "7");
+        binding.money.setText("7");
     }
 
     private void clickMoneyNumber8() {
 
-        binding.money.setText(binding.money + "8");
+        binding.money.setText("8");
     }
 
     private void clickMoneyNumber9() {
 
-        binding.money.setText(binding.money + "9");
+        binding.money.setText("9");
     }
 
     private void clickCancelButton() {
 
-        binding.money.setText(binding.money + "0");
+        binding.money.setText("0");
     }
 
     private void clickDeleteButton() {
