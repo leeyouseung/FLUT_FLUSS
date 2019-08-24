@@ -53,11 +53,16 @@ public class MainActivity extends AppCompatActivity {
 
         money = view.findViewById(R.id.money);
 
-        // 나르샤 끝나고 할 일 :
+        // TODO :
         // 돈 입력 했을 때, 하단 메뉴바 사라지게 만들고 더치페이 보내기 레이아웃 만들기           70%
         // 돈 입력 기능 구현.                                                               100%
         // qr 코드 구현.                                                                     0%
-        //
+        // 회원가입.
+        // 로그인 유지 체크박스 클릭시 색 테마에 맞추기.
+        // 환경설정.
+        // 타임라인.
+        // 개설은 보류.
+        // 조회 페이지에서 추가 했을 때 액션.
     }
 
     private void onCreateViewSetting() {
