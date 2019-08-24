@@ -37,12 +37,11 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         fingerprintManager.authenticate(cryptoObject, cancellationSignal, 0, this, null);
     }
 
-    @SuppressLint("ResourceAsColor")
     @Override
     public void onAuthenticationFailed() {
         super.onAuthenticationFailed();
 
-        binding.tvMessage.setTextColor(R.color.red);
+        binding.tvMessage.setTextColor(context.getColor(R.color.red));
         binding.tvMessage.setText("지문 인식에 실패 했습니다.");
     }
 
