@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 나르샤 끝나고 할 일 :
         // 돈 입력 했을 때, 하단 메뉴바 사라지게 만들고 더치페이 보내기 만들기   70%
-        // 돈 입력 기능 구현.                                               80%
+        // 돈 입력 기능 구현.                                               100%
         // qr 코드 구현.                                                    0%
     }
 
