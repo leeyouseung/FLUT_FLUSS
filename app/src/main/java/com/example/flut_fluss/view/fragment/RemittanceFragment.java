@@ -22,7 +22,7 @@ public class RemittanceFragment extends Fragment {
 
     public TextView money;
 
-    boolean isFirstInput = false;
+    boolean isFirstInput = true;
     int resultNumber = 0;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -116,9 +116,9 @@ public class RemittanceFragment extends Fragment {
 
             resultNumber = 0;
 
-            if(isFirstInput) {
+            if(isFirstInput && binding.money.getText().toString().equals("0")) {
 
-
+                // Do Nothing
             }
             else {
 
