@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.databinding.AddCardFragmentBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +23,9 @@ import com.example.flut_fluss.R;
  * create an instance of this fragment.
  */
 public class AddCardFragment extends Fragment {
+
+    AddCardFragmentBinding binding;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -67,12 +72,19 @@ public class AddCardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.add_card_fragment, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.add_card_fragment, container, false);
+
+        return binding.getRoot();
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        initData();
+    }
+
+    private void initData() {
 
     }
 
