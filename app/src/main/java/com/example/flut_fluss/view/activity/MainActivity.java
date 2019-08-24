@@ -88,6 +88,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
+
+
+
+
+
+
+                // 안돼 시발
+
+
+
+
+
+
+
                 if(!charSequence.equals("0") || charSequence.length() != 0) {
 
                     Toast.makeText(getApplicationContext(), "changed", Toast.LENGTH_SHORT).show();
@@ -106,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable editable) {
 
             }
+
+            ///////////////////////////////////////
         });
     }
 
