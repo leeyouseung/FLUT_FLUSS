@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         // 타임라인.
         // 개설은 보류.
         // 조회 페이지에서 추가 했을 때 액션.
-        // 조회P, 타임라인P, 전체+P 스크롤뷰 추가.
+        // 조회P, 타임라인 P, 전체+P 스크롤뷰 추가.
         // 조회 페이지 밑에 리스트 하나 더 추가.
     }
 
