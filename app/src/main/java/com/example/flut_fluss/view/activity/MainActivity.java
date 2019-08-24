@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.MainActivityBinding;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     MainActivityBinding binding;
 
-    RemittanceFragmentBinding remittanceFragmentBinding;
+    private TextView money;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+
+        money = findViewById(R.id.money);
 
         // 나르샤 끝나고 할 일 :
         // 돈 입력 했을 때, 하단 메뉴바 사라지게 만들고 더치페이 보내기 만들기
@@ -69,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout menuNavigationLinearLayout = findViewById(R.id.menu_navigation_linearLayout);
         LinearLayout moneySendLinearLayout = findViewById(R.id.money_send_linearLayout);
 
-        if(!(remittanceFragmentBinding.money.getText().equals("0") && remittanceFragmentBinding.money.getText().length() > 0)) {
+        if(!(money.getText().equals("0") && money.getText().length() > 0)) {
 
             menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
             moneySendLinearLayout.setVisibility(View.VISIBLE);
