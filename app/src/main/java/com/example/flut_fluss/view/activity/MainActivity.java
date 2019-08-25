@@ -47,9 +47,10 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
 
         LayoutInflater layoutInflater = (LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        
         assert layoutInflater != null;
-        View view = layoutInflater.inflate(R.layout.remittance_fragment, null);
 
+        View view = layoutInflater.inflate(R.layout.remittance_fragment, null);
         money = view.findViewById(R.id.money);
 
 //         TODO :
