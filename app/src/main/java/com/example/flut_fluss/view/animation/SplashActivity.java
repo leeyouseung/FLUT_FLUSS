@@ -14,7 +14,7 @@ import com.example.flut_fluss.view.activity.FingerPrintActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
-    SplashActivityBinding binding;
+    private SplashActivityBinding binding;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
