@@ -22,8 +22,9 @@ public class RemittanceFragment extends Fragment {
 
     public TextView money;
 
-    boolean isFirstInput = true;
-    int resultNumber = 0;
+    private String sMoney;
+    private boolean isFirstInput = true;
+    private int resultNumber = 0;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -314,11 +315,20 @@ public class RemittanceFragment extends Fragment {
 
     private void clickDeleteButton() {
 
-        // TODO
         binding.deleteButton.setOnClickListener(v -> {
 
-            Toast.makeText(getContext(), "delete_button_onClicked", Toast.LENGTH_LONG).show();
+            binding.money.setText(deleteMoney(binding.money.getText().toString()));
         });
+    }
+
+    private String deleteMoney(String sMoney) {
+
+        if (sMoney.length() > 0 && sMoney.charAt(sMoney.length() - 1) == 'x') {
+
+            sMoney = sMoney.substring(0, sMoney.length() - 1);
+        }
+
+        return sMoney;
     }
 
     private void clickQrCameraButton() {
