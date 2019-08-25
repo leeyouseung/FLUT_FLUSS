@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.flut_fluss.R;
@@ -18,6 +19,9 @@ import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
 public class RemittanceFragment extends Fragment {
 
     private RemittanceFragmentBinding binding;
+
+    private LinearLayout menuNavigationLinearLayout;
+    private LinearLayout moneySendLinearLayout;
 
     private boolean isFirstInput = true;
     private int resultNumber = 0;
@@ -78,6 +82,11 @@ public class RemittanceFragment extends Fragment {
 
     private void initData() {
 
+        menuNavigationLinearLayout = getActivity().findViewById(R.id.menu_navigation_linearLayout);
+        moneySendLinearLayout = getActivity().findViewById(R.id.money_send_linearLayout);
+
+        menuNavigationLinearLayout.setVisibility(View.VISIBLE);
+        moneySendLinearLayout.setVisibility(View.INVISIBLE);
     }
 
     private void setting() {
@@ -143,6 +152,9 @@ public class RemittanceFragment extends Fragment {
             else {
 
                 binding.money.append(String.valueOf(resultNumber));
+
+                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+                moneySendLinearLayout.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -163,6 +175,9 @@ public class RemittanceFragment extends Fragment {
             else {
 
                 binding.money.append(String.valueOf(resultNumber));
+
+                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+                moneySendLinearLayout.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -182,6 +197,9 @@ public class RemittanceFragment extends Fragment {
             else {
 
                 binding.money.append(String.valueOf(resultNumber));
+
+                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+                moneySendLinearLayout.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -201,6 +219,9 @@ public class RemittanceFragment extends Fragment {
             else {
 
                 binding.money.append(String.valueOf(resultNumber));
+
+                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+                moneySendLinearLayout.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -220,6 +241,9 @@ public class RemittanceFragment extends Fragment {
             else {
 
                 binding.money.append(String.valueOf(resultNumber));
+
+                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+                moneySendLinearLayout.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -239,6 +263,9 @@ public class RemittanceFragment extends Fragment {
             else {
 
                 binding.money.append(String.valueOf(resultNumber));
+
+                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+                moneySendLinearLayout.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -258,6 +285,9 @@ public class RemittanceFragment extends Fragment {
             else {
 
                 binding.money.append(String.valueOf(resultNumber));
+
+                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+                moneySendLinearLayout.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -277,6 +307,9 @@ public class RemittanceFragment extends Fragment {
             else {
 
                 binding.money.append(String.valueOf(resultNumber));
+
+                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+                moneySendLinearLayout.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -296,6 +329,9 @@ public class RemittanceFragment extends Fragment {
              else {
 
                  binding.money.append(String.valueOf(resultNumber));
+
+                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+                 moneySendLinearLayout.setVisibility(View.VISIBLE);
              }
          });
     }
@@ -309,6 +345,9 @@ public class RemittanceFragment extends Fragment {
             binding.money.setText(String.valueOf(resultNumber));
 
             isFirstInput = true;
+
+            menuNavigationLinearLayout.setVisibility(View.VISIBLE);
+            moneySendLinearLayout.setVisibility(View.INVISIBLE);
         });
     }
 
