@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         onCreateFragmentSetting();
 
-        onButtonSetting();
+        onCreateButtonSetting();
 
         onNavigationBarSetting();
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    private void onButtonSetting() {
+    private void onCreateButtonSetting() {
 
         binding.remittanceIcon.setImageResource(R.drawable.remittance_icon_click);
         binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));
