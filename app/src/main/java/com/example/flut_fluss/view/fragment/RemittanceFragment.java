@@ -92,6 +92,8 @@ public class RemittanceFragment extends Fragment {
     private void event() {
 
         clickEvent();
+
+        setMoneyCountTitle();
     }
 
     private void clickEvent() {
@@ -355,6 +357,11 @@ public class RemittanceFragment extends Fragment {
 
             Toast.makeText(getContext(), "qr_camera_button_onClicked", Toast.LENGTH_LONG).show();
         });
+    }
+
+    private void setMoneyCountTitle() {
+
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

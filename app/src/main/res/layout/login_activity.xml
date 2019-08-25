@@ -108,7 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="50dp"
                 android:background="@drawable/login_button_radius"
                 android:text="로그인"
@@ -125,12 +125,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="110dp"
-                android:layout_marginTop="16dp"
                 android:text="ID 찾기"
                 android:textColor="@color/black"
                 android:textSize="7pt"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/login_button"
+                app:layout_constraintTop_toTopOf="@+id/bar"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -138,12 +137,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
                 android:text="비밀번호 찾기"
                 android:textColor="@color/black"
                 android:textSize="7pt"
                 app:layout_constraintStart_toEndOf="@+id/bar"
-                app:layout_constraintTop_toBottomOf="@+id/login_button"
+                app:layout_constraintTop_toTopOf="@+id/bar"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -151,7 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:text="/"
                 android:textColor="@color/black"
                 android:textSize="7pt"
