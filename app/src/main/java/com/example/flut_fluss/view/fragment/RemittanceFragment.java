@@ -339,9 +339,9 @@ public class RemittanceFragment extends Fragment {
                 }
                 else {
 
-                    binding.money.getText().toString().substring(0, binding.money.getText().toString().length() - 1);
+                    String moneySet = binding.money.getText().toString().substring(0, binding.money.getText().toString().length() - 1);
 
-                    binding.money.setText(deleteMoney(binding.money.getText().toString()));
+                    binding.money.setText(moneySet);
 
                     isFirstInput = false;
                 }
