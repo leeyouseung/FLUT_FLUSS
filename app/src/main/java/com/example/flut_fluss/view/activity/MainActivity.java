@@ -46,14 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
 
-        LayoutInflater layoutInflater = (LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         assert layoutInflater != null;
 
         View view = layoutInflater.inflate(R.layout.remittance_fragment, null);
         money = view.findViewById(R.id.money);
 
-//         TODO :
+//         TODO : {
+//
 //         돈 입력 했을 때, 하단 메뉴바 사라지게 만들고 더치페이 보내기 레이아웃 만들기           70%
 //         돈 입력 기능 구현.                                       오류 수정 끝 !!          100%
 //         돈 보내기.                                                                        0%
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 //         조회 페이지에서 추가 했을 때 액션.
 //         조회P, 타임라인 P, 전체+P 스크롤뷰 추가.
 //         조회 페이지 밑에 리스트 하나 더 추가.
+//        }
     }
 
     private void onCreateViewSetting() {
