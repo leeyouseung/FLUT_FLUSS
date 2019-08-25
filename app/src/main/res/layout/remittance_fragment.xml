@@ -281,7 +281,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="130dp"
-            android:layout_marginEnd="160dp"
+            android:layout_marginEnd="150dp"
             android:text="원"
             android:textColor="@color/black"
             android:textSize="19pt"
