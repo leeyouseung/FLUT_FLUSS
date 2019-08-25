@@ -14,7 +14,7 @@ import com.example.flut_fluss.databinding.LoginActivityBinding;
 
 public class LoginActivity extends AppCompatActivity {
 
-    LoginActivityBinding binding;
+    private LoginActivityBinding binding;
 
     private boolean checkBlind = false;
 
