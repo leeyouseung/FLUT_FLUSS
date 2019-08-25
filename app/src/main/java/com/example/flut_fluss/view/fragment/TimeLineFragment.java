@@ -24,7 +24,7 @@ import com.example.flut_fluss.databinding.TimeLineFragmentBinding;
  */
 public class TimeLineFragment extends Fragment {
 
-    TimeLineFragmentBinding binding;
+    private TimeLineFragmentBinding binding;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
