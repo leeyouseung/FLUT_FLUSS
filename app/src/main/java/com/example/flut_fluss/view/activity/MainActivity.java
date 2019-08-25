@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         initData();
 
-        onCreateViewSetting();
+        onCreateFragmentSetting();
 
         onButtonSetting();
 
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 //        }
     }
 
-    private void onCreateViewSetting() {
+    private void onCreateFragmentSetting() {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
