@@ -321,8 +321,6 @@ public class RemittanceFragment extends Fragment {
 
             resultNumber = 0;
 
-            Toast.makeText(getContext(), "onClicked", Toast.LENGTH_SHORT).show();
-
             if(isFirstInput) {
 
                 Toast.makeText(getContext(), "더 이상 지울 돈이 없습니다.", Toast.LENGTH_SHORT).show();
