@@ -100,6 +100,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
                 if(money.getText().toString().equals("0")) {
 
                     menuNavigationLinearLayout.setVisibility(View.VISIBLE);
@@ -110,11 +115,6 @@ public class MainActivity extends AppCompatActivity {
                     menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                     moneySendLinearLayout.setVisibility(View.VISIBLE);
                 }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
             }
         });
     }
