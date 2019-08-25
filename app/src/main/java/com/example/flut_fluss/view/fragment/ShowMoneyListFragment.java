@@ -16,7 +16,7 @@ import com.example.flut_fluss.databinding.ShowMoneyListFragmentBinding;
 
 public class ShowMoneyListFragment extends Fragment {
 
-    ShowMoneyListFragmentBinding binding;
+    private ShowMoneyListFragmentBinding binding;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
