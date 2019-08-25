@@ -1,4 +1,4 @@
-package com.example.flut_fluss.manager.handler;
+package com.example.flut_fluss.lockManager.handler;
 
 import android.Manifest;
 import android.app.Activity;

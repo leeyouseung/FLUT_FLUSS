@@ -14,14 +14,10 @@ import android.os.Bundle;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyPermanentlyInvalidatedException;
 import android.security.keystore.KeyProperties;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.FingerPrintActivityBinding;
-import com.example.flut_fluss.manager.handler.FingerprintHandler;
+import com.example.flut_fluss.lockManager.handler.FingerprintHandler;
 //import com.example.flut_fluss.manager.FingerprintHandler;
 
 import java.io.IOException;
