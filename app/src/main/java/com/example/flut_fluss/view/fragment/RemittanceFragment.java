@@ -18,11 +18,10 @@ import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
 
 public class RemittanceFragment extends Fragment {
 
-    RemittanceFragmentBinding binding;
+    private RemittanceFragmentBinding binding;
 
     public TextView money;
 
-    private String sMoney;
     private boolean isFirstInput = true;
     private int resultNumber = 0;
 
@@ -93,7 +92,7 @@ public class RemittanceFragment extends Fragment {
 
         clickEvent();
 
-        setMoneyCountTitle();
+        setMoveMoneyCountTitle();
     }
 
     private void clickEvent() {
@@ -323,7 +322,7 @@ public class RemittanceFragment extends Fragment {
 
             if(isFirstInput) {
 
-                Toast.makeText(getContext(), "더 이상 지울 돈이 없습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "이미 0원 입니다.", Toast.LENGTH_SHORT).show();
 
                 isFirstInput = true;
             }
@@ -335,9 +334,11 @@ public class RemittanceFragment extends Fragment {
 
                     isFirstInput = true;
                 }
-                else {
+                else if(binding.money.getText().toString().length() > 1) {
 
                     binding.money.setText(deleteMoney(binding.money.getText().toString()));
+
+                    isFirstInput = false;
                 }
             }
         });
@@ -361,7 +362,7 @@ public class RemittanceFragment extends Fragment {
         });
     }
 
-    private void setMoneyCountTitle() {
+    private void setMoveMoneyCountTitle() {
 
 
     }
