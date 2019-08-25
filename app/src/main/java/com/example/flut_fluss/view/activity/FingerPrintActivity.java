@@ -37,7 +37,7 @@ import javax.crypto.SecretKey;
 
 public class FingerPrintActivity extends AppCompatActivity {
 
-    FingerPrintActivityBinding binding;
+    private FingerPrintActivityBinding binding;
 
     private KeyStore keyStore;
     private static final String KEY_NAME = "example_key";
