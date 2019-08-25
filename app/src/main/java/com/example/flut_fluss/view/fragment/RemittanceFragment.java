@@ -108,6 +108,7 @@ public class RemittanceFragment extends Fragment {
         clickCancelButton();
         clickDeleteButton();
         clickQrCameraButton();
+        clickNotificationButton();
     }
 
     private void clickMoneyNumber0() {
@@ -351,8 +352,11 @@ public class RemittanceFragment extends Fragment {
         });
     }
 
-    private void setMoveMoneyCountTitle() {
+    private void clickNotificationButton(){
 
+    }
+
+    private void setMoveMoneyCountTitle() {
 
     }
 
