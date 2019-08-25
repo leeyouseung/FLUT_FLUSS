@@ -25,7 +25,7 @@ import com.example.flut_fluss.databinding.SettingFragmentBinding;
  */
 public class SettingFragment extends Fragment {
 
-    SettingFragmentBinding binding;
+    private SettingFragmentBinding binding;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
