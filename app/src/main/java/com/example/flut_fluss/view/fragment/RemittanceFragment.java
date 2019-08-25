@@ -10,20 +10,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
 
-import java.util.Objects;
-
 public class RemittanceFragment extends Fragment {
 
     private RemittanceFragmentBinding binding;
-
-    public TextView money;
 
     private boolean isFirstInput = true;
     private int resultNumber = 0;
