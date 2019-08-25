@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
         onCreateButtonSetting();
 
-        onNavigationBarSetting();
-
         event();
     }
 
@@ -84,39 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
         binding.remittanceIcon.setImageResource(R.drawable.remittance_icon_click);
         binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));
-    }
-
-    private void onNavigationBarSetting() {
-
-        LinearLayout menuNavigationLinearLayout = findViewById(R.id.menu_navigation_linearLayout);
-        LinearLayout moneySendLinearLayout = findViewById(R.id.money_send_linearLayout);
-
-        money.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-                if(money.getText().toString().equals("0")) {
-
-                    menuNavigationLinearLayout.setVisibility(View.VISIBLE);
-                    moneySendLinearLayout.setVisibility(View.INVISIBLE);
-                }
-                else {
-
-                    menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                    moneySendLinearLayout.setVisibility(View.VISIBLE);
-                }
-            }
-        });
     }
 
     private void event() {
