@@ -309,9 +309,9 @@ public class RemittanceFragment extends Fragment {
 
             resultNumber = 0;
 
-            isFirstInput = true;
-
             binding.money.setText(String.valueOf(resultNumber));
+
+            isFirstInput = true;
         });
     }
 
@@ -332,6 +332,8 @@ public class RemittanceFragment extends Fragment {
                 if(binding.money.getText().toString().length() == 1) {
 
                     binding.money.setText(String.valueOf(resultNumber));
+
+                    isFirstInput = true;
                 }
                 else {
 
