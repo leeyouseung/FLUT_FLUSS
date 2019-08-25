@@ -349,16 +349,6 @@ public class RemittanceFragment extends Fragment {
         });
     }
 
-    private String deleteMoney(String sMoney) {
-
-        if (sMoney.length() > 0 && sMoney.charAt(sMoney.length() - 1) == 'x') {
-
-            sMoney = sMoney.substring(0, sMoney.length() - 1);
-        }
-
-        return sMoney;
-    }
-
     private void clickQrCameraButton() {
 
         binding.qrCameraButton.setOnClickListener(v -> {
