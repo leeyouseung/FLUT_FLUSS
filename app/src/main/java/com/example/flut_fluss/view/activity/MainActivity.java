@@ -100,15 +100,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                if(!money.getText().toString().equals("0")) {
-
-                    menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                    moneySendLinearLayout.setVisibility(View.VISIBLE);
-                }
-                else {
+                if(money.getText().toString().equals("0")) {
 
                     menuNavigationLinearLayout.setVisibility(View.VISIBLE);
                     moneySendLinearLayout.setVisibility(View.INVISIBLE);
+                }
+                else {
+
+                    menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+                    moneySendLinearLayout.setVisibility(View.VISIBLE);
                 }
             }
 
