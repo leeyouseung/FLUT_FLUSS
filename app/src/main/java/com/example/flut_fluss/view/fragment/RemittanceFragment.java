@@ -317,7 +317,14 @@ public class RemittanceFragment extends Fragment {
 
         binding.deleteButton.setOnClickListener(v -> {
 
-            binding.money.setText(deleteMoney(binding.money.getText().toString()));
+            if(binding.money.length() == 0) {
+
+                Toast.makeText(getContext(), "더 이상 지울 돈이 없습니다.", Toast.LENGTH_SHORT).show();
+            }
+            else {
+
+                binding.money.setText(deleteMoney(binding.money.getText().toString()));
+            }
         });
     }
 
