@@ -330,7 +330,7 @@ public class RemittanceFragment extends Fragment {
             else {
 
                 if(binding.money.getText().toString().length() == 1) {
-
+                    
                     binding.money.setText(String.valueOf(resultNumber));
                 }
                 else if(binding.money.getText().toString().length() > 2) {
