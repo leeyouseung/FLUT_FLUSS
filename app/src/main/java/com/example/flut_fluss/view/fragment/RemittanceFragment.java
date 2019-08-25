@@ -10,11 +10,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
+
+import java.util.Objects;
 
 public class RemittanceFragment extends Fragment {
 
@@ -334,7 +337,9 @@ public class RemittanceFragment extends Fragment {
 
                     isFirstInput = true;
                 }
-                else if(binding.money.getText().toString().length() > 1) {
+                else {
+
+                    binding.money.getText().toString().substring(0, binding.money.getText().toString().length() - 1);
 
                     binding.money.setText(deleteMoney(binding.money.getText().toString()));
 
