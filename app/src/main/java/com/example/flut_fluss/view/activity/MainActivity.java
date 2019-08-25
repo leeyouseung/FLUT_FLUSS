@@ -24,7 +24,7 @@ import com.example.flut_fluss.view.fragment.TimeLineFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    MainActivityBinding binding;
+    private MainActivityBinding binding;
 
     private TextView money;
 
