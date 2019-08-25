@@ -323,15 +323,21 @@ public class RemittanceFragment extends Fragment {
 
             Toast.makeText(getContext(), "onClicked", Toast.LENGTH_SHORT).show();
 
-            if(binding.money.toString().equals("0")) {
+            if(isFirstInput) {
 
                 Toast.makeText(getContext(), "더 이상 지울 돈이 없습니다.", Toast.LENGTH_SHORT).show();
+
+                isFirstInput = true;
             }
             else {
 
-                if(binding.money.toString().length() == 1) {
+                if(binding.money.getText().toString().length() == 1) {
 
                     binding.money.setText(String.valueOf(resultNumber));
+                }
+                else if(binding.money.getText().toString().length() > 1) {
+
+                    binding.money.setText(deleteMoney(binding.money.getText().toString()));
                 }
                 else {
 
