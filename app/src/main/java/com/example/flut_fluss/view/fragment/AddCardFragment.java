@@ -24,7 +24,7 @@ import com.example.flut_fluss.databinding.AddCardFragmentBinding;
  */
 public class AddCardFragment extends Fragment {
 
-    AddCardFragmentBinding binding;
+    private AddCardFragmentBinding binding;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
