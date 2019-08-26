@@ -25,7 +25,7 @@ public class RemittanceFragment extends Fragment {
 
     private boolean isFirstInput = true;
 
-    private int resultNumber = 0;
+    private int setOnCreateMoney = 0;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -92,14 +92,16 @@ public class RemittanceFragment extends Fragment {
 
     private void setting() {
 
-        binding.money.setText(String.valueOf(resultNumber));
+        binding.money.setText(String.valueOf(setOnCreateMoney));
     }
 
     private void event() {
 
         visibleDeleteCancelButton();
-
         invisibleDeleteCancelButton();
+
+        visibleMenuLayout();
+        visibleSendLayout();
 
         clickEvent();
 
@@ -118,69 +120,72 @@ public class RemittanceFragment extends Fragment {
         binding.cancelButton.setVisibility(View.INVISIBLE);
     }
 
+    private void visibleMenuLayout() {
+
+        menuNavigationLinearLayout.setVisibility(View.VISIBLE);
+        moneySendLinearLayout.setVisibility(View.INVISIBLE);
+    }
+
+    private void visibleSendLayout() {
+
+        menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
+        moneySendLinearLayout.setVisibility(View.VISIBLE);
+    }
+
     private void clickEvent() {
 
-        clickMoneyNumber0();
-        clickMoneyNumber1();
-        clickMoneyNumber2();
-        clickMoneyNumber3();
-        clickMoneyNumber4();
-        clickMoneyNumber5();
-        clickMoneyNumber5();
-        clickMoneyNumber6();
-        clickMoneyNumber7();
-        clickMoneyNumber8();
-        clickMoneyNumber9();
-        clickCancelButton();
-        clickDeleteButton();
+        clickMoneyNumber0(0);
+        clickMoneyNumber1(1);
+        clickMoneyNumber2(2);
+        clickMoneyNumber3(3);
+        clickMoneyNumber4(4);
+        clickMoneyNumber5(5);
+        clickMoneyNumber6(6);
+        clickMoneyNumber7(7);
+        clickMoneyNumber8(8);
+        clickMoneyNumber9(9);
+        clickCancelButton(0);
+        clickDeleteButton(0);
         clickQrCameraButton();
         clickNotificationButton();
     }
 
-    private void clickMoneyNumber0() {
+    private void clickMoneyNumber0(int number) {
 
         binding.moneyNumber0.setOnClickListener(v -> {
 
-            resultNumber = 0;
-
             if(isFirstInput && binding.money.getText().toString().equals("0")) {
 
-                menuNavigationLinearLayout.setVisibility(View.VISIBLE);
-                moneySendLinearLayout.setVisibility(View.INVISIBLE);
+                visibleMenuLayout();
             }
             else {
 
-                binding.money.append(String.valueOf(resultNumber));
+                binding.money.append(String.valueOf(number));
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
             }
         });
     }
 
-    private void clickMoneyNumber1() {
+    private void clickMoneyNumber1(int number) {
 
         binding.moneyNumber1.setOnClickListener(v -> {
 
-            resultNumber = 1;
-
             if(isFirstInput) {
 
-                binding.money.setText(String.valueOf(resultNumber));
+                binding.money.setText(String.valueOf(number));
 
                 isFirstInput = false;
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
             else {
 
-                binding.money.append(String.valueOf(resultNumber));
+                binding.money.append(String.valueOf(number));
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
@@ -188,265 +193,227 @@ public class RemittanceFragment extends Fragment {
     }
 
 
-    private void clickMoneyNumber2() {
+    private void clickMoneyNumber2(int number) {
 
         binding.moneyNumber2.setOnClickListener(v -> {
 
-            resultNumber = 2;
-
             if(isFirstInput) {
 
-                binding.money.setText(String.valueOf(resultNumber));
+                binding.money.setText(String.valueOf(number));
 
                 isFirstInput = false;
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
             else {
 
-                binding.money.append(String.valueOf(resultNumber));
+                binding.money.append(String.valueOf(number));
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
         });
     }
 
-    private void clickMoneyNumber3() {
+    private void clickMoneyNumber3(int number) {
 
         binding.moneyNumber3.setOnClickListener(v -> {
 
-            resultNumber = 3;
-
             if(isFirstInput) {
 
-                binding.money.setText(String.valueOf(resultNumber));
+                binding.money.setText(String.valueOf(number));
 
                 isFirstInput = false;
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
             else {
 
-                binding.money.append(String.valueOf(resultNumber));
+                binding.money.append(String.valueOf(number));
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
         });
     }
 
-    private void clickMoneyNumber4() {
+    private void clickMoneyNumber4(int number) {
 
         binding.moneyNumber4.setOnClickListener(v -> {
 
-            resultNumber = 4;
-
             if(isFirstInput) {
 
-                binding.money.setText(String.valueOf(resultNumber));
+                binding.money.setText(String.valueOf(number));
 
                 isFirstInput = false;
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
             else {
 
-                binding.money.append(String.valueOf(resultNumber));
+                binding.money.append(String.valueOf(number));
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
         });
     }
 
-    private void clickMoneyNumber5() {
+    private void clickMoneyNumber5(int number) {
 
         binding.moneyNumber5.setOnClickListener(v -> {
 
-            resultNumber = 5;
-
             if(isFirstInput) {
 
-                binding.money.setText(String.valueOf(resultNumber));
+                binding.money.setText(String.valueOf(number));
 
                 isFirstInput = false;
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
             else {
 
-                binding.money.append(String.valueOf(resultNumber));
+                binding.money.append(String.valueOf(number));
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
         });
     }
 
-    private void clickMoneyNumber6() {
+    private void clickMoneyNumber6(int number) {
 
         binding.moneyNumber6.setOnClickListener(v -> {
 
-            resultNumber = 6;
-
             if(isFirstInput) {
 
-                binding.money.setText(String.valueOf(resultNumber));
+                binding.money.setText(String.valueOf(number));
 
                 isFirstInput = false;
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
             else {
 
-                binding.money.append(String.valueOf(resultNumber));
+                binding.money.append(String.valueOf(number));
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
         });
     }
 
-    private void clickMoneyNumber7() {
+    private void clickMoneyNumber7(int number) {
 
         binding.moneyNumber7.setOnClickListener(v -> {
 
-            resultNumber = 7;
-
             if(isFirstInput) {
 
-                binding.money.setText(String.valueOf(resultNumber));
+                binding.money.setText(String.valueOf(number));
 
                 isFirstInput = false;
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
             else {
 
-                binding.money.append(String.valueOf(resultNumber));
+                binding.money.append(String.valueOf(number));
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
         });
     }
 
-    private void clickMoneyNumber8() {
+    private void clickMoneyNumber8(int number) {
 
         binding.moneyNumber8.setOnClickListener(v -> {
 
-            resultNumber = 8;
-
             if(isFirstInput) {
 
-                binding.money.setText(String.valueOf(resultNumber));
+                binding.money.setText(String.valueOf(number));
 
                 isFirstInput = false;
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
             else {
 
-                binding.money.append(String.valueOf(resultNumber));
+                binding.money.append(String.valueOf(number));
 
-                menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                moneySendLinearLayout.setVisibility(View.VISIBLE);
+                visibleSendLayout();
 
                 visibleDeleteCancelButton();
             }
         });
     }
 
-    private void clickMoneyNumber9() {
+    private void clickMoneyNumber9(int number ) {
 
          binding.moneyNumber9.setOnClickListener(v -> {
 
-             resultNumber = 9;
-
              if(isFirstInput) {
 
-                 binding.money.setText(String.valueOf(resultNumber));
+                 binding.money.setText(String.valueOf(number));
 
                  isFirstInput = false;
 
-                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+                 visibleSendLayout();
 
                  visibleDeleteCancelButton();
              }
              else {
 
-                 binding.money.append(String.valueOf(resultNumber));
+                 binding.money.append(String.valueOf(number));
 
-                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+                 visibleSendLayout();
 
                  visibleDeleteCancelButton();
              }
          });
     }
 
-    private void clickCancelButton() {
+    private void clickCancelButton(int number) {
 
         binding.cancelButton.setOnClickListener(v -> {
 
-            resultNumber = 0;
-
-            binding.money.setText(String.valueOf(resultNumber));
+            binding.money.setText(String.valueOf(number));
 
             isFirstInput = true;
 
-            menuNavigationLinearLayout.setVisibility(View.VISIBLE);
-            moneySendLinearLayout.setVisibility(View.INVISIBLE);
+            visibleMenuLayout();
 
             invisibleDeleteCancelButton();
         });
     }
 
-    private void clickDeleteButton() {
+    private void clickDeleteButton(int number) {
 
         binding.deleteButton.setOnClickListener(v -> {
 
-            resultNumber = 0;
-
             if(isFirstInput) {
 
-                menuNavigationLinearLayout.setVisibility(View.VISIBLE);
-                moneySendLinearLayout.setVisibility(View.INVISIBLE);
+                visibleMenuLayout();
 
                 isFirstInput = true;
 
@@ -456,7 +423,7 @@ public class RemittanceFragment extends Fragment {
 
                 if(binding.money.getText().toString().length() == 1 && binding.money.getText().toString().equals("0")) {
 
-                    binding.money.setText(String.valueOf(resultNumber));
+                    binding.money.setText(String.valueOf(number));
 
                     isFirstInput = true;
 
@@ -464,12 +431,11 @@ public class RemittanceFragment extends Fragment {
                 }
                 else if(binding.money.getText().toString().length() == 1 && !(binding.money.getText().toString().equals("0"))) {
 
-                    binding.money.setText(String.valueOf(resultNumber));
+                    binding.money.setText(String.valueOf(number));
 
                     isFirstInput = true;
 
-                    menuNavigationLinearLayout.setVisibility(View.VISIBLE);
-                    moneySendLinearLayout.setVisibility(View.INVISIBLE);
+                    visibleMenuLayout();
 
                     invisibleDeleteCancelButton();
                 }
@@ -481,8 +447,7 @@ public class RemittanceFragment extends Fragment {
 
                     isFirstInput = false;
 
-                    menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                    moneySendLinearLayout.setVisibility(View.VISIBLE);
+                    visibleSendLayout();
                 }
             }
         });
