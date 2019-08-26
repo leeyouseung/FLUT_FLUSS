@@ -24,6 +24,7 @@ public class RemittanceFragment extends Fragment {
     private LinearLayout moneySendLinearLayout;
 
     private boolean isFirstInput = true;
+
     private int resultNumber = 0;
 
     // TODO: Rename parameter arguments, choose names that match
