@@ -91,6 +91,20 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="HardcodedText" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/show_money_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_photo" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
