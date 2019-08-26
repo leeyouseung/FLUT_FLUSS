@@ -64,6 +64,7 @@ public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.View
 //        }
 //
 //        viewHolder.binding.studyCardView.setOnClickListener(v -> {
+    
 //            Intent intent = new Intent(context, StudyActivity.class);
 //            intent.putExtra("study",study);
 //            context.startActivity(intent);
