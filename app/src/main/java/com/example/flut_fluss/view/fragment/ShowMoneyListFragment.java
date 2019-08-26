@@ -6,17 +6,28 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.data.Card;
 import com.example.flut_fluss.databinding.ShowMoneyListFragmentBinding;
+import com.example.flut_fluss.view.activity.MainActivity;
+import com.example.flut_fluss.widget.recyclerview.adapter.ShowMoneyListAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ShowMoneyListFragment extends Fragment {
 
     private ShowMoneyListFragmentBinding binding;
+
+    private List<Card> cardList = new ArrayList<>();
+
+    private ShowMoneyListAdapter showMoneyListAdapter;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -72,6 +83,13 @@ public class ShowMoneyListFragment extends Fragment {
 
     private void initData() {
 
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+
+        binding.showMoneyRecyclerView.setLayoutManager(linearLayoutManager);
+
+        showMoneyListAdapter = new ShowMoneyListAdapter(cardList, getContext());
+
+        binding.showMoneyRecyclerView.setAdapter(showMoneyListAdapter);
     }
 
     private void event() {

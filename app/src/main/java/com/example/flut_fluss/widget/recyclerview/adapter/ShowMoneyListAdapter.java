@@ -23,11 +23,10 @@ public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.View
     Context context;
     ShowMoneyListFragment view;
 
-    public ShowMoneyListAdapter(List<Card> cardList, Context context, ShowMoneyListFragment view){
+    public ShowMoneyListAdapter(List<Card> cardList, Context context) {
 
         this.cardList = cardList;
         this.context = context;
-        this.view = view;
     }
 
     @NonNull
