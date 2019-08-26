@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -96,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
         clickTimeLineButton();
         clickAddCardButton();
         clickSettingButton();
+        clickDutchPayButton();
+        clickSendMoneyButton();
     }
 
     private void clickRemittanceButton() {
@@ -235,6 +238,18 @@ public class MainActivity extends AppCompatActivity {
 
             binding.settingIcon.setImageResource(R.drawable.setting_icon_click);
             binding.settingTitle.setTextColor(getResources().getColor(R.color.blue));
+        });
+    }
+
+    private void clickDutchPayButton() {
+
+    }
+
+    private void clickSendMoneyButton() {
+
+        binding.moneySendButton.setOnClickListener(v -> {
+
+            startActivity(new Intent(getApplicationContext(), SendMoneyActivity.class));
         });
     }
 }

@@ -228,7 +228,7 @@
             tools:ignore="InefficientWeight,UselessLeaf,UselessParent" >
 
             <Button
-                android:id="@+id/send_button"
+                android:id="@+id/money_send_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="8dp"

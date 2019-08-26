@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flut_fluss">
 
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,19 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".view.activity.FingerPrintActivity">
-
-        </activity>
-        <activity android:name=".view.activity.RegisterActivity" >
-
-        </activity>
-        <activity android:name=".view.animation.SplashActivity">
-
-        </activity>
-        <activity android:name=".view.activity.LoginActivity" >
-
-        </activity>
-        <activity android:name=".view.activity.MainActivity" >
+        <activity android:name=".view.activity.SendMoneyActivity"></activity>
+        <activity android:name=".view.activity.FingerPrintActivity"></activity>
+        <activity android:name=".view.activity.RegisterActivity"></activity>
+        <activity android:name=".view.animation.SplashActivity"></activity>
+        <activity android:name=".view.activity.LoginActivity"></activity>
+        <activity android:name=".view.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,5 +22,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
 </manifest>
