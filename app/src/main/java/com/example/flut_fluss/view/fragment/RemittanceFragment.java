@@ -411,7 +411,7 @@ public class RemittanceFragment extends Fragment {
 
                     binding.money.setText(String.valueOf(resultNumber));
 
-                    isFirstInput = true;
+                    isFirstInput = false;
 
                     menuNavigationLinearLayout.setVisibility(View.VISIBLE);
                     moneySendLinearLayout.setVisibility(View.INVISIBLE);
