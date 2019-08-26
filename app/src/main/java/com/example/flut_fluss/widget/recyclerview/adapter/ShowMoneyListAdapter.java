@@ -43,7 +43,7 @@ public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.View
 
         Card card = cardList.get(position);
 
-//        populateItemRows((ShowMoneyListViewHolder) holder, card);
+        populateItemRows((ShowMoneyListViewHolder) holder, card);
     }
 
     @Override
@@ -52,22 +52,22 @@ public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.View
         return 0;
     }
 
-//    private void populateItemRows(ShowMoneyListViewHolder viewHolder, Card card) {
-//
-//        viewHolder.binding.studyTitle.setText(study.getTitle());
-//        viewHolder.binding.currentPerson.setText(study.getCurrentPerson().toString() + " / ");
-//        viewHolder.binding.personnel.setText(study.getPersonnel().toString());
-//        viewHolder.binding.studyPlace.setText(study.getLocation());
-//        viewHolder.binding.studyTime.setText(study.getStartTerm().split(" ")[0] + " ~ " + study.getEndTerm().split(" ")[0]);
-//        if (!study.getImgs().isEmpty()) {
-//            Glide.with(view).load(study.getImgs().get(0)).into(viewHolder.binding.studyImageview);
-//        }
-//
-//        viewHolder.binding.studyCardView.setOnClickListener(v -> {
-    
-//            Intent intent = new Intent(context, StudyActivity.class);
-//            intent.putExtra("study",study);
-//            context.startActivity(intent);
-//        });
-//    }
+    private void populateItemRows(ShowMoneyListViewHolder viewHolder, Card card) {
+
+        viewHolder.binding.studyTitle.setText(study.getTitle());
+        viewHolder.binding.currentPerson.setText(study.getCurrentPerson().toString() + " / ");
+        viewHolder.binding.personnel.setText(study.getPersonnel().toString());
+        viewHolder.binding.studyPlace.setText(study.getLocation());
+        viewHolder.binding.studyTime.setText(study.getStartTerm().split(" ")[0] + " ~ " + study.getEndTerm().split(" ")[0]);
+        if (!study.getImgs().isEmpty()) {
+            Glide.with(view).load(study.getImgs().get(0)).into(viewHolder.binding.studyImageview);
+        }
+
+        viewHolder.binding.studyCardView.setOnClickListener(v -> {
+
+            Intent intent = new Intent(context, StudyActivity.class);
+            intent.putExtra("study",study);
+            context.startActivity(intent);
+        });
+    }
 }
