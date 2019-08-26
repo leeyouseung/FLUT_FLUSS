@@ -398,14 +398,23 @@ public class RemittanceFragment extends Fragment {
             }
             else {
 
-                if(binding.money.getText().toString().length() == 1) {
+                if(binding.money.getText().toString().length() == 1 && binding.money.getText().toString().equals("0")) {
 
                     binding.money.setText(String.valueOf(resultNumber));
 
                     isFirstInput = true;
 
-                    menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
-                    moneySendLinearLayout.setVisibility(View.VISIBLE);
+                    menuNavigationLinearLayout.setVisibility(View.VISIBLE);
+                    moneySendLinearLayout.setVisibility(View.INVISIBLE);
+                }
+                else if(binding.money.getText().toString().length() == 1 && !(binding.money.getText().toString().equals("0"))) {
+
+                    binding.money.setText(String.valueOf(resultNumber));
+
+                    isFirstInput = true;
+
+                    menuNavigationLinearLayout.setVisibility(View.VISIBLE);
+                    moneySendLinearLayout.setVisibility(View.INVISIBLE);
                 }
                 else {
 
