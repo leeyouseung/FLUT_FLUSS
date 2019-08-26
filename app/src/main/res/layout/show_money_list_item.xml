@@ -42,7 +42,7 @@
         android:layout_marginTop="24dp"
         android:src="@drawable/flut_logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/money_kind"
         tools:ignore="ContentDescription" />
 
     <TextView
