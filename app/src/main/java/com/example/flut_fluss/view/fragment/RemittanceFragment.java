@@ -403,15 +403,12 @@ public class RemittanceFragment extends Fragment {
                     binding.money.setText(String.valueOf(resultNumber));
 
                     isFirstInput = true;
-
-                    menuNavigationLinearLayout.setVisibility(View.VISIBLE);
-                    moneySendLinearLayout.setVisibility(View.INVISIBLE);
                 }
                 else if(binding.money.getText().toString().length() == 1 && !(binding.money.getText().toString().equals("0"))) {
 
                     binding.money.setText(String.valueOf(resultNumber));
 
-                    isFirstInput = false;
+                    isFirstInput = true;
 
                     menuNavigationLinearLayout.setVisibility(View.VISIBLE);
                     moneySendLinearLayout.setVisibility(View.INVISIBLE);
