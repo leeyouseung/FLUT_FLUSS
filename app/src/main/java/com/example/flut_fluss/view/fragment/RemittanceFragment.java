@@ -432,7 +432,10 @@ public class RemittanceFragment extends Fragment {
 
     private void clickNotificationButton() {
 
-        Toast.makeText(getContext(), "notification_button_onClicked", Toast.LENGTH_LONG).show();
+        binding.notificationButton.setOnClickListener(v -> {
+
+            Toast.makeText(getContext(), "notification_button_onClicked", Toast.LENGTH_LONG).show();
+        });
     }
 
     private void setMoveMoneyCountTitle() {
