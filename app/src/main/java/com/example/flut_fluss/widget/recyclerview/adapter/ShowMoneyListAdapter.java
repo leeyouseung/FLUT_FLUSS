@@ -54,15 +54,17 @@ public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     private void populateItemRows(ShowMoneyListViewHolder viewHolder, Card card) {
 
-//        viewHolder.binding.studyTitle.setText(card.getKind());
-//        viewHolder.binding.studyTime.setText(card.getMoney());
+        viewHolder.binding.moneyKind.setText(card.getKind());
+        viewHolder.binding.moneyListMoney.setText(card.getMoney());
 
-//        viewHolder.binding.studyCardView.setOnClickListener(v -> {
-//
+        viewHolder.binding.moneyListKind.setOnClickListener(v -> {
+
 //            Intent intent = new Intent(context, StudyActivity.class);
 //            intent.putExtra("study",study);
 //
 //            context.startActivity(intent);
-//        });
+//
+//            startActivity(new Intent(context, ))
+        });
     }
 }

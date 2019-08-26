@@ -10,7 +10,7 @@ import com.example.flut_fluss.databinding.ShowMoneyListItemBinding;
 
 public class ShowMoneyListViewHolder extends RecyclerView.ViewHolder {
 
-    ShowMoneyListItemBinding binding;
+    public ShowMoneyListItemBinding binding;
 
     public ShowMoneyListViewHolder(@NonNull View itemView) {
         super(itemView);
