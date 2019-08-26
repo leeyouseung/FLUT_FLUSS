@@ -1,6 +1,5 @@
 package com.example.flut_fluss.widget.recyclerview.adapter;
 
-import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,18 +14,18 @@ import com.example.flut_fluss.view.activity.AccountActivity;
 import com.example.flut_fluss.view.fragment.ShowMoneyListFragment;
 import com.example.flut_fluss.widget.recyclerview.viewholder.ShowMoneyListViewHolder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Card> cardList;
-    Context context;
+    private ArrayList<String> mData;
+
     ShowMoneyListFragment view;
 
-    public ShowMoneyListAdapter(List<Card> cardList, Context context) {
+    public ShowMoneyListAdapter(ArrayList<String> cardList) {
 
-        this.cardList = cardList;
-        this.context = context;
+        mData = cardList;
     }
 
     @NonNull
@@ -41,28 +40,28 @@ public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.View
 
         Log.d("LogPosition", "position = " + position);
 
-        Card card = cardList.get(position);
+//        Card card = mData.get(position);
 
-        populateItemRows((ShowMoneyListViewHolder) holder, card);
+//        populateItemRows((ShowMoneyListViewHolder) holder, card);
     }
 
     @Override
     public int getItemCount() {
 
-        return cardList.size();
+        return mData.size();
     }
 
     private void populateItemRows(ShowMoneyListViewHolder viewHolder, Card card) {
 
-        viewHolder.binding.moneyKind.setText(card.getKind());
-        viewHolder.binding.moneyListMoney.setText(card.getMoney());
-
-        viewHolder.binding.moneyListKind.setOnClickListener(v -> {
-
-            Intent intent = new Intent(context, AccountActivity.class);
-            intent.putExtra("card", String.valueOf(card));
-
-            context.startActivity(intent);
-        });
+//        viewHolder.binding.moneyKind.setText(card.getKind());
+//        viewHolder.binding.moneyListMoney.setText(card.getMoney());
+//
+//        viewHolder.binding.moneyListKind.setOnClickListener(v -> {
+//
+//            Intent intent = new Intent(context, AccountActivity.class);
+//            intent.putExtra("card", String.valueOf(card));
+//
+//            context.startActivity(intent);
+//        });
     }
 }
