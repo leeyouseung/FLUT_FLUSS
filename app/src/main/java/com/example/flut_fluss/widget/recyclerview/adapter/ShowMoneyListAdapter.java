@@ -10,7 +10,7 @@ public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.View
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        
+
         return null;
     }
 
