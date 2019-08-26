@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.data.Card;
+import com.example.flut_fluss.view.activity.AccountActivity;
 import com.example.flut_fluss.view.fragment.ShowMoneyListFragment;
 import com.example.flut_fluss.widget.recyclerview.viewholder.ShowMoneyListViewHolder;
 
@@ -59,12 +60,10 @@ public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.View
 
         viewHolder.binding.moneyListKind.setOnClickListener(v -> {
 
-//            Intent intent = new Intent(context, StudyActivity.class);
-//            intent.putExtra("study",study);
-//
-//            context.startActivity(intent);
-//
-//            startActivity(new Intent(context, ))
+            Intent intent = new Intent(context, AccountActivity.class);
+            intent.putExtra("card", card);
+
+            context.startActivity(intent);
         });
     }
 }
