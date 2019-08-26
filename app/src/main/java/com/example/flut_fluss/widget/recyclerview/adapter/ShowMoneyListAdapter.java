@@ -49,25 +49,20 @@ public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.View
     @Override
     public int getItemCount() {
 
-        return 0;
+        return cardList.size();
     }
 
     private void populateItemRows(ShowMoneyListViewHolder viewHolder, Card card) {
 
-        viewHolder.binding.studyTitle.setText(study.getTitle());
-        viewHolder.binding.currentPerson.setText(study.getCurrentPerson().toString() + " / ");
-        viewHolder.binding.personnel.setText(study.getPersonnel().toString());
-        viewHolder.binding.studyPlace.setText(study.getLocation());
-        viewHolder.binding.studyTime.setText(study.getStartTerm().split(" ")[0] + " ~ " + study.getEndTerm().split(" ")[0]);
-        if (!study.getImgs().isEmpty()) {
-            Glide.with(view).load(study.getImgs().get(0)).into(viewHolder.binding.studyImageview);
-        }
+//        viewHolder.binding.studyTitle.setText(card.getKind());
+//        viewHolder.binding.studyTime.setText(card.getMoney());
 
-        viewHolder.binding.studyCardView.setOnClickListener(v -> {
-
-            Intent intent = new Intent(context, StudyActivity.class);
-            intent.putExtra("study",study);
-            context.startActivity(intent);
-        });
+//        viewHolder.binding.studyCardView.setOnClickListener(v -> {
+//
+//            Intent intent = new Intent(context, StudyActivity.class);
+//            intent.putExtra("study",study);
+//
+//            context.startActivity(intent);
+//        });
     }
 }
