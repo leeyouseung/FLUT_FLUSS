@@ -42,7 +42,7 @@
             android:id="@+id/user_photo"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="14dp"
             android:layout_marginTop="60dp"
             android:src="@drawable/user_photo"
             app:layout_constraintStart_toStartOf="parent"
