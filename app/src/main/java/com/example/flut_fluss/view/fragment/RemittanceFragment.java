@@ -97,9 +97,25 @@ public class RemittanceFragment extends Fragment {
 
     private void event() {
 
+        visibleDeleteCancelButton();
+
+        invisibleDeleteCancelButton();
+
         clickEvent();
 
         setMoveMoneyCountTitle();
+    }
+
+    private void visibleDeleteCancelButton() {
+
+        binding.deleteButton.setVisibility(View.VISIBLE);
+        binding.cancelButton.setVisibility(View.VISIBLE);
+    }
+
+    private void invisibleDeleteCancelButton() {
+
+        binding.deleteButton.setVisibility(View.INVISIBLE);
+        binding.cancelButton.setVisibility(View.INVISIBLE);
     }
 
     private void clickEvent() {
@@ -156,6 +172,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
             else {
 
@@ -163,6 +181,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
         });
     }
@@ -182,6 +202,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
             else {
 
@@ -189,6 +211,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
         });
     }
@@ -207,6 +231,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
             else {
 
@@ -214,6 +240,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
         });
     }
@@ -232,6 +260,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
             else {
 
@@ -239,6 +269,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
         });
     }
@@ -257,6 +289,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
             else {
 
@@ -264,6 +298,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
         });
     }
@@ -282,6 +318,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
             else {
 
@@ -289,6 +327,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
         });
     }
@@ -307,6 +347,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
             else {
 
@@ -314,6 +356,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
         });
     }
@@ -332,6 +376,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
             else {
 
@@ -339,6 +385,8 @@ public class RemittanceFragment extends Fragment {
 
                 menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                 moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                visibleDeleteCancelButton();
             }
         });
     }
@@ -357,6 +405,8 @@ public class RemittanceFragment extends Fragment {
 
                  menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                  moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                 visibleDeleteCancelButton();
              }
              else {
 
@@ -364,6 +414,8 @@ public class RemittanceFragment extends Fragment {
 
                  menuNavigationLinearLayout.setVisibility(View.INVISIBLE);
                  moneySendLinearLayout.setVisibility(View.VISIBLE);
+
+                 visibleDeleteCancelButton();
              }
          });
     }
@@ -380,6 +432,8 @@ public class RemittanceFragment extends Fragment {
 
             menuNavigationLinearLayout.setVisibility(View.VISIBLE);
             moneySendLinearLayout.setVisibility(View.INVISIBLE);
+
+            invisibleDeleteCancelButton();
         });
     }
 
@@ -395,6 +449,8 @@ public class RemittanceFragment extends Fragment {
                 moneySendLinearLayout.setVisibility(View.INVISIBLE);
 
                 isFirstInput = true;
+
+                invisibleDeleteCancelButton();
             }
             else {
 
@@ -403,6 +459,8 @@ public class RemittanceFragment extends Fragment {
                     binding.money.setText(String.valueOf(resultNumber));
 
                     isFirstInput = true;
+
+                    invisibleDeleteCancelButton();
                 }
                 else if(binding.money.getText().toString().length() == 1 && !(binding.money.getText().toString().equals("0"))) {
 
@@ -412,6 +470,8 @@ public class RemittanceFragment extends Fragment {
 
                     menuNavigationLinearLayout.setVisibility(View.VISIBLE);
                     moneySendLinearLayout.setVisibility(View.INVISIBLE);
+
+                    invisibleDeleteCancelButton();
                 }
                 else {
 
