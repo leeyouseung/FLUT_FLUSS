@@ -61,7 +61,7 @@ public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.View
         viewHolder.binding.moneyListKind.setOnClickListener(v -> {
 
             Intent intent = new Intent(context, AccountActivity.class);
-            intent.putExtra("card", card);
+            intent.putExtra("card", String.valueOf(card));
 
             context.startActivity(intent);
         });
