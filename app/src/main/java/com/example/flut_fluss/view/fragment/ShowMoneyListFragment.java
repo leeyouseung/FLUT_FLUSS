@@ -101,20 +101,28 @@ public class ShowMoneyListFragment extends Fragment {
             dialog.setTitle("추가");
             dialog.setMessage("항목");
 
-            dialog.setSingleChoiceItems(items, 0, (dialog13, whichButton) -> {
+            dialog.setSingleChoiceItems(items, 0, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int whichButton) {
 
                         // 각 리스트를 선택했을때
                         Toast.makeText(getContext(), whichButton + "", Toast.LENGTH_SHORT).show();
+                    }
+                }).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
-                    }).setPositiveButton("Ok", (dialog12, whichButton) -> {
+                    public void onClick(DialogInterface dialog, int whichButton) {
 
                         // OK 버튼 클릭시 , 여기서 선택한 값을 메인 Activity 로 넘기면 된다.
+                    }
+                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
-                    }).setNegativeButton("Cancel", (dialog1, whichButton) -> {
+                    public void onClick(DialogInterface dialog, int whichButton) {
 
                         // Cancel 버튼 클릭시
-                        dialog1.dismiss();
-                    });
+                        dialog.dismiss();
+                    }
+                });
+
             dialog.show();
         });
     }
