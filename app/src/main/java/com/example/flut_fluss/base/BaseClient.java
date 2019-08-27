@@ -5,11 +5,11 @@ import android.util.Log;
 import com.example.flut_fluss.utils.Utils;
 
 import org.json.JSONObject;
+import com.example.flut_fluss.network.Response;
 
 import java.util.Objects;
 
 import io.reactivex.functions.Function;
-import retrofit2.Response;
 
 public abstract class BaseClient<V> {
 
