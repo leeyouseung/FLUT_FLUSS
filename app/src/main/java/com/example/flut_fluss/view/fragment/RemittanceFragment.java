@@ -44,8 +44,6 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
     private void event() {
 
         clickEvent();
-
-        setMoveMoneyCountTitle();
     }
 
     private void visibleDeleteCancelButton() {
