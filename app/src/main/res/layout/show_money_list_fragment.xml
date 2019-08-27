@@ -53,7 +53,7 @@
             android:id="@+id/name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="65dp"
             android:text="이유승"
             android:textColor="@color/black"
