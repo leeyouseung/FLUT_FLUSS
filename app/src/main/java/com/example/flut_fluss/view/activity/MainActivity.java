@@ -237,6 +237,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
     private void clickDutchPayButton() {
 
+        startActivity(new Intent(getApplicationContext(), DutchPayActivity.class));
     }
 
     private void clickSendMoneyButton() {
