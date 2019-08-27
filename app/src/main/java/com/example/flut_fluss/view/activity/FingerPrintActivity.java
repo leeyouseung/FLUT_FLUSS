@@ -1,8 +1,6 @@
 package com.example.flut_fluss.view.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.databinding.DataBindingUtil;
 
 import android.Manifest;
 import android.app.KeyguardManager;
@@ -16,9 +14,9 @@ import android.security.keystore.KeyPermanentlyInvalidatedException;
 import android.security.keystore.KeyProperties;
 
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.FingerPrintActivityBinding;
 import com.example.flut_fluss.lockManager.handler.FingerprintHandler;
-//import com.example.flut_fluss.manager.FingerprintHandler;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -35,9 +33,7 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
-public class FingerPrintActivity extends AppCompatActivity {
-
-    private FingerPrintActivityBinding binding;
+public class FingerPrintActivity extends BaseActivity<FingerPrintActivityBinding> {
 
     private KeyStore keyStore;
     private static final String KEY_NAME = "example_key";
@@ -47,9 +43,8 @@ public class FingerPrintActivity extends AppCompatActivity {
     private KeyGenerator keyGenerator = null;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.finger_print_activity);
 
         event();
 
@@ -180,5 +175,11 @@ public class FingerPrintActivity extends AppCompatActivity {
 
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         });
+    }
+
+    @Override
+    protected int layoutId() {
+
+        return R.layout.finger_print_activity;
     }
 }
