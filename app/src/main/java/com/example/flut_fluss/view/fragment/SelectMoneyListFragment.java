@@ -2,6 +2,7 @@ package com.example.flut_fluss.view.fragment;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -10,10 +11,11 @@ import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
-import com.example.flut_fluss.databinding.ShowMoneyListFragmentBinding;
+import com.example.flut_fluss.databinding.SelectMoneyListFragmentBinding;
+import com.example.flut_fluss.view.activity.ShowAccountActivity;
+import com.example.flut_fluss.view.activity.ShowCardActivity;
 
-
-public class ShowMoneyListFragment extends BaseFragment<ShowMoneyListFragmentBinding> {
+public class SelectMoneyListFragment extends BaseFragment<SelectMoneyListFragmentBinding> {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -35,7 +37,25 @@ public class ShowMoneyListFragment extends BaseFragment<ShowMoneyListFragmentBin
 
     private void clickEvent() {
 
+        clickAccountLayout();
+        clickCardLayout();
         clickAddKindButton();
+    }
+
+    private void clickAccountLayout() {
+
+        binding.accountLayout.setOnClickListener(v -> {
+
+            startActivity(new Intent(getContext(), ShowAccountActivity.class));
+        });
+    }
+
+    private void clickCardLayout() {
+
+        binding.cardLayout.setOnClickListener(v -> {
+
+            startActivity(new Intent(getContext(), ShowCardActivity.class));
+        });
     }
 
     private void clickAddKindButton() {
@@ -87,6 +107,6 @@ public class ShowMoneyListFragment extends BaseFragment<ShowMoneyListFragmentBin
     @Override
     protected int layoutId() {
 
-        return R.layout.show_money_list_fragment;
+        return R.layout.select_money_list_fragment;
     }
 }

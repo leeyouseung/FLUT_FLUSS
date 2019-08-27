@@ -1,6 +1,5 @@
 package com.example.flut_fluss.view.activity;
 
-import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -17,7 +16,7 @@ import com.example.flut_fluss.databinding.MainActivityBinding;
 import com.example.flut_fluss.view.fragment.AddCardFragment;
 import com.example.flut_fluss.view.fragment.RemittanceFragment;
 import com.example.flut_fluss.view.fragment.SettingFragment;
-import com.example.flut_fluss.view.fragment.ShowMoneyListFragment;
+import com.example.flut_fluss.view.fragment.SelectMoneyListFragment;
 import com.example.flut_fluss.view.fragment.TimeLineFragment;
 
 public class MainActivity extends BaseActivity<MainActivityBinding> {
@@ -132,7 +131,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-            fragmentTransaction.replace(R.id.main_activity_fragment, new ShowMoneyListFragment());
+            fragmentTransaction.replace(R.id.main_activity_fragment, new SelectMoneyListFragment());
             fragmentTransaction.commit();
 
             binding.remittanceIcon.setImageResource(R.drawable.remittance_icon);
