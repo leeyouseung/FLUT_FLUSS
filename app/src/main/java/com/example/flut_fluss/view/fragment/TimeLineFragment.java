@@ -48,7 +48,7 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
 
         binding.incomeButton.setOnClickListener(v -> {
 
-            binding.incomeButton.setBackground(null);
+            binding.expenditureButton.setBackground(null);
             binding.incomeButton.setBackgroundResource(R.drawable.time_line_button_radius);
             binding.anotherButton.setBackground(null);
         });
@@ -58,7 +58,7 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
 
         binding.anotherButton.setOnClickListener(v -> {
 
-            binding.anotherButton.setBackground(null);
+            binding.expenditureButton.setBackground(null);
             binding.incomeButton.setBackground(null);
             binding.anotherButton.setBackgroundResource(R.drawable.time_line_button_radius);
         });
