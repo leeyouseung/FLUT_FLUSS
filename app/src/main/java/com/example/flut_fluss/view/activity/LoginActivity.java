@@ -1,6 +1,5 @@
 package com.example.flut_fluss.view.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
@@ -10,16 +9,16 @@ import android.text.method.PasswordTransformationMethod;
 import android.widget.Toast;
 
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.LoginActivityBinding;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
-    private LoginActivityBinding binding;
 
     private boolean checkBlind = false;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.login_activity);
 
@@ -97,5 +96,11 @@ public class LoginActivity extends AppCompatActivity {
 
             startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
         });
+    }
+
+    @Override
+    protected int layoutId() {
+
+        return R.layout.login_activity;
     }
 }
