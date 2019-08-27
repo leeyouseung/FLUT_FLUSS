@@ -54,23 +54,33 @@
             tools:ignore="HardcodedText"
             style="?android:attr/borderlessButtonStyle" />
 
-        <FrameLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/income_button"
-            tools:ignore="UselessLeaf">
+            app:layout_constraintTop_toBottomOf="@+id/income_button">
 
-            <RelativeLayout
-                android:id="@+id/time_line_fragment"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/income_button"
+                tools:ignore="UselessLeaf">
 
-            </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/time_line_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        </FrameLayout>
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </ScrollView>
 
         <ImageButton
             android:id="@+id/back_button"
