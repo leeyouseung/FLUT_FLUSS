@@ -188,7 +188,7 @@
                 android:layout_marginTop="8dp"
                 android:text="원"
                 android:textSize="8pt"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+                app:layout_constraintEnd_toStartOf="@+id/account_button"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="HardcodedText" />
 

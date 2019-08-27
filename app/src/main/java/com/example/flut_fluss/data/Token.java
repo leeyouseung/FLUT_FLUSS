@@ -1,4 +1,4 @@
-package com.example.flut_fluss.inner_data;
+package com.example.flut_fluss.data;
 
 import android.content.Context;
 import android.content.ContextWrapper;

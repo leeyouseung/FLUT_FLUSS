@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.flut_fluss.inner_data.Token;
+import com.example.flut_fluss.data.Token;
 
 import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
