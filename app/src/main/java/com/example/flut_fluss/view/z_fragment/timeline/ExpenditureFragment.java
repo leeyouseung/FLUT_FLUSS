@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
 import com.example.flut_fluss.databinding.ExpenditureFragmentBinding;
+import com.example.flut_fluss.view.activity.inner_timline.FoodActivity;
 import com.example.flut_fluss.view.activity.inner_timline.TransferActivity;
 
 public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding> {
@@ -48,6 +49,10 @@ public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding
 
     private void clickFoodLayout() {
 
+        binding.foodLayout.setOnClickListener(v -> {
+
+            startActivity(new Intent(getContext(), FoodActivity.class));
+        });
     }
 
     private void clickClothsLayout() {

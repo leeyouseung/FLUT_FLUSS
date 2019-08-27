@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".view.activity.inner_timline.FoodActivity"></activity>
+        <activity android:name=".view.activity.inner_timline.ClothsActivity"></activity>
+        <activity android:name=".view.activity.inner_timline.FoodActivity" />
         <activity android:name=".view.activity.inner_timline.TransferActivity" />
         <activity android:name=".view.activity.lookup.ShowCardActivity" />
         <activity android:name=".view.activity.lookup.ShowAccountActivity" />
