@@ -9,6 +9,7 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
 import com.example.flut_fluss.databinding.ExpenditureFragmentBinding;
 import com.example.flut_fluss.view.activity.inner_timline.ClothsActivity;
+import com.example.flut_fluss.view.activity.inner_timline.EtcActivity;
 import com.example.flut_fluss.view.activity.inner_timline.FoodActivity;
 import com.example.flut_fluss.view.activity.inner_timline.TransferActivity;
 
@@ -66,6 +67,10 @@ public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding
 
     private void clickEtcLayout() {
 
+        binding.etcLayout.setOnClickListener(v -> {
+
+            startActivity(new Intent(getContext(), EtcActivity.class));
+        });
     }
 
     @Override
