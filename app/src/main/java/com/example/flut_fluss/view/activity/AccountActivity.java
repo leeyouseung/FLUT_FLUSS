@@ -1,19 +1,22 @@
 package com.example.flut_fluss.view.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.AccountActivityBinding;
 
-public class AccountActivity extends AppCompatActivity {
-
-    AccountActivityBinding binding;
+public class AccountActivity extends BaseActivity<AccountActivityBinding> {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.account_activity);
+
+    }
+
+    @Override
+    protected int layoutId() {
+
+        return R.layout.account_activity;
     }
 }
