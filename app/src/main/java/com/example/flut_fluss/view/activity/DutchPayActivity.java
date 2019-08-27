@@ -1,20 +1,21 @@
 package com.example.flut_fluss.view.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.DutchPayActivityBinding;
 
-public class DutchPayActivity extends AppCompatActivity {
-
-    DutchPayActivityBinding binding;
+public class DutchPayActivity extends BaseActivity<DutchPayActivityBinding> {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this ,R.layout.dutch_pay_activity);
+    }
+
+    @Override
+    protected int layoutId() {
+
+        return R.layout.dutch_pay_activity;
     }
 }
