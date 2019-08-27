@@ -119,7 +119,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            } else {
+            }
+            else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -144,7 +145,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            } else {
+            }
+            else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -168,7 +170,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            } else {
+            }
+            else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -192,7 +195,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            } else {
+            }
+            else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -216,7 +220,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            } else {
+            }
+            else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -240,7 +245,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            } else {
+            }
+            else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -264,7 +270,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            } else {
+            }
+            else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -288,7 +295,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            } else {
+            }
+            else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -312,7 +320,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            } else {
+            }
+            else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -348,7 +357,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 isFirstInput = true;
 
                 invisibleDeleteCancelButton();
-            } else {
+            }
+            else {
 
                 if (binding.money.getText().toString().length() == 1 && binding.money.getText().toString().equals("0")) {
 
@@ -357,7 +367,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                     isFirstInput = true;
 
                     invisibleDeleteCancelButton();
-                } else if (binding.money.getText().toString().length() == 1 && !(binding.money.getText().toString().equals("0"))) {
+                }
+                else if (binding.money.getText().toString().length() == 1 && !(binding.money.getText().toString().equals("0"))) {
 
                     binding.money.setText(String.valueOf(number));
 
@@ -366,7 +377,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                     visibleMenuLayout();
 
                     invisibleDeleteCancelButton();
-                } else {
+                }
+                else {
 
                     String moneySet = binding.money.getText().toString().substring(0, binding.money.getText().toString().length() - 1);
 
