@@ -11,11 +11,11 @@ import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
-import com.example.flut_fluss.databinding.SelectMoneyListFragmentBinding;
+import com.example.flut_fluss.databinding.LookUpFragmentBinding;
 import com.example.flut_fluss.view.activity.ShowAccountActivity;
 import com.example.flut_fluss.view.activity.ShowCardActivity;
 
-public class SelectMoneyListFragment extends BaseFragment<SelectMoneyListFragmentBinding> {
+public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -127,6 +127,6 @@ public class SelectMoneyListFragment extends BaseFragment<SelectMoneyListFragmen
     @Override
     protected int layoutId() {
 
-        return R.layout.select_money_list_fragment;
+        return R.layout.look_up_fragment;
     }
 }
