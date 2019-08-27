@@ -27,7 +27,6 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.main_activity);
 
         initData();
 
