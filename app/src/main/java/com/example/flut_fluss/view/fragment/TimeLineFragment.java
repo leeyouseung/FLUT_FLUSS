@@ -28,7 +28,22 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
     }
 
     private void clickEvent() {
-        
+
+        clickExpenditureButton();
+        clickIncomeButton();
+        clickAnotherButton();
+    }
+
+    private void clickExpenditureButton() {
+
+    }
+
+    private void clickIncomeButton() {
+
+    }
+
+    private void clickAnotherButton() {
+
     }
 
     @Override
