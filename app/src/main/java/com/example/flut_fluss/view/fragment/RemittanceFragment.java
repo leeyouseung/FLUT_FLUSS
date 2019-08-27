@@ -1,24 +1,18 @@
 package com.example.flut_fluss.view.fragment;
 
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
-import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.base.BaseFragment;
 import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
 
-public class RemittanceFragment extends Fragment {
-
-    private RemittanceFragmentBinding binding;
+public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> {
 
     private LinearLayout menuNavigationLinearLayout;
     private LinearLayout moneySendLinearLayout;
@@ -26,49 +20,6 @@ public class RemittanceFragment extends Fragment {
     private boolean isFirstInput = true;
 
     private int setOnCreateMoney = 0;
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    private OnFragmentInteractionListener mListener;
-
-    public RemittanceFragment() {
-        // Required empty public constructor
-    }
-
-    // TODO: Rename and change types and number of parameters
-    public static RemittanceFragment newInstance(String param1, String param2) {
-        RemittanceFragment fragment = new RemittanceFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.remittance_fragment, container, false);
-
-        return binding.getRoot();
-    }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -143,11 +94,10 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber0.setOnClickListener(v -> {
 
-            if(isFirstInput && binding.money.getText().toString().equals("0")) {
+            if (isFirstInput && binding.money.getText().toString().equals("0")) {
 
                 visibleMenuLayout();
-            }
-            else {
+            } else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -160,7 +110,7 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber1.setOnClickListener(v -> {
 
-            if(isFirstInput) {
+            if (isFirstInput) {
 
                 binding.money.setText(String.valueOf(number));
 
@@ -169,8 +119,7 @@ public class RemittanceFragment extends Fragment {
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            }
-            else {
+            } else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -186,7 +135,7 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber2.setOnClickListener(v -> {
 
-            if(isFirstInput) {
+            if (isFirstInput) {
 
                 binding.money.setText(String.valueOf(number));
 
@@ -195,8 +144,7 @@ public class RemittanceFragment extends Fragment {
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            }
-            else {
+            } else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -211,7 +159,7 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber3.setOnClickListener(v -> {
 
-            if(isFirstInput) {
+            if (isFirstInput) {
 
                 binding.money.setText(String.valueOf(number));
 
@@ -220,8 +168,7 @@ public class RemittanceFragment extends Fragment {
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            }
-            else {
+            } else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -236,7 +183,7 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber4.setOnClickListener(v -> {
 
-            if(isFirstInput) {
+            if (isFirstInput) {
 
                 binding.money.setText(String.valueOf(number));
 
@@ -245,8 +192,7 @@ public class RemittanceFragment extends Fragment {
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            }
-            else {
+            } else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -261,7 +207,7 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber5.setOnClickListener(v -> {
 
-            if(isFirstInput) {
+            if (isFirstInput) {
 
                 binding.money.setText(String.valueOf(number));
 
@@ -270,8 +216,7 @@ public class RemittanceFragment extends Fragment {
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            }
-            else {
+            } else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -286,7 +231,7 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber6.setOnClickListener(v -> {
 
-            if(isFirstInput) {
+            if (isFirstInput) {
 
                 binding.money.setText(String.valueOf(number));
 
@@ -295,8 +240,7 @@ public class RemittanceFragment extends Fragment {
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            }
-            else {
+            } else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -311,7 +255,7 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber7.setOnClickListener(v -> {
 
-            if(isFirstInput) {
+            if (isFirstInput) {
 
                 binding.money.setText(String.valueOf(number));
 
@@ -320,8 +264,7 @@ public class RemittanceFragment extends Fragment {
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            }
-            else {
+            } else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -336,7 +279,7 @@ public class RemittanceFragment extends Fragment {
 
         binding.moneyNumber8.setOnClickListener(v -> {
 
-            if(isFirstInput) {
+            if (isFirstInput) {
 
                 binding.money.setText(String.valueOf(number));
 
@@ -345,8 +288,7 @@ public class RemittanceFragment extends Fragment {
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
-            }
-            else {
+            } else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -357,29 +299,28 @@ public class RemittanceFragment extends Fragment {
         });
     }
 
-    private void clickMoneyNumber9(int number ) {
+    private void clickMoneyNumber9(int number) {
 
-         binding.moneyNumber9.setOnClickListener(v -> {
+        binding.moneyNumber9.setOnClickListener(v -> {
 
-             if(isFirstInput) {
+            if (isFirstInput) {
 
-                 binding.money.setText(String.valueOf(number));
+                binding.money.setText(String.valueOf(number));
 
-                 isFirstInput = false;
+                isFirstInput = false;
 
-                 visibleSendLayout();
+                visibleSendLayout();
 
-                 visibleDeleteCancelButton();
-             }
-             else {
+                visibleDeleteCancelButton();
+            } else {
 
-                 binding.money.append(String.valueOf(number));
+                binding.money.append(String.valueOf(number));
 
-                 visibleSendLayout();
+                visibleSendLayout();
 
-                 visibleDeleteCancelButton();
-             }
-         });
+                visibleDeleteCancelButton();
+            }
+        });
     }
 
     private void clickCancelButton(int number) {
@@ -400,25 +341,23 @@ public class RemittanceFragment extends Fragment {
 
         binding.deleteButton.setOnClickListener(v -> {
 
-            if(isFirstInput) {
+            if (isFirstInput) {
 
                 visibleMenuLayout();
 
                 isFirstInput = true;
 
                 invisibleDeleteCancelButton();
-            }
-            else {
+            } else {
 
-                if(binding.money.getText().toString().length() == 1 && binding.money.getText().toString().equals("0")) {
+                if (binding.money.getText().toString().length() == 1 && binding.money.getText().toString().equals("0")) {
 
                     binding.money.setText(String.valueOf(number));
 
                     isFirstInput = true;
 
                     invisibleDeleteCancelButton();
-                }
-                else if(binding.money.getText().toString().length() == 1 && !(binding.money.getText().toString().equals("0"))) {
+                } else if (binding.money.getText().toString().length() == 1 && !(binding.money.getText().toString().equals("0"))) {
 
                     binding.money.setText(String.valueOf(number));
 
@@ -427,8 +366,7 @@ public class RemittanceFragment extends Fragment {
                     visibleMenuLayout();
 
                     invisibleDeleteCancelButton();
-                }
-                else {
+                } else {
 
                     String moneySet = binding.money.getText().toString().substring(0, binding.money.getText().toString().length() - 1);
 
@@ -462,21 +400,9 @@ public class RemittanceFragment extends Fragment {
 
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
     @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
+    protected int layoutId() {
 
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        return R.layout.remittance_fragment;
     }
 }
