@@ -46,16 +46,36 @@ public class SelectMoneyListFragment extends BaseFragment<SelectMoneyListFragmen
 
         binding.accountLayout.setOnClickListener(v -> {
 
-            startActivity(new Intent(getContext(), ShowAccountActivity.class));
+            startShowAccountActivity();
         });
+
+        binding.accountButton.setOnClickListener(v -> {
+
+            startShowAccountActivity();
+        });
+    }
+
+    private void startShowAccountActivity() {
+
+        startActivity(new Intent(getContext(), ShowAccountActivity.class));
     }
 
     private void clickCardLayout() {
 
         binding.cardLayout.setOnClickListener(v -> {
 
-            startActivity(new Intent(getContext(), ShowCardActivity.class));
+            startShowCardActivity();
         });
+
+        binding.cardButton.setOnClickListener(v -> {
+
+            startShowCardActivity();
+        });
+    }
+
+    private void startShowCardActivity() {
+
+        startActivity(new Intent(getContext(), ShowCardActivity.class));
     }
 
     private void clickAddKindButton() {
