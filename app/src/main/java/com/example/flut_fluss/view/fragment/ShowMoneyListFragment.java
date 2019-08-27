@@ -14,20 +14,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.flut_fluss.R;
-import com.example.flut_fluss.data.Card;
 import com.example.flut_fluss.databinding.ShowMoneyListFragmentBinding;
-import com.example.flut_fluss.view.activity.MainActivity;
-import com.example.flut_fluss.widget.recyclerview.adapter.ShowMoneyListAdapter;
 
-import java.util.ArrayList;
 
 public class ShowMoneyListFragment extends Fragment {
 
     private ShowMoneyListFragmentBinding binding;
-
-    ArrayList<String> cardList = new ArrayList<>();
-
-    private ShowMoneyListAdapter showMoneyListAdapter;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -83,11 +75,6 @@ public class ShowMoneyListFragment extends Fragment {
 
     private void initData() {
 
-        binding.showMoneyRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-
-        showMoneyListAdapter = new ShowMoneyListAdapter(cardList);
-
-        binding.showMoneyRecyclerView.setAdapter(showMoneyListAdapter);
     }
 
     private void event() {
