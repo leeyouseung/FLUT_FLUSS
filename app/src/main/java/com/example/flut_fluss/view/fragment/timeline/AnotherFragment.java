@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.fragment;
+package com.example.flut_fluss.view.fragment.timeline;
 
 import android.os.Bundle;
 
@@ -6,9 +6,9 @@ import androidx.annotation.Nullable;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
-import com.example.flut_fluss.databinding.ExpenditureFragmentBinding;
+import com.example.flut_fluss.databinding.AnotherFragmentBinding;
 
-public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding> {
+public class AnotherFragment extends BaseFragment<AnotherFragmentBinding> {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -24,12 +24,12 @@ public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding
     }
 
     private void event() {
-        
+
     }
 
     @Override
     protected int layoutId() {
 
-        return R.layout.expenditure_fragment;
+        return R.layout.another_fragment;
     }
 }

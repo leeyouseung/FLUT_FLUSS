@@ -9,6 +9,10 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
 import com.example.flut_fluss.databinding.TimeLineFragmentBinding;
+import com.example.flut_fluss.view.fragment.timeline.AnotherFragment;
+import com.example.flut_fluss.view.fragment.timeline.ExpenditureFragment;
+import com.example.flut_fluss.view.fragment.timeline.IncomeFragment;
+
 public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
 
     @Override

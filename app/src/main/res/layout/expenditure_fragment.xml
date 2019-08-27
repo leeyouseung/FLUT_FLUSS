@@ -7,7 +7,7 @@
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragment.ExpenditureFragment">
+    tools:context=".view.fragment.timeline.ExpenditureFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
