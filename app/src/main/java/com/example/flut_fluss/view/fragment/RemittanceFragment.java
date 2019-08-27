@@ -97,12 +97,6 @@ public class RemittanceFragment extends Fragment {
 
     private void event() {
 
-        visibleDeleteCancelButton();
-        invisibleDeleteCancelButton();
-
-        visibleMenuLayout();
-        visibleSendLayout();
-
         clickEvent();
 
         setMoveMoneyCountTitle();
