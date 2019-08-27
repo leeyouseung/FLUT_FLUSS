@@ -1,5 +1,7 @@
 package com.example.flut_fluss.view.fragment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -84,6 +86,44 @@ public class ShowMoneyListFragment extends Fragment {
 
     private void clickEvent() {
 
+        clickAddKindButton();
+    }
+
+    private void clickAddKindButton() {
+
+        binding.addKindButton.setOnClickListener(v -> {
+
+            final String items[] = {"계좌", "카드"};
+
+            AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+
+            dialog.setTitle("추가");
+            dialog.setMessage("항목");
+
+            dialog.setSingleChoiceItems(items, 0,
+                    new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                            // 각 리스트를 선택했을때
+                        }
+                    }).setPositiveButton("Ok",
+                    new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                            // OK 버튼 클릭시 , 여기서 선택한 값을 메인 Activity 로 넘기면 된다.
+                        }
+                    }).setNegativeButton("Cancel",
+                    new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                            // Cancel 버튼 클릭시
+                        }
+                    });
+            dialog.show();
+        });
     }
 
     // TODO: Rename method, update argument and hook method into UI event
