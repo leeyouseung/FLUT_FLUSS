@@ -5,7 +5,6 @@ import android.content.ContextWrapper;
 import android.content.SharedPreferences;
 
 /**
- *  @author 우주 최강 천재 건우
  *  토큰 sharedpreferences에 저장
  */
 public class Token extends ContextWrapper {
