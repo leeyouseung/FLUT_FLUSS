@@ -1,6 +1,5 @@
 package com.example.flut_fluss.view.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -8,14 +7,12 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.MainActivityBinding;
 import com.example.flut_fluss.view.fragment.AddCardFragment;
 import com.example.flut_fluss.view.fragment.RemittanceFragment;
@@ -23,14 +20,12 @@ import com.example.flut_fluss.view.fragment.SettingFragment;
 import com.example.flut_fluss.view.fragment.ShowMoneyListFragment;
 import com.example.flut_fluss.view.fragment.TimeLineFragment;
 
-public class MainActivity extends AppCompatActivity {
-
-    private MainActivityBinding binding;
+public class MainActivity extends BaseActivity<MainActivityBinding> {
 
     private TextView money;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.main_activity);
 
@@ -252,5 +247,11 @@ public class MainActivity extends AppCompatActivity {
 
             startActivity(new Intent(getApplicationContext(), SendMoneyActivity.class));
         });
+    }
+
+    @Override
+    protected int layoutId() {
+
+        return R.layout.main_activity;
     }
 }
