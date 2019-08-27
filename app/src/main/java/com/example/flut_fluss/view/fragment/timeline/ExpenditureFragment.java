@@ -24,7 +24,36 @@ public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding
     }
 
     private void event() {
-        
+
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
+        clickTransferLayout();
+        clickFoodLayout();
+        clickClothsLayout();
+        clickEtcLayout();
+    }
+
+    private void clickTransferLayout() {
+
+        binding.transferLayout.setOnClickListener(v -> {
+
+            
+        });
+    }
+
+    private void clickFoodLayout() {
+
+    }
+
+    private void clickClothsLayout() {
+
+    }
+
+    private void clickEtcLayout() {
+
     }
 
     @Override

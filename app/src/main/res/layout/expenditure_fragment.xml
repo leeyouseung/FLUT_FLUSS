@@ -42,7 +42,7 @@
             tools:ignore="HardcodedText" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/Transfer_layout"
+            android:id="@+id/transfer_layout"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_marginStart="12dp"
@@ -132,7 +132,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Transfer_layout">
+            app:layout_constraintTop_toBottomOf="@+id/transfer_layout">
 
             <ImageButton
                 android:id="@+id/in_button_2"
@@ -234,7 +234,8 @@
                 android:src="@drawable/cloth_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textView13"

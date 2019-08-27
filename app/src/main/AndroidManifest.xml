@@ -12,7 +12,6 @@
         <activity android:name=".view.activity.ShowCardActivity"></activity>
         <activity android:name=".view.activity.ShowAccountActivity" />
         <activity android:name=".view.activity.DutchPayActivity" />
-        <activity android:name=".view.activity.AccountActivity" />
         <activity android:name=".view.activity.SendMoneyActivity" />
         <activity android:name=".view.activity.FingerPrintActivity" />
         <activity android:name=".view.activity.RegisterActivity" />
