@@ -100,6 +100,8 @@ public class ShowMoneyListFragment extends Fragment {
                     "카드"
             };
 
+            final int[] selectedIndex = {0};
+
             AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
 
             dialog.setTitle("추가");
@@ -111,12 +113,16 @@ public class ShowMoneyListFragment extends Fragment {
 
                         // 각 리스트를 선택했을때
                         Toast.makeText(getContext(), whichButton + "", Toast.LENGTH_SHORT).show();
+
+                        selectedIndex[0] = whichButton;
                     }
                 }).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int whichButton) {
 
                         // OK 버튼 클릭시 , 여기서 선택한 값을 메인 Activity 로 넘기면 된다.
+
+                        Toast.makeText(getContext(), whichButton + "", Toast.LENGTH_SHORT).show();
                     }
                 }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
@@ -127,6 +133,7 @@ public class ShowMoneyListFragment extends Fragment {
                     }
                 });
 
+            dialog.create();
             dialog.show();
         });
     }
