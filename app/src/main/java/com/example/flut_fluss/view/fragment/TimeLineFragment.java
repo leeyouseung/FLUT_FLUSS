@@ -3,6 +3,8 @@ package com.example.flut_fluss.view.fragment;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
@@ -20,6 +22,12 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
 
     private void initData() {
 
+        FragmentManager fragmentManager = getChildFragmentManager();
+
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        fragmentTransaction.replace(R.id.main_activity_fragment, new SettingFragment());
+        fragmentTransaction.commit();
     }
 
     private void event() {
