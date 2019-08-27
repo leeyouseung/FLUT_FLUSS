@@ -20,13 +20,12 @@ import com.example.flut_fluss.view.activity.MainActivity;
 import com.example.flut_fluss.widget.recyclerview.adapter.ShowMoneyListAdapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ShowMoneyListFragment extends Fragment {
 
     private ShowMoneyListFragmentBinding binding;
 
-    private List<Card> cardList = new ArrayList<>();
+    ArrayList<String> cardList = new ArrayList<>();
 
     private ShowMoneyListAdapter showMoneyListAdapter;
 
@@ -86,7 +85,7 @@ public class ShowMoneyListFragment extends Fragment {
 
         binding.showMoneyRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
 
-        showMoneyListAdapter = new ShowMoneyListAdapter(cardList, getContext());
+        showMoneyListAdapter = new ShowMoneyListAdapter(cardList);
 
         binding.showMoneyRecyclerView.setAdapter(showMoneyListAdapter);
     }

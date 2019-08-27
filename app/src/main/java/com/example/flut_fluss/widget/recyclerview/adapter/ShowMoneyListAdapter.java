@@ -1,27 +1,39 @@
 package com.example.flut_fluss.widget.recyclerview.adapter;
 
-import android.content.Intent;
+import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.flut_fluss.R;
-import com.example.flut_fluss.data.Card;
-import com.example.flut_fluss.view.activity.AccountActivity;
-import com.example.flut_fluss.view.fragment.ShowMoneyListFragment;
-import com.example.flut_fluss.widget.recyclerview.viewholder.ShowMoneyListViewHolder;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class ShowMoneyListAdapter extends RecyclerView.Adapter<ShowMoneyListAdapter.ViewHolder> {
 
     private ArrayList<String> mData;
 
-    ShowMoneyListFragment view;
+    // 아이템 뷰를 저장하는 뷰홀더 클래스.
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        TextView moneyKind;
+        TextView money_1;
+        TextView money_2;
+
+        ViewHolder(View itemView) {
+            super(itemView);
+
+            // 뷰 객체에 대한 참조. (hold strong reference)
+            moneyKind = itemView.findViewById(R.id.money_kind);
+            money_1 = itemView.findViewById(R.id.show_money_money);
+            money_2 = itemView.findViewById(R.id.money_list_money);
+        }
+    }
 
     public ShowMoneyListAdapter(ArrayList<String> cardList) {
 
@@ -30,38 +42,34 @@ public class ShowMoneyListAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ShowMoneyListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        return new ShowMoneyListViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.show_money_list_item, parent, false));
+        Context context = parent.getContext();
+
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View view = inflater.inflate(R.layout.show_money_list_item, parent, false);
+
+        ShowMoneyListAdapter.ViewHolder vh = new ShowMoneyListAdapter.ViewHolder(view);
+
+        return vh;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         Log.d("LogPosition", "position = " + position);
 
-//        Card card = mData.get(position);
+        String text = mData.get(position);
 
-//        populateItemRows((ShowMoneyListViewHolder) holder, card);
+        holder.moneyKind.setText(text);
+        holder.money_1.setText(text);
+        holder.money_2.setText(text);
     }
 
     @Override
     public int getItemCount() {
 
         return mData.size();
-    }
-
-    private void populateItemRows(ShowMoneyListViewHolder viewHolder, Card card) {
-
-//        viewHolder.binding.moneyKind.setText(card.getKind());
-//        viewHolder.binding.moneyListMoney.setText(card.getMoney());
-//
-//        viewHolder.binding.moneyListKind.setOnClickListener(v -> {
-//
-//            Intent intent = new Intent(context, AccountActivity.class);
-//            intent.putExtra("card", String.valueOf(card));
-//
-//            context.startActivity(intent);
-//        });
     }
 }
