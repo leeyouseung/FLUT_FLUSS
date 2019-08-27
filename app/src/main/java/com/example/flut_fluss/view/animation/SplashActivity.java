@@ -10,7 +10,7 @@ import androidx.databinding.DataBindingUtil;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.databinding.SplashActivityBinding;
-import com.example.flut_fluss.view.activity.FingerPrintActivity;
+import com.example.flut_fluss.view.activity.login.FingerPrintActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

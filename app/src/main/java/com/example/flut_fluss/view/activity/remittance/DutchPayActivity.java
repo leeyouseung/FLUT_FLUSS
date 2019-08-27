@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.activity;
+package com.example.flut_fluss.view.activity.remittance;
 
 import android.os.Bundle;
 

@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.fragment.main;
+package com.example.flut_fluss.view.z_fragment.main;
 
 import android.os.Bundle;
 
@@ -6,7 +6,6 @@ import androidx.annotation.Nullable;
 
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;

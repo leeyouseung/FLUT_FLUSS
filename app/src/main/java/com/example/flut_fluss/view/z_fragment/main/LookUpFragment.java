@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.fragment.main;
+package com.example.flut_fluss.view.z_fragment.main;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -12,8 +12,8 @@ import android.widget.Toast;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
 import com.example.flut_fluss.databinding.LookUpFragmentBinding;
-import com.example.flut_fluss.view.activity.ShowAccountActivity;
-import com.example.flut_fluss.view.activity.ShowCardActivity;
+import com.example.flut_fluss.view.activity.lookup.ShowAccountActivity;
+import com.example.flut_fluss.view.activity.lookup.ShowCardActivity;
 
 public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 

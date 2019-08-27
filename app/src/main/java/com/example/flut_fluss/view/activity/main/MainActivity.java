@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.activity;
+package com.example.flut_fluss.view.activity.main;
 
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -13,11 +13,13 @@ import android.widget.TextView;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.MainActivityBinding;
-import com.example.flut_fluss.view.fragment.main.AddCardFragment;
-import com.example.flut_fluss.view.fragment.main.RemittanceFragment;
-import com.example.flut_fluss.view.fragment.main.SettingFragment;
-import com.example.flut_fluss.view.fragment.main.LookUpFragment;
-import com.example.flut_fluss.view.fragment.main.TimeLineFragment;
+import com.example.flut_fluss.view.activity.remittance.DutchPayActivity;
+import com.example.flut_fluss.view.activity.remittance.SendMoneyActivity;
+import com.example.flut_fluss.view.z_fragment.main.AddCardFragment;
+import com.example.flut_fluss.view.z_fragment.main.RemittanceFragment;
+import com.example.flut_fluss.view.z_fragment.main.SettingFragment;
+import com.example.flut_fluss.view.z_fragment.main.LookUpFragment;
+import com.example.flut_fluss.view.z_fragment.main.TimeLineFragment;
 
 public class MainActivity extends BaseActivity<MainActivityBinding> {
 

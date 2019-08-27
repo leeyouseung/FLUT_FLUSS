@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.fragment.timeline;
+package com.example.flut_fluss.view.z_fragment.timeline;
 
 import android.os.Bundle;
 

@@ -1,5 +1,6 @@
-package com.example.flut_fluss.view.fragment.timeline;
+package com.example.flut_fluss.view.z_fragment.timeline;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -7,6 +8,7 @@ import androidx.annotation.Nullable;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
 import com.example.flut_fluss.databinding.ExpenditureFragmentBinding;
+import com.example.flut_fluss.view.activity.inner_timline.TransferActivity;
 
 public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding> {
 
@@ -40,7 +42,7 @@ public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding
 
         binding.transferLayout.setOnClickListener(v -> {
 
-            
+            startActivity(new Intent(getContext(), TransferActivity.class));
         });
     }
 

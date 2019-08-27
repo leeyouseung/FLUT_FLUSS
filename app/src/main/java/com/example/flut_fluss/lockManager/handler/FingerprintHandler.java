@@ -14,7 +14,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.example.flut_fluss.R;
-import com.example.flut_fluss.view.activity.MainActivity;
+import com.example.flut_fluss.view.activity.main.MainActivity;
 
 public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
 

@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.activity;
+package com.example.flut_fluss.view.activity.login;
 
 import androidx.core.content.ContextCompat;
 

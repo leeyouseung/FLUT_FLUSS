@@ -6,7 +6,7 @@
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragment.main.SettingFragment">
+    tools:context=".view.z_fragment.main.SettingFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

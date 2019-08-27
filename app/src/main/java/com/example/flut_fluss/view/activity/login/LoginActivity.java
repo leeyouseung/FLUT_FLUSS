@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.activity;
+package com.example.flut_fluss.view.activity.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.Toast;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.LoginActivityBinding;
+import com.example.flut_fluss.view.activity.main.MainActivity;
+import com.example.flut_fluss.view.register.RegisterActivity;
 
 public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
