@@ -121,8 +121,6 @@ public class ShowMoneyListFragment extends Fragment {
                     public void onClick(DialogInterface dialog, int whichButton) {
 
                         // OK 버튼 클릭시 , 여기서 선택한 값을 메인 Activity 로 넘기면 된다.
-
-                        Toast.makeText(getContext(), whichButton + "", Toast.LENGTH_SHORT).show();
                     }
                 }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
