@@ -112,7 +112,7 @@ public class ShowMoneyListFragment extends Fragment {
                     public void onClick(DialogInterface dialog, int whichButton) {
 
                         // 각 리스트를 선택했을때
-                        Toast.makeText(getContext(), whichButton + "", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), selectedIndex[whichButton] + "", Toast.LENGTH_SHORT).show();
 
                         selectedIndex[0] = whichButton;
                     }
