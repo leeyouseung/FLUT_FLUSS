@@ -33,7 +33,7 @@ public abstract class BaseActivity<VB extends ViewDataBinding> extends AppCompat
     public void setRequestedOrientation(int requestedOrientation) {
 
         if (Build.VERSION.SDK_INT != Build.VERSION_CODES.O) {
-            
+
             super.setRequestedOrientation(requestedOrientation);
         }
     }
