@@ -29,9 +29,9 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         initData();
 
-        onCreateFragmentSetting();
+        initSetFragment();
 
-        onCreateButtonSetting();
+        initSetButton();
 
         event();
     }
@@ -63,7 +63,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 //        }
     }
 
-    private void onCreateFragmentSetting() {
+    private void initSetFragment() {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
@@ -73,7 +73,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
         fragmentTransaction.commit();
     }
 
-    private void onCreateButtonSetting() {
+    private void initSetButton() {
 
         binding.remittanceIcon.setImageResource(R.drawable.remittance_icon_click);
         binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));

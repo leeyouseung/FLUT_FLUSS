@@ -15,18 +15,18 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        initData();
+        initSetFragment();
 
         event();
     }
 
-    private void initData() {
+    private void initSetFragment() {
 
         FragmentManager fragmentManager = getChildFragmentManager();
 
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        fragmentTransaction.replace(R.id.main_activity_fragment, new SettingFragment());
+        fragmentTransaction.replace(R.id.time_line_fragment, new ExpenditureFragment());
         fragmentTransaction.commit();
     }
 
@@ -49,6 +49,13 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
             binding.expenditureButton.setBackgroundResource(R.drawable.time_line_button_radius);
             binding.incomeButton.setBackground(null);
             binding.anotherButton.setBackground(null);
+
+            FragmentManager fragmentManager = getChildFragmentManager();
+
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            fragmentTransaction.replace(R.id.time_line_fragment, new ExpenditureFragment());
+            fragmentTransaction.commit();
         });
     }
 
@@ -59,6 +66,13 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
             binding.expenditureButton.setBackground(null);
             binding.incomeButton.setBackgroundResource(R.drawable.time_line_button_radius);
             binding.anotherButton.setBackground(null);
+
+            FragmentManager fragmentManager = getChildFragmentManager();
+
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            fragmentTransaction.replace(R.id.time_line_fragment, new IncomeFragment());
+            fragmentTransaction.commit();
         });
     }
 
@@ -69,6 +83,13 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
             binding.expenditureButton.setBackground(null);
             binding.incomeButton.setBackground(null);
             binding.anotherButton.setBackgroundResource(R.drawable.time_line_button_radius);
+
+            FragmentManager fragmentManager = getChildFragmentManager();
+
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            fragmentTransaction.replace(R.id.time_line_fragment, new AnotherFragment());
+            fragmentTransaction.commit();
         });
     }
 

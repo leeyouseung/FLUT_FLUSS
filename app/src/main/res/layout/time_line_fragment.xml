@@ -60,9 +60,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/income_button"
             tools:ignore="UselessLeaf">
 
             <RelativeLayout
+                android:id="@+id/time_line_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
