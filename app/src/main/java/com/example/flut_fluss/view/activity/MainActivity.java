@@ -13,11 +13,11 @@ import android.widget.TextView;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.MainActivityBinding;
-import com.example.flut_fluss.view.fragment.AddCardFragment;
-import com.example.flut_fluss.view.fragment.RemittanceFragment;
-import com.example.flut_fluss.view.fragment.SettingFragment;
-import com.example.flut_fluss.view.fragment.SelectMoneyListFragment;
-import com.example.flut_fluss.view.fragment.TimeLineFragment;
+import com.example.flut_fluss.view.fragment.main.AddCardFragment;
+import com.example.flut_fluss.view.fragment.main.RemittanceFragment;
+import com.example.flut_fluss.view.fragment.main.SettingFragment;
+import com.example.flut_fluss.view.fragment.main.SelectMoneyListFragment;
+import com.example.flut_fluss.view.fragment.main.TimeLineFragment;
 
 public class MainActivity extends BaseActivity<MainActivityBinding> {
 

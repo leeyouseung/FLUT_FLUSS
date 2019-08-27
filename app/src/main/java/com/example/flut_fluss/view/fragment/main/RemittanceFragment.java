@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.fragment;
+package com.example.flut_fluss.view.fragment.main;
 
 import android.os.Bundle;
 
