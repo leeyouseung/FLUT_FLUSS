@@ -94,7 +94,7 @@ public class ShowMoneyListFragment extends Fragment {
 
         binding.addKindButton.setOnClickListener(v -> {
 
-            final String items[] = {"계좌", "카드"};
+            final String[] items = {"계좌", "카드"};
 
             AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
 
