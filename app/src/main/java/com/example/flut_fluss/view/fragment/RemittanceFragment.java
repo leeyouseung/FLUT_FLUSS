@@ -433,12 +433,12 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
 
     private void setMoveMoneyCountTitle() {
 
-        binding.moneyTitle.setX(binding.moneyTitle.getX() + 22);
+        binding.moneyTitle.setX(binding.moneyTitle.getX() + 36);
     }
 
     private void resetMoveMoneyCountTitle() {
 
-        binding.moneyTitle.setX(binding.moneyTitle.getX() - 22);
+        binding.moneyTitle.setX(binding.moneyTitle.getX() - 36);
     }
 
     @Override
