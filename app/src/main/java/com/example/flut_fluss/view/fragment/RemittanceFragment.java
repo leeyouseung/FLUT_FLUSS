@@ -97,7 +97,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             if (isFirstInput && binding.money.getText().toString().equals("0")) {
 
                 visibleMenuLayout();
-            } else {
+            }
+            else {
 
                 binding.money.append(String.valueOf(number));
 
@@ -119,6 +120,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                setMoveMoneyCountTitle();
             }
             else {
 
@@ -145,6 +148,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                setMoveMoneyCountTitle();
             }
             else {
 
@@ -170,6 +175,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                setMoveMoneyCountTitle();
             }
             else {
 
@@ -195,6 +202,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                setMoveMoneyCountTitle();
             }
             else {
 
@@ -220,6 +229,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                setMoveMoneyCountTitle();
             }
             else {
 
@@ -245,6 +256,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                setMoveMoneyCountTitle();
             }
             else {
 
@@ -270,6 +283,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                setMoveMoneyCountTitle();
             }
             else {
 
@@ -295,6 +310,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                setMoveMoneyCountTitle();
             }
             else {
 
@@ -320,6 +337,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                setMoveMoneyCountTitle();
             }
             else {
 
@@ -343,6 +362,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             visibleMenuLayout();
 
             invisibleDeleteCancelButton();
+
+            resetMoveMoneyCountTitle();
         });
     }
 
@@ -357,6 +378,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 isFirstInput = true;
 
                 invisibleDeleteCancelButton();
+
+                resetMoveMoneyCountTitle();
             }
             else {
 
@@ -367,6 +390,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                     isFirstInput = true;
 
                     invisibleDeleteCancelButton();
+
+                    resetMoveMoneyCountTitle();
                 }
                 else if (binding.money.getText().toString().length() == 1 && !(binding.money.getText().toString().equals("0"))) {
 
@@ -377,6 +402,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                     visibleMenuLayout();
 
                     invisibleDeleteCancelButton();
+
+                    resetMoveMoneyCountTitle();
                 }
                 else {
 
@@ -402,12 +429,18 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
     private void clickNotificationButton() {
 
         binding.notificationButton.setOnClickListener(v -> {
-            
+
         });
     }
 
     private void setMoveMoneyCountTitle() {
 
+        binding.moneyTitle.setX(binding.moneyTitle.getX() + 22);
+    }
+
+    private void resetMoveMoneyCountTitle() {
+
+        binding.moneyTitle.setX(binding.moneyTitle.getX() - 22);
     }
 
     @Override
