@@ -396,15 +396,13 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
 
         binding.qrCameraButton.setOnClickListener(v -> {
 
-            Toast.makeText(getContext(), "qr_camera_button_onClicked", Toast.LENGTH_LONG).show();
         });
     }
 
     private void clickNotificationButton() {
 
         binding.notificationButton.setOnClickListener(v -> {
-
-            Toast.makeText(getContext(), "notification_button_onClicked", Toast.LENGTH_LONG).show();
+            
         });
     }
 
