@@ -76,8 +76,6 @@ public class RemittanceFragment extends Fragment {
 
         initData();
 
-        setting();
-
         event();
     }
 
@@ -88,9 +86,6 @@ public class RemittanceFragment extends Fragment {
 
         menuNavigationLinearLayout.setVisibility(View.VISIBLE);
         moneySendLinearLayout.setVisibility(View.INVISIBLE);
-    }
-
-    private void setting() {
 
         binding.money.setText(String.valueOf(setOnCreateMoney));
     }
