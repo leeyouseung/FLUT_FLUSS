@@ -251,7 +251,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
             Intent intent = new Intent(getApplicationContext(), SendMoneyActivity.class);
 
-//            intent.putExtra("send_money", sendMoney);
+//            intent.putExtra("send_money", );
 
             startActivity(intent);
         });
