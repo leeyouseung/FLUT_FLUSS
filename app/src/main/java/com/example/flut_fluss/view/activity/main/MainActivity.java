@@ -249,9 +249,13 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         binding.moneySendButton.setOnClickListener(v -> {
 
+            RemittanceFragment remittanceFragment = new RemittanceFragment();
+
+            String sendMoney = remittanceFragment.money;
+
             Intent intent = new Intent(getApplicationContext(), SendMoneyActivity.class);
 
-//            intent.putExtra("send_money", );
+            intent.putExtra("send_money", sendMoney);
 
             startActivity(intent);
         });
