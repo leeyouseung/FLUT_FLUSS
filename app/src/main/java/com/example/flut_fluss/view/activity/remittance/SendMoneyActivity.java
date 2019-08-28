@@ -25,7 +25,7 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
     @SuppressLint("SetTextI18n")
     private void initData() {
 
-        binding.searchView.setQueryHint("Google Search");
+        binding.searchView.setQueryHint("받는 분 계좌번호 또는 연락처 입력");
 
         Intent intent = getIntent();
 
