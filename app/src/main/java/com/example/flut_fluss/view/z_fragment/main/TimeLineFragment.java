@@ -1,5 +1,6 @@
 package com.example.flut_fluss.view.z_fragment.main;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -50,6 +51,9 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
 
         binding.expenditureButton.setOnClickListener(v -> {
 
+            binding.setMoney.setTextColor(getResources().getColor(R.color.black));
+            binding.setMoneyTitle.setText("원 지출");
+
             binding.expenditureButton.setBackgroundResource(R.drawable.time_line_button_radius);
             binding.incomeButton.setBackground(null);
             binding.anotherButton.setBackground(null);
@@ -67,6 +71,9 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
 
         binding.incomeButton.setOnClickListener(v -> {
 
+            binding.setMoney.setTextColor(getResources().getColor(R.color.blue));
+            binding.setMoneyTitle.setText("원 수입");
+
             binding.expenditureButton.setBackground(null);
             binding.incomeButton.setBackgroundResource(R.drawable.time_line_button_radius);
             binding.anotherButton.setBackground(null);
@@ -80,9 +87,14 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
         });
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickAnotherButton() {
 
         binding.anotherButton.setOnClickListener(v -> {
+
+            binding.setMoney.setText("70,020");
+            binding.setMoneyTitle.setText("");
+            binding.setMoney.setTextColor(getResources().getColor(R.color.gray));
 
             binding.expenditureButton.setBackground(null);
             binding.incomeButton.setBackground(null);
