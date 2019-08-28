@@ -12,6 +12,17 @@ public class SendMoneyAccountActivity extends BaseActivity<SendMoneyAccountActiv
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initData();
+
+        event();
+    }
+
+    private void initData() {
+
+    }
+
+    private void event() {
+        
     }
 
     @Override
