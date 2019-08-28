@@ -22,7 +22,7 @@ public class SendMoneyAccountActivity extends BaseActivity<SendMoneyAccountActiv
     }
 
     private void event() {
-        
+
     }
 
     @Override
