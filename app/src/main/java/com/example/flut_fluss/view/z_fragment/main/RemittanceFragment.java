@@ -13,7 +13,7 @@ import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
 
 public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> {
 
-    public String sendMoney;
+    public String sendMoney = "0";
 
     private LinearLayout menuNavigationLinearLayout;
     private LinearLayout moneySendLinearLayout;
@@ -104,6 +104,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
 
                 binding.money.append(String.valueOf(0));
 
+                sendMoney = binding.money.getText().toString();
+
                 visibleSendLayout();
             }
         });
@@ -124,6 +126,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleDeleteCancelButton();
 
                 setMoveMoneyCountTitle();
+
+                sendMoney = binding.money.getText().toString();
             }
             else {
 
@@ -132,6 +136,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                sendMoney = binding.money.getText().toString();
             }
         });
     }
@@ -152,6 +158,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleDeleteCancelButton();
 
                 setMoveMoneyCountTitle();
+
+                sendMoney = binding.money.getText().toString();
             }
             else {
 
@@ -160,6 +168,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                sendMoney = binding.money.getText().toString();
             }
         });
     }
@@ -179,6 +189,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleDeleteCancelButton();
 
                 setMoveMoneyCountTitle();
+
+                sendMoney = binding.money.getText().toString();
             }
             else {
 
@@ -187,6 +199,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                sendMoney = binding.money.getText().toString();
             }
         });
     }
@@ -206,6 +220,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleDeleteCancelButton();
 
                 setMoveMoneyCountTitle();
+
+                sendMoney = binding.money.getText().toString();
             }
             else {
 
@@ -214,6 +230,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                sendMoney = binding.money.getText().toString();
             }
         });
     }
@@ -233,6 +251,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleDeleteCancelButton();
 
                 setMoveMoneyCountTitle();
+
+                sendMoney = binding.money.getText().toString();
             }
             else {
 
@@ -241,6 +261,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                sendMoney = binding.money.getText().toString();
             }
         });
     }
@@ -260,6 +282,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleDeleteCancelButton();
 
                 setMoveMoneyCountTitle();
+
+                sendMoney = binding.money.getText().toString();
             }
             else {
 
@@ -268,6 +292,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                sendMoney = binding.money.getText().toString();
             }
         });
     }
@@ -287,6 +313,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleDeleteCancelButton();
 
                 setMoveMoneyCountTitle();
+
+                sendMoney = binding.money.getText().toString();
             }
             else {
 
@@ -295,6 +323,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                sendMoney = binding.money.getText().toString();
             }
         });
     }
@@ -314,6 +344,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleDeleteCancelButton();
 
                 setMoveMoneyCountTitle();
+
+                sendMoney = binding.money.getText().toString();
             }
             else {
 
@@ -322,6 +354,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                sendMoney = binding.money.getText().toString();
             }
         });
     }
@@ -341,6 +375,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleDeleteCancelButton();
 
                 setMoveMoneyCountTitle();
+
+                sendMoney = binding.money.getText().toString();
             }
             else {
 
@@ -349,6 +385,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 visibleSendLayout();
 
                 visibleDeleteCancelButton();
+
+                sendMoney = binding.money.getText().toString();
             }
         });
     }
@@ -416,6 +454,8 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                     isFirstInput = false;
 
                     visibleSendLayout();
+
+                    sendMoney = binding.money.getText().toString();
                 }
             }
         });
