@@ -25,6 +25,8 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
     @SuppressLint("SetTextI18n")
     private void initData() {
 
+        binding.searchView.setQueryHint("Google Search");
+
         Intent intent = getIntent();
 
         String sendMoney = intent.getStringExtra("send_money");
