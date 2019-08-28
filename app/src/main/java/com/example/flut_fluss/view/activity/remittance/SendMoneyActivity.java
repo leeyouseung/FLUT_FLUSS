@@ -48,6 +48,10 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
             if(openSetLayout) {
 
+                binding.notOpenButton.setVisibility(View.INVISIBLE);
+
+                binding.openButton.setVisibility(View.VISIBLE);
+
                 binding.accountLayout.setVisibility(View.VISIBLE);
 
                 binding.cardLayout.setVisibility(View.VISIBLE);
@@ -55,6 +59,10 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
                 openSetLayout = false;
             }
             else {
+
+                binding.notOpenButton.setVisibility(View.VISIBLE);
+
+                binding.openButton.setVisibility(View.INVISIBLE);
 
                 binding.accountLayout.setVisibility(View.GONE);
 
