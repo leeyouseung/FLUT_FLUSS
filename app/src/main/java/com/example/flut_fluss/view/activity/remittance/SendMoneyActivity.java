@@ -80,7 +80,7 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
     }
 
     private void clickCardLayout() {
-        
+
     }
 
     @Override
