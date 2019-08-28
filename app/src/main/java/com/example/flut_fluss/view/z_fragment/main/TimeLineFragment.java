@@ -56,6 +56,7 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
             binding.setMoney.setText("370,000");
             binding.setMoney.setTextColor(getResources().getColor(R.color.black));
             binding.setMoneyTitle.setText("원 지출");
+            binding.setMoneyTitle.setTextColor(getResources().getColor(R.color.black));
             binding.etcAlertTitle.setVisibility(View.GONE);
 
             binding.expenditureButton.setBackgroundResource(R.drawable.time_line_button_radius);
@@ -79,6 +80,7 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
             binding.setMoney.setText("350,000");
             binding.setMoney.setTextColor(getResources().getColor(R.color.blue));
             binding.setMoneyTitle.setText("원 수입");
+            binding.setMoneyTitle.setTextColor(getResources().getColor(R.color.black));
             binding.etcAlertTitle.setVisibility(View.GONE);
 
             binding.expenditureButton.setBackground(null);
