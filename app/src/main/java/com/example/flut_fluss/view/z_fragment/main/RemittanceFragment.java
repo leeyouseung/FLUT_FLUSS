@@ -20,8 +20,6 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
 
     private boolean isFirstInput = true;
 
-    private int setOnCreateMoney = 0;
-
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -35,7 +33,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
 
     private void initData() {
 
-        binding.money.setText(String.valueOf(setOnCreateMoney));
+        binding.money.setText(String.valueOf(0));
     }
 
     private void initMenuSet() {
