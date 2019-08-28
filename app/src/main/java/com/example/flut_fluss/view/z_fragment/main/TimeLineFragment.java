@@ -102,6 +102,7 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
             binding.setMoney.setText("70,020");
             binding.setMoney.setTextColor(getResources().getColor(R.color.gray));
             binding.setMoneyTitle.setText("원");
+            binding.setMoneyTitle.setTextColor(getResources().getColor(R.color.gray));
             binding.etcAlertTitle.setVisibility(View.VISIBLE);
 
             binding.expenditureButton.setBackground(null);
