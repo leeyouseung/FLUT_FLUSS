@@ -40,6 +40,8 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
     private void clickEvent() {
 
         clickOpenSetLayout();
+        clickAccountLayout();
+        clickCardLayout();
     }
 
     private void clickOpenSetLayout() {
@@ -71,6 +73,14 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
                 openSetLayout = true;
             }
         });
+    }
+
+    private void clickAccountLayout() {
+
+    }
+
+    private void clickCardLayout() {
+        
     }
 
     @Override
