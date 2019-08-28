@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".view.activity.select_account_list.SendMoneyCardActivity"></activity>
-        <activity android:name=".view.activity.select_account_list.SendMoneyAccountActivity" />
+        <activity android:name=".view.activity.my_account_list.SendMyCardActivity"></activity>
+        <activity android:name=".view.activity.my_account_list.SendMyAccountActivity" />
         <activity android:name=".view.activity.inner_timline.EtcActivity" />
         <activity android:name=".view.activity.inner_timline.ClothsActivity" />
         <activity android:name=".view.activity.inner_timline.FoodActivity" />

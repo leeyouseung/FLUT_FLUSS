@@ -1,12 +1,12 @@
-package com.example.flut_fluss.view.activity.select_account_list;
+package com.example.flut_fluss.view.activity.my_account_list;
 
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
-import com.example.flut_fluss.databinding.SendMoneyAccountActivityBinding;
+import com.example.flut_fluss.databinding.SendMyCardActivityBinding;
 
-public class SendMoneyAccountActivity extends BaseActivity<SendMoneyAccountActivityBinding> {
+public class SendMyCardActivity extends BaseActivity<SendMyCardActivityBinding> {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,6 @@ public class SendMoneyAccountActivity extends BaseActivity<SendMoneyAccountActiv
     @Override
     protected int layoutId() {
 
-        return R.layout.send_money_account_activity;
+        return R.layout.send_my_card_activity;
     }
 }
