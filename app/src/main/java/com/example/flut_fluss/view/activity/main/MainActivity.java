@@ -248,7 +248,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         binding.moneySendButton.setOnClickListener(v -> {
 
-
+            
         });
     }
 
