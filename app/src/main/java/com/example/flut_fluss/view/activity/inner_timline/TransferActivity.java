@@ -12,6 +12,7 @@ public class TransferActivity extends BaseActivity<TransferActivityBinding> {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
     }
 
     @Override
