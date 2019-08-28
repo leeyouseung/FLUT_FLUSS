@@ -51,7 +51,6 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
         binding.searchView.setOnClickListener(v -> {
 
-            binding.searchView.getQueryHint();
         });
     }
 
