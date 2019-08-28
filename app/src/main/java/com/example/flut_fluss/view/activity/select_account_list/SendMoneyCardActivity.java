@@ -22,7 +22,7 @@ public class SendMoneyCardActivity extends BaseActivity<SendMoneyCardActivityBin
     }
 
     private void event() {
-        
+
     }
 
     @Override
