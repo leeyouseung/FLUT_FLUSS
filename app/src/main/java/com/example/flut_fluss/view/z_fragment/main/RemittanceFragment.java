@@ -1,5 +1,7 @@
 package com.example.flut_fluss.view.z_fragment.main;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -10,6 +12,7 @@ import android.widget.LinearLayout;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
 import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
+import com.example.flut_fluss.view.activity.main.MainActivity;
 
 public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> {
 
