@@ -251,7 +251,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
             RemittanceFragment remittanceFragment = new RemittanceFragment();
 
-            String sendMoney = remittanceFragment.money;
+            String sendMoney = remittanceFragment.sendMoney;
 
             Intent intent = new Intent(getApplicationContext(), SendMoneyActivity.class);
 
