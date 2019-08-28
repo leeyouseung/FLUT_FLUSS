@@ -13,7 +13,7 @@ import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
 
 public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> {
 
-    public String money = binding.money.getText().toString();
+    public String sendMoney;
 
     private LinearLayout menuNavigationLinearLayout;
     private LinearLayout moneySendLinearLayout;
@@ -28,18 +28,25 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
 
         initData();
 
+        initMenuSet();
+
         event();
     }
 
     private void initData() {
+
+        sendMoney = binding.money.getText().toString();
+
+        binding.money.setText(String.valueOf(setOnCreateMoney));
+    }
+
+    private void initMenuSet() {
 
         menuNavigationLinearLayout = getActivity().findViewById(R.id.menu_navigation_linearLayout);
         moneySendLinearLayout = getActivity().findViewById(R.id.money_send_linearLayout);
 
         menuNavigationLinearLayout.setVisibility(View.VISIBLE);
         moneySendLinearLayout.setVisibility(View.INVISIBLE);
-
-        binding.money.setText(String.valueOf(setOnCreateMoney));
     }
 
     private void event() {
