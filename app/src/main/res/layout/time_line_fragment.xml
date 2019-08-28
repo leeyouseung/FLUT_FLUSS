@@ -61,7 +61,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/set_money">
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -99,7 +99,7 @@
             android:id="@+id/set_money"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
             android:text="350,000"
             android:textColor="@color/black"
@@ -120,6 +120,21 @@
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/set_money"
             app:layout_constraintTop_toTopOf="@+id/set_money"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="14dp"
+            android:text="내 계좌 간의 금원 이동 내역이나 카드대금 청구서는 이곳에서 확인하세요."
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set_money_title"
             tools:ignore="HardcodedText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
