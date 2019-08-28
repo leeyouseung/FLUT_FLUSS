@@ -8,6 +8,8 @@ import android.view.View;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendMoneyActivityBinding;
+import com.example.flut_fluss.view.activity.select_account_list.SendMoneyAccountActivity;
+import com.example.flut_fluss.view.activity.select_account_list.SendMoneyCardActivity;
 
 public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
@@ -87,10 +89,12 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
     private void clickAccountLayout() {
 
+        startActivity(new Intent(getApplicationContext(), SendMoneyAccountActivity.class));
     }
 
     private void clickCardLayout() {
 
+        startActivity(new Intent(getApplicationContext(), SendMoneyCardActivity.class));
     }
 
     @Override
