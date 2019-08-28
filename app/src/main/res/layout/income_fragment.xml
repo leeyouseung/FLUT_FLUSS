@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
-            android:text="지출"
+            android:text="수입"
             android:textColor="@color/black"
             android:textSize="11pt"
             android:textStyle="bold"
