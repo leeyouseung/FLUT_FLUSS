@@ -52,7 +52,7 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
                 binding.cardLayout.setVisibility(View.VISIBLE);
 
-                openSetLayout = true;
+                openSetLayout = false;
             }
             else {
 
@@ -60,7 +60,7 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
                 binding.cardLayout.setVisibility(View.GONE);
 
-                openSetLayout = false;
+                openSetLayout = true;
             }
         });
     }
