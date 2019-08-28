@@ -249,7 +249,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         binding.moneySendButton.setOnClickListener(v -> {
 
-            RemittanceFragment remittanceFragment = (RemittanceFragment) getSupportFragmentManager().findFragmentById(R.id.money);
+            RemittanceFragment remittanceFragment = (RemittanceFragment) getSupportFragmentManager().findFragmentById(R.id.main_activity_fragment);
 
             String sendMoney = remittanceFragment.toString();
 
