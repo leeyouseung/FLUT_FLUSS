@@ -11,7 +11,7 @@ import com.example.flut_fluss.databinding.SendMoneyActivityBinding;
 
 public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
-    boolean openSetLayout = false;
+    boolean openSetLayout = true;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,21 +39,28 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
     private void clickEvent() {
 
-        binding.myAccountListLayout.setOnClickListener(v -> {
+        clickOpenSetLayout();
+    }
 
-            openSetLayout = true;
+    private void clickOpenSetLayout() {
+
+        binding.myAccountListLayout.setOnClickListener(v -> {
 
             if(openSetLayout) {
 
                 binding.accountLayout.setVisibility(View.VISIBLE);
 
                 binding.cardLayout.setVisibility(View.VISIBLE);
+
+                openSetLayout = true;
             }
             else {
 
-                binding.accountLayout.setVisibility(View.INVISIBLE);
+                binding.accountLayout.setVisibility(View.GONE);
 
-                binding.cardLayout.setVisibility(View.INVISIBLE);
+                binding.cardLayout.setVisibility(View.GONE);
+
+                openSetLayout = false;
             }
         });
     }
