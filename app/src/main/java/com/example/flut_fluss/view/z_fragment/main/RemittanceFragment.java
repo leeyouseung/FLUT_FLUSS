@@ -13,6 +13,8 @@ import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
 
 public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> {
 
+    public String money = binding.money.getText().toString();
+
     private LinearLayout menuNavigationLinearLayout;
     private LinearLayout moneySendLinearLayout;
 
