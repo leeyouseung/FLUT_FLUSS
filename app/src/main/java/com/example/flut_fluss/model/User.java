@@ -4,9 +4,12 @@ import com.google.gson.annotations.SerializedName;
 
 public class User {
 
+    @SerializedName("id")
     private String id;
+    @SerializedName("password")
+    private String password;
+    @SerializedName("name")
     private String name;
-    private String profileImg;
     @SerializedName("phone_number")
     private String phoneNumber;
 
@@ -14,11 +17,11 @@ public class User {
 
     }
 
-    public User(String id, String name, String profileImg, String phoneNumber) {
+    public User(String id, String passoword, String name, String phoneNumber) {
 
         this.id = id;
+        this.password = passoword;
         this.name = name;
-        this.profileImg = profileImg;
         this.phoneNumber = phoneNumber;
     }
 
@@ -32,6 +35,16 @@ public class User {
         this.id = id;
     }
 
+    public String getPassword() {
+
+        return password;
+    }
+
+    public void setPassword(String password) {
+
+        this.password = password;
+    }
+
     public String getName() {
 
         return name;
@@ -40,16 +53,6 @@ public class User {
     public void setName(String name) {
 
         this.name = name;
-    }
-
-    public String getprofileImg() {
-
-        return profileImg;
-    }
-
-    public void setprofileImg(String profileImg) {
-
-        this.profileImg = profileImg;
     }
 
     public String getPhoneNumber() {
