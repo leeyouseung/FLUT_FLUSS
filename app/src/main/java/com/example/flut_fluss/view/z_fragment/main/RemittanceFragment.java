@@ -78,23 +78,23 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
 
     private void clickEvent() {
 
-        clickMoneyNumber0(0);
-        clickMoneyNumber1(1);
-        clickMoneyNumber2(2);
-        clickMoneyNumber3(3);
-        clickMoneyNumber4(4);
-        clickMoneyNumber5(5);
-        clickMoneyNumber6(6);
-        clickMoneyNumber7(7);
-        clickMoneyNumber8(8);
-        clickMoneyNumber9(9);
-        clickCancelButton(0);
-        clickDeleteButton(0);
+        clickMoneyNumber0();
+        clickMoneyNumber1();
+        clickMoneyNumber2();
+        clickMoneyNumber3();
+        clickMoneyNumber4();
+        clickMoneyNumber5();
+        clickMoneyNumber6();
+        clickMoneyNumber7();
+        clickMoneyNumber8();
+        clickMoneyNumber9();
+        clickCancelButton();
+        clickDeleteButton();
         clickQrCameraButton();
         clickNotificationButton();
     }
 
-    private void clickMoneyNumber0(int number) {
+    private void clickMoneyNumber0() {
 
         binding.moneyNumber0.setOnClickListener(v -> {
 
@@ -104,20 +104,20 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             }
             else {
 
-                binding.money.append(String.valueOf(number));
+                binding.money.append(String.valueOf(0));
 
                 visibleSendLayout();
             }
         });
     }
 
-    private void clickMoneyNumber1(int number) {
+    private void clickMoneyNumber1() {
 
         binding.moneyNumber1.setOnClickListener(v -> {
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(number));
+                binding.money.setText(String.valueOf(1));
 
                 isFirstInput = false;
 
@@ -129,7 +129,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             }
             else {
 
-                binding.money.append(String.valueOf(number));
+                binding.money.append(String.valueOf(1));
 
                 visibleSendLayout();
 
@@ -139,13 +139,13 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
     }
 
 
-    private void clickMoneyNumber2(int number) {
+    private void clickMoneyNumber2() {
 
         binding.moneyNumber2.setOnClickListener(v -> {
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(number));
+                binding.money.setText(String.valueOf(2));
 
                 isFirstInput = false;
 
@@ -157,7 +157,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             }
             else {
 
-                binding.money.append(String.valueOf(number));
+                binding.money.append(String.valueOf(2));
 
                 visibleSendLayout();
 
@@ -166,13 +166,13 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
         });
     }
 
-    private void clickMoneyNumber3(int number) {
+    private void clickMoneyNumber3() {
 
         binding.moneyNumber3.setOnClickListener(v -> {
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(number));
+                binding.money.setText(String.valueOf(3));
 
                 isFirstInput = false;
 
@@ -184,7 +184,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             }
             else {
 
-                binding.money.append(String.valueOf(number));
+                binding.money.append(String.valueOf(3));
 
                 visibleSendLayout();
 
@@ -193,13 +193,13 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
         });
     }
 
-    private void clickMoneyNumber4(int number) {
+    private void clickMoneyNumber4() {
 
         binding.moneyNumber4.setOnClickListener(v -> {
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(number));
+                binding.money.setText(String.valueOf(4));
 
                 isFirstInput = false;
 
@@ -211,7 +211,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             }
             else {
 
-                binding.money.append(String.valueOf(number));
+                binding.money.append(String.valueOf(4));
 
                 visibleSendLayout();
 
@@ -220,13 +220,13 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
         });
     }
 
-    private void clickMoneyNumber5(int number) {
+    private void clickMoneyNumber5() {
 
         binding.moneyNumber5.setOnClickListener(v -> {
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(number));
+                binding.money.setText(String.valueOf(5));
 
                 isFirstInput = false;
 
@@ -238,7 +238,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             }
             else {
 
-                binding.money.append(String.valueOf(number));
+                binding.money.append(String.valueOf(5));
 
                 visibleSendLayout();
 
@@ -247,13 +247,13 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
         });
     }
 
-    private void clickMoneyNumber6(int number) {
+    private void clickMoneyNumber6() {
 
         binding.moneyNumber6.setOnClickListener(v -> {
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(number));
+                binding.money.setText(String.valueOf(6));
 
                 isFirstInput = false;
 
@@ -265,7 +265,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             }
             else {
 
-                binding.money.append(String.valueOf(number));
+                binding.money.append(String.valueOf(6));
 
                 visibleSendLayout();
 
@@ -274,13 +274,13 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
         });
     }
 
-    private void clickMoneyNumber7(int number) {
+    private void clickMoneyNumber7() {
 
         binding.moneyNumber7.setOnClickListener(v -> {
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(number));
+                binding.money.setText(String.valueOf(7));
 
                 isFirstInput = false;
 
@@ -292,7 +292,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             }
             else {
 
-                binding.money.append(String.valueOf(number));
+                binding.money.append(String.valueOf(7));
 
                 visibleSendLayout();
 
@@ -301,13 +301,13 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
         });
     }
 
-    private void clickMoneyNumber8(int number) {
+    private void clickMoneyNumber8() {
 
         binding.moneyNumber8.setOnClickListener(v -> {
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(number));
+                binding.money.setText(String.valueOf(8));
 
                 isFirstInput = false;
 
@@ -319,7 +319,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             }
             else {
 
-                binding.money.append(String.valueOf(number));
+                binding.money.append(String.valueOf(8));
 
                 visibleSendLayout();
 
@@ -328,13 +328,13 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
         });
     }
 
-    private void clickMoneyNumber9(int number) {
+    private void clickMoneyNumber9() {
 
         binding.moneyNumber9.setOnClickListener(v -> {
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(number));
+                binding.money.setText(String.valueOf(9));
 
                 isFirstInput = false;
 
@@ -346,7 +346,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
             }
             else {
 
-                binding.money.append(String.valueOf(number));
+                binding.money.append(String.valueOf(9));
 
                 visibleSendLayout();
 
@@ -355,11 +355,11 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
         });
     }
 
-    private void clickCancelButton(int number) {
+    private void clickCancelButton() {
 
         binding.cancelButton.setOnClickListener(v -> {
 
-            binding.money.setText(String.valueOf(number));
+            binding.money.setText(String.valueOf(0));
 
             isFirstInput = true;
 
@@ -371,7 +371,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
         });
     }
 
-    private void clickDeleteButton(int number) {
+    private void clickDeleteButton() {
 
         binding.deleteButton.setOnClickListener(v -> {
 
@@ -389,7 +389,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
 
                 if (binding.money.getText().toString().length() == 1 && binding.money.getText().toString().equals("0")) {
 
-                    binding.money.setText(String.valueOf(number));
+                    binding.money.setText(String.valueOf(0));
 
                     isFirstInput = true;
 
@@ -399,7 +399,7 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
                 }
                 else if (binding.money.getText().toString().length() == 1 && !(binding.money.getText().toString().equals("0"))) {
 
-                    binding.money.setText(String.valueOf(number));
+                    binding.money.setText(String.valueOf(0));
 
                     isFirstInput = true;
 
