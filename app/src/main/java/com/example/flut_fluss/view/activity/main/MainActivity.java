@@ -14,7 +14,6 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.MainActivityBinding;
 import com.example.flut_fluss.view.activity.remittance.DutchPayActivity;
-import com.example.flut_fluss.view.activity.remittance.SendMoneyActivity;
 import com.example.flut_fluss.view.z_fragment.main.AddCardFragment;
 import com.example.flut_fluss.view.z_fragment.main.RemittanceFragment;
 import com.example.flut_fluss.view.z_fragment.main.SettingFragment;
