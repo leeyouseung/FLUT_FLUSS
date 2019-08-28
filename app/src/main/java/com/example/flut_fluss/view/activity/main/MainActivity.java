@@ -1,5 +1,6 @@
 package com.example.flut_fluss.view.activity.main;
 
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -14,11 +15,14 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.MainActivityBinding;
 import com.example.flut_fluss.view.activity.remittance.DutchPayActivity;
+import com.example.flut_fluss.view.activity.remittance.SendMoneyActivity;
 import com.example.flut_fluss.view.z_fragment.main.AddCardFragment;
 import com.example.flut_fluss.view.z_fragment.main.RemittanceFragment;
 import com.example.flut_fluss.view.z_fragment.main.SettingFragment;
 import com.example.flut_fluss.view.z_fragment.main.LookUpFragment;
 import com.example.flut_fluss.view.z_fragment.main.TimeLineFragment;
+
+import java.util.Objects;
 
 public class MainActivity extends BaseActivity<MainActivityBinding> {
 
@@ -248,7 +252,14 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         binding.moneySendButton.setOnClickListener(v -> {
 
-            
+            String sendMoney = Objects.requireNonNull(Objects.requireNonNull(getSupportFragmentManager()
+                    .findFragmentById(R.id.main_activity_fragment)).getView()).findViewById(R.id.money).toString();
+
+            Intent intent = new Intent(getApplicationContext(), SendMoneyActivity.class);
+
+            intent.putExtra("send_money", sendMoney);
+
+            startActivity(intent);
         });
     }
 
