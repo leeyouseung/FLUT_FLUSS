@@ -26,7 +26,7 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
         String sendMoney = intent.getStringExtra("send_money");
 
-        binding.sendMoneyTitle.setText(sendMoney + "원 송금");
+        binding.sendMoneyTitle.setText(sendMoney + " 원 송금");
     }
 
     private void event() {

@@ -35,8 +35,6 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
 
     private void initData() {
 
-        sendMoney = binding.money.getText().toString();
-
         binding.money.setText(String.valueOf(setOnCreateMoney));
     }
 
