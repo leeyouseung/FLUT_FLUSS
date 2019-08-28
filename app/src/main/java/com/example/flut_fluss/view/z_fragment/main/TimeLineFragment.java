@@ -47,10 +47,12 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
         clickAnotherButton();
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickExpenditureButton() {
 
         binding.expenditureButton.setOnClickListener(v -> {
 
+            binding.setMoney.setText("370,000");
             binding.setMoney.setTextColor(getResources().getColor(R.color.black));
             binding.setMoneyTitle.setText("원 지출");
 
@@ -67,10 +69,12 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
         });
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickIncomeButton() {
 
         binding.incomeButton.setOnClickListener(v -> {
 
+            binding.setMoney.setText("350,000");
             binding.setMoney.setTextColor(getResources().getColor(R.color.blue));
             binding.setMoneyTitle.setText("원 수입");
 
@@ -93,8 +97,8 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
         binding.anotherButton.setOnClickListener(v -> {
 
             binding.setMoney.setText("70,020");
-            binding.setMoneyTitle.setText("");
             binding.setMoney.setTextColor(getResources().getColor(R.color.gray));
+            binding.setMoneyTitle.setText("");
 
             binding.expenditureButton.setBackground(null);
             binding.incomeButton.setBackground(null);
