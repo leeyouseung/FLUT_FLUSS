@@ -16,7 +16,7 @@ import android.security.keystore.KeyProperties;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.FingerPrintActivityBinding;
-import com.example.flut_fluss.lockManager.handler.FingerprintHandler;
+import com.example.flut_fluss.manager.lock.FingerprintHandler;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
