@@ -252,8 +252,8 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         binding.moneySendButton.setOnClickListener(v -> {
 
-            String sendMoney = Objects.requireNonNull(Objects.requireNonNull(getSupportFragmentManager()
-                    .findFragmentById(R.id.main_activity_fragment)).getView()).findViewById(R.id.money).toString();
+            String sendMoney = Objects.requireNonNull(
+                     ((RemittanceFragment) Objects.requireNonNull(getSupportFragmentManager().findFragmentById(R.id.main_activity_fragment))).sendMoney);
 
             Intent intent = new Intent(getApplicationContext(), SendMoneyActivity.class);
 
