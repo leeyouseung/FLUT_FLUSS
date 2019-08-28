@@ -2,6 +2,7 @@ package com.example.flut_fluss.view.z_fragment.main;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
@@ -55,6 +56,7 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
             binding.setMoney.setText("370,000");
             binding.setMoney.setTextColor(getResources().getColor(R.color.black));
             binding.setMoneyTitle.setText("원 지출");
+            binding.etcAlertTitle.setVisibility(View.GONE);
 
             binding.expenditureButton.setBackgroundResource(R.drawable.time_line_button_radius);
             binding.incomeButton.setBackground(null);
@@ -77,6 +79,7 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
             binding.setMoney.setText("350,000");
             binding.setMoney.setTextColor(getResources().getColor(R.color.blue));
             binding.setMoneyTitle.setText("원 수입");
+            binding.etcAlertTitle.setVisibility(View.GONE);
 
             binding.expenditureButton.setBackground(null);
             binding.incomeButton.setBackgroundResource(R.drawable.time_line_button_radius);
@@ -99,6 +102,7 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
             binding.setMoney.setText("70,020");
             binding.setMoney.setTextColor(getResources().getColor(R.color.gray));
             binding.setMoneyTitle.setText("");
+            binding.etcAlertTitle.setVisibility(View.VISIBLE);
 
             binding.expenditureButton.setBackground(null);
             binding.incomeButton.setBackground(null);
