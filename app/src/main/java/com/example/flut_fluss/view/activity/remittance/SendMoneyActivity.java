@@ -41,9 +41,18 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
     private void clickEvent() {
 
+        clickSearchView();
         clickOpenSetLayout();
         clickAccountLayout();
         clickCardLayout();
+    }
+
+    private void clickSearchView() {
+
+        binding.searchView.setOnClickListener(v -> {
+
+            binding.searchView.getQueryHint();
+        });
     }
 
     private void clickOpenSetLayout() {
