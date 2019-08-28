@@ -11,7 +11,18 @@ public class SendMoneyCardActivity extends BaseActivity<SendMoneyCardActivityBin
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.send_money_card_activity);
+
+        initData();
+
+        event();
+    }
+
+    private void initData() {
+
+    }
+
+    private void event() {
+        
     }
 
     @Override
