@@ -1,7 +1,5 @@
 package com.example.flut_fluss.view.activity.lookup;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
