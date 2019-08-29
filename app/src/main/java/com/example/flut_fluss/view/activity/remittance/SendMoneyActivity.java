@@ -15,6 +15,8 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
     boolean openSetLayout = true;
 
+    public String sendMoney = "";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +33,7 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
         Intent intent = getIntent();
 
-        String sendMoney = intent.getStringExtra("send_money");
+        sendMoney = intent.getStringExtra("send_money");
 
         binding.sendMoneyTitle.setText(sendMoney + "원 송금");
     }
