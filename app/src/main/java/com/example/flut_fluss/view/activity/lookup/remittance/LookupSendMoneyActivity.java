@@ -1,5 +1,6 @@
 package com.example.flut_fluss.view.activity.lookup.remittance;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -25,6 +26,14 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
     private void initData() {
 
         binding.money.setText(String.valueOf(0));
+
+        Intent intent = getIntent();
+
+        String accountKindTitle = intent.getStringExtra("title_money_list");
+        String accountMoney = intent.getStringExtra("account_money");
+
+        binding.accountKindTitle.setText(accountKindTitle);
+        binding.accountMoney.setText(accountMoney);
     }
 
     private void event() {
