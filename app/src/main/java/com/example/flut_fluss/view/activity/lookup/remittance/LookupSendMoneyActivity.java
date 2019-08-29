@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
@@ -100,6 +101,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
         clickMoneyNumber9();
         clickCancelButton();
         clickDeleteButton();
+        clickRemittanceButton();
     }
 
     private void clickBackButton() {
@@ -648,6 +650,14 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                     sendButtonOn();
                 }
             }
+        });
+    }
+
+    private void clickRemittanceButton() {
+
+        binding.remittanceButton.setOnClickListener(v -> {
+
+            Toast.makeText(getApplicationContext(), "아직 서버 구현 X" ,Toast.LENGTH_SHORT).show();
         });
     }
 
