@@ -12,6 +12,38 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initData();
+
+        event();
+    }
+
+    private void initData() {
+
+    }
+
+    private void event() {
+
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
+        clickMyAccountLayout();
+        clickMyBankLayout();
+    }
+
+    private void clickMyAccountLayout() {
+
+        binding.myAccountRemittanceButton.setOnClickListener(v -> {
+
+        });
+    }
+
+    private void clickMyBankLayout() {
+
+        binding.myBankRemittanceButton.setOnClickListener(v -> {
+            
+        });
     }
 
     @Override
