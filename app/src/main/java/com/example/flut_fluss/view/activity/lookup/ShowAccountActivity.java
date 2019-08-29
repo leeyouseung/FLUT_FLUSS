@@ -33,9 +33,9 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
         myAccountMoney = intent.getStringExtra("my_account_money");
         bankAccountMoney = intent.getStringExtra("bank_account_money");
 
-        binding.accountMoney.setText(accountMoney + "원");
-        binding.myAccountMoney.setText(myAccountMoney + "원");
-        binding.bankAccountMoney.setText(bankAccountMoney + "원");
+        binding.accountMoney.setText(accountMoney + " 원");
+        binding.myAccountMoney.setText(myAccountMoney + " 원");
+        binding.bankAccountMoney.setText(bankAccountMoney + " 원");
     }
 
     private void event() {
