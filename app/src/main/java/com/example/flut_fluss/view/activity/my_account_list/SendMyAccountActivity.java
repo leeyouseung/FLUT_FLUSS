@@ -28,7 +28,16 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
 
     private void clickEvent() {
 
+        clickBackButton();
         clickMyAccountSendMoney();
+    }
+
+    private void clickBackButton() {
+
+        binding.backButton.setOnClickListener(v -> {
+
+            finish();
+        });
     }
 
     private void clickMyAccountSendMoney() {
