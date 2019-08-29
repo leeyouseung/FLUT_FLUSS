@@ -45,7 +45,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
         accountMoney = intent.getStringExtra("account_money");
 
         binding.accountKindTitle.setText(accountKindTitle);
-        binding.accountMoney.setText("잔액 : " + accountMoney + " 원");
+        binding.accountMoney.setText("잔액 : " + accountMoney);
     }
 
     private void initSetBlinkAnimation() {
