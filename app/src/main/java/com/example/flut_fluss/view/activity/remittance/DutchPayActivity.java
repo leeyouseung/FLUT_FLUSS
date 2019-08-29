@@ -1,6 +1,7 @@
 package com.example.flut_fluss.view.activity.remittance;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
@@ -11,6 +12,41 @@ public class DutchPayActivity extends BaseActivity<DutchPayActivityBinding> {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        initData();
+
+        event();
+    }
+
+    private void initData() {
+
+    }
+
+    private void event() {
+
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
+        clickBackButton();
+        clickSelectMemberButton();
+    }
+
+    private void clickBackButton() {
+
+        binding.backButton.setOnClickListener(v -> {
+
+            finish();
+        });
+    }
+
+    private void clickSelectMemberButton() {
+
+        binding.selectNemberButton.setOnClickListener(v -> {
+
+            Toast.makeText(getApplicationContext(), "추후 몇명인지 띄울 예정", Toast.LENGTH_SHORT).show();
+        });
     }
 
     @Override
