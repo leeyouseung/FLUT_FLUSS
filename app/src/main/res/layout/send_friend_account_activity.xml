@@ -22,15 +22,15 @@
         tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/my_account_title"
+        android:id="@+id/friend_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="36dp"
-        android:text="내 플럿머니"
-        android:textStyle="bold"
-        android:textSize="10pt"
+        android:text="곽현준"
         android:textColor="@color/black"
+        android:textSize="10pt"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back_button"
         tools:ignore="HardcodedText" />
@@ -39,12 +39,12 @@
         android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="에"
-        android:textSize="10pt"
+        android:text="님 연락처로"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/my_account_title"
-        app:layout_constraintStart_toEndOf="@+id/my_account_title"
-        app:layout_constraintTop_toTopOf="@+id/my_account_title"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="@+id/friend_name"
+        app:layout_constraintStart_toEndOf="@+id/friend_name"
+        app:layout_constraintTop_toTopOf="@+id/friend_name"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -56,112 +56,196 @@
         android:textStyle="bold"
         android:textSize="10pt"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/my_account_title"
-        app:layout_constraintTop_toBottomOf="@+id/my_account_title"
+        app:layout_constraintStart_toStartOf="@+id/friend_name"
+        app:layout_constraintTop_toBottomOf="@+id/friend_name"
         tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="을 충전합니다"
-        android:textSize="10pt"
+        android:text="을 보냅니다"
         android:textColor="@color/black"
+        android:textSize="10pt"
         app:layout_constraintBottom_toBottomOf="@+id/send_my_account_money"
         app:layout_constraintStart_toEndOf="@+id/send_my_account_money"
         app:layout_constraintTop_toTopOf="@+id/send_my_account_money"
         tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/user_phone_number"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:text="연락처"
+        app:layout_constraintStart_toStartOf="@+id/friend_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView34"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/friend_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="010-XXXX-XXXX"
-        app:layout_constraintStart_toStartOf="@+id/my_account_title"
+        app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/send_my_account_money"
         tools:ignore="HardcodedText" />
 
     <ImageView
-        android:id="@+id/my_account_img"
+        android:id="@+id/friend_img"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="24dp"
-        android:src="@drawable/flut_logo"
-        app:layout_constraintBottom_toTopOf="@+id/user_phone_number"
+        android:src="@drawable/user_icon"
+        app:layout_constraintBottom_toTopOf="@+id/friend_phone_number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/my_account_title"
+        app:layout_constraintTop_toTopOf="@+id/friend_name"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/out_account_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="18dp"
         android:layout_marginBottom="12dp"
         android:text="출금 계좌"
-        app:layout_constraintBottom_toTopOf="@+id/my_bank_img"
+        app:layout_constraintBottom_toTopOf="@+id/my_account_layout"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText" />
 
-    <ImageView
-        android:id="@+id/my_bank_img"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="22dp"
-        android:src="@drawable/bank_icon"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/my_account_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/my_bank_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/my_account_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/flut_logo"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/my_account_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="플럿머니"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            app:layout_constraintStart_toEndOf="@+id/my_account_icon"
+            app:layout_constraintTop_toTopOf="@+id/my_account_icon"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/my_aacount_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="0 원"
+            android:textSize="7pt"
+            app:layout_constraintStart_toStartOf="@+id/my_account_title"
+            app:layout_constraintTop_toBottomOf="@+id/my_account_title"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/pqy_check_1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/check_icon"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/my_bank_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="18dp"
         app:layout_constraintBottom_toTopOf="@+id/my_account_send_button"
-        app:layout_constraintStart_toStartOf="@+id/out_account_title"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <TextView
-        android:id="@+id/my_bank_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="NH농협은행 계좌"
-        android:textSize="8pt"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/my_bank_img"
-        app:layout_constraintTop_toTopOf="@+id/my_bank_img"
-        tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/my_bank_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bank_icon"
+            tools:ignore="ContentDescription" />
 
-    <TextView
-        android:id="@+id/my_bank_account_money"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="37 원"
-        android:textSize="7pt"
-        app:layout_constraintStart_toStartOf="@+id/my_bank_account"
-        app:layout_constraintTop_toBottomOf="@+id/my_bank_account"
-        tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/my_bank_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="NH농협은행 계좌"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            app:layout_constraintStart_toEndOf="@+id/my_bank_icon"
+            app:layout_constraintTop_toTopOf="@+id/my_bank_icon"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/my_bank_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="37 원"
+            android:textSize="7pt"
+            app:layout_constraintStart_toStartOf="@+id/my_bank_title"
+            app:layout_constraintTop_toBottomOf="@+id/my_bank_title"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/pqy_check_2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/check_icon"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/my_account_send_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="12dp"
+        android:background="@drawable/money_send_button_radius"
         android:text="충전하기"
         android:textColor="@color/white"
         android:textSize="7pt"
         android:textStyle="bold"
-        android:background="@drawable/money_send_button_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText" />
-
-    <ImageView
-        android:id="@+id/check_img"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/check_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/my_bank_account_money"
-        app:layout_constraintEnd_toEndOf="@+id/my_account_send_button"
-        app:layout_constraintTop_toTopOf="@+id/my_bank_account"
-        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
