@@ -12,10 +12,6 @@ import com.example.flut_fluss.view.activity.lookup.account.remittance.LookupSend
 
 public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding> {
 
-    private String accountMoney;
-    private String myAccountMoney;
-    private String bankAccountMoney;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,13 +26,9 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         Intent intent = getIntent();
 
-        accountMoney = intent.getStringExtra("account_money");
-        myAccountMoney = intent.getStringExtra("my_account_money");
-        bankAccountMoney = intent.getStringExtra("bank_account_money");
-
-        binding.accountMoney.setText(accountMoney + " 원");
-        binding.myAccountMoney.setText(myAccountMoney + " 원");
-        binding.bankAccountMoney.setText(bankAccountMoney + " 원");
+        binding.accountMoney.setText(intent.getStringExtra("account_money") + " 원");
+        binding.myAccountMoney.setText(intent.getStringExtra("my_account_money") + " 원");
+        binding.bankAccountMoney.setText(intent.getStringExtra("bank_account_money") + " 원");
     }
 
     private void event() {
@@ -65,12 +57,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myAccountLayout.setOnClickListener(v -> {
 
-            Intent intent = new Intent(getApplicationContext(), ShowAccountListActivity.class);
-
-            intent.putExtra("title_money_list", binding.titleFlutMoneyList.getText().toString());
-            intent.putExtra("account_money", binding.myAccountMoney.getText().toString());
-
-            startActivity(intent);
+            intentInfoShowAccountList();
         });
     }
 
@@ -78,12 +65,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myBankLayout.setOnClickListener(v -> {
 
-            Intent intent = new Intent(getApplicationContext(), ShowAccountListActivity.class);
-
-            intent.putExtra("title_money_list", binding.titleBankMoneyList.getText().toString());
-            intent.putExtra("account_money", binding.bankAccountMoney.getText().toString());
-
-            startActivity(intent);
+            intentInfoShowAccountList();
         });
     }
 
@@ -91,12 +73,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myAccountSendButton.setOnClickListener(v -> {
 
-            Intent intent = new Intent(getApplicationContext(), LookupSendMoneyActivity.class);
-
-            intent.putExtra("title_money_list", binding.titleFlutMoneyList.getText().toString());
-            intent.putExtra("account_money", binding.myAccountMoney.getText().toString());
-
-            startActivity(intent);
+            intentInfoLookupSendMoney();
         });
     }
 
@@ -104,13 +81,28 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myBankAccountSendButton.setOnClickListener(v -> {
 
-            Intent intent = new Intent(getApplicationContext(), LookupSendMoneyActivity.class);
-
-            intent.putExtra("title_money_list", binding.titleBankMoneyList.getText().toString());
-            intent.putExtra("account_money", binding.bankAccountMoney.getText().toString());
-
-            startActivity(intent);
+            intentInfoLookupSendMoney();
         });
+    }
+
+    private void intentInfoShowAccountList() {
+
+        Intent intent = new Intent(getApplicationContext(), ShowAccountListActivity.class);
+
+        intent.putExtra("title_money_list", binding.titleFlutMoneyList.getText().toString());
+        intent.putExtra("account_money", binding.myAccountMoney.getText().toString());
+
+        startActivity(intent);
+    }
+
+    private void intentInfoLookupSendMoney() {
+
+        Intent intent = new Intent(getApplicationContext(), LookupSendMoneyActivity.class);
+
+        intent.putExtra("title_money_list", binding.titleBankMoneyList.getText().toString());
+        intent.putExtra("account_money", binding.bankAccountMoney.getText().toString());
+
+        startActivity(intent);
     }
 
     @Override
