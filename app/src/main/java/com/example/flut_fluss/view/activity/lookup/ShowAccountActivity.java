@@ -1,5 +1,6 @@
 package com.example.flut_fluss.view.activity.lookup;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -23,6 +24,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
         event();
     }
 
+    @SuppressLint("SetTextI18n")
     private void initData() {
 
         Intent intent = getIntent();
@@ -31,9 +33,9 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
         myAccountMoney = intent.getStringExtra("my_account_money");
         bankAccountMoney = intent.getStringExtra("bank_account_money");
 
-        binding.accountMoney.setText(accountMoney);
-        binding.myAccountMoney.setText(myAccountMoney);
-        binding.bankAccountMoney.setText(bankAccountMoney);
+        binding.accountMoney.setText(accountMoney + "원");
+        binding.myAccountMoney.setText(myAccountMoney + "원");
+        binding.bankAccountMoney.setText(bankAccountMoney + "원");
     }
 
     private void event() {
