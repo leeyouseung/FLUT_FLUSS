@@ -30,11 +30,11 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
     private void clickEvent() {
 
-        clickMyAccountLayout();
-        clickMyBankLayout();
+        clickMyAccountRemittanceButton();
+        clickMyBankRemittanceButton();
     }
 
-    private void clickMyAccountLayout() {
+    private void clickMyAccountRemittanceButton() {
 
         binding.myAccountRemittanceButton.setOnClickListener(v -> {
 
@@ -42,7 +42,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
         });
     }
 
-    private void clickMyBankLayout() {
+    private void clickMyBankRemittanceButton() {
 
         binding.myBankRemittanceButton.setOnClickListener(v -> {
 
