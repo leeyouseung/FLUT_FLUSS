@@ -23,6 +23,8 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
     private String clearAccountMoney;
     private String clearBankMoney;
 
+    private String sendResultMoney;
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -45,7 +47,9 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
         resultMoney = Integer.parseInt(clearAccountMoney) + Integer.parseInt(clearBankMoney);
 
-        binding.showMoneyMoney.setText(resultMoney);
+        sendResultMoney = Integer.toString(resultMoney);
+
+        binding.showMoneyMoney.setText(sendResultMoney);
     }
 
     private void event() {
@@ -79,7 +83,7 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
         Intent intent = new Intent(getContext(), ShowAccountActivity.class);
 
-        intent.putExtra("account_money", resultMoney);
+        intent.putExtra("account_money", sendResultMoney);
         intent.putExtra("my_account_money", clearAccountMoney);
         intent.putExtra("bank_account_money", clearBankMoney);
 
