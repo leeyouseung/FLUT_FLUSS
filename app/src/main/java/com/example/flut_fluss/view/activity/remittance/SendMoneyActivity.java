@@ -8,8 +8,8 @@ import android.view.View;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendMoneyActivityBinding;
-import com.example.flut_fluss.view.activity.my_account_list.SendMyAccountActivity;
-import com.example.flut_fluss.view.activity.my_account_list.SendMyCardActivity;
+import com.example.flut_fluss.view.activity.account_list.my_account.SendMyAccountActivity;
+import com.example.flut_fluss.view.activity.account_list.my_account.SendMyCardActivity;
 
 public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 

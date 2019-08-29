@@ -7,7 +7,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.my_account_list.SendMyCardActivity">
+    tools:context=".view.activity.account_list.my_account.SendMyCardActivity">
 
     <ImageButton
         android:id="@+id/back_button"

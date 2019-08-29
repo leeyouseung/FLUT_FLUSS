@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.activity.my_account_list;
+package com.example.flut_fluss.view.activity.account_list.my_account;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
