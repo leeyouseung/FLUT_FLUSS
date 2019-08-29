@@ -62,11 +62,16 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
     private void clickMyAccountSendLayout() {
 
+        binding.myAccountLayout.setOnClickListener(v -> {
+
+        });
     }
 
     private void clickMyBankAccountSendLayout() {
 
-        
+        binding.myBankLayout.setOnClickListener(v -> {
+            
+        });
     }
 
     private void clickMyAccountSendButton() {
