@@ -36,6 +36,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myAccountRemittanceButton.setOnClickListener(v -> {
 
+            
         });
     }
 
