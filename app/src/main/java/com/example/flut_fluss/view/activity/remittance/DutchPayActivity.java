@@ -32,6 +32,7 @@ public class DutchPayActivity extends BaseActivity<DutchPayActivityBinding> {
 
         clickBackButton();
         clickSelectMemberButton();
+        clickSearchView();
     }
 
     private void clickBackButton() {
@@ -47,6 +48,13 @@ public class DutchPayActivity extends BaseActivity<DutchPayActivityBinding> {
         binding.selectNemberButton.setOnClickListener(v -> {
 
             Toast.makeText(getApplicationContext(), "추후 몇명인지 띄울 예정", Toast.LENGTH_SHORT).show();
+        });
+    }
+
+    private void clickSearchView() {
+
+        binding.searchView.setOnClickListener(v -> {
+
         });
     }
 
