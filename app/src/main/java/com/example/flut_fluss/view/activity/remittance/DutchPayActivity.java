@@ -20,6 +20,7 @@ public class DutchPayActivity extends BaseActivity<DutchPayActivityBinding> {
 
     private void initData() {
 
+        binding.searchView.setQueryHint("연락처 입력");
     }
 
     private void event() {
