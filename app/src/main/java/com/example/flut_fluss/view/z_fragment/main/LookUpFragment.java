@@ -12,9 +12,9 @@ import android.widget.Toast;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
 import com.example.flut_fluss.databinding.LookUpFragmentBinding;
-import com.example.flut_fluss.view.activity.lookup.ShowAccountActivity;
-import com.example.flut_fluss.view.activity.lookup.ShowCardActivity;
-import com.example.flut_fluss.view.activity.lookup.remittance.LookupSendMoneyActivity;
+import com.example.flut_fluss.view.activity.lookup.account.ShowAccountActivity;
+import com.example.flut_fluss.view.activity.lookup.account.ShowCardActivity;
+import com.example.flut_fluss.view.activity.lookup.account.remittance.LookupSendMoneyActivity;
 
 public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 

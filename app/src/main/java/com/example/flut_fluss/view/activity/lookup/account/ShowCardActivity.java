@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.activity.lookup;
+package com.example.flut_fluss.view.activity.lookup.account;
 
 import android.os.Bundle;
 

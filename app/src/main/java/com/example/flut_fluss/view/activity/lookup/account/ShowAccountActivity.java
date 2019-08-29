@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.activity.lookup;
+package com.example.flut_fluss.view.activity.lookup.account;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.ShowAccountActivityBinding;
-import com.example.flut_fluss.view.activity.lookup.remittance.LookupSendMoneyActivity;
+import com.example.flut_fluss.view.activity.lookup.account.remittance.LookupSendMoneyActivity;
 
 public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding> {
 

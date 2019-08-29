@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.activity.lookup.remittance;
+package com.example.flut_fluss.view.activity.lookup.account.remittance;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
