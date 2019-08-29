@@ -205,8 +205,6 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                 binding.money.append(String.valueOf(4));
 
-                ;
-
                 visibleDeleteCancelButton();
 
                 sendMoney = binding.money.getText().toString();
