@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.ShowAccountActivityBinding;
+import com.example.flut_fluss.view.activity.lookup.ShowAccountListActivity;
 import com.example.flut_fluss.view.activity.lookup.account.remittance.LookupSendMoneyActivity;
 
 public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding> {
@@ -64,13 +65,25 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myAccountLayout.setOnClickListener(v -> {
 
+            Intent intent = new Intent(getApplicationContext(), ShowAccountListActivity.class);
+
+            intent.putExtra("title_money_list", binding.titleFlutMoneyList.getText().toString());
+            intent.putExtra("account_money", binding.myAccountMoney.getText().toString());
+
+            startActivity(intent);
         });
     }
 
     private void clickMyBankAccountSendLayout() {
 
         binding.myBankLayout.setOnClickListener(v -> {
-            
+
+            Intent intent = new Intent(getApplicationContext(), ShowAccountListActivity.class);
+
+            intent.putExtra("title_money_list", binding.titleBankMoneyList.getText().toString());
+            intent.putExtra("account_money", binding.bankAccountMoney.getText().toString());
+
+            startActivity(intent);
         });
     }
 
