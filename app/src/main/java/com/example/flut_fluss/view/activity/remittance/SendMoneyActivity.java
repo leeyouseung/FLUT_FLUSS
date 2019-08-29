@@ -105,7 +105,11 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
         binding.cardLayout.setOnClickListener(v -> {
 
-            startActivity(new Intent(getApplicationContext(), SendMyCardActivity.class));
+            Intent intent = new Intent(getApplicationContext(), SendMyCardActivity.class);
+
+            intent.putExtra("sendMoney", sendMoney);
+
+            startActivity(intent);
         });
     }
 
