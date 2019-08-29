@@ -84,6 +84,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
         binding.remittanceButton.setBackground(getResources().getDrawable(R.drawable.money_send_button_radius));
         binding.remittanceButton.setClickable(true);
+
+        clickRemittanceButton();
     }
 
     private void clickEvent() {
@@ -101,7 +103,6 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
         clickMoneyNumber9();
         clickCancelButton();
         clickDeleteButton();
-        clickRemittanceButton();
     }
 
     private void clickBackButton() {
