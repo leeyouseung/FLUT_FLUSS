@@ -42,6 +42,7 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
         clickCardLayout();
         clickAddKindButton();
         clickMyAccountSendButton();
+        clickMyBankAccountSendButton();
     }
 
     private void clickAccountLayout() {
@@ -129,6 +130,14 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
     private void clickMyAccountSendButton() {
 
         binding.myAccountSendButton.setOnClickListener(v -> {
+
+            startActivity(new Intent(getContext(), LookupSendMoneyActivity.class));
+        });
+    }
+
+    private void clickMyBankAccountSendButton() {
+
+        binding.myBankAccountSendButton.setOnClickListener(v -> {
 
             startActivity(new Intent(getContext(), LookupSendMoneyActivity.class));
         });
