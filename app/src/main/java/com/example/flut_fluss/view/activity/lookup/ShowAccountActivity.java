@@ -1,10 +1,12 @@
 package com.example.flut_fluss.view.activity.lookup;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.ShowAccountActivityBinding;
+import com.example.flut_fluss.view.activity.lookup.remittance.LookupSendMoneyActivity;
 
 public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding> {
 
@@ -36,7 +38,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myAccountRemittanceButton.setOnClickListener(v -> {
 
-            
+            startActivity(new Intent(getApplicationContext(), LookupSendMoneyActivity.class));
         });
     }
 
@@ -44,6 +46,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myBankRemittanceButton.setOnClickListener(v -> {
 
+            startActivity(new Intent(getApplicationContext(), LookupSendMoneyActivity.class));
         });
     }
 
