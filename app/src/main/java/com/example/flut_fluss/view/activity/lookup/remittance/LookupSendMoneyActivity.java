@@ -12,6 +12,22 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initData();
+
+        event();
+    }
+
+    private void initData() {
+
+    }
+
+    private void event() {
+
+        clickEvent();
+    }
+
+    private void clickEvent() {
+        
     }
 
     @Override
