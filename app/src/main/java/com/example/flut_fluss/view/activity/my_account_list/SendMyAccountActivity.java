@@ -23,6 +23,12 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
 
     private void event() {
 
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
+        
     }
 
     @Override
