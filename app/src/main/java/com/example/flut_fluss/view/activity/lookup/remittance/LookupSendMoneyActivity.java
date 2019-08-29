@@ -109,7 +109,10 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
     private void clickBackButton() {
 
-        finish();
+        binding.backButton.setOnClickListener(v -> {
+
+            finish();
+        });
     }
 
     private void clickMoneyNumber0() {
