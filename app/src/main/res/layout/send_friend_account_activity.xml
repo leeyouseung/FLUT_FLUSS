@@ -137,7 +137,7 @@
             tools:ignore="ContentDescription" />
 
         <TextView
-            android:id="@+id/my_account_title"
+            android:id="@+id/title_flut_money_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -149,14 +149,14 @@
             tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/my_aacount_money"
+            android:id="@+id/my_account_money"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:text="0 원"
             android:textSize="7pt"
-            app:layout_constraintStart_toStartOf="@+id/my_account_title"
-            app:layout_constraintTop_toBottomOf="@+id/my_account_title"
+            app:layout_constraintStart_toStartOf="@+id/title_flut_money_list"
+            app:layout_constraintTop_toBottomOf="@+id/title_flut_money_list"
             tools:ignore="HardcodedText" />
 
         <ImageView
@@ -194,7 +194,7 @@
             tools:ignore="ContentDescription" />
 
         <TextView
-            android:id="@+id/my_bank_title"
+            android:id="@+id/title_bank_money_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -206,14 +206,14 @@
             tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/my_bank_money"
+            android:id="@+id/bank_account_money"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:text="37 원"
             android:textSize="7pt"
-            app:layout_constraintStart_toStartOf="@+id/my_bank_title"
-            app:layout_constraintTop_toBottomOf="@+id/my_bank_title"
+            app:layout_constraintStart_toStartOf="@+id/title_bank_money_list"
+            app:layout_constraintTop_toBottomOf="@+id/title_bank_money_list"
             tools:ignore="HardcodedText" />
 
         <ImageView

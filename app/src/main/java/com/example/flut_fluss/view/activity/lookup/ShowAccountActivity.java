@@ -31,8 +31,8 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
     private void clickEvent() {
 
         clickBackButton();
-        clickMyAccountRemittanceButton();
-        clickMyBankRemittanceButton();
+        clickMyAccountSendButton();
+        clickMyBankAccountSendButton();
     }
 
     private void clickBackButton() {
@@ -43,19 +43,29 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
         });
     }
 
-    private void clickMyAccountRemittanceButton() {
+    private void clickMyAccountSendButton() {
 
-        binding.myAccountRemittanceButton.setOnClickListener(v -> {
+        binding.myAccountSendButton.setOnClickListener(v -> {
 
-            startActivity(new Intent(getApplicationContext(), LookupSendMoneyActivity.class));
+            Intent intent = new Intent(getApplicationContext(), LookupSendMoneyActivity.class);
+
+            intent.putExtra("title_money_list", binding.titleFlutMoneyList.getText().toString());
+            intent.putExtra("account_money", binding.myAccountMoney.getText().toString());
+
+            startActivity(intent);
         });
     }
 
-    private void clickMyBankRemittanceButton() {
+    private void clickMyBankAccountSendButton() {
 
-        binding.myBankRemittanceButton.setOnClickListener(v -> {
+        binding.myBankAccountSendButton.setOnClickListener(v -> {
 
-            startActivity(new Intent(getApplicationContext(), LookupSendMoneyActivity.class));
+            Intent intent = new Intent(getApplicationContext(), LookupSendMoneyActivity.class);
+
+            intent.putExtra("title_money_list", binding.titleBankMoneyList.getText().toString());
+            intent.putExtra("account_money", binding.bankAccountMoney.getText().toString());
+
+            startActivity(intent);
         });
     }
 
