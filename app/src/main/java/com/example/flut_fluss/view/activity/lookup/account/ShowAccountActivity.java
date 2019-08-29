@@ -71,6 +71,9 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
             intent.putExtra("account_money", binding.myAccountMoney.getText().toString());
 
             startActivity(intent);
+
+
+            // 코드 정리
         });
     }
 
