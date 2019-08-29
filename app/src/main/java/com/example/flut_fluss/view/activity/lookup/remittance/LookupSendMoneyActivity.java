@@ -57,7 +57,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
     }
 
     private void event() {
-        
+
         clickEvent();
     }
 
@@ -76,6 +76,18 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
     private void checkBlinkMoneySet() {
 
         binding.accountMoney.startAnimation(anim);
+    }
+
+    private void sendButtonOff() {
+
+        binding.remittanceButton.setBackground(getResources().getDrawable(R.drawable.money_send_button_off_radius));
+        binding.remittanceButton.setClickable(false);
+    }
+
+    private void sendButtonOn() {
+
+        binding.remittanceButton.setBackground(getResources().getDrawable(R.drawable.money_send_button_radius));
+        binding.remittanceButton.setClickable(true);
     }
 
     private void clickEvent() {
@@ -100,13 +112,15 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput && binding.money.getText().toString().equals("0")) {
 
-                return;
+                sendButtonOff();
             }
             else {
 
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -114,7 +128,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
         });
@@ -129,6 +143,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -142,7 +158,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
             else {
@@ -150,6 +166,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -159,12 +177,11 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
         });
     }
-
 
     private void clickMoneyNumber2() {
 
@@ -175,6 +192,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -188,7 +207,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
             else {
@@ -196,6 +215,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -205,7 +226,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
         });
@@ -220,6 +241,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -233,7 +256,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
             else {
@@ -241,6 +264,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -250,7 +275,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
         });
@@ -265,6 +290,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -278,7 +305,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
             else {
@@ -286,6 +313,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -295,7 +324,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
         });
@@ -310,6 +339,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -323,7 +354,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
             else {
@@ -331,6 +362,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -340,7 +373,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
         });
@@ -355,6 +388,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -368,7 +403,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
             else {
@@ -376,6 +411,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -385,7 +422,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
         });
@@ -400,6 +437,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -413,7 +452,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
             else {
@@ -421,6 +460,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -430,7 +471,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
         });
@@ -445,6 +486,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -458,7 +501,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
             else {
@@ -466,6 +509,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -475,7 +520,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
         });
@@ -490,6 +535,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -503,7 +550,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
             else {
@@ -511,6 +558,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
                 if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
                     checkBlinkMoneySet();
+
+                    sendButtonOff();
                 }
                 else {
 
@@ -520,7 +569,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
         });
@@ -538,7 +587,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             resetMoveMoneyCountTitle();
 
-            binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.remittance_button_off));
+            sendButtonOff();
         });
     }
 
@@ -554,7 +603,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                 resetMoveMoneyCountTitle();
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.remittance_button_off));
+                sendButtonOff();
             }
             else {
 
@@ -568,7 +617,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     resetMoveMoneyCountTitle();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
                 else if (binding.money.getText().toString().length() == 1 && !(binding.money.getText().toString().equals("0"))) {
 
@@ -580,7 +629,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     resetMoveMoneyCountTitle();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
                 else {
 
@@ -592,7 +641,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
                     sendMoney = binding.money.getText().toString();
 
-                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    sendButtonOn();
                 }
             }
         });
