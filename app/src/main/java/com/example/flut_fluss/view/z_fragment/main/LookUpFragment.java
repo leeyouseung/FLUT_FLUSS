@@ -136,7 +136,6 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
             intent.putExtra("title_money_list", binding.titleFlutMoneyList.getText().toString());
             intent.putExtra("account_money", binding.myAccountMoney.getText().toString());
 
-
             startActivity(intent);
         });
     }

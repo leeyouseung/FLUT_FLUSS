@@ -18,8 +18,6 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
     final String CHECKMONEY = "잔액 : 0 원";
 
     public String sendMoney = "0";
-    private String accountKindTitle;
-    private String accountMoney;
 
     private boolean isFirstInput = true;
 
@@ -41,11 +39,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
         Intent intent = getIntent();
 
-        accountKindTitle = intent.getStringExtra("title_money_list");
-        accountMoney = intent.getStringExtra("account_money");
-
-        binding.accountKindTitle.setText(accountKindTitle);
-        binding.accountMoney.setText("잔액 : " + accountMoney);
+        binding.accountKindTitle.setText(intent.getStringExtra("title_money_list"));
+        binding.accountMoney.setText("잔액 : " + intent.getStringExtra("account_money"));
     }
 
     private void initSetBlinkAnimation() {
