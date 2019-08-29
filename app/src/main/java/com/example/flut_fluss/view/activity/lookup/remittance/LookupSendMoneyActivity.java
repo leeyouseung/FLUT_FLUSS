@@ -12,6 +12,8 @@ import com.example.flut_fluss.databinding.LookupSendMoneyActivityBinding;
 public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivityBinding> {
 
     public String sendMoney = "0";
+    private String accountKindTitle;
+    private String accountMoney;
 
     private boolean isFirstInput = true;
 
@@ -31,8 +33,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
         Intent intent = getIntent();
 
-        String accountKindTitle = intent.getStringExtra("title_money_list");
-        String accountMoney = intent.getStringExtra("account_money");
+        accountKindTitle = intent.getStringExtra("title_money_list");
+        accountMoney = intent.getStringExtra("account_money");
 
         binding.accountKindTitle.setText(accountKindTitle);
         binding.accountMoney.setText("잔액 : " + accountMoney + " 원");
@@ -77,14 +79,22 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput && binding.money.getText().toString().equals("0")) {
 
+                return;
             }
             else {
 
-                binding.money.append(String.valueOf(0));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                sendMoney = binding.money.getText().toString();
+                    return;
+                }
+                else {
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    binding.money.append(String.valueOf(0));
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
         });
     }
@@ -95,27 +105,41 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(1));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                isFirstInput = false;
+                    return;
+                }
+                else {
 
-                visibleDeleteCancelButton();
+                    binding.money.setText(String.valueOf(1));
 
-                setMoveMoneyCountTitle();
+                    isFirstInput = false;
 
-                sendMoney = binding.money.getText().toString();
+                    visibleDeleteCancelButton();
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    setMoveMoneyCountTitle();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
             else {
 
-                binding.money.append(String.valueOf(1));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                visibleDeleteCancelButton();
+                    return;
+                }
+                else {
 
-                sendMoney = binding.money.getText().toString();
+                    binding.money.append(String.valueOf(1));
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    visibleDeleteCancelButton();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
         });
     }
@@ -127,27 +151,41 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(2));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                isFirstInput = false;
+                    return;
+                }
+                else {
 
-                visibleDeleteCancelButton();
+                    binding.money.setText(String.valueOf(2));
 
-                setMoveMoneyCountTitle();
+                    isFirstInput = false;
 
-                sendMoney = binding.money.getText().toString();
+                    visibleDeleteCancelButton();
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    setMoveMoneyCountTitle();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
             else {
 
-                binding.money.append(String.valueOf(2));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                visibleDeleteCancelButton();
+                    return;
+                }
+                else {
 
-                sendMoney = binding.money.getText().toString();
+                    binding.money.append(String.valueOf(2));
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    visibleDeleteCancelButton();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
         });
     }
@@ -158,27 +196,41 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(3));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                isFirstInput = false;
+                    return;
+                }
+                else {
 
-                visibleDeleteCancelButton();
+                    binding.money.setText(String.valueOf(3));
 
-                setMoveMoneyCountTitle();
+                    isFirstInput = false;
 
-                sendMoney = binding.money.getText().toString();
+                    visibleDeleteCancelButton();
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    setMoveMoneyCountTitle();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
             else {
 
-                binding.money.append(String.valueOf(3));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                visibleDeleteCancelButton();
+                    return;
+                }
+                else {
 
-                sendMoney = binding.money.getText().toString();
+                    binding.money.append(String.valueOf(3));
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    visibleDeleteCancelButton();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
         });
     }
@@ -189,27 +241,41 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(4));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                isFirstInput = false;
+                    return;
+                }
+                else {
 
-                visibleDeleteCancelButton();
+                    binding.money.setText(String.valueOf(4));
 
-                setMoveMoneyCountTitle();
+                    isFirstInput = false;
 
-                sendMoney = binding.money.getText().toString();
+                    visibleDeleteCancelButton();
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    setMoveMoneyCountTitle();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
             else {
 
-                binding.money.append(String.valueOf(4));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                visibleDeleteCancelButton();
+                    return;
+                }
+                else {
 
-                sendMoney = binding.money.getText().toString();
+                    binding.money.append(String.valueOf(4));
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    visibleDeleteCancelButton();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
         });
     }
@@ -220,27 +286,41 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(5));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                isFirstInput = false;
+                    return;
+                }
+                else {
 
-                visibleDeleteCancelButton();
+                    binding.money.setText(String.valueOf(5));
 
-                setMoveMoneyCountTitle();
+                    isFirstInput = false;
 
-                sendMoney = binding.money.getText().toString();
+                    visibleDeleteCancelButton();
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    setMoveMoneyCountTitle();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
             else {
 
-                binding.money.append(String.valueOf(5));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                visibleDeleteCancelButton();
+                    return;
+                }
+                else {
 
-                sendMoney = binding.money.getText().toString();
+                    binding.money.append(String.valueOf(5));
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    visibleDeleteCancelButton();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
         });
     }
@@ -251,27 +331,41 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(6));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                isFirstInput = false;
+                    return;
+                }
+                else {
 
-                visibleDeleteCancelButton();
+                    binding.money.setText(String.valueOf(6));
 
-                setMoveMoneyCountTitle();
+                    isFirstInput = false;
 
-                sendMoney = binding.money.getText().toString();
+                    visibleDeleteCancelButton();
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    setMoveMoneyCountTitle();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
             else {
 
-                binding.money.append(String.valueOf(6));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                visibleDeleteCancelButton();
+                    return;
+                }
+                else {
 
-                sendMoney = binding.money.getText().toString();
+                    binding.money.append(String.valueOf(6));
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    visibleDeleteCancelButton();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
         });
     }
@@ -282,27 +376,41 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(7));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                isFirstInput = false;
+                    return;
+                }
+                else {
 
-                visibleDeleteCancelButton();
+                    binding.money.setText(String.valueOf(7));
 
-                setMoveMoneyCountTitle();
+                    isFirstInput = false;
 
-                sendMoney = binding.money.getText().toString();
+                    visibleDeleteCancelButton();
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    setMoveMoneyCountTitle();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
             else {
 
-                binding.money.append(String.valueOf(7));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                visibleDeleteCancelButton();
+                    return;
+                }
+                else {
 
-                sendMoney = binding.money.getText().toString();
+                    binding.money.append(String.valueOf(7));
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    visibleDeleteCancelButton();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
         });
     }
@@ -313,27 +421,41 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(8));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                isFirstInput = false;
+                    return;
+                }
+                else {
 
-                visibleDeleteCancelButton();
+                    binding.money.setText(String.valueOf(8));
 
-                setMoveMoneyCountTitle();
+                    isFirstInput = false;
 
-                sendMoney = binding.money.getText().toString();
+                    visibleDeleteCancelButton();
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    setMoveMoneyCountTitle();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
             else {
 
-                binding.money.append(String.valueOf(8));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                visibleDeleteCancelButton();
+                    return;
+                }
+                else {
 
-                sendMoney = binding.money.getText().toString();
+                    binding.money.append(String.valueOf(8));
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    visibleDeleteCancelButton();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
         });
     }
@@ -344,27 +466,41 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                binding.money.setText(String.valueOf(9));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                isFirstInput = false;
+                    return;
+                }
+                else {
 
-                visibleDeleteCancelButton();
+                    binding.money.setText(String.valueOf(9));
 
-                setMoveMoneyCountTitle();
+                    isFirstInput = false;
 
-                sendMoney = binding.money.getText().toString();
+                    visibleDeleteCancelButton();
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    setMoveMoneyCountTitle();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
             else {
 
-                binding.money.append(String.valueOf(9));
+                if(binding.accountMoney.getText().toString().equals("0")) {
 
-                visibleDeleteCancelButton();
+                    return;
+                }
+                else {
 
-                sendMoney = binding.money.getText().toString();
+                    binding.money.append(String.valueOf(9));
 
-                binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                    visibleDeleteCancelButton();
+
+                    sendMoney = binding.money.getText().toString();
+
+                    binding.remittanceButton.setBackgroundColor(getResources().getColor(R.color.login_button_first_gradation));
+                }
             }
         });
     }
