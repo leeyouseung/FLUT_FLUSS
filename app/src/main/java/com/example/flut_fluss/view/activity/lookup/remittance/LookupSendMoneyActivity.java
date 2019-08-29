@@ -13,7 +13,7 @@ import com.example.flut_fluss.databinding.LookupSendMoneyActivityBinding;
 
 public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivityBinding> {
 
-    Animation anim = new AlphaAnimation(0.0f, 1.0f);
+    private Animation anim = new AlphaAnimation(0.0f, 1.0f);
 
     final String CHECKMONEY = "잔액 : 0 원";
 
