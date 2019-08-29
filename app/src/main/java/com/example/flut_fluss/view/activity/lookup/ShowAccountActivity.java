@@ -10,6 +10,10 @@ import com.example.flut_fluss.view.activity.lookup.remittance.LookupSendMoneyAct
 
 public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding> {
 
+    private String accountMoney;
+    private String myAccountMoney;
+    private String bankAccountMoney;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +25,15 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
     private void initData() {
 
+        Intent intent = getIntent();
+
+        accountMoney = intent.getStringExtra("account_money");
+        myAccountMoney = intent.getStringExtra("my_account_money");
+        bankAccountMoney = intent.getStringExtra("bank_account_money");
+
+        binding.accountMoney.setText(accountMoney);
+        binding.myAccountMoney.setText(myAccountMoney);
+        binding.bankAccountMoney.setText(bankAccountMoney);
     }
 
     private void event() {
