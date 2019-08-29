@@ -1,5 +1,7 @@
 package com.example.flut_fluss.view.activity.my_account_list;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
@@ -17,8 +19,14 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
         event();
     }
 
+    @SuppressLint("SetTextI18n")
     private void initData() {
 
+        Intent intent = getIntent();
+
+        String sendMyAccountMoney = intent.getStringExtra("sendMoney");
+
+        binding.sendMyAccountMoney.setText(sendMyAccountMoney + "원");
     }
 
     private void event() {

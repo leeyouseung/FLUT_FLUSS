@@ -48,7 +48,7 @@
         tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/my_account_money"
+        android:id="@+id/send_my_bank_money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -67,9 +67,9 @@
         android:text="을 보냅니다"
         android:textSize="10pt"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/my_account_money"
-        app:layout_constraintStart_toEndOf="@+id/my_account_money"
-        app:layout_constraintTop_toTopOf="@+id/my_account_money"
+        app:layout_constraintBottom_toBottomOf="@+id/send_my_bank_money"
+        app:layout_constraintStart_toEndOf="@+id/send_my_bank_money"
+        app:layout_constraintTop_toTopOf="@+id/send_my_bank_money"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -79,7 +79,7 @@
         android:layout_marginTop="8dp"
         android:text="NH농협 352-XXXX-XXXX-XX"
         app:layout_constraintStart_toStartOf="@+id/my_account_title"
-        app:layout_constraintTop_toBottomOf="@+id/my_account_money"
+        app:layout_constraintTop_toBottomOf="@+id/send_my_bank_money"
         tools:ignore="HardcodedText" />
 
     <ImageView
