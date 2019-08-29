@@ -92,6 +92,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
     private void clickEvent() {
 
+        clickBackButton();
         clickMoneyNumber0();
         clickMoneyNumber1();
         clickMoneyNumber2();
@@ -104,6 +105,11 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
         clickMoneyNumber9();
         clickCancelButton();
         clickDeleteButton();
+    }
+
+    private void clickBackButton() {
+
+        finish();
     }
 
     private void clickMoneyNumber0() {
