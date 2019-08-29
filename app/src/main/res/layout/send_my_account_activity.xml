@@ -83,7 +83,7 @@
         tools:ignore="HardcodedText" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/my_account_img"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="24dp"
@@ -94,24 +94,24 @@
         tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/account"
+        android:id="@+id/out_account_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="12dp"
         android:text="출금 계좌"
-        app:layout_constraintBottom_toTopOf="@+id/bank_img"
+        app:layout_constraintBottom_toTopOf="@+id/my_bank_img"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText" />
 
     <ImageView
-        android:id="@+id/bank_img"
+        android:id="@+id/my_bank_img"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginBottom="22dp"
         android:src="@drawable/bank_icon"
         app:layout_constraintBottom_toTopOf="@+id/my_account_send_button"
-        app:layout_constraintStart_toStartOf="@+id/account"
+        app:layout_constraintStart_toStartOf="@+id/out_account_title"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -122,8 +122,8 @@
         android:text="NH농협은행 계좌"
         android:textSize="8pt"
         android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/bank_img"
-        app:layout_constraintTop_toTopOf="@+id/bank_img"
+        app:layout_constraintStart_toEndOf="@+id/my_bank_img"
+        app:layout_constraintTop_toTopOf="@+id/my_bank_img"
         tools:ignore="HardcodedText" />
 
     <TextView

@@ -23,6 +23,11 @@ public class SendMyCardActivity extends BaseActivity<SendMyCardActivityBinding> 
 
     private void event() {
 
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
     }
 
     @Override
