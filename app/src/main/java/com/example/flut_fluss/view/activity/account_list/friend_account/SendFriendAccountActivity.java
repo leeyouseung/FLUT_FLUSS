@@ -9,7 +9,7 @@ import com.example.flut_fluss.databinding.SendFriendAccountActivityBinding;
 public class SendFriendAccountActivity extends BaseActivity<SendFriendAccountActivityBinding> {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
     }
