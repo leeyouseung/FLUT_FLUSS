@@ -34,7 +34,6 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
     private void clickMyAccountSendMoney() {
 
         binding.myAccountSendButton.setOnClickListener(v -> {
-
             
         });
     }
