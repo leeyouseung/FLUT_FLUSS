@@ -40,14 +40,10 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
         clearAccountMoney = clearAccountMoney.replaceAll(" ", "");
         clearBankMoney = clearBankMoney.replaceAll(" ", "");
 
-        if (clearAccountMoney.length() > 0 && clearAccountMoney.charAt(clearAccountMoney.length() - 1) == 'x'
-                && clearBankMoney.length() > 0 && clearBankMoney.charAt(clearBankMoney.length() - 1) == 'x') {
+        clearAccountMoney = clearAccountMoney.substring(0, clearAccountMoney.length() - 1);
+        clearBankMoney = clearBankMoney.substring(0, clearBankMoney.length() - 1);
 
-            clearAccountMoney = clearAccountMoney.substring(0, clearAccountMoney.length() - 1);
-            clearBankMoney = clearBankMoney.substring(0, clearBankMoney.length() - 1);
-
-            resultMoney = Integer.parseInt(clearAccountMoney) + Integer.parseInt(clearBankMoney);
-        }
+        resultMoney = Integer.parseInt(clearAccountMoney) + Integer.parseInt(clearBankMoney);
 
         binding.showMoneyMoney.setText(resultMoney);
     }
