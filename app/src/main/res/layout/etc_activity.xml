@@ -10,7 +10,7 @@
     tools:context=".view.activity.inner_timline.EtcActivity">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/back_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -43,7 +43,7 @@
         android:layout_marginTop="64dp"
         android:text="총 금액"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/back_button"
         tools:ignore="HardcodedText" />
 
     <TextView

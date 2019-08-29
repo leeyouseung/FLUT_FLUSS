@@ -28,6 +28,15 @@ public class EtcActivity extends BaseActivity<EtcActivityBinding> {
 
     private void clickEvent() {
 
+        clickBackButton();
+    }
+
+    private void clickBackButton() {
+
+        binding.backButton.setOnClickListener(v -> {
+
+            finish();
+        });
     }
 
     @Override

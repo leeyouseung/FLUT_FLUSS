@@ -28,6 +28,15 @@ public class FoodActivity extends BaseActivity<FoodActivityBinding> {
 
     private void clickEvent() {
 
+        clickBackButton();
+    }
+
+    private void clickBackButton() {
+
+        binding.backButton.setOnClickListener(v -> {
+
+            finish();
+        });
     }
 
     @Override

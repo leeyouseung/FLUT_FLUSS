@@ -28,6 +28,15 @@ public class ClothsActivity extends BaseActivity<ClothsActivityBinding> {
 
     private void clickEvent() {
 
+        clickBackButton();
+    }
+
+    private void clickBackButton() {
+
+        binding.backButton.setOnClickListener(v -> {
+
+            finish();
+        });
     }
 
     @Override

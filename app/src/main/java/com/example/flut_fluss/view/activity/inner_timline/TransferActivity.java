@@ -12,7 +12,31 @@ public class TransferActivity extends BaseActivity<TransferActivityBinding> {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initData();
 
+        event();
+    }
+
+    private void initData() {
+
+    }
+
+    private void event() {
+
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
+        clickBackButton();
+    }
+
+    private void clickBackButton() {
+
+        binding.backButton.setOnClickListener(v -> {
+
+            finish();
+        });
     }
 
     @Override

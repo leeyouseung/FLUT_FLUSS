@@ -30,8 +30,17 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
     private void clickEvent() {
 
+        clickBackButton();
         clickMyAccountRemittanceButton();
         clickMyBankRemittanceButton();
+    }
+
+    private void clickBackButton() {
+
+        binding.backButton.setOnClickListener(v -> {
+
+            finish();
+        });
     }
 
     private void clickMyAccountRemittanceButton() {
