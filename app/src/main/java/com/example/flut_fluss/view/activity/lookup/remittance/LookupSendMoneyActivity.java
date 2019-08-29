@@ -4,12 +4,18 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.LookupSendMoneyActivityBinding;
 
 public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivityBinding> {
+
+    Animation anim = new AlphaAnimation(0.0f, 1.0f);
+
+    final String CHECKMONEY = "잔액 : 0 원";
 
     public String sendMoney = "0";
     private String accountKindTitle;
@@ -22,6 +28,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
         super.onCreate(savedInstanceState);
 
         initData();
+
+        initSetBlinkAnimation();
 
         event();
     }
@@ -40,8 +48,17 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
         binding.accountMoney.setText("잔액 : " + accountMoney + " 원");
     }
 
+    private void initSetBlinkAnimation() {
+
+        anim.setDuration(50); //You can manage the time of the blink with this parameter
+        anim.setStartOffset(20);
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(5); // blink time
+    }
+
     private void event() {
 
+        checkBlinkMoneySet();
         clickEvent();
     }
 
@@ -55,6 +72,11 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
         binding.deleteButton.setVisibility(View.INVISIBLE);
         binding.cancelButton.setVisibility(View.INVISIBLE);
+    }
+
+    private void checkBlinkMoneySet() {
+
+        binding.accountMoney.startAnimation(anim);
     }
 
     private void clickEvent() {
@@ -83,9 +105,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -105,9 +127,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -126,9 +148,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -151,9 +173,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -172,9 +194,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -196,9 +218,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -217,9 +239,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -241,9 +263,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -262,9 +284,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -286,9 +308,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -307,9 +329,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -331,9 +353,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -352,9 +374,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -376,9 +398,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -397,9 +419,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -421,9 +443,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -442,9 +464,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -466,9 +488,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
@@ -487,9 +509,9 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals("0")) {
+                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
 
-                    return;
+                    checkBlinkMoneySet();
                 }
                 else {
 
