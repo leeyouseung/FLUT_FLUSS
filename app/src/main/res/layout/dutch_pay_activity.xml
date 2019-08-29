@@ -72,7 +72,7 @@
         android:id="@+id/select_nember_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="16dp"
         android:text="확인 0"
         android:textColor="@color/login_button_first_gradation"
         android:textSize="8pt"
