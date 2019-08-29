@@ -283,7 +283,7 @@
         android:textSize="7pt"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:background="@drawable/money_send_button_radius"
+        android:background="@drawable/money_send_button_off_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
