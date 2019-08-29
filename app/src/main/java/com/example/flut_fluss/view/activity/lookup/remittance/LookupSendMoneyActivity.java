@@ -57,8 +57,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
     }
 
     private void event() {
-
-        checkBlinkMoneySet();
+        
         clickEvent();
     }
 
