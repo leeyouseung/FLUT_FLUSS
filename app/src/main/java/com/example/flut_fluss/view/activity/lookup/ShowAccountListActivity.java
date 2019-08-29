@@ -27,7 +27,7 @@ public class ShowAccountListActivity extends BaseActivity<ShowAccountListActivit
     }
 
     private void clickEvent() {
-        
+
     }
 
     @Override

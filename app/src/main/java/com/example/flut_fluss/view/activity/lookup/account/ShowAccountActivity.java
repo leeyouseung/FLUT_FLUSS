@@ -46,6 +46,8 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
     private void clickEvent() {
 
         clickBackButton();
+        clickMyAccountSendLayout();
+        clickMyBankAccountSendLayout();
         clickMyAccountSendButton();
         clickMyBankAccountSendButton();
     }
@@ -56,6 +58,15 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
             finish();
         });
+    }
+
+    private void clickMyAccountSendLayout() {
+
+    }
+
+    private void clickMyBankAccountSendLayout() {
+
+        
     }
 
     private void clickMyAccountSendButton() {
