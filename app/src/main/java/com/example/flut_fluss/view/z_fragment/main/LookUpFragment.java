@@ -18,7 +18,7 @@ import com.example.flut_fluss.view.activity.lookup.remittance.LookupSendMoneyAct
 
 public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
-    private int resultMoney;
+    public int sendResultMoney = 0;
 
     private String clearAccountMoney;
     private String clearBankMoney;
@@ -37,16 +37,21 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
         clearAccountMoney = binding.myAccountMoney.getText().toString();
         clearBankMoney = binding.bankAccountMoney.getText().toString();
 
+        clearAccountMoney = clearAccountMoney.replaceAll(" ", "");
+        clearBankMoney = clearBankMoney.replaceAll(" ", "");
+
         if (clearAccountMoney.length() > 0 && clearAccountMoney.charAt(clearAccountMoney.length() - 1) == 'x') {
 
-            clearAccountMoney = clearAccountMoney.substring(0, clearAccountMoney.length() - 2);
+            clearAccountMoney = clearAccountMoney.substring(0, clearAccountMoney.length() - 1);
         }
         if (clearBankMoney.length() > 0 && clearBankMoney.charAt(clearBankMoney.length() - 1) == 'x') {
 
-            clearBankMoney = clearBankMoney.substring(0, clearBankMoney.length() - 2);
+            clearBankMoney = clearBankMoney.substring(0, clearBankMoney.length() - 1);
         }
 
-        resultMoney = Integer.parseInt(clearAccountMoney) + Integer.parseInt(clearBankMoney);
+        int resultMoney = Integer.parseInt(clearAccountMoney) + Integer.parseInt(clearBankMoney);
+
+        sendResultMoney = resultMoney;
 
         binding.showMoneyMoney.setText(resultMoney);
     }
@@ -82,7 +87,7 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
         Intent intent = new Intent(getContext(), ShowAccountActivity.class);
 
-        intent.putExtra("account_money", resultMoney);
+        intent.putExtra("account_money", sendResultMoney);
         intent.putExtra("my_account_money", clearAccountMoney);
         intent.putExtra("bank_account_money", clearBankMoney);
 
