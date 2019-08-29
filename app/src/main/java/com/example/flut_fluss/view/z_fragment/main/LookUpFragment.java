@@ -131,7 +131,11 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
         binding.myAccountSendButton.setOnClickListener(v -> {
 
-            startActivity(new Intent(getContext(), LookupSendMoneyActivity.class));
+            Intent intent = new Intent(getContext(), LookupSendMoneyActivity.class);
+
+            intent.putExtra("my_account_money", binding.myAccountMoney.getText().toString());
+
+            startActivity(intent);
         });
     }
 
@@ -139,7 +143,11 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
         binding.myBankAccountSendButton.setOnClickListener(v -> {
 
-            startActivity(new Intent(getContext(), LookupSendMoneyActivity.class));
+            Intent intent = new Intent(getContext(), LookupSendMoneyActivity.class);
+
+            intent.putExtra("bank_account_money", binding.bankAccountMoney.getText().toString());
+
+            startActivity(intent);
         });
     }
 
