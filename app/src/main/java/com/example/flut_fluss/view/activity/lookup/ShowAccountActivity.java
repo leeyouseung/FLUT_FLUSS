@@ -42,7 +42,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
     private void clickMyBankLayout() {
 
         binding.myBankRemittanceButton.setOnClickListener(v -> {
-            
+
         });
     }
 
