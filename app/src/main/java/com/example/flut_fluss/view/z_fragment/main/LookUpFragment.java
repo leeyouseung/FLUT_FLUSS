@@ -39,11 +39,11 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
         if (clearAccountMoney.length() > 0 && clearAccountMoney.charAt(clearAccountMoney.length() - 1) == 'x') {
 
-            clearAccountMoney = clearAccountMoney.substring(0, clearAccountMoney.length() - 1);
+            clearAccountMoney = clearAccountMoney.substring(0, clearAccountMoney.length() - 2);
         }
         if (clearBankMoney.length() > 0 && clearBankMoney.charAt(clearBankMoney.length() - 1) == 'x') {
 
-            clearBankMoney = clearBankMoney.substring(0, clearBankMoney.length() - 1);
+            clearBankMoney = clearBankMoney.substring(0, clearBankMoney.length() - 2);
         }
 
         resultMoney = Integer.parseInt(clearAccountMoney) + Integer.parseInt(clearBankMoney);
