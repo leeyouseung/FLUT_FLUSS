@@ -14,6 +14,7 @@ import com.example.flut_fluss.base.BaseFragment;
 import com.example.flut_fluss.databinding.LookUpFragmentBinding;
 import com.example.flut_fluss.view.activity.lookup.ShowAccountActivity;
 import com.example.flut_fluss.view.activity.lookup.ShowCardActivity;
+import com.example.flut_fluss.view.activity.lookup.remittance.LookupSendMoneyActivity;
 
 public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
@@ -40,6 +41,7 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
         clickAccountLayout();
         clickCardLayout();
         clickAddKindButton();
+        clickMyAccountSendButton();
     }
 
     private void clickAccountLayout() {
@@ -121,6 +123,14 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
             dialog.create();
             dialog.show();
+        });
+    }
+
+    private void clickMyAccountSendButton() {
+
+        binding.myAccountSendButton.setOnClickListener(v -> {
+
+            startActivity(new Intent(getContext(), LookupSendMoneyActivity.class));
         });
     }
 
