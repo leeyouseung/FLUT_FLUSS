@@ -25,6 +25,11 @@ public class AnotherFragment extends BaseFragment<AnotherFragmentBinding> {
 
     private void event() {
 
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
     }
 
     @Override
