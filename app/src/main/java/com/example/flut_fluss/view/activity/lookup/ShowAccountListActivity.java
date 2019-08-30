@@ -21,6 +21,10 @@ public class ShowAccountListActivity extends BaseActivity<ShowAccountListActivit
 
     private void initData() {
 
+        Intent intent = getIntent();
+
+        intent.getStringExtra("title_money_list");
+        intent.getStringExtra("account_money");
     }
 
     private void event() {

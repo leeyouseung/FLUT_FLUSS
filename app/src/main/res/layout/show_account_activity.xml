@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="36 원"
+        android:text="32 원"
         android:textColor="@color/black"
         android:textSize="13pt"
         android:textStyle="bold"
