@@ -59,7 +59,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 //         qr 코드 구현.                                                                     0%
 //         회원가입.                                                                         0%
 //         로그인 유지 체크박스 클릭시 색 테마에 맞추기.                                        0%
-//         환경설정.                                                                         0%
+//         환경설정.                                                                        80%
 //         타임라인.                                                                         0%
 //         개설은 보류.                                                                      0%
 //         조회 페이지에서 추가 했을 때 액션.                                                  0%
