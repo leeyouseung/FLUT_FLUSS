@@ -73,6 +73,31 @@
         app:layout_constraintTop_toBottomOf="@+id/textView28"
         tools:ignore="HardcodedText" />
 
+    <ImageButton
+        android:id="@+id/add_money_button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/add_icon"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/account_money"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/add_money_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="충전하기"
+        android:textColor="@color/blue"
+        android:textSize="7pt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/add_money_button"
+        app:layout_constraintStart_toEndOf="@+id/add_money_button"
+        app:layout_constraintTop_toTopOf="@+id/add_money_button"
+        tools:ignore="HardcodedText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
