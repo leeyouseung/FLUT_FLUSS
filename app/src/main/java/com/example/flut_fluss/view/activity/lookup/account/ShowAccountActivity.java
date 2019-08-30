@@ -97,7 +97,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
     private void intentInfoLookupSendMoney() {
 
-        Intent intent = new Intent(getApplicationContext(), LookupSendMoneyActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ShowAccountListActivity.class);
 
         intent.putExtra("title_money_list", binding.titleBankMoneyList.getText().toString());
         intent.putExtra("account_money", binding.bankAccountMoney.getText().toString());
