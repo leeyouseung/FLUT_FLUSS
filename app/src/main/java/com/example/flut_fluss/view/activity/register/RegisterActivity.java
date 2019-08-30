@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.register;
+package com.example.flut_fluss.view.activity.register;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;

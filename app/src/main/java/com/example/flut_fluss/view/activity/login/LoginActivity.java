@@ -10,7 +10,7 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.LoginActivityBinding;
 import com.example.flut_fluss.view.activity.main.MainActivity;
-import com.example.flut_fluss.view.register.RegisterActivity;
+import com.example.flut_fluss.view.activity.register.RegisterActivity;
 
 public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
