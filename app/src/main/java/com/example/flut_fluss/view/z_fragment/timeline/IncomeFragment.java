@@ -25,6 +25,11 @@ public class IncomeFragment extends BaseFragment<IncomeFragmentBinding> {
 
     private void event() {
 
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
     }
 
     @Override
