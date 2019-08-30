@@ -259,7 +259,7 @@
         tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/big_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="송금"
@@ -298,9 +298,9 @@
         android:text="플럿머니"
         android:textSize="7pt"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/big_title"
+        app:layout_constraintStart_toStartOf="@+id/big_title"
+        app:layout_constraintTop_toBottomOf="@+id/big_title"
         tools:ignore="HardcodedText" />
 
     <TextView
