@@ -217,7 +217,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
-                android:text="32 원"
+                android:text="34 원"
                 android:textColor="@color/black"
                 android:textSize="9pt"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
