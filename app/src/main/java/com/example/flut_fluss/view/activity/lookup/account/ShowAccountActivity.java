@@ -57,7 +57,12 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myAccountLayout.setOnClickListener(v -> {
 
-            intentInfoShowAccountList();
+            Intent intent = new Intent(getApplicationContext(), ShowAccountListActivity.class);
+
+            intent.putExtra("title_money_list", binding.titleFlutMoneyList.getText().toString());
+            intent.putExtra("account_money", binding.myAccountMoney.getText().toString());
+
+            startActivity(intent);
         });
     }
 
@@ -65,7 +70,12 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myBankLayout.setOnClickListener(v -> {
 
-            intentInfoLookupSendMoney();
+            Intent intent = new Intent(getApplicationContext(), ShowAccountListActivity.class);
+
+            intent.putExtra("title_money_list", binding.titleBankMoneyList.getText().toString());
+            intent.putExtra("account_money", binding.bankAccountMoney.getText().toString());
+
+            startActivity(intent);
         });
     }
 
@@ -73,7 +83,12 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myAccountSendButton.setOnClickListener(v -> {
 
-            intentInfoShowAccountList();
+            Intent intent = new Intent(getApplicationContext(), LookupSendMoneyActivity.class);
+
+            intent.putExtra("title_money_list", binding.titleFlutMoneyList.getText().toString());
+            intent.putExtra("account_money", binding.myAccountMoney.getText().toString());
+
+            startActivity(intent);
         });
     }
 
@@ -81,28 +96,13 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myBankAccountSendButton.setOnClickListener(v -> {
 
-            intentInfoLookupSendMoney();
+            Intent intent = new Intent(getApplicationContext(), LookupSendMoneyActivity.class);
+
+            intent.putExtra("title_money_list", binding.titleBankMoneyList.getText().toString());
+            intent.putExtra("account_money", binding.bankAccountMoney.getText().toString());
+
+            startActivity(intent);
         });
-    }
-
-    private void intentInfoShowAccountList() {
-
-        Intent intent = new Intent(getApplicationContext(), ShowAccountListActivity.class);
-
-        intent.putExtra("title_money_list", binding.titleFlutMoneyList.getText().toString());
-        intent.putExtra("account_money", binding.myAccountMoney.getText().toString());
-
-        startActivity(intent);
-    }
-
-    private void intentInfoLookupSendMoney() {
-
-        Intent intent = new Intent(getApplicationContext(), ShowAccountListActivity.class);
-
-        intent.putExtra("title_money_list", binding.titleBankMoneyList.getText().toString());
-        intent.putExtra("account_money", binding.bankAccountMoney.getText().toString());
-
-        startActivity(intent);
     }
 
     @Override

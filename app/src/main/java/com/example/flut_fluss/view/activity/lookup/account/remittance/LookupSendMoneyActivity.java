@@ -50,7 +50,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
         else {
 
             binding.bigTitle.setText(intent.getStringExtra("big_title"));
-            binding.accountKindTitle.setText(intent.getStringExtra("title_money_list"));
+            binding.accountKindTitle.setText(intent.getStringExtra("title_kind"));
             binding.accountMoney.setText("잔액 : " + intent.getStringExtra("account_money"));
         }
     }

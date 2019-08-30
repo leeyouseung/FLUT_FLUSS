@@ -42,7 +42,13 @@ public class ShowAccountListActivity extends BaseActivity<ShowAccountListActivit
 
         binding.addMoneyButton.setOnClickListener(v -> {
 
-            IntentLookupSendMoney();
+            Intent intent = new Intent(getApplicationContext(), LookupSendMoneyActivity.class);
+
+            intent.putExtra("big_title", "충전");
+            intent.putExtra("title_kind", binding.accountKindTitle.getText().toString());
+            intent.putExtra("account_money", binding.accountMoney.getText().toString());
+
+            startActivity(intent);
         });
     }
 
@@ -50,19 +56,14 @@ public class ShowAccountListActivity extends BaseActivity<ShowAccountListActivit
 
         binding.addMoneyButtonText.setOnClickListener(v -> {
 
-            IntentLookupSendMoney();
+            Intent intent = new Intent(getApplicationContext(), LookupSendMoneyActivity.class);
+
+            intent.putExtra("big_title", "충전");
+            intent.putExtra("title_kind", binding.accountKindTitle.getText().toString());
+            intent.putExtra("account_money", binding.accountMoney.getText().toString());
+
+            startActivity(intent);
         });
-    }
-
-    private void IntentLookupSendMoney() {
-
-        Intent intent = new Intent(getApplicationContext(), LookupSendMoneyActivity.class);
-
-        intent.putExtra("big_title", "충전");
-        intent.putExtra("title_kind", binding.accountKindTitle.getText().toString());
-        intent.putExtra("account_money", binding.accountMoney.getText().toString());
-
-        startActivity(intent);
     }
 
     @Override
