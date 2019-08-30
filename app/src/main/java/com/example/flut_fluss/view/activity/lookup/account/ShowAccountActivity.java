@@ -65,7 +65,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myBankLayout.setOnClickListener(v -> {
 
-            intentInfoShowAccountList();
+            intentInfoLookupSendMoney();
         });
     }
 
@@ -73,7 +73,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
         binding.myAccountSendButton.setOnClickListener(v -> {
 
-            intentInfoLookupSendMoney();
+            intentInfoShowAccountList();
         });
     }
 
