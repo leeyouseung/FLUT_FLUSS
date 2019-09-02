@@ -119,7 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="플럿 카드"
+        android:text="플럿 머니"
         android:textColor="@color/black"
         android:textSize="8pt"
         app:layout_constraintStart_toEndOf="@+id/my_account_img"
