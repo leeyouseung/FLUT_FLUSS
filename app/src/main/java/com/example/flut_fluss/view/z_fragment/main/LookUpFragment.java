@@ -11,6 +11,7 @@ import com.example.flut_fluss.databinding.LookUpFragmentBinding;
 import com.example.flut_fluss.view.activity.lookup.ShowAccountActivity;
 import com.example.flut_fluss.view.activity.lookup.account.ShowCardActivity;
 import com.example.flut_fluss.view.activity.lookup.account.remittance.LookupSendMoneyActivity;
+import com.example.flut_fluss.view.activity.my_page.MyPageActivity;
 
 public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
@@ -65,7 +66,10 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
     private void clickMyPageButton() {
 
+        binding.myPageButton.setOnClickListener(v -> {
 
+            startActivity(new Intent(getContext(), MyPageActivity.class));
+        });
     }
 
     private void clickAccountLayout() {
