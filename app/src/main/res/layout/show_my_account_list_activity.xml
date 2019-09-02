@@ -7,7 +7,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.lookup.ShowAccountListActivity">
+    tools:context=".view.activity.lookup.ShowMyAccountActivity">
 
     <ImageButton
         android:id="@+id/back_button"
