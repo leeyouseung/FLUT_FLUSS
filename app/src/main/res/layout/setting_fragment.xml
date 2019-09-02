@@ -43,7 +43,6 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="24dp"
-            android:background="@drawable/login_button_line"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +55,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
+                android:background="@drawable/login_button_line"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
@@ -83,6 +83,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
+                android:background="@drawable/login_button_line"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
@@ -110,6 +111,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
+                android:background="@drawable/login_button_line"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
