@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/flut_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".view.activity.lookup.account.ShowMyAccountActivity"/>
+        <activity android:name=".view.activity.my_page.MyPageActivity"></activity>
+        <activity android:name=".view.activity.lookup.account.ShowMyAccountActivity" />
         <activity android:name=".view.activity.lookup.account.remittance.LookupSendMoneyActivity" />
         <activity android:name=".view.activity.account_list.friend_account.SendFriendAccountActivity" />
         <activity android:name=".view.activity.account_list.my_account.SendMyCardActivity" />
