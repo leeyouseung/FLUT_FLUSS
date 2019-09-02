@@ -107,6 +107,7 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
     private void clickAddKindButton() {
 
         binding.addKindButton.setOnClickListener(v -> {
+
             
         });
     }
