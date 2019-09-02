@@ -4,12 +4,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
@@ -98,6 +101,33 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
         clickSettingButton();
         clickDutchPayButton();
         clickSendMoneyButton();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+
+        dialog.setTitle("종료");
+        dialog.setMessage("종료하시겠습니까 ?")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+
+                        // onClick OK
+
+                        finish();
+                    }
+                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+
+                        // onClick Cancel
+
+                        dialog.dismiss();
+                    }
+                });
+
+        dialog.create();
+        dialog.show();
     }
 
     private void clickRemittanceButton() {
