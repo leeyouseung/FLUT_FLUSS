@@ -87,6 +87,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
             intent.putExtra("title_money_list", binding.titleFlutMoneyList.getText().toString());
             intent.putExtra("account_money", binding.myAccountMoney.getText().toString());
+            intent.putExtra("button_text", "보내기");
 
             startActivity(intent);
         });
@@ -100,6 +101,7 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
             intent.putExtra("title_money_list", binding.titleBankMoneyList.getText().toString());
             intent.putExtra("account_money", binding.bankAccountMoney.getText().toString());
+            intent.putExtra("button_text", "보내기");
 
             startActivity(intent);
         });
