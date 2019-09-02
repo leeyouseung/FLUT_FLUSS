@@ -1,18 +1,14 @@
 package com.example.flut_fluss.view.z_fragment.main;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
-import android.widget.Toast;
-
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
 import com.example.flut_fluss.databinding.LookUpFragmentBinding;
-import com.example.flut_fluss.view.activity.lookup.account.ShowAccountActivity;
+import com.example.flut_fluss.view.activity.lookup.ShowAccountActivity;
 import com.example.flut_fluss.view.activity.lookup.account.ShowCardActivity;
 import com.example.flut_fluss.view.activity.lookup.account.remittance.LookupSendMoneyActivity;
 
@@ -59,7 +55,7 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
     private void clickEvent() {
 
-        clickUserInfoButton();
+        clickMyPageButton();
         clickAccountLayout();
         clickCardLayout();
         clickAddKindButton();
@@ -67,9 +63,9 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
         clickMyBankAccountSendButton();
     }
 
-    private void clickUserInfoButton() {
+    private void clickMyPageButton() {
 
-        
+
     }
 
     private void clickAccountLayout() {

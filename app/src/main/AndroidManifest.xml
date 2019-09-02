@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/flut_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".view.activity.lookup.ShowMyAccountActivity"/>
+        <activity android:name=".view.activity.lookup.account.ShowMyAccountActivity"/>
         <activity android:name=".view.activity.lookup.account.remittance.LookupSendMoneyActivity" />
         <activity android:name=".view.activity.account_list.friend_account.SendFriendAccountActivity" />
         <activity android:name=".view.activity.account_list.my_account.SendMyCardActivity" />
@@ -19,7 +19,7 @@
         <activity android:name=".view.activity.inner_timline.FoodActivity" />
         <activity android:name=".view.activity.inner_timline.TransferActivity" />
         <activity android:name=".view.activity.lookup.account.ShowCardActivity" />
-        <activity android:name=".view.activity.lookup.account.ShowAccountActivity" />
+        <activity android:name=".view.activity.lookup.ShowAccountActivity" />
         <activity android:name=".view.activity.remittance.DutchPayActivity" />
         <activity android:name=".view.activity.remittance.SendMoneyActivity" />
         <activity android:name=".view.activity.login.FingerPrintActivity" />
