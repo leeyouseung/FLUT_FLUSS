@@ -39,45 +39,110 @@
             tools:ignore="HardcodedText" />
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="24dp"
+            android:background="@drawable/login_button_line"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/setting_title">
+            app:layout_constraintTop_toBottomOf="@+id/setting_title"
+            tools:ignore="DisableBaselineAlignment">
 
             <LinearLayout
+                android:id="@+id/setting_in_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/setting_icon" />
+                    android:id="@+id/imageView10"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
+                    app:srcCompat="@drawable/setting_icon"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="match_parent"
+                    android:id="@+id/textView59"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="설정" />
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="center"
+                    android:text="설정"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/service_center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="match_parent"
+                    android:id="@+id/imageView11"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
+                    app:srcCompat="@drawable/setting_call"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/setting_call" />
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="center"
+                    android:text="고객센터"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/notification_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
+                    app:srcCompat="@drawable/notification"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:text="공지사항"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="최근 방문"
+            app:layout_constraintStart_toStartOf="@+id/setting_title"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="HardcodedText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
