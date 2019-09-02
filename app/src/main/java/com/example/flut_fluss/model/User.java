@@ -1,4 +1,4 @@
-package com.example.flut_fluss.model.entity;
+package com.example.flut_fluss.model;
 
 import com.google.gson.annotations.SerializedName;
 
