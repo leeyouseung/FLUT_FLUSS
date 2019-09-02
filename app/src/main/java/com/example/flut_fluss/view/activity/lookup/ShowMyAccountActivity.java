@@ -47,6 +47,7 @@ public class ShowMyAccountActivity extends BaseActivity<ShowMyAccountListActivit
             intent.putExtra("big_title", "충전");
             intent.putExtra("title_kind", binding.accountKindTitle.getText().toString());
             intent.putExtra("account_money", binding.accountMoney.getText().toString());
+            intent.putExtra("button_text", "충전하기");
 
             startActivity(intent);
         });
@@ -61,6 +62,7 @@ public class ShowMyAccountActivity extends BaseActivity<ShowMyAccountListActivit
             intent.putExtra("big_title", "충전");
             intent.putExtra("title_kind", binding.accountKindTitle.getText().toString());
             intent.putExtra("account_money", binding.accountMoney.getText().toString());
+            intent.putExtra("button_text", "충전하기");
 
             startActivity(intent);
         });
