@@ -6,9 +6,9 @@ import android.os.Bundle;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
-import com.example.flut_fluss.databinding.SendMyCardActivityBinding;
+import com.example.flut_fluss.databinding.SendMyBankActivityBinding;
 
-public class SendMyCardActivity extends BaseActivity<SendMyCardActivityBinding> {
+public class SendMyCardActivity extends BaseActivity<SendMyBankActivityBinding> {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,6 @@ public class SendMyCardActivity extends BaseActivity<SendMyCardActivityBinding> 
     @Override
     protected int layoutId() {
 
-        return R.layout.send_my_card_activity;
+        return R.layout.send_my_bank_activity;
     }
 }
