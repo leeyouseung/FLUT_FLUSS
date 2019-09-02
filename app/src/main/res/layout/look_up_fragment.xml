@@ -64,7 +64,7 @@
             tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/user_info_title"
+            android:id="@+id/user_info_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -85,7 +85,7 @@
             android:background="@drawable/background_show_money_list"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user_info_title">
+            app:layout_constraintTop_toBottomOf="@+id/user_info_button">
 
             <Button
                 android:id="@+id/my_account_send_button"
