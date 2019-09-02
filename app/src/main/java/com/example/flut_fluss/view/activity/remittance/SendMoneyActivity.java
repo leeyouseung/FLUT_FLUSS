@@ -45,10 +45,19 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
     private void clickEvent() {
 
+        clickBackButton();
         clickSearchView();
         clickOpenSetLayout();
         clickAccountLayout();
         clickCardLayout();
+    }
+
+    private void clickBackButton() {
+
+        binding.backButton.setOnClickListener(v -> {
+
+            finish();
+        });
     }
 
     private void clickSearchView() {
@@ -70,7 +79,7 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
                 binding.accountLayout.setVisibility(View.VISIBLE);
 
-                binding.cardLayout.setVisibility(View.VISIBLE);
+                binding.bankLayout.setVisibility(View.VISIBLE);
 
                 openSetLayout = false;
             }
@@ -82,7 +91,7 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
                 binding.accountLayout.setVisibility(View.GONE);
 
-                binding.cardLayout.setVisibility(View.GONE);
+                binding.bankLayout.setVisibility(View.GONE);
 
                 openSetLayout = true;
             }
@@ -103,7 +112,7 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
     private void clickCardLayout() {
 
-        binding.cardLayout.setOnClickListener(v -> {
+        binding.bankLayout.setOnClickListener(v -> {
 
             Intent intent = new Intent(getApplicationContext(), SendMyCardActivity.class);
 
