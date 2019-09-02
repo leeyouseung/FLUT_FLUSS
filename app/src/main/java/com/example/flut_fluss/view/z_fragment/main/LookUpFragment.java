@@ -59,11 +59,17 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
     private void clickEvent() {
 
+        clickUserInfoButton();
         clickAccountLayout();
         clickCardLayout();
         clickAddKindButton();
         clickMyAccountSendButton();
         clickMyBankAccountSendButton();
+    }
+
+    private void clickUserInfoButton() {
+
+        
     }
 
     private void clickAccountLayout() {
@@ -107,7 +113,7 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
     private void clickAddKindButton() {
 
         binding.addKindButton.setOnClickListener(v -> {
-            
+
         });
     }
 
