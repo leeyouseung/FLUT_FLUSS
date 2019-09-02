@@ -70,42 +70,38 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
         binding.accountLayout.setOnClickListener(v -> {
 
-            startShowAccountActivity();
+            Intent intent = new Intent(getContext(), ShowAccountActivity.class);
+
+            intent.putExtra("account_money", sendResultMoney);
+            intent.putExtra("my_account_money", clearAccountMoney);
+            intent.putExtra("bank_account_money", clearBankMoney);
+
+            startActivity(intent);
         });
 
         binding.accountButton.setOnClickListener(v -> {
 
-            startShowAccountActivity();
+            Intent intent = new Intent(getContext(), ShowAccountActivity.class);
+
+            intent.putExtra("account_money", sendResultMoney);
+            intent.putExtra("my_account_money", clearAccountMoney);
+            intent.putExtra("bank_account_money", clearBankMoney);
+
+            startActivity(intent);
         });
-    }
-
-    private void startShowAccountActivity() {
-
-        Intent intent = new Intent(getContext(), ShowAccountActivity.class);
-
-        intent.putExtra("account_money", sendResultMoney);
-        intent.putExtra("my_account_money", clearAccountMoney);
-        intent.putExtra("bank_account_money", clearBankMoney);
-
-        startActivity(intent);
     }
 
     private void clickCardLayout() {
 
         binding.cardLayout.setOnClickListener(v -> {
 
-            startShowCardActivity();
+            startActivity(new Intent(getContext(), ShowCardActivity.class));
         });
 
         binding.cardButton.setOnClickListener(v -> {
 
-            startShowCardActivity();
+            startActivity(new Intent(getContext(), ShowCardActivity.class));
         });
-    }
-
-    private void startShowCardActivity() {
-
-        startActivity(new Intent(getContext(), ShowCardActivity.class));
     }
 
     private void clickAddKindButton() {
