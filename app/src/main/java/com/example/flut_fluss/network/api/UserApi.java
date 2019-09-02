@@ -1,6 +1,6 @@
 package com.example.flut_fluss.network.api;
 
-import com.example.flut_fluss.model.User;
+import com.example.flut_fluss.model.entity.User;
 
 import java.util.List;
 

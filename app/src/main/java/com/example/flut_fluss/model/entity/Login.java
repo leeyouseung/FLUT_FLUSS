@@ -1,4 +1,6 @@
-package com.example.flut_fluss.model;
+package com.example.flut_fluss.model.entity;
+
+import com.example.flut_fluss.model.entity.User;
 
 public class Login {
 
