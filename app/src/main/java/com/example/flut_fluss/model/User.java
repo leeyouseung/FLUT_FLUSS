@@ -1,14 +1,9 @@
 package com.example.flut_fluss.model;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
 import com.google.gson.annotations.SerializedName;
 
-@Entity(tableName = "user_table")
 public class User {
 
-    @PrimaryKey
     @SerializedName("userId")
     private String id;
 
