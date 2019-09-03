@@ -25,14 +25,14 @@ public abstract class UserDatabase extends androidx.room.RoomDatabase {
 
             sInstance = Room.databaseBuilder(context.getApplicationContext(), UserDatabase.class, "user_database")
                     .fallbackToDestructiveMigration()
-                    .addCallback(userCallback)
+                    .addCallback(roomCallback)
                     .build();
         }
 
         return sInstance;
     }
 
-    private static UserDatabase.Callback userCallback = new RoomDatabase.Callback() {
+    private static RoomDatabase.Callback roomCallback = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
