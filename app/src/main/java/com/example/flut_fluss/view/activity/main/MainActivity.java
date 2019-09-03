@@ -2,6 +2,7 @@ package com.example.flut_fluss.view.activity.main;
 
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -22,6 +23,7 @@ import com.example.flut_fluss.view.z_fragment.main.RemittanceFragment;
 import com.example.flut_fluss.view.z_fragment.main.SettingFragment;
 import com.example.flut_fluss.view.z_fragment.main.LookUpFragment;
 import com.example.flut_fluss.view.z_fragment.main.TimeLineFragment;
+import com.example.flut_fluss.viewmodel.MainViewModel;
 
 import java.util.Objects;
 
@@ -89,7 +91,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
     private void initSetViewModel() {
 
-        
+        MainViewModel mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
     }
 
     private void event() {
