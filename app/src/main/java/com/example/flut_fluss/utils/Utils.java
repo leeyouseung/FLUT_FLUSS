@@ -23,9 +23,14 @@ public final class Utils {
                     .build();
 
     private static OkHttpClient getClient() {
+
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        if (BuildConfig.DEBUG)
+
+        if (BuildConfig.DEBUG) {
+
             builder.addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY));
+        }
+
         return builder.build();
     }
 }
