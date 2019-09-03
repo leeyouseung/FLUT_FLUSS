@@ -18,7 +18,7 @@ public class MyPageActivity extends BaseActivity<MyPageActivityBinding> {
     }
 
     private void initData() {
-        
+
     }
 
     private void event() {
