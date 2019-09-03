@@ -1,6 +1,7 @@
 package com.example.flut_fluss.network;
 
 public final class Response<T> {
+
     private String message;
     private int status;
     private T data;
