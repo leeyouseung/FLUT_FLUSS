@@ -1,6 +1,5 @@
 package com.example.flut_fluss.view.activity.main;
 
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -12,7 +11,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
