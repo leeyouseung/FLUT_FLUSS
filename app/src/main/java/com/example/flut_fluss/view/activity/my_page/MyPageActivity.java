@@ -14,10 +14,17 @@ public class MyPageActivity extends BaseActivity<MyPageActivityBinding> {
 
         initData();
 
+        initViewModel();
+
         event();
     }
 
     private void initData() {
+
+    }
+
+    private void initViewModel() {
+
 
     }
 

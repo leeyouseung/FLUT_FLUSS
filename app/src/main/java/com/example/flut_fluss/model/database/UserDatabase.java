@@ -9,7 +9,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import com.example.flut_fluss.model.dao.UserDao;
+//import com.example.flut_fluss.model.dao.UserDao;
 import com.example.flut_fluss.model.User;
 
 @Database(entities = {User.class}, version = 1)
@@ -17,7 +17,7 @@ public abstract class UserDatabase extends androidx.room.RoomDatabase {
 
     private static UserDatabase sInstance;
 
-    public abstract UserDao userDao();
+//    public abstract UserDao userDao();
 
     public static synchronized UserDatabase getInstance(Context context) {
 
@@ -43,18 +43,17 @@ public abstract class UserDatabase extends androidx.room.RoomDatabase {
 
     private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
 
-        private UserDao userDao;
+//        private UserDao userDao;
 
         private PopulateDbAsyncTask(UserDatabase db) {
 
-            userDao = db.userDao();
+//            userDao = db.userDao();
         }
 
         @Override
         protected Void doInBackground(Void... voids) {
 
-            userDao.insert(new User("aaaa", "1234", "이유승",
-                    "123-1234-123124-123", "123-1234-1234-12", "010-1234-1234"));
+            // 내부 디비 값 가져오기
 
             return null;
         }
