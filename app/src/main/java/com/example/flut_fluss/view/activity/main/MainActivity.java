@@ -39,6 +39,8 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         initSetButton();
 
+        initSetViewModel();
+
         event();
     }
 
@@ -83,6 +85,11 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         binding.remittanceIcon.setImageResource(R.drawable.remittance_icon_click);
         binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));
+    }
+
+    private void initSetViewModel() {
+
+        
     }
 
     private void event() {
