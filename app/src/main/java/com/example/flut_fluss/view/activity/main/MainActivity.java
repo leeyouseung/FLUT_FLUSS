@@ -133,8 +133,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
                     }
                 });
 
-        dialog.create();
-        dialog.show();
+        dialog.create().show();
     }
 
     private void clickRemittanceButton() {
