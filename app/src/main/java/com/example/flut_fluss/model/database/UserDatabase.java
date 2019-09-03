@@ -53,7 +53,7 @@ public abstract class UserDatabase extends androidx.room.RoomDatabase {
         @Override
         protected Void doInBackground(Void... voids) {
 
-            userDao.insert(new User("abcd", "1234", "이유승",
+            userDao.insert(new User("aaaa", "1234", "이유승",
                     "123-1234-123124-123", "123-1234-1234-12", "010-1234-1234"));
 
             return null;
