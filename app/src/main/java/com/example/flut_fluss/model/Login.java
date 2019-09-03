@@ -4,7 +4,7 @@ public class Login {
 
     private String token;
     private String refreshToken;
-    private User info;
+//    private User info;
 
     public String getToken() {
 
@@ -26,13 +26,13 @@ public class Login {
         this.refreshToken = refreshToken;
     }
 
-    public User getInfo() {
-
-        return info;
-    }
-
-    public void setInfo(User info) {
-
-        this.info = info;
-    }
+//    public User getInfo() {
+//
+//        return info;
+//    }
+//
+//    public void setInfo(User info) {
+//
+//        this.info = info;
+//    }
 }
