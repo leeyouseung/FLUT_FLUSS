@@ -1,7 +1,5 @@
 package com.example.flut_fluss.view.activity.my_page;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
@@ -13,6 +11,22 @@ public class MyPageActivity extends BaseActivity<MyPageActivityBinding> {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        initData();
+
+        event();
+    }
+
+    private void initData() {
+
+    }
+
+    private void event() {
+
+        clickEvent();
+    }
+
+    private void clickEvent() {
 
     }
 

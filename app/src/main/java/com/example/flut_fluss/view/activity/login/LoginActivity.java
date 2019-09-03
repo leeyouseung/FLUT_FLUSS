@@ -6,15 +6,27 @@ import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.widget.Toast;
 
+import androidx.lifecycle.ViewModelProviders;
+
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
+import com.example.flut_fluss.data.Token;
 import com.example.flut_fluss.databinding.LoginActivityBinding;
+import com.example.flut_fluss.manager.factory.ViewModelFactory;
+import com.example.flut_fluss.network.request.LoginRequest;
 import com.example.flut_fluss.view.activity.main.MainActivity;
 import com.example.flut_fluss.view.activity.register.RegisterActivity;
+import com.example.flut_fluss.viewmodel.LoginViewModel;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
     private boolean checkBlind = false;
+
+    LoginViewModel loginViewModel;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,11 +34,35 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
         initData();
 
+        initViewModel();
+
+        loginViewModel.getData().observe(this, login -> {
+
+            new Token(this).setToken(login.getToken());
+
+
+            Toast.makeText(this,"로그인 성공",Toast.LENGTH_LONG).show();
+
+            if (login.getInfo() != null) {
+
+                startActivity(new Intent(this, MainActivity.class));
+
+            }
+
+        });
+
+        loginViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this,message,Toast.LENGTH_LONG).show());
+
         event();
     }
 
     private void initData() {
 
+    }
+
+    private void initViewModel() {
+
+        loginViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(LoginViewModel.class);
     }
 
     private void event() {
@@ -39,6 +75,7 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
         clickPasswordClearButton();
         clickBlindButton();
         clickLoginButton();
+        clickRegisterButton();
     }
 
     private void clickPasswordClearButton() {
@@ -73,22 +110,24 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
             if (binding.idText.getText().toString().isEmpty()) {
 
-                Toast.makeText(this,"아이디를 입력해주세요",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"아이디를 입력해 주세요",Toast.LENGTH_SHORT).show();
 
                 return;
             }
             if (binding.passwordText.getText().toString().isEmpty()) {
 
-                Toast.makeText(this,"비밀번호를 입력해주세요",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"비밀번호를 입력해 주세요",Toast.LENGTH_SHORT).show();
 
                 return;
             }
-//            loginViewModel.login(
-//                    new LoginRequest(binding.idText.getText().toString(),
-//                            binding.passwordText.getText().toString()));
+            else {
 
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                loginViewModel.login(new LoginRequest(binding.idText.getText().toString(), binding.passwordText.getText().toString()));
+            }
         });
+    }
+
+    private void clickRegisterButton() {
 
         binding.registerButton.setOnClickListener(v -> {
 
