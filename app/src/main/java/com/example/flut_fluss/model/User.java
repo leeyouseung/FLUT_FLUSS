@@ -13,27 +13,27 @@ public class User {
     @SerializedName("name")
     private String name;
 
+    @SerializedName("phoneNumber")
+    private String phoneNumber;
+
     @SerializedName("bankAccount")
     private String bankAccount;
 
     @SerializedName("flutAccount")
     private String flutAccount;
 
-    @SerializedName("phoneNumber")
-    private String phoneNumber;
-
     public User() {
 
     }
 
-    public User(String id, String password, String name, String bankAccount, String flutAccount, String phoneNumber) {
+    public User(String id, String password, String name, String phoneNumber, String bankAccount, String flutAccount) {
 
         this.id = id;
         this.password = password;
         this.name = name;
+        this.phoneNumber = phoneNumber;
         this.bankAccount = bankAccount;
         this.flutAccount = flutAccount;
-        this.phoneNumber = phoneNumber;
     }
 
     public String getId() {
@@ -66,6 +66,17 @@ public class User {
         this.name = name;
     }
 
+    public String getPhoneNumber() {
+
+
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getBankAccount() {
 
         return bankAccount;
@@ -84,16 +95,5 @@ public class User {
     public void setFlutAccount(String flutAccount) {
 
         this.flutAccount = flutAccount;
-    }
-
-    public String getPhoneNumber() {
-
-
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-
-        this.phoneNumber = phoneNumber;
     }
 }
