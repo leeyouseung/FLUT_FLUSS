@@ -1,8 +1,12 @@
 package com.example.flut_fluss.network.request;
 
+import com.google.gson.annotations.SerializedName;
+
 public class LoginRequest {
 
+    @SerializedName("userId")
     private String id;
+    @SerializedName("password")
     private String password;
 
     public LoginRequest(String id, String password) {
