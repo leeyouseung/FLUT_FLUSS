@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
-import com.example.flut_fluss.data.Token;
+import com.example.flut_fluss.manager.Token;
 import com.example.flut_fluss.databinding.LoginActivityBinding;
 import com.example.flut_fluss.manager.factory.ViewModelFactory;
 import com.example.flut_fluss.manager.sqlite.CurrentUser;
@@ -38,7 +38,7 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
             new Token(this).setToken(login.getToken());
             new CurrentUser(this, "flut_database", null, 1).insert(login.getInfo());
 
-            Toast.makeText(this, "로그인 성공", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show();
 
             if(login.getInfo().getId() == null) {
 

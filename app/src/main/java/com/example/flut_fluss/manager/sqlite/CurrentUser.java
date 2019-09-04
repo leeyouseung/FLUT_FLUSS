@@ -5,7 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.flut_fluss.data.Token;
+import com.example.flut_fluss.manager.Token;
 import com.example.flut_fluss.model.User;
 
 public class CurrentUser extends SQLiteOpenHelper {
