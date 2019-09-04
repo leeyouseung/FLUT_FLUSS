@@ -19,10 +19,6 @@ import com.example.flut_fluss.view.activity.main.MainActivity;
 import com.example.flut_fluss.view.activity.register.RegisterActivity;
 import com.example.flut_fluss.viewmodel.LoginViewModel;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
     private boolean checkBlind = false;
