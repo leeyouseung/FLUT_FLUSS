@@ -22,6 +22,10 @@ public class User {
     @SerializedName("phoneNumber")
     private String phoneNumber;
 
+    public User() {
+
+    }
+
     public User(String id, String passoword, String name, String bankAccount, String flutAccount, String phoneNumber) {
 
         this.id = id;
