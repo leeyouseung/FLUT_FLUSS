@@ -26,10 +26,10 @@ public class User {
 
     }
 
-    public User(String id, String passoword, String name, String bankAccount, String flutAccount, String phoneNumber) {
+    public User(String id, String password, String name, String bankAccount, String flutAccount, String phoneNumber) {
 
         this.id = id;
-        this.password = passoword;
+        this.password = password;
         this.name = name;
         this.bankAccount = bankAccount;
         this.flutAccount = flutAccount;
