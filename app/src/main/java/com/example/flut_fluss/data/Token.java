@@ -18,7 +18,7 @@ public class Token extends ContextWrapper {
 
     public void setToken(String token) {
 
-        SharedPreferences sharedPreferences = getSharedPreferences("flut_token",MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("flut_token", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         editor.putString("token", token);
@@ -28,7 +28,7 @@ public class Token extends ContextWrapper {
 
     public String getToken() {
 
-        SharedPreferences sharedPreferences = getSharedPreferences("flut_token",MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("flut_token", MODE_PRIVATE);
 
         token = sharedPreferences.getString("token","");
 
