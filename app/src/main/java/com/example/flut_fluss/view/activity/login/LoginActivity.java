@@ -29,9 +29,9 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initData();
-
         initViewModel();
+
+        initData();
 
         loginViewModel.getData().observe(this, login -> {
 
