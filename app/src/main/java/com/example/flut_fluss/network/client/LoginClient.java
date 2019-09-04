@@ -20,6 +20,7 @@ public class LoginClient extends BaseClient<LoginApi> {
     }
 
     public Single<Login> login(LoginRequest loginRequest) {
+
         return api.login(loginRequest).map(response -> {
 
             if (!response.isSuccessful()) {
