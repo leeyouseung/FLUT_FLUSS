@@ -23,7 +23,7 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
     private boolean checkBlind = false;
 
-    LoginViewModel loginViewModel;
+    private LoginViewModel loginViewModel;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
             new Token(this).setToken(login.getToken());
             new CurrentUser(this, "flut_database", null, 1).insert(login.getInfo());
 
-            Toast.makeText(this,"로그인 성공",Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "로그인 성공", Toast.LENGTH_LONG).show();
 
             if(login.getInfo().getId() == null) {
 
@@ -79,7 +79,10 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
     private void clickPasswordClearButton() {
 
-        binding.pwClearButton.setOnClickListener(v -> binding.passwordText.setText(""));
+        binding.pwClearButton.setOnClickListener(v -> {
+
+            binding.passwordText.setText("");
+        });
     }
 
     private void clickBlindButton() {
@@ -109,13 +112,13 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
             if (binding.idText.getText().toString().isEmpty()) {
 
-                Toast.makeText(this,"아이디를 입력해 주세요",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "아이디를 입력해 주세요", Toast.LENGTH_SHORT).show();
 
                 return;
             }
             if (binding.passwordText.getText().toString().isEmpty()) {
 
-                Toast.makeText(this,"비밀번호를 입력해 주세요",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "비밀번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
 
                 return;
             }
