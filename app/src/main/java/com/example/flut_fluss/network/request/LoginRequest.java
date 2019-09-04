@@ -6,7 +6,7 @@ public class LoginRequest {
 
     @SerializedName("userId")
     private String id;
-    
+
     @SerializedName("password")
     private String password;
 
