@@ -21,8 +21,8 @@ public class CurrentUser extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE User (token TEXT PRIMARY KEY, userId String, userPassword String, userName TEXT, " +
-                "bankAccount TEXT, flutAccount TEXT, phoneNumber TEXT);");
+        db.execSQL("CREATE TABLE User (token TEXT PRIMARY KEY, userId String, userPassword String, userName String, " +
+                "phoneNumber TEXT, bankAccount TEXT, flutAccount TEXT);");
     }
 
     @Override
@@ -35,8 +35,8 @@ public class CurrentUser extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
         db.execSQL("INSERT INTO User VALUES('" + new Token(context).getToken() + "'  ,  " + user.getId() + "  ,  '" +
-                user.getPassword() + "'  ,  '" + user.getName() + "' , '" + user.getBankAccount() + "'  ,  '" +
-                user.getFlutAccount() + "'  ,  '" + user.getPhoneNumber() + "');");
+                user.getPassword() + "'  ,  '" + user.getName() + "' , '" + user.getPhoneNumber() + "'  ,  '" +
+                user.getBankAccount() + "'  ,  '" + user.getFlutAccount() + "');");
 
         db.close();
     }
@@ -56,24 +56,24 @@ public class CurrentUser extends SQLiteOpenHelper {
         String userId  = null;
         String userPassword = null;
         String userName = null;
+        String phoneNumber = null;
         String bankAccount = null;
         String flutAccount = null;
-        String phoneNumber = null;
 
         User user = new User();
 
-        Cursor cursor = db.rawQuery("SELECT * FROM User WHERE token='"+new Token(context).getToken()+"'", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM User WHERE token='" + new Token(context).getToken()+"'", null);
 
         while (cursor.moveToNext()) {
 
             userId = cursor.getString(cursor.getColumnIndex("userId"));
             userPassword = cursor.getString(cursor.getColumnIndex("userPassword"));
             userName = cursor.getString(cursor.getColumnIndex("userName"));
+            phoneNumber = cursor.getString(cursor.getColumnIndex("phoneNumber"));
             bankAccount = cursor.getString(cursor.getColumnIndex("bankAccount"));
             flutAccount = cursor.getString(cursor.getColumnIndex("flutAccount"));
-            phoneNumber = cursor.getString(cursor.getColumnIndex("phoneNumber"));
 
-            user = new User(userId, userPassword, userName, bankAccount, flutAccount, phoneNumber);
+            user = new User(userId, userPassword, userName, phoneNumber, bankAccount, flutAccount);
         }
 
         return user;

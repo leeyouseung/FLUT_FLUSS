@@ -40,13 +40,13 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
             Toast.makeText(this,"로그인 성공",Toast.LENGTH_LONG).show();
 
-            if (login.getInfo() != null) {
+            if (login.getInfo().getId() != null) {
 
                 startActivity(new Intent(this, MainActivity.class));
             }
         });
 
-        loginViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this,message,Toast.LENGTH_LONG).show());
+        loginViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, message, Toast.LENGTH_LONG).show());
 
         event();
     }
