@@ -35,7 +35,7 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
         loginViewModel.getData().observe(this, login -> {
 
-            new Token(this).setToken(login.getToken());
+            new Token(this).setToken(login.getToken().getToken());
             new CurrentUser(this, "flut_database", null, 1).insert(login.getInfo());
 
             Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show();

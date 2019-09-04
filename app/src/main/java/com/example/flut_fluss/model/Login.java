@@ -5,30 +5,30 @@ import com.google.gson.annotations.SerializedName;
 public class Login {
 
     @SerializedName("Token")
-    private String token;
+    private Token token;
 
     @SerializedName("RefreshToken")
-    private String refreshToken;
+    private Token refreshToken;
 
     @SerializedName("User")
     private User info;
 
-    public String getToken() {
+    public Token getToken() {
 
         return token;
     }
 
-    public void setToken(String token) {
+    public void setToken(Token token) {
 
         this.token = token;
     }
 
-    public String getRefreshToken() {
+    public Token getRefreshToken() {
 
         return refreshToken;
     }
 
-    public void setRefreshToken(String refreshToken) {
+    public void setRefreshToken(Token refreshToken) {
 
         this.refreshToken = refreshToken;
     }
