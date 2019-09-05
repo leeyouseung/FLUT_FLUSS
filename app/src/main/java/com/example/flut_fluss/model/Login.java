@@ -1,5 +1,6 @@
 package com.example.flut_fluss.model;
 
+import com.example.flut_fluss.manager.Token;
 import com.google.gson.annotations.SerializedName;
 
 public class Login {
