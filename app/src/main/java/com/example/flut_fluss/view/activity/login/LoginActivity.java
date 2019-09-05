@@ -13,6 +13,7 @@ import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.manager.Token;
 import com.example.flut_fluss.databinding.LoginActivityBinding;
 import com.example.flut_fluss.manager.factory.ViewModelFactory;
+import com.example.flut_fluss.manager.room.repository.UserRepository;
 import com.example.flut_fluss.manager.sqlite.CurrentUser;
 import com.example.flut_fluss.network.request.LoginRequest;
 import com.example.flut_fluss.view.activity.main.MainActivity;
@@ -36,7 +37,7 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
         loginViewModel.getData().observe(this, login -> {
 
             new Token(this).setToken(login.getToken().getToken());
-//            new CurrentUser(this, "flut_database.db", null, 2).insert(login.getUser());
+            UserRepository userRepository = new UserRepository()
 
             Toast.makeText(this, "잠시만 기다려주세요", Toast.LENGTH_SHORT).show();
 
