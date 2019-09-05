@@ -55,13 +55,13 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
         event();
     }
 
-    private void initData() {
-
-    }
-
     private void initViewModel() {
 
         loginViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(LoginViewModel.class);
+    }
+
+    private void initData() {
+
     }
 
     private void event() {
