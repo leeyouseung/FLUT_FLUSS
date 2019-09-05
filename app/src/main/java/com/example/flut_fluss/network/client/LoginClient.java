@@ -36,7 +36,6 @@ public class LoginClient extends BaseClient<LoginApi> {
 
                 Login login = new Login(response.body().getData().getToken(), response.body().getData().getUser());
 
-                System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
                 return login;
             }
             else if (response.body().getStatus() == 401) {
