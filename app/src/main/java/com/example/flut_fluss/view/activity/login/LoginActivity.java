@@ -38,19 +38,17 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
             new Token(this).setToken(login.getToken().getToken());
 //            new CurrentUser(this, "flut_database.db", null, 2).insert(login.getUser());
 
-            Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "잠시만 기다려주세요", Toast.LENGTH_SHORT).show();
 
             if(login.getUser().getId().isEmpty()) {
 
-                return;
+                loginViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, message, Toast.LENGTH_LONG).show());
             }
             else {
 
                 startActivity(new Intent(this, MainActivity.class));
             }
         });
-
-        loginViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, message, Toast.LENGTH_LONG).show());
 
         event();
     }
