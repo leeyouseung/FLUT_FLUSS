@@ -1,4 +1,4 @@
-package com.example.flut_fluss.data;
+package com.example.flut_fluss.model;
 
 public class Card {
 
