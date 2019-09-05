@@ -1,17 +1,13 @@
 package com.example.flut_fluss.model;
 
 import com.example.flut_fluss.manager.Token;
-import com.google.gson.annotations.SerializedName;
 
 public class Login {
 
-    @SerializedName("Token")
     private Token token;
 
-    @SerializedName("RefreshToken")
     private Token refreshToken;
 
-    @SerializedName("User")
     private User info;
 
     public Token getToken() {
