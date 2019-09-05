@@ -28,7 +28,7 @@ public class Login {
     }
 
     public void setUser(User user) {
-        
+
         this.user = user;
     }
 }
