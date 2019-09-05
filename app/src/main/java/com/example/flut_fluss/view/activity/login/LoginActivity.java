@@ -40,7 +40,11 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
             Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show();
 
-            if(login.getUser().getId() != null) {
+            if(login.getUser().getId().isEmpty()) {
+
+                return;
+            }
+            else {
 
                 startActivity(new Intent(this, MainActivity.class));
             }
