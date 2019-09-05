@@ -36,15 +36,11 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
         loginViewModel.getData().observe(this, login -> {
 
             new Token(this).setToken(login.getToken().getToken());
-            new CurrentUser(this, "flut_database", null, 1).insert(login.getInfo());
+//            new CurrentUser(this, "flut_database.db", null, 2).insert(login.getUser());
 
             Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show();
 
-            if(login.getInfo().getId() == null) {
-
-                return;
-            }
-            else {
+            if(login.getUser().getId() != null) {
 
                 startActivity(new Intent(this, MainActivity.class));
             }

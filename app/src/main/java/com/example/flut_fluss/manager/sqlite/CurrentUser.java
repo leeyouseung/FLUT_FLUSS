@@ -21,7 +21,7 @@ public class CurrentUser extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE User (token TEXT PRIMARY KEY, userId String, userPassword String, userName String, " +
+        db.execSQL("CREATE TABLE User (token TEXT PRIMARY KEY, userId String, userPassword TEXT, userName String, " +
                 "phoneNumber TEXT, bankAccount TEXT, flutAccount TEXT);");
     }
 
@@ -68,7 +68,7 @@ public class CurrentUser extends SQLiteOpenHelper {
 
             userId = cursor.getString(cursor.getColumnIndex("userId"));
             userPassword = cursor.getString(cursor.getColumnIndex("userPassword"));
-            userName = cursor.getString(cursor.getColumnIndex("userName"));
+            userName = cursor.getString(cursor.getColumnIndex("name"));
             phoneNumber = cursor.getString(cursor.getColumnIndex("phoneNumber"));
             bankAccount = cursor.getString(cursor.getColumnIndex("bankAccount"));
             flutAccount = cursor.getString(cursor.getColumnIndex("flutAccount"));

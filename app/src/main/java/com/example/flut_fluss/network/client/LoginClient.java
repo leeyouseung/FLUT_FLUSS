@@ -34,11 +34,9 @@ public class LoginClient extends BaseClient<LoginApi> {
 
             if (response.body().getStatus() == 200) {
 
-                Login login = new Login();
-                login.setToken(response.body().getData().getToken());
-                login.setRefreshToken(response.body().getData().getRefreshToken());
-                login.setInfo(response.body().getData().getInfo());
+                Login login = new Login(response.body().getData().getToken(), response.body().getData().getUser());
 
+                System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
                 return login;
             }
             else if (response.body().getStatus() == 401) {
