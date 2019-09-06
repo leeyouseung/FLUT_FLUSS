@@ -23,6 +23,7 @@ public class SignUpClient extends BaseClient<SignUpApi> {
         return api.signup(signUpRequest).map(response -> {
 
             if (!response.isSuccessful()) {
+
                 JSONObject errorBody = new JSONObject(Objects
                         .requireNonNull(
                                 response.errorBody()).string());
