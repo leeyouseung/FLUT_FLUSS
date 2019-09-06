@@ -1,12 +1,21 @@
 package com.example.flut_fluss.view.activity.SignUp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.lifecycle.ViewModelProviders;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SignupActivityBinding;
+import com.example.flut_fluss.manager.factory.ViewModelFactory;
+import com.example.flut_fluss.view.activity.login.LoginActivity;
+import com.example.flut_fluss.viewmodel.SignUpViewModel;
 
 public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
+
+    private SignUpViewModel signUpViewModel;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -16,12 +25,21 @@ public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
 
         initData();
 
+        signUpViewModel.getSuccessMessage().observe(this, message -> {
+
+            Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show();
+
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+        });
+
+        signUpViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, (String) message, Toast.LENGTH_SHORT).show());
+
         event();
     }
 
     private void initViewModel() {
 
-
+        signUpViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SignUpViewModel.class);
     }
 
     private void initData() {
@@ -37,6 +55,13 @@ public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
 
         binding.registerButton.setOnClickListener(v -> {
 
+            if(binding.idText.getText().toString().isEmpty() || binding.passwordText.getText().toString().isEmpty() ||
+                    binding.passwordCheckText.getText().toString().isEmpty() || binding.nameText.getText().toString().isEmpty() ||
+                    binding.phoneNumberText.getText().toString().isEmpty() || binding.bankAccountText.getText().toString().isEmpty() ||
+                    binding.flutAccountText.getText().toString().isEmpty()) {
+
+                
+            }
         });
     }
 

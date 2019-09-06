@@ -1,6 +1,7 @@
 package com.example.flut_fluss.viewmodel;
 
 import android.app.Application;
+import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
@@ -21,8 +22,8 @@ public class LoginViewModel extends BaseViewModel<Login> {
 //    private UserRepository repository;
 //    private LiveData<List<User>> userInfo;
 
-    public LoginViewModel(@NonNull Application application) {
-        super(application);
+    public LoginViewModel(@NonNull Context context) {
+        super(context);
 
         loginClient = new LoginClient();
 
