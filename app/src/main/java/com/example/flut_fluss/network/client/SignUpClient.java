@@ -34,7 +34,7 @@ public class SignUpClient extends BaseClient<SignUpApi> {
 
                 return response.body().getMessage();
             }
-            else if (response.body().getStatus() == 401) {
+            else if (response.body().getStatus() == 400) {
 
                 throw new Exception("아이디가 중복되었습니다.");
             }
