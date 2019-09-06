@@ -8,6 +8,6 @@ import retrofit2.http.POST;
 
 public interface SignUpApi {
 
-    @POST("/api/user")
+    @POST("/api/user/sign")
     Single<retrofit2.Response<Response>> signup(SignUpRequest signUpRequest);
 }
