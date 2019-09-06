@@ -1,5 +1,6 @@
 package com.example.flut_fluss.manager.room.model;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -7,6 +8,7 @@ import androidx.room.PrimaryKey;
 public class User {
 
     @PrimaryKey
+    @NonNull
     private String id;
 
     private String password;
