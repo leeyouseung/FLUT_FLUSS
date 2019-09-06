@@ -115,14 +115,10 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
             if (binding.idText.getText().toString().isEmpty()) {
 
                 Toast.makeText(this, "아이디를 입력해 주세요", Toast.LENGTH_SHORT).show();
-
-                return;
             }
             if (binding.passwordText.getText().toString().isEmpty()) {
 
                 Toast.makeText(this, "비밀번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
-
-                return;
             }
             else {
 
