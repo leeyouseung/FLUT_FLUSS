@@ -116,13 +116,16 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
                 Toast.makeText(this, "아이디를 입력해 주세요", Toast.LENGTH_SHORT).show();
             }
-            if (binding.passwordText.getText().toString().isEmpty()) {
-
-                Toast.makeText(this, "비밀번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
-            }
             else {
 
-                loginViewModel.login(new LoginRequest(binding.idText.getText().toString(), binding.passwordText.getText().toString()));
+                if (binding.passwordText.getText().toString().isEmpty()) {
+
+                    Toast.makeText(this, "비밀번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    
+                    loginViewModel.login(new LoginRequest(binding.idText.getText().toString(), binding.passwordText.getText().toString()));
+                }
             }
         });
     }
