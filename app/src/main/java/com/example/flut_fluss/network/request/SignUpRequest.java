@@ -8,7 +8,7 @@ public class SignUpRequest {
     private String userId;
 
     @SerializedName("password")
-    private String pasword;
+    private String password;
 
     @SerializedName("name")
     private String name;
@@ -22,10 +22,10 @@ public class SignUpRequest {
     @SerializedName("flutAccount")
     private String flutAccount;
 
-    public SignUpRequest(String userId, String pasword, String name, String phoneNumber, String bankAccount, String flutAccount) {
+    public SignUpRequest(String userId, String password, String name, String phoneNumber, String bankAccount, String flutAccount) {
 
         this.userId = userId;
-        this.pasword = pasword;
+        this.password = password;
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.bankAccount = bankAccount;
@@ -42,14 +42,14 @@ public class SignUpRequest {
         this.userId = userId;
     }
 
-    public String getPasword() {
+    public String getPassword() {
 
-        return pasword;
+        return password;
     }
 
-    public void setPasword(String pasword) {
+    public void setPasword(String password) {
 
-        this.pasword = pasword;
+        this.password = password;
     }
 
     public String getName() {

@@ -71,20 +71,19 @@ public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
 
                 return;
             }
-            else {
 
-                try {
+            try {
 
-                    signUpViewModel.signup(new SignUpRequest(
-                            binding.idText.getText().toString(), binding.passwordText.getText().toString(), binding.nameText.getText().toString(),
-                            binding.phoneNumberText.getText().toString(), binding.bankAccountText.getText().toString(), binding.flutAccountText.getText().toString()));
-                }
-                catch (NullPointerException e) {
+                signUpViewModel.signup(new SignUpRequest(
+                        binding.idText.getText().toString(), binding.passwordText.getText().toString(), binding.nameText.getText().toString(),
+                        binding.phoneNumberText.getText().toString(), binding.bankAccountText.getText().toString(),
+                        binding.flutAccountText.getText().toString()));
+            }
+            catch (NullPointerException e) {
 
-                    Toast.makeText(this, "회원가입을 위한 요소가 다 포함되지 않았습니다.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "회원가입을 위한 요소가 다 포함되지 않았습니다.", Toast.LENGTH_SHORT).show();
 
-                    e.printStackTrace();
-                }
+                e.printStackTrace();
             }
         });
     }
