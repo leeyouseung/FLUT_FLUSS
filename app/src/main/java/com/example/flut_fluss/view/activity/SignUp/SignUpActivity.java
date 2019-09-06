@@ -10,6 +10,7 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SignupActivityBinding;
 import com.example.flut_fluss.manager.factory.ViewModelFactory;
+import com.example.flut_fluss.network.request.SignUpRequest;
 import com.example.flut_fluss.view.activity.login.LoginActivity;
 import com.example.flut_fluss.viewmodel.SignUpViewModel;
 
@@ -60,7 +61,30 @@ public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
                     binding.phoneNumberText.getText().toString().isEmpty() || binding.bankAccountText.getText().toString().isEmpty() ||
                     binding.flutAccountText.getText().toString().isEmpty()) {
 
-                
+                Toast.makeText(getApplicationContext(), "빈칸 없이 입력해 주세요", Toast.LENGTH_SHORT).show();
+
+                return;
+            }
+            if(!(binding.passwordText.getText().toString().equals(binding.passwordCheckText.getText().toString()))) {
+
+                Toast.makeText(getApplicationContext(), "비밀번호가 서로 다릅니다", Toast.LENGTH_SHORT).show();
+
+                return;
+            }
+            else {
+
+                try {
+
+                    signUpViewModel.signup(new SignUpRequest(
+                            binding.idText.getText().toString(), binding.passwordText.getText().toString(), binding.nameText.getText().toString(),
+                            binding.phoneNumberText.getText().toString(), binding.bankAccountText.getText().toString(), binding.flutAccountText.getText().toString()));
+                }
+                catch (NullPointerException e) {
+
+                    Toast.makeText(this, "회원가입을 위한 요소가 다 포함되지 않았습니다.", Toast.LENGTH_SHORT).show();
+
+                    e.printStackTrace();
+                }
             }
         });
     }
