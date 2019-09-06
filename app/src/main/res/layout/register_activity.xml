@@ -7,17 +7,126 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     tools:context=".view.activity.register.RegisterActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="회원가입 페이지"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="170dp"
+        android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        app:srcCompat="@drawable/flut_logo"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo">
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/login_button_radius"
+            android:text="회원가입"
+            android:textColor="@color/white"
+            android:textSize="8pt"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/id_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/gray"
+            android:hint="ID"
+            android:inputType="textPersonName"
+            android:paddingStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/login_container"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/password_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/gray"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/id_text"
+            app:layout_constraintStart_toStartOf="@+id/id_text"
+            app:layout_constraintTop_toBottomOf="@+id/id_text"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/password_check_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/gray"
+            android:hint="PasswordCheck"
+            android:inputType="textPassword"
+            android:paddingStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/password_text"
+            app:layout_constraintStart_toStartOf="@+id/password_text"
+            app:layout_constraintTop_toBottomOf="@+id/password_text"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/name_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:inputType="textPersonName"
+            android:backgroundTint="@color/gray"
+            android:hint="Name"
+            android:paddingStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/password_check_text"
+            app:layout_constraintStart_toStartOf="@+id/password_check_text"
+            app:layout_constraintTop_toBottomOf="@+id/password_check_text"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/gray"
+            android:hint="PhoneNumber"
+            android:inputType="phone"
+            android:paddingStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/name_text"
+            app:layout_constraintStart_toStartOf="@+id/name_text"
+            app:layout_constraintTop_toBottomOf="@+id/name_text"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
