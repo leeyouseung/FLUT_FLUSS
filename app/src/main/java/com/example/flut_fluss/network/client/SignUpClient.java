@@ -42,7 +42,6 @@ public class SignUpClient extends BaseClient<SignUpApi> {
 
                 throw new Exception(response.body().getMessage());
             }
-
         });
     }
 }
