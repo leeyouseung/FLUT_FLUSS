@@ -29,7 +29,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/background_login"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="30dp"
             android:backgroundTint="@color/gray"
             android:hint="ID"
@@ -103,9 +103,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:inputType="textPersonName"
             android:backgroundTint="@color/gray"
             android:hint="Name"
+            android:inputType="textPersonName"
             android:paddingStart="8dp"
             app:layout_constraintEnd_toEndOf="@+id/password_check_text"
             app:layout_constraintStart_toStartOf="@+id/password_check_text"
@@ -125,6 +125,32 @@
             app:layout_constraintStart_toStartOf="@+id/name_text"
             app:layout_constraintTop_toBottomOf="@+id/name_text"
             tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/bank_account_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="BankAccount"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/phone_number"
+            app:layout_constraintStart_toStartOf="@+id/phone_number"
+            app:layout_constraintTop_toBottomOf="@+id/phone_number"
+            tools:ignore="Autofill,HardcodedText" />
+
+        <EditText
+            android:id="@+id/flut_account_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="FlutAccount"
+            app:layout_constraintEnd_toEndOf="@+id/bank_account_text"
+            app:layout_constraintStart_toStartOf="@+id/bank_account_text"
+            app:layout_constraintTop_toBottomOf="@+id/bank_account_text"
+            tools:ignore="Autofill,HardcodedText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
