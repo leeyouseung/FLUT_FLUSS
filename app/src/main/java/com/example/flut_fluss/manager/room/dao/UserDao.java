@@ -7,7 +7,8 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.flut_fluss.model.User;
+
+import com.example.flut_fluss.manager.room.model.User;
 
 import java.util.List;
 

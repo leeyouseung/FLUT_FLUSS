@@ -7,7 +7,8 @@ import androidx.lifecycle.LiveData;
 
 import com.example.flut_fluss.manager.room.dao.UserDao;
 import com.example.flut_fluss.manager.room.database.UserDatabase;
-import com.example.flut_fluss.model.User;
+import com.example.flut_fluss.manager.room.model.User;
+
 
 import java.util.List;
 

@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.flut_fluss.manager.room.dao.UserDao;
-import com.example.flut_fluss.model.User;
+import com.example.flut_fluss.manager.room.model.User;
 
 @Database(entities = {User.class}, version = 1)
 public abstract class UserDatabase extends RoomDatabase {
