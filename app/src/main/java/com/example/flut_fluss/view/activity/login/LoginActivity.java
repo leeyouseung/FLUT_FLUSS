@@ -41,13 +41,13 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
 //            loginViewModel.insert(user);
 
-            Toast.makeText(this, "잠시만 기다려주세요", Toast.LENGTH_SHORT).show();
-
             if(login.getUser().getId().isEmpty()) {
 
                 loginViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, message, Toast.LENGTH_LONG).show());
             }
             else {
+
+                Toast.makeText(this, "잠시만 기다려주세요", Toast.LENGTH_SHORT).show();
 
                 startActivity(new Intent(this, MainActivity.class));
             }
