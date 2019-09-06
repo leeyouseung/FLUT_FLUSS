@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.activity.SignUp;
+package com.example.flut_fluss.view.activity.singup;
 
 import android.content.Intent;
 import android.os.Bundle;

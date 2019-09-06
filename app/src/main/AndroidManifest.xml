@@ -60,8 +60,12 @@
         <activity android:name=".view.activity.login.FingerPrintActivity" >
 
         </activity>
-        <activity android:name=".view.activity.SignUp.SignUpActivity" >
+        <activity android:name=".view.activity.singup.SignUpActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".view.animation.SplashActivity" >
 
@@ -70,11 +74,7 @@
 
         </activity>
         <activity android:name=".view.activity.main.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

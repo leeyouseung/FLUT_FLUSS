@@ -16,7 +16,7 @@ import com.example.flut_fluss.manager.factory.ViewModelFactory;
 import com.example.flut_fluss.model.User;
 import com.example.flut_fluss.network.request.LoginRequest;
 import com.example.flut_fluss.view.activity.main.MainActivity;
-import com.example.flut_fluss.view.activity.SignUp.SignUpActivity;
+import com.example.flut_fluss.view.activity.singup.SignUpActivity;
 import com.example.flut_fluss.viewmodel.LoginViewModel;
 
 public class LoginActivity extends BaseActivity<LoginActivityBinding> {
