@@ -8,6 +8,6 @@ import retrofit2.http.POST;
 
 public interface SignUpApi {
 
-    @POST("/api/user/")
+    @POST("/api/user/sign")
     Single<Response<com.example.flut_fluss.network.Response>> signup(SignUpRequest signUpRequest);
 }
