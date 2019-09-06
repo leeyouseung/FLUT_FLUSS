@@ -34,6 +34,9 @@ public class RegisterActivity extends BaseActivity<RegisterActivityBinding> {
 
     private void clickEvent() {
 
+        binding.registerButton.setOnClickListener(v -> {
+            
+        });
     }
 
     @Override
