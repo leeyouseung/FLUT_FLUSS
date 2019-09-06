@@ -123,7 +123,7 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
                     Toast.makeText(this, "비밀번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    
+
                     loginViewModel.login(new LoginRequest(binding.idText.getText().toString(), binding.passwordText.getText().toString()));
                 }
             }
