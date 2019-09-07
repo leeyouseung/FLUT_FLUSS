@@ -15,7 +15,7 @@ public class SendMoneyRequest {
     }
 
     public void setMoney(String money) {
-        
+
         this.money = money;
     }
 }
