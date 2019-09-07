@@ -22,7 +22,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
     private Animation anim = new AlphaAnimation(0.0f, 1.0f);
 
-    final String CHECKMONEY = "잔액 : 0 원";
+    final private String CHECK_MONEY = "잔액 : 0 원";
 
     public String sendMoney = "0";
 
@@ -149,7 +149,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -173,7 +173,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -196,7 +196,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -222,7 +222,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -245,7 +245,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -271,7 +271,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -294,7 +294,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -320,7 +320,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -343,7 +343,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -369,7 +369,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -392,7 +392,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -418,7 +418,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -441,7 +441,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -467,7 +467,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -490,7 +490,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -516,7 +516,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -539,7 +539,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -565,7 +565,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
             if (isFirstInput) {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -588,7 +588,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
             }
             else {
 
-                if(binding.accountMoney.getText().toString().equals(CHECKMONEY)) {
+                if(binding.accountMoney.getText().toString().equals(CHECK_MONEY)) {
 
                     checkBlinkMoneySet();
 
@@ -685,6 +685,8 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
         binding.remittanceButton.setOnClickListener(v -> {
 
             Toast.makeText(getApplicationContext(), "아직 서버 구현 X" ,Toast.LENGTH_SHORT).show();
+
+
         });
     }
 
