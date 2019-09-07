@@ -6,7 +6,7 @@ import com.example.flut_fluss.base.BaseViewModel;
 
 public class LookupSendMoneyViewModel extends BaseViewModel {
 
-    protected LookupSendMoneyViewModel(Context context) {
+    public LookupSendMoneyViewModel(Context context) {
         super(context);
 
     }
