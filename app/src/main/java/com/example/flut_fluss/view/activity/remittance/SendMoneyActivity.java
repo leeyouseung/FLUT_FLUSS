@@ -105,7 +105,7 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
             Intent intent = new Intent(getApplicationContext(), SendMyAccountActivity.class);
 
             intent.putExtra("sendMoney", sendMoney);
-
+            
             startActivity(intent);
         });
     }
