@@ -685,8 +685,6 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
         binding.remittanceButton.setOnClickListener(v -> {
 
             Toast.makeText(getApplicationContext(), "아직 서버 구현 X" ,Toast.LENGTH_SHORT).show();
-
-            
         });
     }
 
