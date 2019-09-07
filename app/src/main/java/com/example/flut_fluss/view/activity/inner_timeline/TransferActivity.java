@@ -1,12 +1,12 @@
-package com.example.flut_fluss.view.activity.inner_timline;
+package com.example.flut_fluss.view.activity.inner_timeline;
 
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
-import com.example.flut_fluss.databinding.FoodActivityBinding;
+import com.example.flut_fluss.databinding.TransferActivityBinding;
 
-public class FoodActivity extends BaseActivity<FoodActivityBinding> {
+public class TransferActivity extends BaseActivity<TransferActivityBinding> {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,6 @@ public class FoodActivity extends BaseActivity<FoodActivityBinding> {
     @Override
     protected int layoutId() {
 
-        return R.layout.food_activity;
+        return R.layout.transfer_activity;
     }
 }

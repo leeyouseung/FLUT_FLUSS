@@ -8,10 +8,10 @@ import androidx.annotation.Nullable;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseFragment;
 import com.example.flut_fluss.databinding.ExpenditureFragmentBinding;
-import com.example.flut_fluss.view.activity.inner_timline.ClothsActivity;
-import com.example.flut_fluss.view.activity.inner_timline.EtcActivity;
-import com.example.flut_fluss.view.activity.inner_timline.FoodActivity;
-import com.example.flut_fluss.view.activity.inner_timline.TransferActivity;
+import com.example.flut_fluss.view.activity.inner_timeline.ClothsActivity;
+import com.example.flut_fluss.view.activity.inner_timeline.EtcActivity;
+import com.example.flut_fluss.view.activity.inner_timeline.FoodActivity;
+import com.example.flut_fluss.view.activity.inner_timeline.TransferActivity;
 
 public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding> {
 

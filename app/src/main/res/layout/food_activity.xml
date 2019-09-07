@@ -7,7 +7,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.inner_timline.FoodActivity">
+    tools:context=".view.activity.inner_timeline.FoodActivity">
 
     <ImageButton
         android:id="@+id/back_button"
