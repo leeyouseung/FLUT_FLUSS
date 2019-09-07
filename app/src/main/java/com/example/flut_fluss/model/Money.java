@@ -15,7 +15,7 @@ public class Money {
     }
 
     public void setMoney(String money) {
-        
+
         this.money = money;
     }
 }
