@@ -107,18 +107,20 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
         binding.loginButton.setOnClickListener(v -> {
 
-            if (binding.idText.getText().toString().isEmpty()) {
+//            if (binding.idText.getText().toString().isEmpty()) {
+//
+//                Toast.makeText(this, "아이디를 입력해 주세요", Toast.LENGTH_SHORT).show();
+//            }
+//            else if (binding.pwText.getText().toString().isEmpty()) {
+//
+//                Toast.makeText(this, "비밀번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
+//            }
+//            else {
 
-                Toast.makeText(this, "아이디를 입력해 주세요", Toast.LENGTH_SHORT).show();
-            }
-            else if (binding.pwText.getText().toString().isEmpty()) {
+//                loginViewModel.login(new LoginRequest(binding.idText.getText().toString(), binding.pwText.getText().toString()));
+//            }
 
-                Toast.makeText(this, "비밀번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
-            }
-            else {
-
-                loginViewModel.login(new LoginRequest(binding.idText.getText().toString(), binding.pwText.getText().toString()));
-            }
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         });
     }
 
