@@ -7,10 +7,12 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
@@ -112,27 +114,58 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
     @Override
     public void onBackPressed() {
 
-        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        Toast.makeText(getApplicationContext(), "asdfghjkjhgfds", Toast.LENGTH_SHORT).show();
 
-        dialog.setTitle("종료");
-        dialog.setMessage("종료하시겠습니까 ?")
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
+//        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+//
+//        dialog.setTitle("종료");
+//        dialog.setMessage("종료하시겠습니까 ?")
+//                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int whichButton) {
+//
+//                        // onClick OK
+//
+//                        finish();
+//                    }
+//                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int whichButton) {
+//
+//                        // onClick Cancel
+//
+//                        dialog.dismiss();
+//                    }
+//                });
+//
+//        dialog.create().show();
 
-                        // onClick OK
+        //-----------------------
 
-                        finish();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("종료");
+        builder.setMessage("종료하시겠습니까 ?")
+                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
                     }
-                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
+                }).setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
 
-                        // onClick Cancel
-
-                        dialog.dismiss();
                     }
                 });
 
-        dialog.create().show();
+        final AlertDialog dialog = builder.create();
+
+        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface arg0) {
+
+                dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getColor(R.color.login_button_first_gradation));
+                dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(getColor(R.color.login_button_first_gradation));
+            }
+        });
     }
 
     private void clickRemittanceButton() {
