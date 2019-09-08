@@ -15,4 +15,5 @@
     <color name="red">#FF0000</color>
     <color name="transparent">#00ff0000</color>
     <color name="remittance_button_off">#C6DAF5</color>
+    <color name="colorLine">#A5A5A5</color>
 </resources>

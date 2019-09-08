@@ -72,40 +72,40 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
     private void clickEvent() {
 
-        clickPasswordClearButton();
-        clickBlindButton();
+//        clickPasswordClearButton();
+//        clickBlindButton();
         clickLoginButton();
         clickRegisterButton();
     }
 
-    private void clickPasswordClearButton() {
-
-        binding.pwClearButton.setOnClickListener(v -> {
-
-            binding.passwordText.setText("");
-        });
-    }
-
-    private void clickBlindButton() {
-
-        binding.blindButton.setOnClickListener(v -> {
-
-            if (checkBlind) {
-
-                binding.blindButton.setImageResource(R.drawable.ic_blind);
-                binding.passwordText.setTransformationMethod(PasswordTransformationMethod.getInstance());
-
-                checkBlind = false;
-            }
-            else {
-
-                binding.blindButton.setImageResource(R.drawable.ic_blind_check);
-                binding.passwordText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-
-                checkBlind = true;
-            }
-        });
-    }
+//    private void clickPasswordClearButton() {
+//
+//        binding.pwClearButton.setOnClickListener(v -> {
+//
+//            binding.passwordText.setText("");
+//        });
+//    }
+//
+//    private void clickBlindButton() {
+//
+//        binding.blindButton.setOnClickListener(v -> {
+//
+//            if (checkBlind) {
+//
+//                binding.blindButton.setImageResource(R.drawable.ic_blind);
+//                binding.passwordText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+//
+//                checkBlind = false;
+//            }
+//            else {
+//
+//                binding.blindButton.setImageResource(R.drawable.ic_blind_check);
+//                binding.passwordText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+//
+//                checkBlind = true;
+//            }
+//        });
+//    }
 
     private void clickLoginButton() {
 
@@ -115,20 +115,20 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
                 Toast.makeText(this, "아이디를 입력해 주세요", Toast.LENGTH_SHORT).show();
             }
-            if (binding.passwordText.getText().toString().isEmpty()) {
+            if (binding.pwText.getText().toString().isEmpty()) {
 
                 Toast.makeText(this, "비밀번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
             }
             else {
 
-                loginViewModel.login(new LoginRequest(binding.idText.getText().toString(), binding.passwordText.getText().toString()));
+                loginViewModel.login(new LoginRequest(binding.idText.getText().toString(), binding.pwText.getText().toString()));
             }
         });
     }
 
     private void clickRegisterButton() {
 
-        binding.registerButton.setOnClickListener(v -> {
+        binding.signUpButton.setOnClickListener(v -> {
 
             startActivity(new Intent(getApplicationContext(), SignUpActivity.class));
         });

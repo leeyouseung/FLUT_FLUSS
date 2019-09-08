@@ -24,156 +24,119 @@
             app:srcCompat="@drawable/flut_logo"
             tools:ignore="ContentDescription" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/login_container"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="110dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/background_login"
+            android:layout_height="400dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="36dp"
+            android:elevation="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/logo">
+            app:layout_constraintTop_toBottomOf="@+id/logo">
 
-            <EditText
-                android:id="@+id/id_text"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="36dp"
-                android:layout_marginEnd="30dp"
-                android:hint="ID"
-                android:inputType="textPersonName"
-                android:paddingStart="8dp"
-                android:backgroundTint="@color/gray"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/login_container"
-                tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+                android:layout_height="match_parent">
 
-            <EditText
-                android:id="@+id/password_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="30dp"
-                android:ems="18"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:paddingStart="8dp"
-                android:backgroundTint="@color/gray"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/id_text"
-                tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+                <LinearLayout
+                    android:id="@+id/input_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/pw_clear_button"
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/ic_clear_btn"
-                app:layout_constraintBottom_toBottomOf="@+id/password_text"
-                app:layout_constraintEnd_toStartOf="@+id/blind_button"
-                tools:ignore="ContentDescription" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_id"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:hint="@string/id_text"
+                        app:boxBackgroundColor="@android:color/white">
 
-            <ImageView
-                android:id="@+id/blind_button"
-                android:layout_width="25dp"
-                android:layout_height="15dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_blind"
-                app:layout_constraintBottom_toBottomOf="@+id/pw_clear_button"
-                app:layout_constraintEnd_toEndOf="@+id/password_text"
-                app:layout_constraintTop_toTopOf="@+id/pw_clear_button"
-                tools:ignore="ContentDescription" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/id_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="flagNoExtractUi|flagNoFullscreen|flagNoAccessoryAction"
+                            android:inputType="textEmailAddress"
+                            android:privateImeOptions="nm" />
 
-            <CheckBox
-                android:id="@+id/keepLoginButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="16dp"
-                android:text="로그인 유지"
-                android:backgroundTint="@color/login_button_first_gradation"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/password_text"
-                tools:ignore="HardcodedText" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/login_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="50dp"
-                android:background="@drawable/login_button_radius"
-                android:text="로그인"
-                android:textColor="@color/white"
-                android:textSize="8pt"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/keepLoginButton"
-                tools:ignore="HardcodedText" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_pw"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/pw_text"
+                        app:boxBackgroundColor="@android:color/white"
+                        app:passwordToggleEnabled="true">
 
-            <TextView
-                android:id="@+id/find_id_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="110dp"
-                android:text="ID 찾기"
-                android:textColor="@color/black"
-                android:textSize="7pt"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/bar"
-                tools:ignore="HardcodedText" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pw_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen|flagNoAccessoryAction"
+                            android:inputType="textPassword"
+                            android:privateImeOptions="nm" />
 
-            <TextView
-                android:id="@+id/find_pw_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="비밀번호 찾기"
-                android:textColor="@color/black"
-                android:textSize="7pt"
-                app:layout_constraintStart_toEndOf="@+id/bar"
-                app:layout_constraintTop_toTopOf="@+id/bar"
-                tools:ignore="HardcodedText" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/bar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="20dp"
-                android:text="/"
-                android:textColor="@color/black"
-                android:textSize="7pt"
-                app:layout_constraintStart_toEndOf="@+id/find_id_button"
-                app:layout_constraintTop_toBottomOf="@+id/login_button"
-                tools:ignore="HardcodedText" />
+                </LinearLayout>
 
-            <TextView
-                android:id="@+id/register_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:text="회원가입"
-                android:textColor="@color/black"
-                android:textSize="7pt"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bar"
-                tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/login_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/background_signup_button"
+                    android:fontFamily="@font/nanum_squareeb"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="@string/login_text"
+                    android:textColor="@color/colorLine"
+                    android:textSize="7pt"
+                    app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/nanum_squareb"
+                    android:text="@string/no_id_text"
+                    app:layout_constraintBottom_toBottomOf="@+id/sign_up_button"
+                    app:layout_constraintEnd_toStartOf="@+id/sign_up_button"
+                    app:layout_constraintTop_toTopOf="@+id/sign_up_button" />
+
+                <TextView
+                    android:id="@+id/sign_up_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="80dp"
+                    android:fontFamily="@font/nanum_squareeb"
+                    android:text="@string/signup_text"
+                    android:textColor="@android:color/black"
+                    android:textSize="7pt"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
