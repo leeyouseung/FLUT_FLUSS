@@ -281,23 +281,16 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         finishDialog.setMessage("종료 하시겠습니까 ?")
                 .setCancelable(false)
-                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Action for 'OK' Button;
+                .setPositiveButton("확인", (dialog, which) -> {
+                    // Action for 'OK' Button;
 
-                        Toast.makeText(getApplicationContext(), "OK_OK_OK_OK_OK", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "OK_OK_OK_OK_OK", Toast.LENGTH_SHORT).show();
 
-                        finish();
-                    }
+                    finish();
+                }).setNegativeButton("취소", (dialog, which) -> {
+                    // Action for 'Cancel' Button;
 
-                }).setNegativeButton("취소", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Action for 'Cancel' Button;
-
-                        dialog.dismiss();
-                    }
+                    dialog.dismiss();
                 });
 
         finishDialog.create().show();
