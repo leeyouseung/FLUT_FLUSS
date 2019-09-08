@@ -188,7 +188,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:visibility="invisible"
+        android:visibility="visible"
         android:id="@+id/money_send_linearLayout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -206,11 +206,12 @@
             android:orientation="vertical"
             tools:ignore="InefficientWeight,UselessLeaf,UselessParent" >
 
-        <Button
+        <TextView
             android:id="@+id/dutch_pay_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
+            android:gravity="center"
             android:text="더치페이"
             android:textSize="7pt"
             android:textStyle="bold"
@@ -227,11 +228,12 @@
             android:orientation="vertical"
             tools:ignore="InefficientWeight,UselessLeaf,UselessParent" >
 
-            <Button
+            <TextView
                 android:id="@+id/money_send_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="8dp"
+                android:gravity="center"
                 android:text="보내기"
                 android:textSize="7pt"
                 android:textStyle="bold"
