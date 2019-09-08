@@ -116,7 +116,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         AlertDialog.Builder finishDialog = new AlertDialog.Builder(this);
 
-        finishDialog.setMessage("알람을 삭제하시겠습니까?")
+        finishDialog.setMessage("종료 하시겠습니까 ?")
                 .setCancelable(false)
                 .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                     @Override
