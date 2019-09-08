@@ -285,7 +285,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
                     public void onClick(DialogInterface dialog, int which) {
                         // Action for 'OK' Button;
 
-                        Toast.makeText(getApplicationContext(), "OKOKOKOKOK", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "OK_OK_OK_OK_OK", Toast.LENGTH_SHORT).show();
 
                         finish();
                     }
