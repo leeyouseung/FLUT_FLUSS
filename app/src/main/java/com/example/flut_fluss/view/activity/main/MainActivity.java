@@ -114,58 +114,30 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
     @Override
     public void onBackPressed() {
 
-        Toast.makeText(getApplicationContext(), "asdfghjkjhgfds", Toast.LENGTH_SHORT).show();
+        AlertDialog.Builder finishDialog = new AlertDialog.Builder(this);
 
-//        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-//
-//        dialog.setTitle("종료");
-//        dialog.setMessage("종료하시겠습니까 ?")
-//                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int whichButton) {
-//
-//                        // onClick OK
-//
-//                        finish();
-//                    }
-//                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int whichButton) {
-//
-//                        // onClick Cancel
-//
-//                        dialog.dismiss();
-//                    }
-//                });
-//
-//        dialog.create().show();
-
-        //-----------------------
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
-        builder.setTitle("종료");
-        builder.setMessage("종료하시겠습니까 ?")
+        finishDialog.setMessage("알람을 삭제하시겠습니까?")
+                .setCancelable(false)
                 .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        // Action for 'OK' Button;
 
+                        Toast.makeText(getApplicationContext(), "OKOKOKOKOK", Toast.LENGTH_SHORT).show();
+
+                        finish();
                     }
+
                 }).setNegativeButton("취소", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        // Action for 'Cancel' Button;
 
+                        dialog.dismiss();
                     }
                 });
 
-        final AlertDialog dialog = builder.create();
-
-        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
-            @Override
-            public void onShow(DialogInterface arg0) {
-
-                dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getColor(R.color.login_button_first_gradation));
-                dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(getColor(R.color.login_button_first_gradation));
-            }
-        });
+        finishDialog.create().show();
     }
 
     private void clickRemittanceButton() {
