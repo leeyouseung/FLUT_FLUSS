@@ -81,8 +81,8 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
 //        clickPasswordClearButton();
 //        clickBlindButton();
-        clickLoginButton();
-        clickRegisterButton();
+//        clickLoginButton();
+//        clickRegisterButton();
     }
 
 //    private void clickPasswordClearButton() {
@@ -114,32 +114,32 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 //        });
 //    }
 
-    private void clickLoginButton() {
-
-        binding.loginButton.setOnClickListener(v -> {
-
-            if (binding.idText.getText().toString().isEmpty()) {
-
-                Toast.makeText(this, "아이디를 입력해 주세요", Toast.LENGTH_SHORT).show();
-            }
-            if (binding.pwText.getText().toString().isEmpty()) {
-
-                Toast.makeText(this, "비밀번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
-            }
-            else {
-
-                loginViewModel.login(new LoginRequest(binding.idText.getText().toString(), binding.pwText.getText().toString()));
-            }
-        });
-    }
-
-    private void clickRegisterButton() {
-
-        binding.signUpButton.setOnClickListener(v -> {
-
-            startActivity(new Intent(getApplicationContext(), SignUpActivity.class));
-        });
-    }
+//    private void clickLoginButton() {
+//
+//        binding.loginButton.setOnClickListener(v -> {
+//
+//            if (binding.idText.getText().toString().isEmpty()) {
+//
+//                Toast.makeText(this, "아이디를 입력해 주세요", Toast.LENGTH_SHORT).show();
+//            }
+//            if (binding.pwText.getText().toString().isEmpty()) {
+//
+//                Toast.makeText(this, "비밀번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
+//            }
+//            else {
+//
+//                loginViewModel.login(new LoginRequest(binding.idText.getText().toString(), binding.pwText.getText().toString()));
+//            }
+//        });
+//    }
+//
+//    private void clickRegisterButton() {
+//
+//        binding.signUpButton.setOnClickListener(v -> {
+//
+//            startActivity(new Intent(getApplicationContext(), SignUpActivity.class));
+//        });
+//    }
 
     @Override
     protected int layoutId() {

@@ -28,14 +28,12 @@
             android:id="@+id/materialCardView"
             android:layout_width="0dp"
             android:layout_height="400dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="70dp"
-            android:layout_marginEnd="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:elevation="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo">
+            app:layout_constraintStart_toStartOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -46,19 +44,19 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="70dp"
                     android:layout_marginEnd="24dp"
+                    android:layout_marginTop="70dp"
                     android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintStart_toStartOf="parent">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/input_layout_id"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_marginBottom="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
                         android:hint="@string/id_text"
                         app:boxBackgroundColor="@android:color/white">
 
@@ -94,18 +92,18 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/login_button"
+                    android:id="@+id/login_btn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginEnd="50dp"
                     android:layout_marginBottom="50dp"
                     android:background="@drawable/background_signup_button"
-                    android:fontFamily="@font/nanum_squareeb"
-                    android:gravity="center"
-                    android:padding="15dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginStart="50dp"
                     android:text="@string/login_text"
+                    android:gravity="center"
                     android:textColor="@color/colorLine"
+                    android:fontFamily="@font/nanum_squareeb"
+                    android:padding="15dp"
                     android:textSize="7pt"
                     app:layout_constraintBottom_toTopOf="@+id/sign_up_button"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -114,11 +112,12 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
                     android:fontFamily="@font/nanum_squareb"
                     android:text="@string/no_id_text"
+                    android:gravity="center"
                     app:layout_constraintBottom_toBottomOf="@+id/sign_up_button"
-                    app:layout_constraintEnd_toStartOf="@+id/sign_up_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/sign_up_button" />
 
                 <TextView
