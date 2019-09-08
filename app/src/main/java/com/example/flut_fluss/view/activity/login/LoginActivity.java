@@ -31,6 +31,8 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
         initViewModel();
 
+        initView();
+
         initData();
 
         loginViewModel.getData().observe(this, login -> {
@@ -59,6 +61,11 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
     private void initViewModel() {
 
         loginViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(LoginViewModel.class);
+    }
+
+    private void initView() {
+
+        binding.materialCardView.setBackgroundResource(R.drawable.background_login);
     }
 
     private void initData() {
