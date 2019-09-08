@@ -3,7 +3,10 @@
 
     <string name="id_text">아이디</string>
     <string name="password_text">비밀번호</string>
-    <string name="no_id_text">계정이 없으신가요?</string>
     <string name="login_text">로그인</string>
+    <string name="find_account_title_text">계정을 잊으셨나요?</string>
+    <string name="find_id_text">아이디 찾기</string>
+    <string name="find_password_text">비밀번호 찾기</string>
+    <string name="no_id_text">계정이 없으신가요?</string>
     <string name="sign_up_text">회원가입</string>
 </resources>
