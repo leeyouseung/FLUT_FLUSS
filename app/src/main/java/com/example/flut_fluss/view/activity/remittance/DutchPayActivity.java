@@ -10,6 +10,12 @@ import com.example.flut_fluss.databinding.DutchPayActivityBinding;
 public class DutchPayActivity extends BaseActivity<DutchPayActivityBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.dutch_pay_activity;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -56,11 +62,5 @@ public class DutchPayActivity extends BaseActivity<DutchPayActivityBinding> {
         binding.searchView.setOnClickListener(v -> {
 
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.dutch_pay_activity;
     }
 }

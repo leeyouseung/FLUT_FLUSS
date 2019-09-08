@@ -11,6 +11,12 @@ import com.example.flut_fluss.databinding.AddCardFragmentBinding;
 public class AddCardFragment extends BaseFragment<AddCardFragmentBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.add_card_fragment;
+    }
+
+    @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
@@ -19,11 +25,5 @@ public class AddCardFragment extends BaseFragment<AddCardFragmentBinding> {
 
     private void initData() {
 
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.add_card_fragment;
     }
 }

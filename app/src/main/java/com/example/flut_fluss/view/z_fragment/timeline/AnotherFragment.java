@@ -11,6 +11,12 @@ import com.example.flut_fluss.databinding.AnotherFragmentBinding;
 public class AnotherFragment extends BaseFragment<AnotherFragmentBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.another_fragment;
+    }
+
+    @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
@@ -30,11 +36,5 @@ public class AnotherFragment extends BaseFragment<AnotherFragmentBinding> {
 
     private void clickEvent() {
 
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.another_fragment;
     }
 }

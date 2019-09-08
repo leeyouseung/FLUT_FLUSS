@@ -9,6 +9,12 @@ import com.example.flut_fluss.databinding.TransferActivityBinding;
 public class TransferActivity extends BaseActivity<TransferActivityBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.transfer_activity;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -37,11 +43,5 @@ public class TransferActivity extends BaseActivity<TransferActivityBinding> {
 
             finish();
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.transfer_activity;
     }
 }

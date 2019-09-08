@@ -16,6 +16,12 @@ import com.example.flut_fluss.view.activity.inner_timeline.TransferActivity;
 public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.expenditure_fragment;
+    }
+
+    @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
@@ -71,11 +77,5 @@ public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding
 
             startActivity(new Intent(getContext(), EtcActivity.class));
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.expenditure_fragment;
     }
 }

@@ -9,6 +9,12 @@ import com.example.flut_fluss.databinding.FoodActivityBinding;
 public class FoodActivity extends BaseActivity<FoodActivityBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.food_activity;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -37,11 +43,5 @@ public class FoodActivity extends BaseActivity<FoodActivityBinding> {
 
             finish();
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.food_activity;
     }
 }

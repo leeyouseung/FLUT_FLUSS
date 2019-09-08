@@ -9,6 +9,12 @@ import com.example.flut_fluss.databinding.ClothsActivityBinding;
 public class ClothsActivity extends BaseActivity<ClothsActivityBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.cloths_activity;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -37,11 +43,5 @@ public class ClothsActivity extends BaseActivity<ClothsActivityBinding> {
 
             finish();
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.cloths_activity;
     }
 }

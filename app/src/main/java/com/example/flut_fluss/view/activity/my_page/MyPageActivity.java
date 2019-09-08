@@ -9,6 +9,12 @@ import com.example.flut_fluss.databinding.MyPageActivityBinding;
 public class MyPageActivity extends BaseActivity<MyPageActivityBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.my_page_activity;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -35,11 +41,5 @@ public class MyPageActivity extends BaseActivity<MyPageActivityBinding> {
 
     private void clickEvent() {
 
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.my_page_activity;
     }
 }

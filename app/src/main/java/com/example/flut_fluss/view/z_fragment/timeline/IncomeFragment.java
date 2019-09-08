@@ -11,6 +11,12 @@ import com.example.flut_fluss.databinding.IncomeFragmentBinding;
 public class IncomeFragment extends BaseFragment<IncomeFragmentBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.income_fragment;
+    }
+
+    @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
@@ -30,11 +36,5 @@ public class IncomeFragment extends BaseFragment<IncomeFragmentBinding> {
 
     private void clickEvent() {
 
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.income_fragment;
     }
 }

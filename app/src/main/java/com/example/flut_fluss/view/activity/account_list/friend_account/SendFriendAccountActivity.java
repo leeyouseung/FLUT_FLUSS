@@ -10,6 +10,12 @@ import com.example.flut_fluss.databinding.SendFriendAccountActivityBinding;
 public class SendFriendAccountActivity extends BaseActivity<SendFriendAccountActivityBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.send_friend_account_activity;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -49,11 +55,5 @@ public class SendFriendAccountActivity extends BaseActivity<SendFriendAccountAct
             binding.pqyCheck1.setVisibility(View.INVISIBLE);
             binding.pqyCheck2.setVisibility(View.VISIBLE);
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.send_friend_account_activity;
     }
 }

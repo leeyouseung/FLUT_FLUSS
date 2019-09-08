@@ -16,6 +16,12 @@ import com.example.flut_fluss.viewmodel.SignUpViewModel;
 
 public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
 
+    @Override
+    protected int layoutId() {
+
+        return R.layout.signup_activity;
+    }
+
     private SignUpViewModel signUpViewModel;
 
     @Override
@@ -86,11 +92,5 @@ public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
                 e.printStackTrace();
             }
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.signup_activity;
     }
 }

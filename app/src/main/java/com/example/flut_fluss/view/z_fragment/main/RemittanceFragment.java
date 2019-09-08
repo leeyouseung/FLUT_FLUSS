@@ -13,6 +13,12 @@ import com.example.flut_fluss.databinding.RemittanceFragmentBinding;
 
 public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> {
 
+    @Override
+    protected int layoutId() {
+
+        return R.layout.remittance_fragment;
+    }
+
     public String sendMoney = "0";
 
     private LinearLayout menuNavigationLinearLayout;
@@ -485,11 +491,5 @@ public class RemittanceFragment extends BaseFragment<RemittanceFragmentBinding> 
 
         binding.money.setX(binding.money.getX() - 42);
         binding.moneyTitle.setX(binding.moneyTitle.getX() - 42);
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.remittance_fragment;
     }
 }

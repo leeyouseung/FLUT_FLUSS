@@ -13,6 +13,12 @@ import com.example.flut_fluss.view.activity.lookup.account.remittance.LookupSend
 public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.show_account_activity;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -105,11 +111,5 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
 
             startActivity(intent);
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.show_account_activity;
     }
 }

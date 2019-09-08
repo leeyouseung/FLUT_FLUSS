@@ -23,6 +23,12 @@ import com.example.flut_fluss.viewmodel.LoginViewModel;
 
 public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
+    @Override
+    protected int layoutId() {
+
+        return R.layout.login_activity;
+    }
+
     private LoginViewModel loginViewModel;
 
     @Override
@@ -161,11 +167,5 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
         });
 
         finishDialog.create().show();
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.login_activity;
     }
 }

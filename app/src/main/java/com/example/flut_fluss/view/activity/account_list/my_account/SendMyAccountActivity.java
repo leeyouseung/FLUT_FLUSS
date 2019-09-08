@@ -11,6 +11,12 @@ import com.example.flut_fluss.databinding.SendMyAccountActivityBinding;
 public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.send_my_account_activity;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -53,11 +59,5 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
         binding.myAccountSendButton.setOnClickListener(v -> {
 
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.send_my_account_activity;
     }
 }

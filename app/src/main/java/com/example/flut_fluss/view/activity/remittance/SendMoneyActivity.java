@@ -13,6 +13,12 @@ import com.example.flut_fluss.view.activity.account_list.my_account.SendMyCardAc
 
 public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
+    @Override
+    protected int layoutId() {
+
+        return R.layout.send_money_activity;
+    }
+
     boolean openSetLayout = true;
 
     public String sendMoney = "";
@@ -120,11 +126,5 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
             startActivity(intent);
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.send_money_activity;
     }
 }

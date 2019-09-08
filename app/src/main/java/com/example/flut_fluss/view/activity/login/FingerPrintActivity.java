@@ -35,6 +35,12 @@ import javax.crypto.SecretKey;
 
 public class FingerPrintActivity extends BaseActivity<FingerPrintActivityBinding> {
 
+    @Override
+    protected int layoutId() {
+
+        return R.layout.finger_print_activity;
+    }
+
     private KeyStore keyStore;
     private static final String KEY_NAME = "example_key";
     private Cipher cipher;
@@ -175,11 +181,5 @@ public class FingerPrintActivity extends BaseActivity<FingerPrintActivityBinding
 
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.finger_print_activity;
     }
 }

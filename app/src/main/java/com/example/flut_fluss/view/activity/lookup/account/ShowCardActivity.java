@@ -9,14 +9,14 @@ import com.example.flut_fluss.databinding.ShowCardActivityBinding;
 public class ShowCardActivity extends BaseActivity<ShowCardActivityBinding> {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
-    @Override
     protected int layoutId() {
 
         return R.layout.show_card_activity;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
     }
 }

@@ -18,6 +18,12 @@ import com.example.flut_fluss.viewmodel.LookupSendMoneyViewModel;
 
 public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivityBinding> {
 
+    @Override
+    protected int layoutId() {
+
+        return R.layout.lookup_send_money_activity;
+    }
+
     private LookupSendMoneyViewModel lookupSendMoneyViewModel;
 
     private Animation anim = new AlphaAnimation(0.0f, 1.0f);
@@ -698,11 +704,5 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
         binding.money.setX(binding.money.getX() - 42);
         binding.moneyTitle.setX(binding.moneyTitle.getX() - 42);
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.lookup_send_money_activity;
     }
 }
