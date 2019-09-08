@@ -3,6 +3,7 @@ package com.example.flut_fluss.view.activity.account_list.my_account;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
@@ -58,6 +59,7 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
 
         binding.myAccountSendButton.setOnClickListener(v -> {
 
+            Toast.makeText(getApplicationContext(), "아직 서버구현 X", Toast.LENGTH_SHORT).show();
         });
     }
 }
