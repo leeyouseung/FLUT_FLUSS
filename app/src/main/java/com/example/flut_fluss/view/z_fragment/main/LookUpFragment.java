@@ -15,6 +15,12 @@ import com.example.flut_fluss.view.activity.my_page.MyPageActivity;
 
 public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
+    @Override
+    protected int layoutId() {
+
+        return R.layout.look_up_fragment;
+    }
+
     private int resultMoney = 0;
 
     private String clearAccountMoney;
@@ -147,11 +153,5 @@ public class LookUpFragment extends BaseFragment<LookUpFragmentBinding> {
 
             startActivity(intent);
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.look_up_fragment;
     }
 }

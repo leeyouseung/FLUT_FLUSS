@@ -30,6 +30,12 @@ import java.util.Objects;
 
 public class MainActivity extends BaseActivity<MainActivityBinding> {
 
+    @Override
+    protected int layoutId() {
+
+        return R.layout.main_activity;
+    }
+
     private TextView money;
 
     @Override
@@ -294,11 +300,5 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
                 });
 
         finishDialog.create().show();
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.main_activity;
     }
 }

@@ -18,6 +18,12 @@ import com.example.flut_fluss.view.z_fragment.timeline.IncomeFragment;
 public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
 
     @Override
+    protected int layoutId() {
+
+        return R.layout.time_line_fragment;
+    }
+
+    @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
@@ -118,11 +124,5 @@ public class TimeLineFragment extends BaseFragment<TimeLineFragmentBinding> {
             fragmentTransaction.replace(R.id.time_line_fragment, new AnotherFragment());
             fragmentTransaction.commit();
         });
-    }
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.time_line_fragment;
     }
 }

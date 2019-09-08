@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <TextView
             android:id="@+id/expenditure_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
             tools:ignore="HardcodedText"
             style="?android:attr/borderlessButtonStyle" />
 
-        <Button
+        <TextView
             android:id="@+id/income_button"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="0dp"
@@ -41,7 +41,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="HardcodedText" />
 
-        <Button
+        <TextView
             android:id="@+id/another_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
