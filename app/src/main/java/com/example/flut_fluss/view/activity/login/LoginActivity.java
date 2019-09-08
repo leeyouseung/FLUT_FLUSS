@@ -1,5 +1,7 @@
 package com.example.flut_fluss.view.activity.login;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
@@ -130,6 +132,35 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
             startActivity(new Intent(getApplicationContext(), SignUpActivity.class));
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        AlertDialog.Builder finishDialog = new AlertDialog.Builder(this);
+
+        finishDialog.setMessage("종료 하시겠습니까 ?")
+                .setCancelable(false)
+                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Action for 'OK' Button;
+
+                        Toast.makeText(getApplicationContext(), "OKOKOKOKOK", Toast.LENGTH_SHORT).show();
+
+                        finish();
+                    }
+
+                }).setNegativeButton("취소", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Action for 'Cancel' Button;
+
+                dialog.dismiss();
+            }
+        });
+
+        finishDialog.create().show();
     }
 
     @Override

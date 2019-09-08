@@ -110,35 +110,6 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
         clickSendMoneyButton();
     }
 
-    @Override
-    public void onBackPressed() {
-
-        AlertDialog.Builder finishDialog = new AlertDialog.Builder(this);
-
-        finishDialog.setMessage("종료 하시겠습니까 ?")
-                .setCancelable(false)
-                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Action for 'OK' Button;
-
-                        Toast.makeText(getApplicationContext(), "OKOKOKOKOK", Toast.LENGTH_SHORT).show();
-
-                        finish();
-                    }
-
-                }).setNegativeButton("취소", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Action for 'Cancel' Button;
-
-                        dialog.dismiss();
-                    }
-                });
-
-        finishDialog.create().show();
-    }
-
     private void clickRemittanceButton() {
 
         binding.remittanceButton.setOnClickListener(v -> {
@@ -300,6 +271,35 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
             startActivity(intent);
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        AlertDialog.Builder finishDialog = new AlertDialog.Builder(this);
+
+        finishDialog.setMessage("종료 하시겠습니까 ?")
+                .setCancelable(false)
+                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Action for 'OK' Button;
+
+                        Toast.makeText(getApplicationContext(), "OKOKOKOKOK", Toast.LENGTH_SHORT).show();
+
+                        finish();
+                    }
+
+                }).setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Action for 'Cancel' Button;
+
+                        dialog.dismiss();
+                    }
+                });
+
+        finishDialog.create().show();
     }
 
     @Override
