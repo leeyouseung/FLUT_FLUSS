@@ -8,7 +8,7 @@
 
         <shape android:shape="rectangle">
 
-            <solid android:color="@color/bright_bright_gray" />
+            <solid android:color="@color/white" />
 
             <corners
                 android:topRightRadius="20dp"
