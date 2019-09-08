@@ -36,15 +36,20 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initViewModel();
+
         initData();
 
         initSetFragment();
 
         initSetButton();
 
-        initSetViewModel();
-
         event();
+    }
+
+    private void initViewModel() {
+
+//        MainViewModel mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
     }
 
     private void initData() {
@@ -88,11 +93,6 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         binding.remittanceIcon.setImageResource(R.drawable.remittance_icon_click);
         binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));
-    }
-
-    private void initSetViewModel() {
-
-//        MainViewModel mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
     }
 
     private void event() {
