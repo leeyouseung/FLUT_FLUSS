@@ -136,7 +136,7 @@
         app:layout_constraintTop_toBottomOf="@+id/my_bank_account"
         tools:ignore="HardcodedText" />
 
-    <Button
+    <TextView
         android:id="@+id/my_account_send_button"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="match_parent"
