@@ -68,14 +68,12 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
         money = view.findViewById(R.id.money);
 
 //         TODO : {
-//
 //         돈 입력 했을 때, 하단 메뉴바 사라지게 만들고 더치페이 보내기 레이아웃 만들기           100%
 //                        ##마지막 오류 하나 있음. (delete button 누르면 마지막에 0에서 한번 더 눌러줘야 레이아웃이 변경되는 것.) // 끝 다 고침 100% 동작 버그 X;
 //         돈 입력 기능 구현.                                                               100%
-//         돈 보내기.                                                                        0%
+//         돈 송금.                                                                          0%
 //         qr 코드 구현.                                                                     0%
-//         회원가입.                                                                         0%
-//         로그인 유지 체크박스 클릭시 색 테마에 맞추기.                                        0%
+//         회원가입.                                                                        90%
 //         환경설정.                                                                        80%
 //         타임라인.                                                                         0%
 //         개설은 보류.                                                                      0%

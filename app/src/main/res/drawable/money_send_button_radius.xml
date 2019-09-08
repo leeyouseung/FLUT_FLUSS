@@ -7,7 +7,7 @@
             <gradient
                 android:angle="0"
                 android:startColor="@color/login_button_first_gradation"
-                android:endColor="@color/login_button_first_gradation" />
+                android:endColor="@color/login_button_end_gradation" />
         </shape>
     </item>
 
