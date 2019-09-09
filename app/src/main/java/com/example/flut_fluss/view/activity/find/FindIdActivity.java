@@ -39,6 +39,6 @@ public class FindIdActivity extends BaseActivity<FindIdActivityBinding> {
     }
 
     private void clickEvent() {
-        
+
     }
 }
