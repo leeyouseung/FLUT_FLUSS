@@ -10,6 +10,7 @@
     tools:context=".view.z_fragment.main.TimeLineFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/background_color"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
