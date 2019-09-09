@@ -60,18 +60,17 @@ public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
 
     private void clickEvent() {
 
-        binding.registerButton.setOnClickListener(v -> {
+        binding.signUpButton.setOnClickListener(v -> {
 
-            if(binding.idText.getText().toString().isEmpty() || binding.passwordText.getText().toString().isEmpty() ||
-                    binding.passwordCheckText.getText().toString().isEmpty() || binding.nameText.getText().toString().isEmpty() ||
-                    binding.phoneNumberText.getText().toString().isEmpty() || binding.bankAccountText.getText().toString().isEmpty() ||
-                    binding.flutAccountText.getText().toString().isEmpty()) {
+            if(binding.idText.getText().toString().isEmpty() || binding.pwText.getText().toString().isEmpty() ||
+                    binding.checkPwText.getText().toString().isEmpty() || binding.nameText.getText().toString().isEmpty() ||
+                    binding.phoneNumberText.getText().toString().isEmpty() || binding.accountText.getText().toString().isEmpty()) {
 
                 Toast.makeText(getApplicationContext(), "빈칸 없이 입력해 주세요", Toast.LENGTH_SHORT).show();
 
                 return;
             }
-            if(!(binding.passwordText.getText().toString().equals(binding.passwordCheckText.getText().toString()))) {
+            if(!(binding.pwText.getText().toString().equals(binding.checkPwText.getText().toString()))) {
 
                 Toast.makeText(getApplicationContext(), "비밀번호가 서로 다릅니다", Toast.LENGTH_SHORT).show();
 
@@ -81,9 +80,8 @@ public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
             try {
 
                 signUpViewModel.signup(new SignUpRequest(
-                        binding.idText.getText().toString(), binding.passwordText.getText().toString(), binding.nameText.getText().toString(),
-                        binding.phoneNumberText.getText().toString(), binding.bankAccountText.getText().toString(),
-                        binding.flutAccountText.getText().toString()));
+                        binding.idText.getText().toString(), binding.pwText.getText().toString(), binding.nameText.getText().toString(),
+                        binding.phoneNumberText.getText().toString(), binding.accountText.getText().toString()));
             }
             catch (NullPointerException e) {
 

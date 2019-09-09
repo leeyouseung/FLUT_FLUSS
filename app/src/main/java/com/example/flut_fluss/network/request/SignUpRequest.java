@@ -4,32 +4,28 @@ import com.google.gson.annotations.SerializedName;
 
 public class SignUpRequest {
 
-//    @SerializedName("userId")
+    @SerializedName("userId")
     private String userId;
 
-//    @SerializedName("password")
+    @SerializedName("password")
     private String password;
 
-//    @SerializedName("name")
+    @SerializedName("name")
     private String name;
 
-//    @SerializedName("phoneNumber")
+    @SerializedName("phoneNumber")
     private String phoneNumber;
 
-//    @SerializedName("bankAccount")
-    private String bankAccount;
+    @SerializedName("account")
+    private String account;
 
-//    @SerializedName("flutAccount")
-    private String flutAccount;
-
-    public SignUpRequest(String userId, String password, String name, String phoneNumber, String bankAccount, String flutAccount) {
+    public SignUpRequest(String userId, String password, String name, String phoneNumber, String account) {
 
         this.userId = userId;
         this.password = password;
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.bankAccount = bankAccount;
-        this.flutAccount = flutAccount;
+        this.account = account;
     }
 
     public String getUserId() {
@@ -72,23 +68,13 @@ public class SignUpRequest {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getBankAccount() {
+    public String getAccount() {
 
-        return bankAccount;
+        return account;
     }
 
-    public void setBankAccount(String bankAccount) {
+    public void setAccount(String account) {
 
-        this.bankAccount = bankAccount;
-    }
-
-    public String getFlutAccount() {
-
-        return flutAccount;
-    }
-
-    public void setFlutAccount(String flutAccount) {
-
-        this.flutAccount = flutAccount;
+        this.account = account;
     }
 }
