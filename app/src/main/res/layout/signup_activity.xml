@@ -37,122 +37,143 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo">
 
-        <Button
-            android:id="@+id/register_button"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="4dp"
-            android:background="@drawable/login_button_radius"
-            android:text="회원가입"
-            android:textColor="@color/white"
-            android:textSize="8pt"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/id_text"
+            app:boxBackgroundColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/flut_account_text"
-            tools:ignore="HardcodedText" />
+            app:layout_constraintTop_toTopOf="@id/login_container">
 
-        <EditText
-            android:id="@+id/id_text"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/id_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="flagNoExtractUi|flagNoFullscreen|flagNoAccessoryAction"
+                android:inputType="textEmailAddress"
+                android:privateImeOptions="nm" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_pw"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/gray"
-            android:hint="ID"
-            android:inputType="textPersonName"
-            android:paddingStart="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/password_text"
+            app:boxBackgroundColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/login_container"
-            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+            app:layout_constraintTop_toBottomOf="@id/input_layout_id">
 
-        <EditText
-            android:id="@+id/password_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/gray"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:paddingStart="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/id_text"
-            app:layout_constraintStart_toStartOf="@+id/id_text"
-            app:layout_constraintTop_toBottomOf="@+id/id_text"
-            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pw_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen|flagNoAccessoryAction"
+                android:inputType="textPassword"
+                android:privateImeOptions="nm" />
 
-        <EditText
-            android:id="@+id/password_check_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/gray"
-            android:hint="PasswordCheck"
-            android:inputType="textPassword"
-            android:paddingStart="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/password_text"
-            app:layout_constraintStart_toStartOf="@+id/password_text"
-            app:layout_constraintTop_toBottomOf="@+id/password_text"
-            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/name_text"
-            android:layout_width="0dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_check_pw"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="@color/gray"
-            android:hint="Name"
-            android:inputType="textPersonName"
-            android:paddingStart="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/password_check_text"
-            app:layout_constraintStart_toStartOf="@+id/password_check_text"
-            app:layout_constraintTop_toBottomOf="@+id/password_check_text"
-            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/check_password_text"
+            app:boxBackgroundColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_layout_pw">
 
-        <EditText
-            android:id="@+id/phone_number_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="@color/gray"
-            android:hint="PhoneNumber"
-            android:inputType="phone"
-            android:paddingStart="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/name_text"
-            app:layout_constraintStart_toStartOf="@+id/name_text"
-            app:layout_constraintTop_toBottomOf="@+id/name_text"
-            tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/check_pw_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen|flagNoAccessoryAction"
+                android:inputType="textPassword"
+                android:privateImeOptions="nm" />
 
-        <EditText
-            android:id="@+id/bank_account_text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:ems="10"
-            android:hint="BankAccount"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/phone_number_text"
-            app:layout_constraintStart_toStartOf="@+id/phone_number_text"
-            app:layout_constraintTop_toBottomOf="@+id/phone_number_text"
-            tools:ignore="Autofill,HardcodedText" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/flut_account_text"
-            android:layout_width="0dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:ems="10"
-            android:hint="FlutAccount"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/bank_account_text"
-            app:layout_constraintStart_toStartOf="@+id/bank_account_text"
-            app:layout_constraintTop_toBottomOf="@+id/bank_account_text"
-            tools:ignore="Autofill,HardcodedText" />
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/name_text"
+            app:boxBackgroundColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_layout_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen|flagNoAccessoryAction"
+                android:inputType="textPassword"
+                android:privateImeOptions="nm" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_phone_number"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/ex_user_phone_number"
+            app:boxBackgroundColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_layout_check_pw">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_number_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen|flagNoAccessoryAction"
+                android:inputType="textPassword"
+                android:privateImeOptions="nm" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_account"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/ex_account_number"
+            app:boxBackgroundColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_layout_phone_number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/account_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen|flagNoAccessoryAction"
+                android:inputType="textPassword"
+                android:privateImeOptions="nm" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
