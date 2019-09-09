@@ -9,4 +9,10 @@
     <string name="find_password_text">비밀번호 찾기</string>
     <string name="no_id_text">계정이 없으신가요?</string>
     <string name="sign_up_text">회원가입</string>
+
+    <string name="send_money_title">55원 송금</string>
+    <string name="my_account_send_title">내 계좌로 송금하기</string>
+    <string name="user_account_title">이유승님의 계좌 목록</string>
+    <string name="account_count">2개의 계좌</string>
+    <string name="chlrms_thdrmagks_ahrfhr">최근 송금한 목록</string>
 </resources>
