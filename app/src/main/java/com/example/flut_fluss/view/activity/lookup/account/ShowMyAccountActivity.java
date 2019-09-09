@@ -40,8 +40,17 @@ public class ShowMyAccountActivity extends BaseActivity<ShowMyAccountListActivit
 
     private void clickEvent() {
 
+        clickBackButton();
         clickAddMoneyImgButton();
         clickAddMoneyTextButton();
+    }
+
+    private void clickBackButton() {
+
+        binding.backButton.setOnClickListener(v -> {
+
+            finish();
+        });
     }
 
     private void clickAddMoneyImgButton() {
