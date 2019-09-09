@@ -74,7 +74,7 @@
         android:id="@+id/textView31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:text="거래내역"
         android:textSize="7pt"
         android:textColor="@color/black"
