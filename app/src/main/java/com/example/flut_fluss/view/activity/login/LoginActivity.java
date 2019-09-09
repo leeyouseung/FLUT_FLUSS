@@ -87,6 +87,8 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
 //        clickBlindButton();
         clickLoginButton();
+        clickFindIdButton();
+        clickFindPasswordButton();
         clickSignUpButton();
     }
 
@@ -129,6 +131,20 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 //            }
 
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        });
+    }
+
+    private void clickFindIdButton() {
+
+        binding.findIdButton.setOnClickListener(v -> {
+
+        });
+    }
+
+    private void clickFindPasswordButton() {
+
+        binding.findPasswordButton.setOnClickListener(v -> {
+            
         });
     }
 
