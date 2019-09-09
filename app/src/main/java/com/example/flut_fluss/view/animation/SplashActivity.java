@@ -5,21 +5,22 @@ import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SplashActivityBinding;
 import com.example.flut_fluss.view.activity.login.FingerPrintActivity;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity<SplashActivityBinding> {
 
-    private SplashActivityBinding binding;
+    @Override
+    protected int layoutId() {
+
+        return R.layout.splash_activity;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.splash_activity);
 
         initData();
 
