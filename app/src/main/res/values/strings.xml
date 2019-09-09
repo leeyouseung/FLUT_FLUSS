@@ -23,4 +23,7 @@
     <string name="bank_name_title">NH농협은행계좌</string>
     <string name="user_phone_number">010-XXXX-XXXX</string>
     <string name="bank_account_number">352-XXXX-XXXX-XXXX</string>
+
+    <string name="transfer_item_send_list">내 NH농협계좌   ></string>
+    <string name="transfer_item_send_friend_name">이재민</string>
 </resources>
