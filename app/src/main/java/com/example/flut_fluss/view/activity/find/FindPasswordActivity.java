@@ -39,6 +39,6 @@ public class FindPasswordActivity extends BaseActivity<FindPasswordActivityBindi
     }
 
     private void clickEvent() {
-        
+
     }
 }
