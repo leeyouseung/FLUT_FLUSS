@@ -11,24 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".view.activity.find.FindIdActivity"></activity>
-        <activity android:name=".view.activity.my_page.MyPageActivity"></activity>
-        <activity android:name=".view.activity.lookup.account.ShowMyAccountActivity"></activity>
-        <activity android:name=".view.activity.lookup.account.remittance.LookupSendMoneyActivity"></activity>
-        <activity android:name=".view.activity.account_list.friend_account.SendFriendAccountActivity"></activity>
-        <activity android:name=".view.activity.account_list.my_account.SendMyCardActivity"></activity>
-        <activity android:name=".view.activity.account_list.my_account.SendMyAccountActivity"></activity>
-        <activity android:name=".view.activity.inner_timeline.EtcActivity"></activity>
-        <activity android:name=".view.activity.inner_timeline.ClothsActivity"></activity>
-        <activity android:name=".view.activity.inner_timeline.FoodActivity"></activity>
-        <activity android:name=".view.activity.inner_timeline.TransferActivity"></activity>
-        <activity android:name=".view.activity.lookup.account.ShowCardActivity"></activity>
-        <activity android:name=".view.activity.lookup.ShowAccountActivity"></activity>
-        <activity android:name=".view.activity.remittance.DutchPayActivity"></activity>
-        <activity android:name=".view.activity.remittance.SendMoneyActivity"></activity>
-        <activity android:name=".view.activity.login.FingerPrintActivity"></activity>
-        <activity android:name=".view.activity.singup.SignUpActivity"></activity>
-        <activity android:name=".view.animation.SplashActivity"></activity>
+        <activity android:name=".view.activity.find.FindPasswordActivity"></activity>
+        <activity android:name=".view.activity.find.FindIdActivity" />
+        <activity android:name=".view.activity.my_page.MyPageActivity" />
+        <activity android:name=".view.activity.lookup.account.ShowMyAccountActivity" />
+        <activity android:name=".view.activity.lookup.account.remittance.LookupSendMoneyActivity" />
+        <activity android:name=".view.activity.account_list.friend_account.SendFriendAccountActivity" />
+        <activity android:name=".view.activity.account_list.my_account.SendMyCardActivity" />
+        <activity android:name=".view.activity.account_list.my_account.SendMyAccountActivity" />
+        <activity android:name=".view.activity.inner_timeline.EtcActivity" />
+        <activity android:name=".view.activity.inner_timeline.ClothsActivity" />
+        <activity android:name=".view.activity.inner_timeline.FoodActivity" />
+        <activity android:name=".view.activity.inner_timeline.TransferActivity" />
+        <activity android:name=".view.activity.lookup.account.ShowCardActivity" />
+        <activity android:name=".view.activity.lookup.ShowAccountActivity" />
+        <activity android:name=".view.activity.remittance.DutchPayActivity" />
+        <activity android:name=".view.activity.remittance.SendMoneyActivity" />
+        <activity android:name=".view.activity.login.FingerPrintActivity" />
+        <activity android:name=".view.activity.singup.SignUpActivity" />
+        <activity android:name=".view.animation.SplashActivity" />
         <activity android:name=".view.activity.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,10 +37,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.main.MainActivity"></activity>
+        <activity android:name=".view.activity.main.MainActivity" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
