@@ -18,5 +18,27 @@ public class ShowCardActivity extends BaseActivity<ShowCardActivityBinding> {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initViewModel();
+
+        initData();
+
+        event();
+    }
+
+    private void initViewModel() {
+
+    }
+
+    private void initData() {
+
+    }
+
+    private void event() {
+
+        clickEvent();
+    }
+
+    private void clickEvent() {
+
     }
 }
