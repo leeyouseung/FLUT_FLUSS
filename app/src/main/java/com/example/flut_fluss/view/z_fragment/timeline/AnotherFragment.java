@@ -20,9 +20,15 @@ public class AnotherFragment extends BaseFragment<AnotherFragmentBinding> {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        initViewModel();
+
         initData();
 
         event();
+    }
+
+    private void initViewModel() {
+
     }
 
     private void initData() {
