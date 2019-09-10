@@ -26,7 +26,7 @@ public class FoodActivity extends BaseActivity<FoodActivityBinding> {
     }
 
     private void initViewModel() {
-        
+
     }
 
     private void initData() {
