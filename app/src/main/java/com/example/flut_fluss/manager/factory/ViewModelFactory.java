@@ -10,7 +10,7 @@ import com.example.flut_fluss.viewmodel.LookupSendMoneyViewModel;
 import com.example.flut_fluss.viewmodel.SignUpViewModel;
 
 /**
- * ViewModel 추가 시킬때 마다 create 에 추가 시켜 줘야됨
+ * ViewModel 추가 시킬때 마다 create 에 추가 
  */
 public class ViewModelFactory extends ViewModelProvider.NewInstanceFactory {
 
