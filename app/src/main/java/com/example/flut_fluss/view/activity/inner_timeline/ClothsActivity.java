@@ -18,9 +18,15 @@ public class ClothsActivity extends BaseActivity<ClothsActivityBinding> {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initViewModel();
+
         initData();
 
         event();
+    }
+
+    private void initViewModel() {
+        
     }
 
     private void initData() {

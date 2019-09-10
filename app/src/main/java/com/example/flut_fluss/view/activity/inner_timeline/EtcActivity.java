@@ -26,7 +26,7 @@ public class EtcActivity extends BaseActivity<EtcActivityBinding> {
     }
 
     private void initViewModel() {
-        
+
     }
 
     private void initData() {
