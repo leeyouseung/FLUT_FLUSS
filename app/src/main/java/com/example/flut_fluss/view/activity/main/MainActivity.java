@@ -48,7 +48,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         initSetFragment();
 
-        initSetButton();
+        initSetLayoutButton();
 
         event();
     }
@@ -93,7 +93,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
         fragmentTransaction.commit();
     }
 
-    private void initSetButton() {
+    private void initSetLayoutButton() {
 
         binding.remittanceIcon.setImageResource(R.drawable.remittance_icon_click);
         binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));
