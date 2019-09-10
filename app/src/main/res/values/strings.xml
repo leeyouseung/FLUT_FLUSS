@@ -29,6 +29,6 @@
     <string name="f_market_text">F-Market</string>
 
     <string name="category_text">카테고리</string>
-    <string name="food_money">-71,000 원</string>
+    <string name="leftover_money">-71,000 원</string>
     <string name="deal_title">거래내역</string>
 </resources>
