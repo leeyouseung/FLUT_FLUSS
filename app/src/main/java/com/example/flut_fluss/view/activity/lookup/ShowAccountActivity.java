@@ -22,9 +22,15 @@ public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initViewModel();
+
         initData();
 
         event();
+    }
+
+    private void initViewModel() {
+
     }
 
     @SuppressLint("SetTextI18n")

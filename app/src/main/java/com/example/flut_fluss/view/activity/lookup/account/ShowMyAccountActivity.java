@@ -28,7 +28,7 @@ public class ShowMyAccountActivity extends BaseActivity<ShowMyAccountListActivit
     }
 
     private void initViewModel() {
-        
+
     }
 
     private void initData() {
