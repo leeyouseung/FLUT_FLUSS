@@ -20,9 +20,15 @@ public class ShowMyAccountActivity extends BaseActivity<ShowMyAccountListActivit
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initViewModel();
+
         initData();
 
         event();
+    }
+
+    private void initViewModel() {
+        
     }
 
     private void initData() {
