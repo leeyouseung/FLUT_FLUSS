@@ -18,9 +18,15 @@ public class FoodActivity extends BaseActivity<FoodActivityBinding> {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initViewModel();
+
         initData();
 
         event();
+    }
+
+    private void initViewModel() {
+        
     }
 
     private void initData() {
