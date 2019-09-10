@@ -26,7 +26,7 @@ public class ClothsActivity extends BaseActivity<ClothsActivityBinding> {
     }
 
     private void initViewModel() {
-        
+
     }
 
     private void initData() {
