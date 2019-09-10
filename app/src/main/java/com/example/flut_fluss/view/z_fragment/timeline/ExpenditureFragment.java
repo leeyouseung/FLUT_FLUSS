@@ -25,9 +25,15 @@ public class ExpenditureFragment extends BaseFragment<ExpenditureFragmentBinding
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        initViewMoel();
+
         initData();
 
         event();
+    }
+
+    private void initViewMoel() {
+
     }
 
     private void initData() {
