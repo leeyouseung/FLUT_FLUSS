@@ -18,9 +18,15 @@ public class EtcActivity extends BaseActivity<EtcActivityBinding> {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initViewModel();
+
         initData();
 
         event();
+    }
+
+    private void initViewModel() {
+        
     }
 
     private void initData() {

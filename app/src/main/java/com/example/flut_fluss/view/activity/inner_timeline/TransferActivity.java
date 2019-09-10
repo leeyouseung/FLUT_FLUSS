@@ -26,7 +26,7 @@ public class TransferActivity extends BaseActivity<TransferActivityBinding> {
     }
 
     private void initViewModel() {
-        
+
     }
 
     private void initData() {
