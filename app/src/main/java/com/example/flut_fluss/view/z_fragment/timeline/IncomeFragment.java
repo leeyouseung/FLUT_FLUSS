@@ -20,9 +20,15 @@ public class IncomeFragment extends BaseFragment<IncomeFragmentBinding> {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        initViewModel();
+
         initData();
 
         event();
+    }
+
+    private void initViewModel() {
+
     }
 
     private void initData() {
