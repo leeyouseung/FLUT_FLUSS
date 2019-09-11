@@ -83,7 +83,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
             context.getApplicationContext().startActivity(new Intent(context.getApplicationContext(), MainActivity.class));
 
             /*
-            //sound effect
+            // sound effect
             Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
             Ringtone r = RingtoneManager.getRingtone((Activity)context, notification);
             r.play();
