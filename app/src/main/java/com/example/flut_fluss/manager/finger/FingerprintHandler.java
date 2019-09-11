@@ -68,7 +68,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
         final TextView tv_message = ((Activity)context).findViewById(R.id.tv_message);
 
-        //안내 메세지 출력
+        // 안내 메세지 출력
         tv_message.setText(s);
 
         if (!b) {
@@ -77,7 +77,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         }
         else {
 
-            //지문인증 성공
+            // 지문인증 성공
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.login_button_first_gradation));
 
             context.getApplicationContext().startActivity(new Intent(context.getApplicationContext(), MainActivity.class));
