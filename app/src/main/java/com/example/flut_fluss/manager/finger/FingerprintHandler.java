@@ -65,7 +65,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
     public void onAuthenticationSucceeded(FingerprintManager.AuthenticationResult result) {
         super.onAuthenticationSucceeded(result);
 
-        this.update("앱 접근이 허용되었습니다.", true);
+        this.update("앱 접근이 허용 되었습니다.", true);
 
         context.getApplicationContext().startActivity(new Intent(context.getApplicationContext(), MainActivity.class));
     }
