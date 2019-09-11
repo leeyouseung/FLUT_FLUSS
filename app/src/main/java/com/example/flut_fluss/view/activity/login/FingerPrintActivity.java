@@ -59,20 +59,20 @@ public class FingerPrintActivity extends BaseActivity<FingerPrintActivityBinding
             fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
             keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
 
-            if(!fingerprintManager.isHardwareDetected()) {   // Manifest 에 Fingerprint 퍼미션을 추가해 워야 사용가능
+            if (!fingerprintManager.isHardwareDetected()) {   // Manifest 에 Fingerprint 퍼미션을 추가해 워야 사용가능
 
                 binding.tvMessage.setText("지문을 사용할 수 없는 디바이스 입니다.");
             }
-            else if(ContextCompat.checkSelfPermission(this, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
+            else if (ContextCompat.checkSelfPermission(this, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
 
                 binding.tvMessage.setText("지문사용을 허용해 주세요.");
                 /*잠금화면 상태를 체크한다.*/
             }
-            else if(!keyguardManager.isKeyguardSecure()) {
+            else if (!keyguardManager.isKeyguardSecure()) {
 
                 binding.tvMessage.setText("잠금화면을 설정해 주세요.");
             }
-            else if(!fingerprintManager.hasEnrolledFingerprints()) {
+            else if (!fingerprintManager.hasEnrolledFingerprints()) {
 
                 binding.tvMessage.setText("등록된 지문이 없습니다.");
             }
@@ -111,7 +111,9 @@ public class FingerPrintActivity extends BaseActivity<FingerPrintActivityBinding
         try {
 
             keyStore.load(null);
+
             SecretKey key = (SecretKey) keyStore.getKey(KEY_NAME, null);
+
             cipher.init(Cipher.ENCRYPT_MODE, key);
 
             return true;
@@ -149,6 +151,7 @@ public class FingerPrintActivity extends BaseActivity<FingerPrintActivityBinding
         try {
 
             keyStore.load(null);
+
             keyGenerator.init(new KeyGenParameterSpec.Builder(KEY_NAME,
                     KeyProperties.PURPOSE_ENCRYPT |
                             KeyProperties.PURPOSE_DECRYPT)
