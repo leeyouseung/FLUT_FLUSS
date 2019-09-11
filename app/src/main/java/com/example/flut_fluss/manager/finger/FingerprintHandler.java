@@ -20,8 +20,6 @@ import com.example.flut_fluss.view.activity.main.MainActivity;
 @TargetApi(Build.VERSION_CODES.N)
 public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
 
-    CancellationSignal cancellationSignal;
-
     private Context context;
 
     public FingerprintHandler(Context context) {
