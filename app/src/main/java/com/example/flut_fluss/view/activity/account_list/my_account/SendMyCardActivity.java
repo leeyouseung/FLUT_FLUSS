@@ -42,5 +42,14 @@ public class SendMyCardActivity extends BaseActivity<SendMyBankActivityBinding> 
 
     private void clickEvent() {
 
+        clickBackButton();
+    }
+
+    private void clickBackButton() {
+
+        binding.backButton.setOnClickListener(v -> {
+
+            finish();
+        });
     }
 }
