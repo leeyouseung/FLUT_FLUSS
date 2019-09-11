@@ -1,4 +1,4 @@
-package com.example.flut_fluss.manager.lock;
+package com.example.flut_fluss.manager.finger;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -7,12 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
-import android.media.Ringtone;
-import android.media.RingtoneManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.CancellationSignal;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.core.app.ActivityCompat;
