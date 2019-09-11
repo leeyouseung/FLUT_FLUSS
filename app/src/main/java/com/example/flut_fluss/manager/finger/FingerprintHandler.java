@@ -41,8 +41,6 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         fingerprintManager.authenticate(cryptoObject, cancellationSignal, 0, this, null);
     }
 
-    //------------------------
-
     @Override
     public void onAuthenticationError(int errorCode, CharSequence errString) {
 
