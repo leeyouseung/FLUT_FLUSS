@@ -28,7 +28,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
         CancellationSignal cancellationSignal = new CancellationSignal();
 
-        if(ActivityCompat.checkSelfPermission(context, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
 
             return;
         }
