@@ -16,7 +16,7 @@ import android.security.keystore.KeyProperties;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.FingerPrintActivityBinding;
-import com.example.flut_fluss.manager.finger.FingerprintHandler;
+import com.example.flut_fluss.manager.finger.LoginFingerprintHandler;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -86,7 +86,7 @@ public class FingerPrintActivity extends BaseActivity<FingerPrintActivityBinding
 
                     FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
 
-                    FingerprintHandler handler = new FingerprintHandler(this);
+                    LoginFingerprintHandler handler = new LoginFingerprintHandler(this);
 
                     handler.startAuthentication(fingerprintManager, cryptoObject);
                 }

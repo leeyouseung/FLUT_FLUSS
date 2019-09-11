@@ -18,11 +18,11 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.view.activity.main.MainActivity;
 
 @TargetApi(Build.VERSION_CODES.N)
-public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
+public class LoginFingerprintHandler extends FingerprintManager.AuthenticationCallback {
 
     private Context context;
 
-    public FingerprintHandler(Context context) {
+    public LoginFingerprintHandler(Context context) {
 
         this.context = context;
     }
