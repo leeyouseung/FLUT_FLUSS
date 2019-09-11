@@ -3,10 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.flut_fluss">
 
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/flut_logo"
@@ -15,9 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".view.activity.find.FindPasswordActivity">
-
-        </activity>
+        <activity android:name=".view.activity.account_list.my_account.send_money_finger.SendCheckFingerPrintActivity"></activity>
+        <activity android:name=".view.activity.find.FindPasswordActivity"></activity>
         <activity android:name=".view.activity.find.FindIdActivity" />
         <activity android:name=".view.activity.my_page.MyPageActivity" />
         <activity android:name=".view.activity.lookup.account.ShowMyAccountActivity" />
@@ -42,10 +37,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.login.LoginActivity">
-
-        </activity>
+        <activity android:name=".view.activity.login.LoginActivity"></activity>
         <activity android:name=".view.activity.main.MainActivity" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
 </manifest>
