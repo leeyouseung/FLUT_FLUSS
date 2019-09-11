@@ -1,4 +1,4 @@
-package com.example.flut_fluss.view.activity.account_list.my_account.send_money_password;   
+package com.example.flut_fluss.view.activity.account_list.my_account.send_money_password;
 
 import android.os.Bundle;
 

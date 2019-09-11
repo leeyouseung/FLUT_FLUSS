@@ -6,6 +6,7 @@ import android.os.Bundle;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendCheckFingerPrintActivityBinding;
+import com.example.flut_fluss.view.activity.account_list.my_account.send_money_password.SendCheckPasswordActivity;
 
 public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPrintActivityBinding> {
 
