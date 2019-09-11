@@ -109,35 +109,6 @@
         app:layout_constraintTop_toBottomOf="@+id/finger_sub_title"
         tools:ignore="HardcodedText" />
 
-    <!--지문인증 되면 나타나는 내용-->
-
-    <!-- <LinearLayout
-        android:id="@+id/ll_secure"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tv_message"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="200dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/iv_photo"
-            android:layout_width="match_parent"
-            android:layout_height="203dp"
-            app:srcCompat="@drawable/time_line_icon"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/iv_lock"
-            android:layout_marginTop="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/finger_print_done_icon"
-            tools:ignore="ContentDescription" />
-
-    </LinearLayout> -->
-
     <TextView
         android:id="@+id/cancel_button"
         android:layout_width="wrap_content"
