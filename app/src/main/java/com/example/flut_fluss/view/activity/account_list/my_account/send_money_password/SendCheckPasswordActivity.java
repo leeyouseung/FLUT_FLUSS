@@ -1,0 +1,22 @@
+package com.example.flut_fluss.view.activity.account_list.my_account.send_money_password;   
+
+import android.os.Bundle;
+
+import com.example.flut_fluss.R;
+import com.example.flut_fluss.base.BaseActivity;
+import com.example.flut_fluss.databinding.SendCheckPasswordActivityBinding;
+
+public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordActivityBinding> {
+
+    @Override
+    protected int layoutId() {
+
+        return R.layout.send_check_password_activity;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+}

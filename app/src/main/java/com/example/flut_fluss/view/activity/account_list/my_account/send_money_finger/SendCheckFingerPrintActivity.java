@@ -1,5 +1,6 @@
 package com.example.flut_fluss.view.activity.account_list.my_account.send_money_finger;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
@@ -40,5 +41,14 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
 
     private void clickEvent() {
 
+        clickCancelButton();
+    }
+
+    private void clickCancelButton() {
+
+        binding.cancelButton.setOnClickListener(v -> {
+
+            startActivity(new Intent(getApplicationContext(), SendCheckPasswordActivity.class));
+        });
     }
 }
