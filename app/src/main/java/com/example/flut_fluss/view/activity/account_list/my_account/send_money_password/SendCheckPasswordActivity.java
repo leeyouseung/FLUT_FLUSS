@@ -39,6 +39,6 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
     }
 
     private void clickEvent() {
-        
+
     }
 }
