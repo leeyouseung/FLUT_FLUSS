@@ -66,8 +66,6 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         super.onAuthenticationSucceeded(result);
 
         this.update("앱 접근이 허용 되었습니다.", true);
-
-        context.getApplicationContext().startActivity(new Intent(context.getApplicationContext(), MainActivity.class));
     }
 
     private void update(String s, boolean b) {
@@ -85,6 +83,8 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
             //지문인증 성공
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.login_button_first_gradation));
+
+            context.startActivity(new Intent(context.getApplicationContext(), MainActivity.class));
 
             /*
             //sound effect
