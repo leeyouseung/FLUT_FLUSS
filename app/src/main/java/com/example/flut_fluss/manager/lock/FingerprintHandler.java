@@ -74,18 +74,9 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         context.startActivity(new Intent(context, MainActivity.class));
     }
 
-    public void stopFingerAuth() {
-
-        if (cancellationSignal != null && !cancellationSignal.isCanceled()) {
-
-            cancellationSignal.cancel();
-        }
-    }
-
     private void update(String s, boolean b) {
 
         final TextView tv_message = ((Activity)context).findViewById(R.id.tv_message);
-        final ImageView iv_fingerprint = ((Activity)context).findViewById(R.id.iv_fingerprint);
 
         //안내 메세지 출력
         tv_message.setText(s);
@@ -98,7 +89,6 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
             //지문인증 성공
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.login_button_first_gradation));
-            iv_fingerprint.setImageResource(R.drawable.finger_print_done_icon);
 
             /*
             //sound effect
