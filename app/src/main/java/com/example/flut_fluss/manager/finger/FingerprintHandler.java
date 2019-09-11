@@ -80,7 +80,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
             //지문인증 성공
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.login_button_first_gradation));
 
-            context.startActivity(new Intent(context.getApplicationContext(), MainActivity.class));
+            context.getApplicationContext().startActivity(new Intent(context.getApplicationContext(), MainActivity.class));
 
             /*
             //sound effect
