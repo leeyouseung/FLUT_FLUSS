@@ -40,8 +40,8 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
     public void onAuthenticationFailed() {
         super.onAuthenticationFailed();
 
-        binding.tvMessage.setTextColor(context.getColor(R.color.red));
-        binding.tvMessage.setText("지문 인식에 실패 했습니다.");
+//        binding.tvMessage.setTextColor(context.getColor(R.color.red));
+//        binding.tvMessage.setText("지문 인식에 실패 했습니다.");
     }
 
     @Override
