@@ -20,9 +20,15 @@ public class SendMyCardActivity extends BaseActivity<SendMyBankActivityBinding> 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        initViewModel();
+
         initData();
 
         event();
+    }
+
+    private void initViewModel() {
+
     }
 
     @SuppressLint("SetTextI18n")
