@@ -1,6 +1,7 @@
 package com.example.flut_fluss.view.activity.account_list.my_account.send_money_password;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
@@ -40,5 +41,14 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
 
     private void clickEvent() {
 
+        clickSendButton();
+    }
+
+    private void clickSendButton() {
+
+        binding.sendButton.setOnClickListener(v -> {
+
+            Toast.makeText(getApplicationContext(), "서버구현 X", Toast.LENGTH_SHORT).show();
+        });
     }
 }
