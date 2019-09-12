@@ -80,7 +80,7 @@
         tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/finger_sub_title"
+        android:id="@+id/send_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -106,7 +106,7 @@
         android:textSize="6pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finger_sub_title"
+        app:layout_constraintTop_toBottomOf="@+id/send_button"
         tools:ignore="HardcodedText" />
 
     <TextView
