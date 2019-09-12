@@ -7,7 +7,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="@color/finger_login_check_background"
     tools:context=".view.activity.account_list.my_account.send_money_finger.SendCheckFingerPrintActivity">
