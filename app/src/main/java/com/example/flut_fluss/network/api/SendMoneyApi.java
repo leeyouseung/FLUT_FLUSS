@@ -9,6 +9,6 @@ import retrofit2.http.POST;
 
 public interface SendMoneyApi {
 
-    @POST("api/")
+    @POST("api/#")
     Single<retrofit2.Response<Response>> sendMoney(@Body SendMoneyRequest sendMoneyRequest);
 }
