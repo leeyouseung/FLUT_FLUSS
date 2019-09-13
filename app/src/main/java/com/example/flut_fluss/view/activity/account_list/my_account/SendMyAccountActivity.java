@@ -3,7 +3,6 @@ package com.example.flut_fluss.view.activity.account_list.my_account;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.lifecycle.ViewModelProviders;
 
