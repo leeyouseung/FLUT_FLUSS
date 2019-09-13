@@ -6,9 +6,9 @@ import com.example.flut_fluss.base.BaseViewModel;
 
 public class SendMyAccountViewModel extends BaseViewModel {
 
-    protected SendMyAccountViewModel(Context context) {
+    public SendMyAccountViewModel(Context context) {
         super(context);
 
-        
+
     }
 }

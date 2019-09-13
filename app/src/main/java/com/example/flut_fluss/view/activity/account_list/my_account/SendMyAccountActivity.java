@@ -5,14 +5,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.lifecycle.ViewModelProviders;
+
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendMyAccountActivityBinding;
+import com.example.flut_fluss.manager.factory.ViewModelFactory;
 import com.example.flut_fluss.view.activity.account_list.my_account.send_money_finger.SendCheckFingerPrintActivity;
+import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
 
 public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBinding> {
 
-
+    private SendMyAccountViewModel sendMyAccountViewModel;
 
     @Override
     protected int layoutId() {
@@ -33,7 +37,7 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
 
     private void initViewModel() {
 
-
+        sendMyAccountViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SendMyAccountViewModel.class);
     }
 
     @SuppressLint("SetTextI18n")
