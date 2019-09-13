@@ -12,6 +12,8 @@ import com.example.flut_fluss.view.activity.account_list.my_account.send_money_f
 
 public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBinding> {
 
+
+
     @Override
     protected int layoutId() {
 
@@ -30,6 +32,7 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
     }
 
     private void initViewModel() {
+
 
     }
 
