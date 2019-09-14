@@ -52,7 +52,9 @@ public class FingerPrintActivity extends BaseActivity<FingerPrintActivityBinding
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        event();
+        initViewModel();
+
+        initData();
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
@@ -92,6 +94,16 @@ public class FingerPrintActivity extends BaseActivity<FingerPrintActivityBinding
                 }
             }
         }
+
+        event();
+    }
+
+    private void initViewModel() {
+
+    }
+
+    private void initData() {
+
     }
 
     //Cipher Init()
