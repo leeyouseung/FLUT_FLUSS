@@ -8,7 +8,7 @@ import android.view.animation.AnimationUtils;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SplashActivityBinding;
-import com.example.flut_fluss.view.activity.login.FingerPrintActivity;
+import com.example.flut_fluss.view.activity.login.LoginFingerPrintActivity;
 
 public class SplashActivity extends BaseActivity<SplashActivityBinding> {
 
@@ -58,7 +58,7 @@ public class SplashActivity extends BaseActivity<SplashActivityBinding> {
 
                 binding.animationLogo.clearAnimation();
 
-                Intent intent = new Intent(SplashActivity.this, FingerPrintActivity.class);
+                Intent intent = new Intent(SplashActivity.this, LoginFingerPrintActivity.class);
                 startActivity(intent);
 
                 finish();

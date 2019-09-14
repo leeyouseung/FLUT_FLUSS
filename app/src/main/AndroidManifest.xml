@@ -30,7 +30,7 @@
         <activity android:name=".view.activity.lookup.ShowAccountActivity" />
         <activity android:name=".view.activity.remittance.DutchPayActivity" />
         <activity android:name=".view.activity.remittance.SendMoneyActivity" />
-        <activity android:name=".view.activity.login.FingerPrintActivity" />
+        <activity android:name=".view.activity.login.LoginFingerPrintActivity" />
         <activity android:name=".view.activity.singup.SignUpActivity" />
         <activity android:name=".view.animation.SplashActivity">
             <intent-filter>

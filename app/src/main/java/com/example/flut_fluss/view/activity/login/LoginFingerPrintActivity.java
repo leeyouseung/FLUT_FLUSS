@@ -33,7 +33,7 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
-public class FingerPrintActivity extends BaseActivity<FingerPrintActivityBinding> {
+public class LoginFingerPrintActivity extends BaseActivity<FingerPrintActivityBinding> {
 
     @Override
     protected int layoutId() {

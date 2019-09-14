@@ -11,7 +11,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="@color/finger_login_check_background"
-    tools:context=".view.activity.login.FingerPrintActivity">
+    tools:context=".view.activity.login.LoginFingerPrintActivity">
 
     <ImageView
         android:id="@+id/animation_logo"
