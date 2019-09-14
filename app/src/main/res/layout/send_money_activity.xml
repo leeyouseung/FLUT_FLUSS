@@ -99,7 +99,7 @@
             tools:ignore="ContentDescription" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/user_icon"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
@@ -118,7 +118,7 @@
             android:text="@string/user_account_title"
             android:textColor="@color/black"
             android:textSize="8pt"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/user_icon"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="HardcodedText" />
 
@@ -129,7 +129,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="8dp"
             android:text="@string/account_count"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/user_icon"
             app:layout_constraintTop_toBottomOf="@+id/textView11"
             tools:ignore="HardcodedText" />
 
