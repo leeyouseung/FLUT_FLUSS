@@ -40,4 +40,6 @@
     <string name="main_setting_button_text">전체</string>
     <string name="main_dutch_button_text">더치페이</string>
     <string name="main_remittance_button_text">보내기</string>
+
+    <string name="friend_name">이재민</string>
 </resources>
