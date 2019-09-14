@@ -17,6 +17,7 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendCheckFingerPrintActivityBinding;
 import com.example.flut_fluss.manager.finger.LoginFingerprintHandler;
+import com.example.flut_fluss.manager.finger.RemittanceFingerprintHandler;
 import com.example.flut_fluss.view.activity.account_list.my_account.send_money_password.SendCheckPasswordActivity;
 
 import java.io.IOException;
@@ -89,7 +90,7 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
 
                     FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
 
-                    LoginFingerprintHandler handler = new LoginFingerprintHandler(this);
+                    RemittanceFingerprintHandler handler = new RemittanceFingerprintHandler(this);
 
                     handler.startAuthentication(fingerprintManager, cryptoObject);
                 }

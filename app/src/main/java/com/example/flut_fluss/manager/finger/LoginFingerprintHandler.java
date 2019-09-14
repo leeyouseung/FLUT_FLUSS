@@ -54,7 +54,7 @@ public class LoginFingerprintHandler extends FingerprintManager.AuthenticationCa
     @Override
     public void onAuthenticationHelp(int helpCode, CharSequence helpString) {
 
-        this.update("Error : "+ helpString, false);
+        this.update("Error : " + helpString, false);
     }
 
     @Override
