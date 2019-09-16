@@ -15,7 +15,7 @@ import android.security.keystore.KeyProperties;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
-import com.example.flut_fluss.databinding.FingerPrintActivityBinding;
+import com.example.flut_fluss.databinding.LoginFingerPrintActivityBinding;
 import com.example.flut_fluss.manager.finger.LoginFingerprintHandler;
 
 import java.io.IOException;
@@ -33,12 +33,12 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
-public class LoginFingerPrintActivity extends BaseActivity<FingerPrintActivityBinding> {
+public class LoginFingerPrintActivity extends BaseActivity<LoginFingerPrintActivityBinding> {
 
     @Override
     protected int layoutId() {
 
-        return R.layout.finger_print_activity;
+        return R.layout.login_finger_print_activity;
     }
 
     private KeyStore keyStore;
