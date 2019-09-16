@@ -1,7 +1,10 @@
 package com.example.flut_fluss.network.request;
 
+import com.google.gson.annotations.SerializedName;
+
 public class SendMoneyRequest {
 
+    @SerializedName("money")
     private String money;
 
     public SendMoneyRequest(String money) {
