@@ -42,7 +42,7 @@ public class SendMoneyClient extends BaseClient<SendMoneyApi> {
             } else if (response.body().getStatus() == 400) {
 
                 throw new Exception("송금 오류");
-                
+
             } else {
 
                 throw new Exception(response.body().getMessage());
