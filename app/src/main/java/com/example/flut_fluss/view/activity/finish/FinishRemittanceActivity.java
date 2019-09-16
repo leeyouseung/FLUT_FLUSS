@@ -1,10 +1,12 @@
 package com.example.flut_fluss.view.activity.finish;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.ActivityFinishRemittanceBinding;
+import com.example.flut_fluss.view.activity.main.MainActivity;
 
 public class FinishRemittanceActivity extends BaseActivity<ActivityFinishRemittanceBinding> {
 
@@ -40,5 +42,14 @@ public class FinishRemittanceActivity extends BaseActivity<ActivityFinishRemitta
 
     private void clickEvent() {
 
+        clickOkButton();
+    }
+
+    private void clickOkButton() {
+
+        binding.okButton.setOnClickListener(v -> {
+
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        });
     }
 }
