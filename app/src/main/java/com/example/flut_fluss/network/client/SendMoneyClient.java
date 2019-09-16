@@ -21,7 +21,7 @@ public class SendMoneyClient extends BaseClient<SendMoneyApi> {
 
     public Single<Money> sendMoney(SendMoneyRequest sendMoneyRequest) {
 
-        return api.sendMoney(sendMoneyRequest).map(response -> {
+        return api.sendFlussMoney(sendMoneyRequest).map(response -> {
 
             if (!response.isSuccessful()) {
 
