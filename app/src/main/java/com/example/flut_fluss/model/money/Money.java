@@ -1,4 +1,4 @@
-package com.example.flut_fluss.model;
+package com.example.flut_fluss.model.money;
 
 public class Money {
 

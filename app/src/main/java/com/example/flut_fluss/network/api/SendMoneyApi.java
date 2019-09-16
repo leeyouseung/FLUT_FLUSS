@@ -1,6 +1,6 @@
 package com.example.flut_fluss.network.api;
 
-import com.example.flut_fluss.model.Money;
+import com.example.flut_fluss.model.money.Money;
 import com.example.flut_fluss.network.Response;
 import com.example.flut_fluss.network.request.SendMoneyRequest;
 
