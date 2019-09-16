@@ -13,6 +13,7 @@ import com.example.flut_fluss.manager.factory.ViewModelFactory;
 import com.example.flut_fluss.network.request.SendMoneyRequest;
 import com.example.flut_fluss.view.activity.finish.FinishRemittanceActivity;
 import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
+import com.example.flut_fluss.viewmodel.SendMyBankViewModel;
 
 public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordActivityBinding> {
 
@@ -23,6 +24,9 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
     }
 
     private SendMyAccountViewModel sendMyAccountViewModel;
+    private SendMyBankViewModel sendMyBankViewModel;
+
+    private String sendKind;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,36 +36,46 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
 
         initData();
 
-        sendMyAccountViewModel.getSuccessMessage().observe(this, message -> {
-
-            Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show();
-
-            startActivity(new Intent(getApplicationContext(), FinishRemittanceActivity.class));
-        });
-
-        sendMyAccountViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, (String) message, Toast.LENGTH_SHORT).show());
-
         event();
     }
 
     private void initViewModel() {
 
         sendMyAccountViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SendMyAccountViewModel.class);
+        sendMyBankViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SendMyBankViewModel.class);
     }
 
     private void initData() {
 
         Intent intent = getIntent();
 
-        String sendKind = intent.getStringExtra("send_kind");
+        sendKind = intent.getStringExtra("send_kind");
 
         if(sendKind.equals("0")) {
 
             binding.animationLogo.setImageResource(R.drawable.flut_logo);
+
+            sendMyAccountViewModel.getSuccessMessage().observe(this, message -> {
+
+                Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show();
+
+                startActivity(new Intent(getApplicationContext(), FinishRemittanceActivity.class));
+            });
+
+            sendMyAccountViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, (String) message, Toast.LENGTH_SHORT).show());
         }
         else if(sendKind.equals("1")) {
 
             binding.animationLogo.setImageResource(R.drawable.bank_icon);
+
+            sendMyBankViewModel.getSuccessMessage().observe(this, message -> {
+
+                Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show();
+
+                startActivity(new Intent(getApplicationContext(), FinishRemittanceActivity.class));
+            });
+
+            sendMyBankViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show());
         }
     }
 
@@ -79,9 +93,18 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
 
         binding.sendButton.setOnClickListener(v -> {
 
-            String money = binding.money.getText().toString().substring(0, binding.money.getText().toString().length() - 1);
+            if(sendKind.equals("0")) {
 
-            sendMyAccountViewModel.sendMoney(new SendMoneyRequest(money));
+                String money = binding.money.getText().toString().substring(0, binding.money.getText().toString().length() - 1);
+
+                sendMyAccountViewModel.sendFlussMoney(new SendMoneyRequest(money));
+            }
+            else if(sendKind.equals("1")) {
+
+                String money = binding.money.getText().toString().substring(0, binding.money.getText().toString().length() - 1);
+
+                sendMyBankViewModel.sendBankMoney(new SendMoneyRequest(money));
+            }
         });
     }
 }

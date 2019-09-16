@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.flut_fluss.viewmodel.LoginViewModel;
 import com.example.flut_fluss.viewmodel.LookupSendMoneyViewModel;
 import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
+import com.example.flut_fluss.viewmodel.SendMyBankViewModel;
 import com.example.flut_fluss.viewmodel.SignUpViewModel;
 
 /**
@@ -40,6 +41,10 @@ public class ViewModelFactory extends ViewModelProvider.NewInstanceFactory {
         else if(modelClass == SendMyAccountViewModel.class) {
 
             return (T) new SendMyAccountViewModel(context);
+        }
+        else if(modelClass == SendMyBankViewModel.class) {
+
+            return (T) new SendMyBankViewModel(context);
         }
         else {
 

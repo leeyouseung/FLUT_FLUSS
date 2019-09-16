@@ -10,7 +10,7 @@ public class SendMyBankViewModel extends BaseViewModel {
 
     private SendBankMoneyClient sendBankMoneyClient;
 
-    protected SendMyBankViewModel(Context context) {
+    public SendMyBankViewModel(Context context) {
         super(context);
 
         sendBankMoneyClient = new SendBankMoneyClient();
@@ -18,6 +18,6 @@ public class SendMyBankViewModel extends BaseViewModel {
 
     public void sendBankMoney(SendMoneyRequest sendMoneyRequest) {
 
-//        addDisposable(sendFlussMoneyClient.sendFlussMoney(sendMoneyRequest), getBaseObserver());
+        addDisposable(sendBankMoneyClient.sendBankMoney(sendMoneyRequest), getBaseObserver());
     }
 }

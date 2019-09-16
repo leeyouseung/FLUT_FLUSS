@@ -16,7 +16,7 @@ public class SendMyAccountViewModel extends BaseViewModel {
         sendFlussMoneyClient = new SendFlussMoneyClient();
     }
 
-    public void sendMoney(SendMoneyRequest sendMoneyRequest) {
+    public void sendFlussMoney(SendMoneyRequest sendMoneyRequest) {
 
         addDisposable(sendFlussMoneyClient.sendFlussMoney(sendMoneyRequest), getBaseObserver());
     }
