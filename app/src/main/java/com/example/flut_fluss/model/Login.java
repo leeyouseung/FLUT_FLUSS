@@ -1,8 +1,5 @@
 package com.example.flut_fluss.model;
 
-import com.example.flut_fluss.model.Token;
-import com.example.flut_fluss.model.User;
-
 public class Login {
 
     private Token token;
