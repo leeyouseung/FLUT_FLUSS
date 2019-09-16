@@ -35,13 +35,15 @@ public class SendMoneyClient extends BaseClient<SendMoneyApi> {
 
             if (response.body().getStatus() == 200) {
 
-//                Money money = new Money(response.body().getData())
-            }
-            else if (response.body().getStatus() == 400) {
+                Money money = new Money(response.body().getData().getAccount(), response.body().getData().getBank());
+
+                return money;
+
+            } else if (response.body().getStatus() == 400) {
 
                 throw new Exception("송금 오류");
-            }
-            else {
+                
+            } else {
 
                 throw new Exception(response.body().getMessage());
             }

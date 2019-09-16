@@ -1,5 +1,6 @@
 package com.example.flut_fluss.network.api;
 
+import com.example.flut_fluss.model.Money;
 import com.example.flut_fluss.network.Response;
 import com.example.flut_fluss.network.request.SendMoneyRequest;
 
@@ -10,5 +11,5 @@ import retrofit2.http.POST;
 public interface SendMoneyApi {
 
     @POST("api/#")
-    Single<retrofit2.Response<Response>> sendMoney(@Body SendMoneyRequest sendMoneyRequest);
+    Single<retrofit2.Response<Response<Money>>> sendMoney(@Body SendMoneyRequest sendMoneyRequest);
 }

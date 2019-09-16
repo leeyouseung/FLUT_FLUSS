@@ -4,21 +4,21 @@ import com.google.gson.annotations.SerializedName;
 
 public class Account {
 
-    @SerializedName("totalMoney")
-    private int totalMoney;
+    @SerializedName("totalAccountMoney")
+    private int totalAccountMoney;
 
-    public Account(int totalMoney) {
+    public Account(int totalAccountMoney) {
 
-        this.totalMoney = totalMoney;
+        this.totalAccountMoney = totalAccountMoney;
     }
 
-    public int getTotalMoney() {
+    public int getTotalAccountMoney() {
 
-        return totalMoney;
+        return totalAccountMoney;
     }
 
-    public void setTotalMoney(int totalMoney) {
+    public void setTotalAccountMoney(int totalAccountMoney) {
 
-        this.totalMoney = totalMoney;
+        this.totalAccountMoney = totalAccountMoney;
     }
 }
