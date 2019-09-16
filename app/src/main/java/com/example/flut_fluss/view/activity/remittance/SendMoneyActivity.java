@@ -9,7 +9,7 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendMoneyActivityBinding;
 import com.example.flut_fluss.view.activity.account_list.my_account.SendMyAccountActivity;
-import com.example.flut_fluss.view.activity.account_list.my_account.SendMyCardActivity;
+import com.example.flut_fluss.view.activity.account_list.my_account.SendMyBankActivity;
 
 public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
@@ -120,7 +120,7 @@ public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
 
         binding.bankLayout.setOnClickListener(v -> {
 
-            Intent intent = new Intent(getApplicationContext(), SendMyCardActivity.class);
+            Intent intent = new Intent(getApplicationContext(), SendMyBankActivity.class);
 
             intent.putExtra("sendMoney", sendMoney);
 

@@ -8,7 +8,7 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendMyBankActivityBinding;
 
-public class SendMyCardActivity extends BaseActivity<SendMyBankActivityBinding> {
+public class SendMyBankActivity extends BaseActivity<SendMyBankActivityBinding> {
 
     @Override
     protected int layoutId() {
@@ -49,6 +49,7 @@ public class SendMyCardActivity extends BaseActivity<SendMyBankActivityBinding> 
     private void clickEvent() {
 
         clickBackButton();
+        clickSendBankButton();
     }
 
     private void clickBackButton() {
@@ -56,6 +57,14 @@ public class SendMyCardActivity extends BaseActivity<SendMyBankActivityBinding> 
         binding.backButton.setOnClickListener(v -> {
 
             finish();
+        });
+    }
+
+    private void clickSendBankButton() {
+
+        binding.myBankSendButton.setOnClickListener(v -> {
+
+            
         });
     }
 }

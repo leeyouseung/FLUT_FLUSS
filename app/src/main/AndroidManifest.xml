@@ -20,7 +20,7 @@
         <activity android:name=".view.activity.lookup.account.ShowMyAccountActivity" />
         <activity android:name=".view.activity.lookup.account.remittance.LookupSendMoneyActivity" />
         <activity android:name=".view.activity.account_list.friend_account.SendFriendAccountActivity" />
-        <activity android:name=".view.activity.account_list.my_account.SendMyCardActivity" />
+        <activity android:name=".view.activity.account_list.my_account.SendMyBankActivity" />
         <activity android:name=".view.activity.account_list.my_account.SendMyAccountActivity" />
         <activity android:name=".view.activity.inner_timeline.EtcActivity" />
         <activity android:name=".view.activity.inner_timeline.ClothsActivity" />

@@ -11,7 +11,7 @@ import java.util.Objects;
 
 import io.reactivex.Single;
 
-public class SendMoneyClient extends BaseClient<SendMoneyApi> {
+public class SendFlussMoneyClient extends BaseClient<SendMoneyApi> {
 
     @Override
     protected Class api() {

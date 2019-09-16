@@ -11,8 +11,8 @@ import retrofit2.http.POST;
 public interface SendMoneyApi {
 
     @POST("api/send/bank")
-    Single<retrofit2.Response<Response<Money>>> sendFlussMoney(@Body SendMoneyRequest sendMoneyRequest);
+    Single<retrofit2.Response<Response<Money>>> sendBankMoney(@Body SendMoneyRequest sendMoneyRequest);
 
     @POST("api/send/fluss")
-    Single<retrofit2.Response<Response<Money>>> sendBankMoney(@Body SendMoneyRequest sendMoneyRequest);
+    Single<retrofit2.Response<Response<Money>>> sendFlussMoney(@Body SendMoneyRequest sendMoneyRequest);
 }
