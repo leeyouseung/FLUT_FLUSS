@@ -15,8 +15,6 @@ import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
 
 public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBinding> {
 
-    private SendMyAccountViewModel sendMyAccountViewModel;
-
     @Override
     protected int layoutId() {
 
@@ -36,7 +34,6 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
 
     private void initViewModel() {
 
-        sendMyAccountViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SendMyAccountViewModel.class);
     }
 
     @SuppressLint("SetTextI18n")

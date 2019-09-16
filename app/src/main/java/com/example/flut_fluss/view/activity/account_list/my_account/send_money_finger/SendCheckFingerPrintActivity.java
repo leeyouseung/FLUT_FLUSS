@@ -18,6 +18,7 @@ import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendCheckFingerPrintActivityBinding;
 import com.example.flut_fluss.manager.finger.SendCheckFingerprintHandler;
 import com.example.flut_fluss.view.activity.account_list.my_account.send_money_password.SendCheckPasswordActivity;
+import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -41,6 +42,8 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
 
         return R.layout.send_check_finger_print_activity;
     }
+
+    private SendMyAccountViewModel sendMyAccountViewModel;
 
     private KeyStore keyStore;
     private static final String KEY_NAME = "example_key";
@@ -100,6 +103,7 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
     }
 
     private void initViewModel() {
+
 
     }
 

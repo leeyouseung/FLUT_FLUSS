@@ -20,31 +20,31 @@ public class SendMoneyClient extends BaseClient<SendMoneyApi> {
         return SendMoneyApi.class;
     }
 
-//    public Single<Money> sendMoney(SendMoneyRequest sendMoneyRequest) {
+    public Single<Money> sendMoney(SendMoneyRequest sendMoneyRequest) {
 
-//        return api.sendMoney(sendMoneyRequest).map(response -> {
-//
-//            if (!response.isSuccessful()) {
-//
-//                JSONObject errorBody = new JSONObject(Objects
-//                        .requireNonNull(
-//                                response.errorBody()).string());
-//
-//                throw new Exception(errorBody.getString("message"));
-//            }
-//
-//            if (response.body().getStatus() == 200) {
-//
-//                return response.body().getMessage();
-//            }
-//            else if (response.body().getStatus() == 400) {
-//
-//                throw new Exception("송금 오류");
-//            }
-//            else {
-//
-//                throw new Exception(response.body().getMessage());
-//            }
-//        });
-//    }
+        return api.sendMoney(sendMoneyRequest).map(response -> {
+
+            if (!response.isSuccessful()) {
+
+                JSONObject errorBody = new JSONObject(Objects
+                        .requireNonNull(
+                                response.errorBody()).string());
+
+                throw new Exception(errorBody.getString("message"));
+            }
+
+            if (response.body().getStatus() == 200) {
+
+//                Money money = new Money(response.body().getData())
+            }
+            else if (response.body().getStatus() == 400) {
+
+                throw new Exception("송금 오류");
+            }
+            else {
+
+                throw new Exception(response.body().getMessage());
+            }
+        });
+    }
 }

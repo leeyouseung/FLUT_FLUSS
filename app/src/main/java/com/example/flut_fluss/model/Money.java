@@ -2,20 +2,33 @@ package com.example.flut_fluss.model;
 
 public class Money {
 
-    private String money;
+    private Account account;
 
-    public Money(String money) {
+    private Bank bank;
 
-        this.money = money;
+    public Money(Account account, Bank bank) {
+
+        this.account = account;
+        this.bank = bank;
     }
 
-    public String getMoney() {
+    public Account getAccount() {
 
-        return money;
+        return account;
     }
 
-    public void setMoney(String money) {
+    public void setAccount(Account account) {
 
-        this.money = money;
+        this.account = account;
+    }
+
+    public Bank getBank() {
+
+        return bank;
+    }
+
+    public void setBank(Bank bank) {
+
+        this.bank = bank;
     }
 }

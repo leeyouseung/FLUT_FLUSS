@@ -3,9 +3,13 @@ package com.example.flut_fluss.view.activity.account_list.my_account.send_money_
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.lifecycle.ViewModelProviders;
+
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendCheckPasswordActivityBinding;
+import com.example.flut_fluss.manager.factory.ViewModelFactory;
+import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
 
 public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordActivityBinding> {
 
@@ -14,6 +18,8 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
 
         return R.layout.send_check_password_activity;
     }
+
+    private SendMyAccountViewModel sendMyAccountViewModel;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,6 +34,7 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
 
     private void initViewModel() {
 
+        sendMyAccountViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SendMyAccountViewModel.class);
     }
 
     private void initData() {

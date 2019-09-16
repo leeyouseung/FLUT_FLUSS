@@ -80,6 +80,8 @@ public class SendCheckFingerprintHandler extends FingerprintManager.Authenticati
             // 지문인증 성공
             tv_message.setTextColor(ContextCompat.getColor(context, R.color.login_button_first_gradation));
 
+
+
             context.getApplicationContext().startActivity(new Intent(context.getApplicationContext(), FinishRemittanceActivity.class));
 
             /*
