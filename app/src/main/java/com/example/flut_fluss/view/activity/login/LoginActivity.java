@@ -45,7 +45,7 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding> {
 
             new Token(this).setToken(login.getToken().getToken());
 //            new CurrentUser(this, "flut_database.db", null, 2).insert(login.getUser());
-            User user = new User();
+//            User user = new User();
 
 //            loginViewModel.insert(user);
 

@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 
 import com.example.flut_fluss.base.BaseViewModel;
 //import com.example.flut_fluss.manager.room.repository.UserRepository;
-import com.example.flut_fluss.model.register.Login;
+import com.example.flut_fluss.model.Login;
 import com.example.flut_fluss.network.client.LoginClient;
 import com.example.flut_fluss.network.request.LoginRequest;
 

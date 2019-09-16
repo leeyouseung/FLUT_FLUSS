@@ -2,7 +2,7 @@ package com.example.flut_fluss.network.api;
 
 import androidx.annotation.NonNull;
 
-import com.example.flut_fluss.model.register.Login;
+import com.example.flut_fluss.model.Login;
 import com.example.flut_fluss.network.Response;
 import com.example.flut_fluss.network.request.LoginRequest;
 

@@ -1,4 +1,4 @@
-package com.example.flut_fluss.model.register;
+package com.example.flut_fluss.model;
 
 import com.example.flut_fluss.model.Token;
 import com.example.flut_fluss.model.User;
