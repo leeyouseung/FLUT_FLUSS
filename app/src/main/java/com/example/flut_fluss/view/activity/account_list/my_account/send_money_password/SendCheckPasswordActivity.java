@@ -68,7 +68,9 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
 
         binding.sendButton.setOnClickListener(v -> {
 
-//            sendMyAccountViewModel.sendMoney(new SendMoneyRequest());
+            String money = binding.money.getText().toString().substring(0, binding.money.getText().toString().length() - 1);
+
+            sendMyAccountViewModel.sendMoney(new SendMoneyRequest(money));
         });
     }
 }
