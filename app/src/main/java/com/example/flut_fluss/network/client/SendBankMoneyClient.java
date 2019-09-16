@@ -11,7 +11,7 @@ import java.util.Objects;
 
 import io.reactivex.Single;
 
-public class SendFlussMoneyClient extends BaseClient<SendMoneyApi> {
+public class SendBankMoneyClient extends BaseClient<SendMoneyApi> {
 
     @Override
     protected Class api() {
@@ -19,7 +19,7 @@ public class SendFlussMoneyClient extends BaseClient<SendMoneyApi> {
         return SendMoneyApi.class;
     }
 
-    public Single<Money> sendFlussMoney(SendMoneyRequest sendMoneyRequest) {
+    public Single<Money> sendBankMoney(SendMoneyRequest sendMoneyRequest) {
 
         return api.sendFlussMoney(sendMoneyRequest).map(response -> {
 
