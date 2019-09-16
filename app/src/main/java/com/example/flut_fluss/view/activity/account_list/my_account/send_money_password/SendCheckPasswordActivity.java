@@ -1,5 +1,6 @@
 package com.example.flut_fluss.view.activity.account_list.my_account.send_money_password;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -9,6 +10,8 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendCheckPasswordActivityBinding;
 import com.example.flut_fluss.manager.factory.ViewModelFactory;
+import com.example.flut_fluss.view.activity.finish.FinishRemittanceActivity;
+import com.example.flut_fluss.view.activity.login.LoginActivity;
 import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
 
 public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordActivityBinding> {
@@ -28,6 +31,15 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
         initViewModel();
 
         initData();
+
+        sendMyAccountViewModel.getSuccessMessage().observe(this, message -> {
+
+            Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show();
+
+            startActivity(new Intent(getApplicationContext(), FinishRemittanceActivity.class));
+        });
+
+        sendMyAccountViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, (String) message, Toast.LENGTH_SHORT).show());
 
         event();
     }
