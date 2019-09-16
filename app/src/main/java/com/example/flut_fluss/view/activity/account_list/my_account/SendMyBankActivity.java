@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendMyBankActivityBinding;
+import com.example.flut_fluss.view.activity.account_list.my_account.send_money_finger.SendCheckFingerPrintActivity;
 
 public class SendMyBankActivity extends BaseActivity<SendMyBankActivityBinding> {
 
@@ -64,7 +65,11 @@ public class SendMyBankActivity extends BaseActivity<SendMyBankActivityBinding> 
 
         binding.myBankSendButton.setOnClickListener(v -> {
 
-            
+            Intent intent = new Intent(getApplicationContext(), SendCheckFingerPrintActivity.class);
+
+            intent.putExtra("send_kind", 1);
+
+            startActivity(intent);
         });
     }
 }

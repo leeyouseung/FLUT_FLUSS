@@ -51,6 +51,18 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
 
     private void initData() {
 
+        Intent intent = getIntent();
+
+        String sendKind = intent.getStringExtra("send_kind");
+
+        if(sendKind.equals("0")) {
+
+            binding.animationLogo.setImageResource(R.drawable.flut_logo);
+        }
+        else if(sendKind.equals("1")) {
+
+            binding.animationLogo.setImageResource(R.drawable.bank_icon);
+        }
     }
 
     private void event() {

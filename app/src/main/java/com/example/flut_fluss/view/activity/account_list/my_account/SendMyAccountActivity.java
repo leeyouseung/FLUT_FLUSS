@@ -69,7 +69,11 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
 
         binding.myAccountSendButton.setOnClickListener(v -> {
 
-            startActivity(new Intent(getApplicationContext(), SendCheckFingerPrintActivity.class));
+            Intent intent = new Intent(getApplicationContext(), SendCheckFingerPrintActivity.class);
+
+            intent.putExtra("send_kind", 0);
+
+            startActivity(intent);
         });
     }
 }
