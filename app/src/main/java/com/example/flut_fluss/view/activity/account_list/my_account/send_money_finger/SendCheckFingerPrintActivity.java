@@ -16,7 +16,7 @@ import androidx.core.content.ContextCompat;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendCheckFingerPrintActivityBinding;
-import com.example.flut_fluss.manager.finger.RemittanceFingerprintHandler;
+import com.example.flut_fluss.manager.finger.SendCheckFingerprintHandler;
 import com.example.flut_fluss.view.activity.account_list.my_account.send_money_password.SendCheckPasswordActivity;
 
 import java.io.IOException;
@@ -89,7 +89,7 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
 
                     FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
 
-                    RemittanceFingerprintHandler handler = new RemittanceFingerprintHandler(this);
+                    SendCheckFingerprintHandler handler = new SendCheckFingerprintHandler(this);
 
                     handler.startAuthentication(fingerprintManager, cryptoObject);
                 }

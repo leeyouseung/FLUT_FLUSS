@@ -18,11 +18,11 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.view.activity.finish.FinishRemittanceActivity;
 
 @TargetApi(Build.VERSION_CODES.N)
-public class RemittanceFingerprintHandler extends FingerprintManager.AuthenticationCallback {
+public class SendCheckFingerprintHandler extends FingerprintManager.AuthenticationCallback {
 
     private Context context;
 
-    public RemittanceFingerprintHandler(Context context) {
+    public SendCheckFingerprintHandler(Context context) {
 
         this.context = context;
     }
