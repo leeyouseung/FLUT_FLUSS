@@ -1,4 +1,7 @@
-package com.example.flut_fluss.model;
+package com.example.flut_fluss.model.register;
+
+import com.example.flut_fluss.model.Token;
+import com.example.flut_fluss.model.User;
 
 public class Login {
 
