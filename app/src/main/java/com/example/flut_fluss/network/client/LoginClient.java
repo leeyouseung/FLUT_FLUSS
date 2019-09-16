@@ -38,7 +38,7 @@ public class LoginClient extends BaseClient<LoginApi> {
 
                 return login;
             }
-            else if (response.body().getStatus() == 401) {
+            else if (response.body().getStatus() == 400) {
 
                 throw new Exception("아이디 또는 비밀번호가 틀렸습니다");
             }
