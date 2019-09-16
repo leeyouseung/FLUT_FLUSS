@@ -10,6 +10,7 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendCheckPasswordActivityBinding;
 import com.example.flut_fluss.manager.factory.ViewModelFactory;
+import com.example.flut_fluss.network.request.SendMoneyRequest;
 import com.example.flut_fluss.view.activity.finish.FinishRemittanceActivity;
 import com.example.flut_fluss.view.activity.login.LoginActivity;
 import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
@@ -67,7 +68,7 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
 
         binding.sendButton.setOnClickListener(v -> {
 
-            Toast.makeText(getApplicationContext(), "서버구현 X", Toast.LENGTH_SHORT).show();
+            sendMyAccountViewModel.sendMoney(new SendMoneyRequest());
         });
     }
 }

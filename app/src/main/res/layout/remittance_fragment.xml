@@ -47,7 +47,7 @@
             app:layout_constraintEnd_toStartOf="@+id/money_number_3"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/money_number_1"
-            app:layout_constraintTop_toBottomOf="@+id/money"
+            app:layout_constraintTop_toBottomOf="@+id/money_title"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -267,7 +267,7 @@
             tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/money"
+            android:id="@+id/money_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="130dp"

@@ -5,12 +5,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -65,7 +63,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
         assert layoutInflater != null;
 
         View view = layoutInflater.inflate(R.layout.remittance_fragment, null);
-        money = view.findViewById(R.id.money);
+        money = view.findViewById(R.id.money_title);
 
 //         TODO : {
 //         돈 입력 했을 때, 하단 메뉴바 사라지게 만들고 더치페이 보내기 레이아웃 만들기           100%
