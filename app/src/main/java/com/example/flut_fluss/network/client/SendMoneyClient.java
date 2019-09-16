@@ -1,7 +1,6 @@
 package com.example.flut_fluss.network.client;
 
 import com.example.flut_fluss.base.BaseClient;
-import com.example.flut_fluss.model.Login;
 import com.example.flut_fluss.model.Money;
 import com.example.flut_fluss.network.api.SendMoneyApi;
 import com.example.flut_fluss.network.request.SendMoneyRequest;
