@@ -23,10 +23,10 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
         return R.layout.send_check_password_activity;
     }
 
+    private String sendKind;
+
     private SendMyAccountViewModel sendMyAccountViewModel;
     private SendMyBankViewModel sendMyBankViewModel;
-
-    private String sendKind;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
