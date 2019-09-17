@@ -114,6 +114,15 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
         Intent intent = getIntent();
 
         sendKind = intent.getStringExtra("send_kind");
+
+        if(sendKind.equals("0")) {
+
+            binding.animationLogo.setImageResource(R.drawable.flut_logo);
+        }
+        else if(sendKind.equals("1")) {
+
+            binding.animationLogo.setImageResource(R.drawable.bank_icon);
+        }
     }
 
     //Cipher Init()
