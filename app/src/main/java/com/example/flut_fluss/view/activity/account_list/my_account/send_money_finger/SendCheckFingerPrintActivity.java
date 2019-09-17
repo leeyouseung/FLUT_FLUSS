@@ -105,8 +105,7 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
     }
 
     private void initViewModel() {
-
-
+        
     }
 
     private void initData() {
