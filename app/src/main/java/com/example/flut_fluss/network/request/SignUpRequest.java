@@ -16,16 +16,12 @@ public class SignUpRequest {
     @SerializedName("phoneNumber")
     private String phoneNumber;
 
-    @SerializedName("account")
-    private String account;
-
-    public SignUpRequest(String userId, String password, String name, String phoneNumber, String account) {
+    public SignUpRequest(String userId, String password, String name, String phoneNumber) {
 
         this.userId = userId;
         this.password = password;
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.account = account;
     }
 
     public String getUserId() {
@@ -66,15 +62,5 @@ public class SignUpRequest {
     public void setPhoneNumber(String phoneNumber) {
 
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getAccount() {
-
-        return account;
-    }
-
-    public void setAccount(String account) {
-
-        this.account = account;
     }
 }
