@@ -70,8 +70,6 @@ public class SendCheckFingerprintHandler extends FingerprintManager.Authenticati
         super.onAuthenticationSucceeded(result);
 
         this.update("송금 되었습니다.", true);
-
-
     }
 
     private void update(String s, boolean b) {
