@@ -13,13 +13,16 @@ import android.security.keystore.KeyPermanentlyInvalidatedException;
 import android.security.keystore.KeyProperties;
 
 import androidx.core.content.ContextCompat;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendCheckFingerPrintActivityBinding;
+import com.example.flut_fluss.manager.factory.ViewModelFactory;
 import com.example.flut_fluss.manager.finger.SendCheckFingerprintHandler;
 import com.example.flut_fluss.view.activity.account_list.my_account.send_money_password.SendCheckPasswordActivity;
 import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
+import com.example.flut_fluss.viewmodel.SendMyBankViewModel;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -45,6 +48,7 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
     }
 
     private SendMyAccountViewModel sendMyAccountViewModel;
+    private SendMyBankViewModel sendMyBankViewModel;
 
     private KeyStore keyStore;
     private static final String KEY_NAME = "example_key";
@@ -108,6 +112,8 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
 
     private void initViewModel() {
 
+        sendMyAccountViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SendMyAccountViewModel.class);
+        sendMyBankViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SendMyBankViewModel.class);
     }
 
     @SuppressLint("SetTextI18n")
