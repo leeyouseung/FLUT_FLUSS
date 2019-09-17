@@ -64,7 +64,7 @@ public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
 
             if(binding.idText.getText().toString().isEmpty() || binding.pwText.getText().toString().isEmpty() ||
                     binding.checkPwText.getText().toString().isEmpty() || binding.nameText.getText().toString().isEmpty() ||
-                    binding.phoneNumberText.getText().toString().isEmpty() || binding.accountText.getText().toString().isEmpty()) {
+                    binding.phoneNumberText.getText().toString().isEmpty()) {
 
                 Toast.makeText(getApplicationContext(), "빈칸 없이 입력해 주세요", Toast.LENGTH_SHORT).show();
 
@@ -81,7 +81,7 @@ public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
 
                 signUpViewModel.signup(new SignUpRequest(
                         binding.idText.getText().toString(), binding.pwText.getText().toString(), binding.nameText.getText().toString(),
-                        binding.phoneNumberText.getText().toString(), binding.accountText.getText().toString()));
+                        binding.phoneNumberText.getText().toString()));
             }
             catch (NullPointerException e) {
 

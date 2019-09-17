@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="42dp"
             android:layout_marginEnd="24dp"
             android:hint="@string/id_text"
             app:boxBackgroundColor="@android:color/white"
@@ -67,6 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="24dp"
             android:hint="@string/password_text"
             app:boxBackgroundColor="@android:color/white"
@@ -90,6 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="24dp"
             android:hint="@string/check_password_text"
             app:boxBackgroundColor="@android:color/white"
@@ -113,6 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="24dp"
             android:hint="@string/name_text"
             app:boxBackgroundColor="@android:color/white"
@@ -136,6 +139,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="24dp"
             android:hint="@string/ex_user_phone_number"
             app:boxBackgroundColor="@android:color/white"
@@ -153,36 +157,11 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_layout_account"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:hint="@string/ex_account_number"
-            app:boxBackgroundColor="@android:color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/input_layout_phone_number">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/account_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:imeOptions="actionDone|flagNoExtractUi|flagNoFullscreen|flagNoAccessoryAction"
-                android:inputType="textPassword"
-                android:privateImeOptions="nm" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
         <TextView
             android:id="@+id/sign_up_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="36dp"
+            android:layout_marginTop="52dp"
             android:layout_marginBottom="12dp"
             android:background="@drawable/login_button_radius"
             android:gravity="center"
@@ -190,9 +169,9 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/input_layout_account"
-            app:layout_constraintStart_toStartOf="@+id/input_layout_account"
-            app:layout_constraintTop_toBottomOf="@+id/input_layout_account" />
+            app:layout_constraintEnd_toEndOf="@+id/input_layout_phone_number"
+            app:layout_constraintStart_toStartOf="@+id/input_layout_phone_number"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_phone_number" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
