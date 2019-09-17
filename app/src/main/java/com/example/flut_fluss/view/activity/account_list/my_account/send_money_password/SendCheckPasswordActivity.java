@@ -55,27 +55,27 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
 
             binding.animationLogo.setImageResource(R.drawable.flut_logo);
 
-            sendMyAccountViewModel.getSuccessMessage().observe(this, message -> {
-
-                Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show();
-
-                startActivity(new Intent(getApplicationContext(), FinishRemittanceActivity.class));
-            });
-
-            sendMyAccountViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, (String) message, Toast.LENGTH_SHORT).show());
+//            sendMyAccountViewModel.getSuccessMessage().observe(this, message -> {
+//
+//                Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show();
+//
+//                startActivity(new Intent(getApplicationContext(), FinishRemittanceActivity.class));
+//            });
+//
+//            sendMyAccountViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, (String) message, Toast.LENGTH_SHORT).show());
         }
         else if(sendKind.equals("1")) {
 
             binding.animationLogo.setImageResource(R.drawable.bank_icon);
 
-            sendMyBankViewModel.getSuccessMessage().observe(this, message -> {
-
-                Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show();
-
-                startActivity(new Intent(getApplicationContext(), FinishRemittanceActivity.class));
-            });
-
-            sendMyBankViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show());
+//            sendMyBankViewModel.getSuccessMessage().observe(this, message -> {
+//
+//                Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show();
+//
+//                startActivity(new Intent(getApplicationContext(), FinishRemittanceActivity.class));
+//            });
+//
+//            sendMyBankViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show());
         }
     }
 
