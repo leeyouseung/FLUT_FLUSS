@@ -13,12 +13,20 @@ import android.widget.TextView;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.example.flut_fluss.R;
+import com.example.flut_fluss.manager.factory.ViewModelFactory;
+import com.example.flut_fluss.view.activity.account_list.my_account.send_money_finger.SendCheckFingerPrintActivity;
 import com.example.flut_fluss.view.activity.finish.FinishRemittanceActivity;
+import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
+import com.example.flut_fluss.viewmodel.SendMyBankViewModel;
 
 @TargetApi(Build.VERSION_CODES.N)
 public class SendCheckFingerprintHandler extends FingerprintManager.AuthenticationCallback {
+
+    private SendMyAccountViewModel sendMyAccountViewModel;
+    private SendMyBankViewModel sendMyBankViewModel;
 
     private Context context;
 
@@ -62,6 +70,8 @@ public class SendCheckFingerprintHandler extends FingerprintManager.Authenticati
         super.onAuthenticationSucceeded(result);
 
         this.update("송금 되었습니다.", true);
+
+
     }
 
     private void update(String s, boolean b) {
