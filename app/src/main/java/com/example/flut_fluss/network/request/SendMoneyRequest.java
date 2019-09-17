@@ -32,7 +32,7 @@ public class SendMoneyRequest {
     }
 
     public void setSendKind(String sendKind) {
-        
+
         this.sendKind = sendKind;
     }
 }
