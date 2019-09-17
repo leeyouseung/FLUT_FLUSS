@@ -8,6 +8,7 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendMyBankActivityBinding;
 import com.example.flut_fluss.view.activity.account_list.my_account.send_money_finger.SendCheckFingerPrintActivity;
+import com.example.flut_fluss.view.activity.account_list.my_account.send_money_password.SendCheckPasswordActivity;
 
 public class SendMyBankActivity extends BaseActivity<SendMyBankActivityBinding> {
 
@@ -69,7 +70,7 @@ public class SendMyBankActivity extends BaseActivity<SendMyBankActivityBinding> 
 
             money = binding.sendMyBankMoney.getText().toString().substring(0, binding.sendMyBankMoney.getText().toString().length() - 1);
 
-            Intent intent = new Intent(getApplicationContext(), SendCheckFingerPrintActivity.class);
+            Intent intent = new Intent(getApplicationContext(), SendCheckPasswordActivity.class);
 
             intent.putExtra("send_kind", "1");
             intent.putExtra("money", money);
