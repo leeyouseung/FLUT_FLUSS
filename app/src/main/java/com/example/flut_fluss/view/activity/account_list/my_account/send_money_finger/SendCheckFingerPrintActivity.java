@@ -52,6 +52,8 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
     private KeyguardManager keyguardManager;
     private KeyGenerator keyGenerator = null;
 
+    private String sendKind = "";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,6 +111,9 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
 
     private void initData() {
 
+        Intent intent = getIntent();
+
+        sendKind = intent.getStringExtra("send_kind");
     }
 
     //Cipher Init()
@@ -198,7 +203,11 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
 
         binding.cancelButton.setOnClickListener(v -> {
 
-            startActivity(new Intent(getApplicationContext(), SendCheckPasswordActivity.class));
+            Intent intent = new Intent(getApplicationContext(), SendCheckPasswordActivity.class);
+
+            intent.putExtra("send_kind", sendKind);
+
+            startActivity(intent);
         });
     }
 }
