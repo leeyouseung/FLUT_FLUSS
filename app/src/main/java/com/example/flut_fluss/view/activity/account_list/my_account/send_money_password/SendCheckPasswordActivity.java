@@ -1,5 +1,6 @@
 package com.example.flut_fluss.view.activity.account_list.my_account.send_money_password;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
     }
 
     private String sendKind = "0";
+    private String money = "";
 
     private SendMyAccountViewModel sendMyAccountViewModel;
     private SendMyBankViewModel sendMyBankViewModel;
@@ -44,11 +46,15 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
         sendMyBankViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SendMyBankViewModel.class);
     }
 
+    @SuppressLint("SetTextI18n")
     private void initData() {
 
         Intent intent = getIntent();
 
         sendKind = intent.getStringExtra("send_kind");
+        money = intent.getStringExtra("money");
+
+        binding.money.setText(money + "원");
 
         if(sendKind.equals("0")) {
 

@@ -17,6 +17,8 @@ public class SendMyBankActivity extends BaseActivity<SendMyBankActivityBinding> 
         return R.layout.send_my_bank_activity;
     }
 
+    private String money = "";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,9 +67,12 @@ public class SendMyBankActivity extends BaseActivity<SendMyBankActivityBinding> 
 
         binding.myBankSendButton.setOnClickListener(v -> {
 
+            money = binding.sendMyBankMoney.getText().toString().substring(0, binding.sendMyBankMoney.getText().toString().length() - 1);
+
             Intent intent = new Intent(getApplicationContext(), SendCheckFingerPrintActivity.class);
 
             intent.putExtra("send_kind", "1");
+            intent.putExtra("money", money);
 
             startActivity(intent);
         });

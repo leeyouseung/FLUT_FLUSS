@@ -4,14 +4,10 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.lifecycle.ViewModelProviders;
-
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendMyAccountActivityBinding;
-import com.example.flut_fluss.manager.factory.ViewModelFactory;
 import com.example.flut_fluss.view.activity.account_list.my_account.send_money_finger.SendCheckFingerPrintActivity;
-import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
 
 public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBinding> {
 
@@ -20,6 +16,8 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
 
         return R.layout.send_my_account_activity;
     }
+
+    private String money = "";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,9 +67,12 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
 
         binding.myAccountSendButton.setOnClickListener(v -> {
 
+            money = binding.sendMyAccountMoney.getText().toString().substring(0, binding.sendMyAccountMoney.getText().toString().length() - 1);
+
             Intent intent = new Intent(getApplicationContext(), SendCheckFingerPrintActivity.class);
 
             intent.putExtra("send_kind", "0");
+            intent.putExtra("money", money);
 
             startActivity(intent);
         });

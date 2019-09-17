@@ -1,6 +1,7 @@
 package com.example.flut_fluss.view.activity.account_list.my_account.send_money_finger;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.KeyguardManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -53,6 +54,7 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
     private KeyGenerator keyGenerator = null;
 
     private String sendKind = "";
+    private String money = "";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -108,11 +110,15 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
 
     }
 
+    @SuppressLint("SetTextI18n")
     private void initData() {
 
         Intent intent = getIntent();
 
         sendKind = intent.getStringExtra("send_kind");
+        money = intent.getStringExtra("money");
+
+        binding.money.setText(money + "원");
 
         if(sendKind.equals("0")) {
 
@@ -214,6 +220,7 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
             Intent intent = new Intent(getApplicationContext(), SendCheckPasswordActivity.class);
 
             intent.putExtra("send_kind", sendKind);
+            intent.putExtra("money", money);
 
             startActivity(intent);
         });

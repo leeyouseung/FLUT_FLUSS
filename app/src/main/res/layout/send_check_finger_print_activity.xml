@@ -56,7 +56,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_message"
+        app:layout_constraintTop_toBottomOf="@+id/money_title"
         app:srcCompat="@drawable/fingerprint_icon"
         tools:ignore="ContentDescription" />
 
@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:text="'FLUSS' 의 Touch ID"
         android:textColor="@color/white"
@@ -93,26 +93,11 @@
         tools:ignore="HardcodedText" />
 
     <TextView
-        android:id="@+id/finger_sub_2_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:text="지문이 일치하면 송금 합니다."
-        android:textColor="@color/white"
-        android:textSize="6pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/send_button"
-        tools:ignore="HardcodedText" />
-
-    <TextView
         android:id="@+id/cancel_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
         android:text="취소"
         android:textColor="@color/white"
@@ -120,7 +105,32 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finger_sub_2_title"
+        app:layout_constraintTop_toBottomOf="@+id/send_button"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/money_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="송금 금액 :"
+        android:textColor="@color/white"
+        android:textSize="7pt"
+        app:layout_constraintStart_toStartOf="@+id/tv_message"
+        app:layout_constraintTop_toBottomOf="@+id/tv_message"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="800원"
+        android:textSize="7pt"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tv_message"
+        app:layout_constraintStart_toEndOf="@+id/money_title"
+        app:layout_constraintTop_toTopOf="@+id/money_title"
         tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
