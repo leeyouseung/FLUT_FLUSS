@@ -102,13 +102,13 @@ public class SendCheckPasswordActivity extends BaseActivity<SendCheckPasswordAct
 
                 String money = binding.money.getText().toString().substring(0, binding.money.getText().toString().length() - 1);
 
-                sendMyAccountViewModel.sendFlussMoney(new SendMoneyRequest(money));
+                sendMyAccountViewModel.sendFlussMoney(new SendMoneyRequest(money, sendKind));
             }
             else if(sendKind.equals("1")) {
 
                 String money = binding.money.getText().toString().substring(0, binding.money.getText().toString().length() - 1);
 
-                sendMyBankViewModel.sendBankMoney(new SendMoneyRequest(money));
+                sendMyBankViewModel.sendBankMoney(new SendMoneyRequest(money, sendKind));
             }
         });
     }
