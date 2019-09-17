@@ -120,7 +120,7 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
         }
         else if(sendKind.equals("1")) {
 
-            binding.animationLogo.setImageResource(R.drawable.bank_icon);
+            binding.animationLogo.setImageResource(R.drawable.bank_icon_white);
         }
     }
 
