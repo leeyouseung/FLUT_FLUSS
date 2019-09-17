@@ -67,7 +67,7 @@ public class SendMyBankActivity extends BaseActivity<SendMyBankActivityBinding> 
 
             Intent intent = new Intent(getApplicationContext(), SendCheckFingerPrintActivity.class);
 
-            intent.putExtra("send_kind", 1);
+            intent.putExtra("send_kind", "1");
 
             startActivity(intent);
         });

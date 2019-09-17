@@ -71,7 +71,7 @@ public class SendMyAccountActivity extends BaseActivity<SendMyAccountActivityBin
 
             Intent intent = new Intent(getApplicationContext(), SendCheckFingerPrintActivity.class);
 
-            intent.putExtra("send_kind", 0);
+            intent.putExtra("send_kind", "0");
 
             startActivity(intent);
         });
