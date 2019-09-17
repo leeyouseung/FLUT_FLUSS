@@ -11,7 +11,6 @@ import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendCheckPasswordActivityBinding;
 import com.example.flut_fluss.manager.factory.ViewModelFactory;
 import com.example.flut_fluss.network.request.SendMoneyRequest;
-import com.example.flut_fluss.view.activity.finish.FinishRemittanceActivity;
 import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
 import com.example.flut_fluss.viewmodel.SendMyBankViewModel;
 
