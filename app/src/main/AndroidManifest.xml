@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".view.activity.finish.FinishRemittanceActivity"></activity>
+        <activity android:name=".view.activity.finish.FinishRemittanceActivity"/>
         <activity android:name=".view.activity.account_list.my_account.send_money_password.SendCheckPasswordActivity" />
         <activity android:name=".view.activity.account_list.my_account.send_money_finger.SendCheckFingerPrintActivity" />
         <activity android:name=".view.activity.find.FindPasswordActivity" />
