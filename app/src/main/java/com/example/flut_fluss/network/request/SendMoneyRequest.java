@@ -10,8 +10,6 @@ public class SendMoneyRequest {
     @SerializedName("send_kind")
     private String sendKind;
 
-
-
     public SendMoneyRequest(String money, String sendKind) {
 
         this.money = money;
