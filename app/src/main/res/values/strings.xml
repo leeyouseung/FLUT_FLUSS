@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">FLUSS</string>
+    
+    <string name="remittance_title">송금</string>
+    <string name="lookup_title">조회</string>
+    <string name="timeline_title">타임라인</string>
+    <string name="addcard_title">카드추가</string>
+    <string name="setting_title">설정</string>
 
     <string name="id_text">아이디</string>
     <string name="password_text">비밀번호</string>
