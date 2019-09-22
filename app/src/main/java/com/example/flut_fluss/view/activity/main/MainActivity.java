@@ -87,8 +87,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        fragmentTransaction.replace(R.id.main_activity_fragment, new RemittanceFragment());
-        fragmentTransaction.commit();
+        fragmentTransaction.replace(R.id.main_activity_fragment, new RemittanceFragment()).commit();
     }
 
     private void initSetLayoutButton() {
@@ -121,8 +120,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-            fragmentTransaction.replace(R.id.main_activity_fragment, new RemittanceFragment());
-            fragmentTransaction.commit();
+            fragmentTransaction.replace(R.id.main_activity_fragment, new RemittanceFragment()).commit();
 
             binding.remittanceIcon.setImageResource(R.drawable.remittance_icon_click);
             binding.remittanceTitle.setTextColor(getResources().getColor(R.color.blue));
@@ -149,8 +147,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-            fragmentTransaction.replace(R.id.main_activity_fragment, new LookUpFragment());
-            fragmentTransaction.commit();
+            fragmentTransaction.replace(R.id.main_activity_fragment, new LookUpFragment()).commit();
 
             binding.remittanceIcon.setImageResource(R.drawable.remittance_icon);
             binding.remittanceTitle.setTextColor(getResources().getColor(R.color.black));
@@ -177,8 +174,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-            fragmentTransaction.replace(R.id.main_activity_fragment, new TimeLineFragment());
-            fragmentTransaction.commit();
+            fragmentTransaction.replace(R.id.main_activity_fragment, new TimeLineFragment()).commit();
 
             binding.remittanceIcon.setImageResource(R.drawable.remittance_icon);
             binding.remittanceTitle.setTextColor(getResources().getColor(R.color.black));
@@ -205,8 +201,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-            fragmentTransaction.replace(R.id.main_activity_fragment, new AddCardFragment());
-            fragmentTransaction.commit();
+            fragmentTransaction.replace(R.id.main_activity_fragment, new AddCardFragment()).commit();
 
             binding.remittanceIcon.setImageResource(R.drawable.remittance_icon);
             binding.remittanceTitle.setTextColor(getResources().getColor(R.color.black));
@@ -233,8 +228,7 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
 
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-            fragmentTransaction.replace(R.id.main_activity_fragment, new SettingFragment());
-            fragmentTransaction.commit();
+            fragmentTransaction.replace(R.id.main_activity_fragment, new SettingFragment()).commit();
 
             binding.remittanceIcon.setImageResource(R.drawable.remittance_icon);
             binding.remittanceTitle.setTextColor(getResources().getColor(R.color.black));
