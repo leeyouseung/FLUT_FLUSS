@@ -28,164 +28,164 @@
     </FrameLayout>
 
     <LinearLayout
-        android:id="@+id/menu_navigation_linearLayout"
+    android:id="@+id/menu_navigation_linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:orientation="horizontal"
+    android:layout_marginBottom="4dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:ignore="DisableBaselineAlignment">
+
+    <LinearLayout
+        android:id="@+id/remittance_button"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:orientation="horizontal"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="DisableBaselineAlignment">
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
 
-        <LinearLayout
-            android:id="@+id/remittance_button"
+        <ImageView
+            android:id="@+id/remittance_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/remittance_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/remittance_title"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:ignore="UseCompoundDrawables">
-
-            <ImageView
-                android:id="@+id/remittance_icon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/remittance_icon"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/remittance_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/main_send_button_text"
-                android:textSize="5pt"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/black"
-                android:visibility="visible"
-                tools:ignore="HardcodedText" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/show_money_list_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:ignore="UseCompoundDrawables">
-
-            <ImageView
-                android:id="@+id/show_money_list_icon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:background="@drawable/show_money_list_icon"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/show_money_list_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/main_search_button_text"
-                android:textSize="5pt"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/time_line_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:ignore="UseCompoundDrawables">
-
-            <ImageView
-                android:id="@+id/time_line_icon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/time_line_icon"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/time_line_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/main_timeline_button_text"
-                android:textSize="5pt"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/add_card_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:ignore="UseCompoundDrawables">
-
-            <ImageView
-                android:id="@+id/add_card_icon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/add_card_icon"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/add_card_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/main_create_button_text"
-                android:textSize="5pt"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/setting_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:ignore="UseCompoundDrawables">
-
-            <ImageView
-                android:id="@+id/setting_icon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/setting_icon"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/setting_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/main_setting_button_text"
-                android:textSize="5pt"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/main_send_button_text"
+            android:textSize="5pt"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:visibility="visible"
+            tools:ignore="HardcodedText" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/show_money_list_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/show_money_list_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/show_money_list_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/show_money_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/main_search_button_text"
+            android:textSize="5pt"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/time_line_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/time_line_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/time_line_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/time_line_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/main_timeline_button_text"
+            android:textSize="5pt"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_card_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/add_card_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/add_card_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/add_card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/main_create_button_text"
+            android:textSize="5pt"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/setting_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/setting_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/setting_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/main_setting_button_text"
+            android:textSize="5pt"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>
 
     <LinearLayout
         android:visibility="visible"
