@@ -7,19 +7,24 @@ import androidx.annotation.LayoutRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.lifecycle.ViewModelProviders;
 
-public abstract class BaseActivity<VB extends ViewDataBinding> extends AppCompatActivity {
+public abstract class BaseActivity<VB extends ViewDataBinding, VM extends BaseViewModel> extends AppCompatActivity {
 
     protected VB binding;
+    protected VM viewmodel;
 
     @LayoutRes
-    protected abstract int layoutId();
+    protected abstract int getLayoutId();lo
+
+    protected abstract Class<VM> getViewModel();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = DataBindingUtil.setContentView(this, layoutId());
+        binding = DataBindingUtil.setContentView(this, getLayoutId());
+        viewmodel = ViewModelProviders.of(this).get(getViewModel());
     }
 
     @Override
