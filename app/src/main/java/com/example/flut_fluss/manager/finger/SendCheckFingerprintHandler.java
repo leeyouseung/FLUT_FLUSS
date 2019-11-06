@@ -16,7 +16,6 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.flut_fluss.R;
-import com.example.flut_fluss.manager.factory.ViewModelFactory;
 import com.example.flut_fluss.view.activity.account_list.my_account.send_money_finger.SendCheckFingerPrintActivity;
 import com.example.flut_fluss.view.activity.finish.FinishRemittanceActivity;
 import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
