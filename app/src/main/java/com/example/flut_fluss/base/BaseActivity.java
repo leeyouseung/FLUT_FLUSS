@@ -15,7 +15,7 @@ public abstract class BaseActivity<VB extends ViewDataBinding, VM extends BaseVi
     protected VM viewmodel;
 
     @LayoutRes
-    protected abstract int getLayoutId();lo
+    protected abstract int getLayoutId();
 
     protected abstract Class<VM> getViewModel();
 

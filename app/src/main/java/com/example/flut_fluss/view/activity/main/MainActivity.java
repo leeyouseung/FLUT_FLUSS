@@ -29,9 +29,14 @@ import java.util.Objects;
 public class MainActivity extends BaseActivity<MainActivityBinding> {
 
     @Override
-    protected int layoutId() {
+    protected int getLayoutId() {
 
         return R.layout.main_activity;
+    }
+
+    @Override
+    protected Class getViewModel() {
+        return null;
     }
 
     private TextView money;

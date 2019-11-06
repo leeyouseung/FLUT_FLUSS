@@ -13,14 +13,13 @@ import android.security.keystore.KeyPermanentlyInvalidatedException;
 import android.security.keystore.KeyProperties;
 
 import androidx.core.content.ContextCompat;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendCheckFingerPrintActivityBinding;
-import com.example.flut_fluss.manager.factory.ViewModelFactory;
 import com.example.flut_fluss.manager.finger.SendCheckFingerprintHandler;
 import com.example.flut_fluss.view.activity.account_list.my_account.send_money_password.SendCheckPasswordActivity;
+import com.example.flut_fluss.viewmodel.SendCheckFingerPrintViewModel;
 import com.example.flut_fluss.viewmodel.SendMyAccountViewModel;
 import com.example.flut_fluss.viewmodel.SendMyBankViewModel;
 
@@ -39,20 +38,14 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
-public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPrintActivityBinding> {
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.send_check_finger_print_activity;
-    }
+public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPrintActivityBinding, SendCheckFingerPrintViewModel> {
 
     private SendMyAccountViewModel sendMyAccountViewModel;
     private SendMyBankViewModel sendMyBankViewModel;
 
     private KeyStore keyStore;
-    private static final String KEY_NAME = "example_key";
     private Cipher cipher;
+    private static final String KEY_NAME = "example_key";
     private FingerprintManager fingerprintManager;
     private KeyguardManager keyguardManager;
     private KeyGenerator keyGenerator = null;
@@ -61,10 +54,18 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
     private String money = "";
 
     @Override
+    protected int getLayoutId() {
+        return R.layout.send_check_finger_print_activity;
+    }
+
+    @Override
+    protected Class getViewModel() {
+        return SendCheckFingerPrintViewModel.class;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        initViewModel();
 
         initData();
 
@@ -108,12 +109,6 @@ public class SendCheckFingerPrintActivity extends BaseActivity<SendCheckFingerPr
         }
 
         event();
-    }
-
-    private void initViewModel() {
-
-        sendMyAccountViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SendMyAccountViewModel.class);
-        sendMyBankViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SendMyBankViewModel.class);
     }
 
     @SuppressLint("SetTextI18n")
