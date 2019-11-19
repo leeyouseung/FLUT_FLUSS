@@ -72,7 +72,7 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
 
     private void initSetBlinkAnimation() {
 
-        anim.setDuration(50); //You can manage the time of the blink with this parameter
+        anim.setDuration(50); // You can manage the time of the blink with this parameter
         anim.setStartOffset(20);
         anim.setRepeatMode(Animation.REVERSE);
         anim.setRepeatCount(5); // blink time

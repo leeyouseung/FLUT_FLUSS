@@ -9,6 +9,5 @@ public class LookupSendMoneyViewModel extends BaseViewModel {
     public LookupSendMoneyViewModel(Context context) {
         super(context);
 
-
     }
 }
