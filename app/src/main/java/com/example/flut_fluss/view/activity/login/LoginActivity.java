@@ -1,6 +1,5 @@
 package com.example.flut_fluss.view.activity.login;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 
 import android.content.DialogInterface;
@@ -9,8 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.widget.Toast;
-
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
@@ -23,8 +20,6 @@ import com.example.flut_fluss.view.activity.singup.SignUpActivity;
 import com.example.flut_fluss.viewmodel.LoginViewModel;
 
 public class LoginActivity extends BaseActivity<LoginActivityBinding, LoginViewModel> {
-
-    private LoginViewModel loginViewModel;
 
     @Override
     protected int getLayoutId() {
@@ -40,38 +35,31 @@ public class LoginActivity extends BaseActivity<LoginActivityBinding, LoginViewM
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initViewModel();
-
         initView();
 
         initData();
 
-        loginViewModel.getData().observe(this, login -> {
-
-            new Token(this).setToken(login.getToken().getToken());
-//            new CurrentUser(this, "flut_database.db", null, 2).insert(login.getUser());
-//            User user = new User();
-
-//            loginViewModel.insert(user);
-
-            if(login.getUser().getId().isEmpty()) {
-
-                loginViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, message, Toast.LENGTH_LONG).show());
-            }
-            else {
-
-                Toast.makeText(this, "잠시만 기다려주세요", Toast.LENGTH_SHORT).show();
-
-                startActivity(new Intent(this, MainActivity.class));
-            }
-        });
+//        loginViewModel.getData().observe(this, login -> {
+//
+//            new Token(this).setToken(login.getToken().getToken());
+////            new CurrentUser(this, "flut_database.db", null, 2).insert(login.getUser());
+////            User user = new User();
+//
+////            loginViewModel.insert(user);
+//
+//            if(login.getUser().getId().isEmpty()) {
+//
+//                loginViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, message, Toast.LENGTH_LONG).show());
+//            }
+//            else {
+//
+//                Toast.makeText(this, "잠시만 기다려주세요", Toast.LENGTH_SHORT).show();
+//
+//                startActivity(new Intent(this, MainActivity.class));
+//            }
+//        });
 
         event();
-    }
-
-    private void initViewModel() {
-
-        loginViewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
     }
 
     private void initView() {

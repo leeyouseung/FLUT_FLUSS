@@ -9,44 +9,40 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SignupActivityBinding;
-import com.example.flut_fluss.manager.factory.ViewModelFactory;
 import com.example.flut_fluss.network.request.SignUpRequest;
 import com.example.flut_fluss.view.activity.login.LoginActivity;
 import com.example.flut_fluss.viewmodel.SignUpViewModel;
 
-public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
+public class SignUpActivity extends BaseActivity<SignupActivityBinding, SignUpViewModel> {
 
     @Override
-    protected int layoutId() {
+    protected int getLayoutId() {
 
         return R.layout.signup_activity;
     }
 
-    private SignUpViewModel signUpViewModel;
+    @Override
+    protected Class<SignUpViewModel> getViewModel() {
+
+        return SignUpViewModel.class;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initViewModel();
-
         initData();
 
-        signUpViewModel.getSuccessMessage().observe(this, message -> {
-
-            Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show();
-
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-        });
-
-        signUpViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, (String) message, Toast.LENGTH_SHORT).show());
+//        signUpViewModel.getSuccessMessage().observe(this, message -> {
+//
+//            Toast.makeText(this, (String) message, Toast.LENGTH_LONG).show();
+//
+//            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+//        });
+//
+//        signUpViewModel.getErrorMessage().observe(this, message -> Toast.makeText(this, (String) message, Toast.LENGTH_SHORT).show());
 
         event();
-    }
-
-    private void initViewModel() {
-
-        signUpViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(SignUpViewModel.class);
     }
 
     private void initData() {
@@ -79,9 +75,9 @@ public class SignUpActivity extends BaseActivity<SignupActivityBinding> {
 
             try {
 
-                signUpViewModel.signup(new SignUpRequest(
-                        binding.idText.getText().toString(), binding.pwText.getText().toString(), binding.nameText.getText().toString(),
-                        binding.phoneNumberText.getText().toString()));
+//                signUpViewModel.signup(new SignUpRequest(
+//                        binding.idText.getText().toString(), binding.pwText.getText().toString(), binding.nameText.getText().toString(),
+//                        binding.phoneNumberText.getText().toString()));
             }
             catch (NullPointerException e) {
 

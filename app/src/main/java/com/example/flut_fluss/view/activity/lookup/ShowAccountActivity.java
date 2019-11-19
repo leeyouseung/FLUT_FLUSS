@@ -2,6 +2,7 @@ package com.example.flut_fluss.view.activity.lookup;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
@@ -9,28 +10,29 @@ import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.ShowAccountActivityBinding;
 import com.example.flut_fluss.view.activity.lookup.account.ShowMyAccountActivity;
 import com.example.flut_fluss.view.activity.lookup.account.remittance.LookupSendMoneyActivity;
+import com.example.flut_fluss.viewmodel.ShowAccountViewModel;
 
-public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding> {
+public class ShowAccountActivity extends BaseActivity<ShowAccountActivityBinding, ShowAccountViewModel> {
 
     @Override
-    protected int layoutId() {
+    protected int getLayoutId() {
 
         return R.layout.show_account_activity;
+    }
+
+    @Override
+    protected Class<ShowAccountViewModel> getViewModel() {
+
+        return ShowAccountViewModel.class;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initViewModel();
-
         initData();
 
         event();
-    }
-
-    private void initViewModel() {
-
     }
 
     @SuppressLint("SetTextI18n")

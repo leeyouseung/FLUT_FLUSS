@@ -1,34 +1,36 @@
 package com.example.flut_fluss.view.activity.lookup.account;
 
 import android.content.Intent;
+
 import android.os.Bundle;
 
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.ShowMyAccountListActivityBinding;
 import com.example.flut_fluss.view.activity.lookup.account.remittance.LookupSendMoneyActivity;
+import com.example.flut_fluss.viewmodel.ShowMyAccountListViewModel;
 
-public class ShowMyAccountActivity extends BaseActivity<ShowMyAccountListActivityBinding> {
+public class ShowMyAccountActivity extends BaseActivity<ShowMyAccountListActivityBinding, ShowMyAccountListViewModel> {
 
     @Override
-    protected int layoutId() {
+    protected int getLayoutId() {
 
         return R.layout.show_my_account_list_activity;
+    }
+
+    @Override
+    protected Class<ShowMyAccountListViewModel> getViewModel() {
+
+        return ShowMyAccountListViewModel.class;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initViewModel();
-
         initData();
 
         event();
-    }
-
-    private void initViewModel() {
-
     }
 
     private void initData() {

@@ -6,13 +6,20 @@ import android.widget.Toast;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.DutchPayActivityBinding;
+import com.example.flut_fluss.viewmodel.DutchPayViewModel;
 
-public class DutchPayActivity extends BaseActivity<DutchPayActivityBinding> {
+public class DutchPayActivity extends BaseActivity<DutchPayActivityBinding, DutchPayViewModel> {
 
     @Override
-    protected int layoutId() {
+    protected int getLayoutId() {
 
         return R.layout.dutch_pay_activity;
+    }
+
+    @Override
+    protected Class<DutchPayViewModel> getViewModel() {
+
+        return DutchPayViewModel.class;
     }
 
     @Override

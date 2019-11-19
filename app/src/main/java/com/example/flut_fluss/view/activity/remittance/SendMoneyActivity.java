@@ -10,18 +10,25 @@ import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SendMoneyActivityBinding;
 import com.example.flut_fluss.view.activity.account_list.my_account.SendMyAccountActivity;
 import com.example.flut_fluss.view.activity.account_list.my_account.SendMyBankActivity;
+import com.example.flut_fluss.viewmodel.SendMoneyViewModel;
 
-public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding> {
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.send_money_activity;
-    }
+public class SendMoneyActivity extends BaseActivity<SendMoneyActivityBinding, SendMoneyViewModel> {
 
     boolean openSetLayout = true;
 
     public String sendMoney = "";
+
+    @Override
+    protected int getLayoutId() {
+
+        return R.layout.send_money_activity;
+    }
+
+    @Override
+    protected Class<SendMoneyViewModel> getViewModel() {
+
+        return SendMoneyViewModel.class;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

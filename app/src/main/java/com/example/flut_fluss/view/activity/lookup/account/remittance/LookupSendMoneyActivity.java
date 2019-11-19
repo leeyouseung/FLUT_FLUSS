@@ -8,23 +8,12 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Toast;
 
-import androidx.lifecycle.ViewModelProviders;
-
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.LookupSendMoneyActivityBinding;
-import com.example.flut_fluss.manager.factory.ViewModelFactory;
 import com.example.flut_fluss.viewmodel.LookupSendMoneyViewModel;
 
-public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivityBinding> {
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.lookup_send_money_activity;
-    }
-
-    private LookupSendMoneyViewModel lookupSendMoneyViewModel;
+public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivityBinding, LookupSendMoneyViewModel> {
 
     private Animation anim = new AlphaAnimation(0.0f, 1.0f);
 
@@ -35,21 +24,26 @@ public class LookupSendMoneyActivity extends BaseActivity<LookupSendMoneyActivit
     private boolean isFirstInput = true;
 
     @Override
+    protected int getLayoutId() {
+
+        return R.layout.lookup_send_money_activity;
+    }
+
+    @Override
+    protected Class<LookupSendMoneyViewModel> getViewModel() {
+
+        return LookupSendMoneyViewModel.class;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        initViewModel();
 
         initData();
 
         initSetBlinkAnimation();
 
         event();
-    }
-
-    private void initViewModel() {
-
-        lookupSendMoneyViewModel = ViewModelProviders.of(this, new ViewModelFactory(this)).get(LookupSendMoneyViewModel.class);
     }
 
     @SuppressLint("SetTextI18n")

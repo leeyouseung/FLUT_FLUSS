@@ -17,6 +17,7 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.LoginFingerPrintActivityBinding;
 import com.example.flut_fluss.manager.finger.LoginFingerprintHandler;
+import com.example.flut_fluss.viewmodel.LoginFingerPrintViewModel;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -33,13 +34,7 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
-public class LoginFingerPrintActivity extends BaseActivity<LoginFingerPrintActivityBinding> {
-
-    @Override
-    protected int layoutId() {
-
-        return R.layout.login_finger_print_activity;
-    }
+public class LoginFingerPrintActivity extends BaseActivity<LoginFingerPrintActivityBinding, LoginFingerPrintViewModel> {
 
     private KeyStore keyStore;
     private static final String KEY_NAME = "example_key";
@@ -47,6 +42,18 @@ public class LoginFingerPrintActivity extends BaseActivity<LoginFingerPrintActiv
     private FingerprintManager fingerprintManager;
     private KeyguardManager keyguardManager;
     private KeyGenerator keyGenerator = null;
+
+    @Override
+    protected int getLayoutId() {
+
+        return R.layout.login_finger_print_activity;
+    }
+
+    @Override
+    protected Class<LoginFingerPrintViewModel> getViewModel() {
+
+        return LoginFingerPrintViewModel.class;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -5,28 +5,29 @@ import android.os.Bundle;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.ShowCardActivityBinding;
+import com.example.flut_fluss.viewmodel.ShowCardViewModel;
 
-public class ShowCardActivity extends BaseActivity<ShowCardActivityBinding> {
+public class ShowCardActivity extends BaseActivity<ShowCardActivityBinding, ShowCardViewModel> {
 
     @Override
-    protected int layoutId() {
+    protected int getLayoutId() {
 
         return R.layout.show_card_activity;
+    }
+
+    @Override
+    protected Class<ShowCardViewModel> getViewModel() {
+
+        return ShowCardViewModel.class;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initViewModel();
-
         initData();
 
         event();
-    }
-
-    private void initViewModel() {
-
     }
 
     private void initData() {

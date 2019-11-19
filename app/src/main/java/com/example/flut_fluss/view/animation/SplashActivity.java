@@ -9,13 +9,20 @@ import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.SplashActivityBinding;
 import com.example.flut_fluss.view.activity.login.LoginFingerPrintActivity;
+import com.example.flut_fluss.viewmodel.SplashViewModel;
 
-public class SplashActivity extends BaseActivity<SplashActivityBinding> {
+public class SplashActivity extends BaseActivity<SplashActivityBinding, SplashViewModel> {
 
     @Override
-    protected int layoutId() {
+    protected int getLayoutId() {
 
         return R.layout.splash_activity;
+    }
+
+    @Override
+    protected Class<SplashViewModel> getViewModel() {
+
+        return SplashViewModel.class;
     }
 
     @Override

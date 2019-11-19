@@ -4,11 +4,14 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.AlertDialog;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.view.LayoutInflater;
 import android.view.View;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,11 +25,11 @@ import com.example.flut_fluss.view.z_fragment.main.RemittanceFragment;
 import com.example.flut_fluss.view.z_fragment.main.SettingFragment;
 import com.example.flut_fluss.view.z_fragment.main.LookUpFragment;
 import com.example.flut_fluss.view.z_fragment.main.TimeLineFragment;
-//import com.example.flut_fluss.viewmodel.MainViewModel;
+import com.example.flut_fluss.viewmodel.MainViewModel;
 
 import java.util.Objects;
 
-public class MainActivity extends BaseActivity<MainActivityBinding> {
+public class MainActivity extends BaseActivity<MainActivityBinding, MainViewModel> {
 
     @Override
     protected int getLayoutId() {
@@ -35,8 +38,9 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
     }
 
     @Override
-    protected Class getViewModel() {
-        return null;
+    protected Class<MainViewModel> getViewModel() {
+
+        return MainViewModel.class;
     }
 
     private TextView money;
@@ -45,8 +49,6 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        initViewModel();
-
         initData();
 
         initSetFragment();
@@ -54,11 +56,6 @@ public class MainActivity extends BaseActivity<MainActivityBinding> {
         initSetLayoutButton();
 
         event();
-    }
-
-    private void initViewModel() {
-
-//        MainViewModel mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
     }
 
     private void initData() {

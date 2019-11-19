@@ -5,13 +5,20 @@ import android.os.Bundle;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.MyPageActivityBinding;
+import com.example.flut_fluss.viewmodel.MyPageViewModel;
 
-public class MyPageActivity extends BaseActivity<MyPageActivityBinding> {
+public class MyPageActivity extends BaseActivity<MyPageActivityBinding, MyPageViewModel> {
 
     @Override
-    protected int layoutId() {
+    protected int getLayoutId() {
 
         return R.layout.my_page_activity;
+    }
+
+    @Override
+    protected Class<MyPageViewModel> getViewModel() {
+
+        return MyPageViewModel.class;
     }
 
     @Override
