@@ -5,13 +5,20 @@ import android.os.Bundle;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.FoodActivityBinding;
+import com.example.flut_fluss.viewmodel.FoodViewModel;
 
-public class FoodActivity extends BaseActivity<FoodActivityBinding> {
+public class FoodActivity extends BaseActivity<FoodActivityBinding, FoodViewModel> {
 
     @Override
-    protected int layoutId() {
+    protected int getLayoutId() {
 
         return R.layout.food_activity;
+    }
+
+    @Override
+    protected Class<FoodViewModel> getViewModel() {
+
+        return FoodViewModel.class;
     }
 
     @Override

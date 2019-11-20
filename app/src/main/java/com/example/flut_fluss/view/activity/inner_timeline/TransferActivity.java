@@ -5,13 +5,20 @@ import android.os.Bundle;
 import com.example.flut_fluss.R;
 import com.example.flut_fluss.base.BaseActivity;
 import com.example.flut_fluss.databinding.TransferActivityBinding;
+import com.example.flut_fluss.viewmodel.TransferViewModel;
 
-public class TransferActivity extends BaseActivity<TransferActivityBinding> {
+public class TransferActivity extends BaseActivity<TransferActivityBinding, TransferViewModel> {
 
     @Override
-    protected int layoutId() {
+    protected int getLayoutId() {
 
         return R.layout.transfer_activity;
+    }
+
+    @Override
+    protected Class<TransferViewModel> getViewModel() {
+
+        return TransferViewModel.class;
     }
 
     @Override
